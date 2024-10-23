@@ -1,4 +1,5 @@
 ﻿using Datos.Infrastructure;
+using Datos.Repositorys;
 using Negocio.EntitiesDTO;
 using System;
 using System.Collections.Generic;
@@ -15,17 +16,61 @@ namespace Negocio.Managment
         public String altaUsuario(UsuarioDTO usuarioDTO)
         {
             Usuario usuario = new Usuario();
+            Datos.Repositorys.UsuarioRepository datos = new Datos.Repositorys.UsuarioRepository();
+            List<Usuario> usuarios = datos.ObtenerUsuarios();
 
-            usuario.Nombre = usuarioDTO.Nombre;
-            usuario.Apellidos = usuarioDTO.Apellidos;
-            usuario.Telefono = usuarioDTO.Telefono;
-            usuario.DNI = usuarioDTO.DNI;
-            usuario.Direccion = usuarioDTO.Direccion;
-            usuario.Cuenta_Corriente = usuarioDTO.Cuenta_Corriente;    
-            usuario.Email = usuarioDTO.Email;
-            usuario.Passwd = cifrar(usuarioDTO.Passwd);
+            if (comprobarEmail(usuarios,usuarioDTO))
+            {
+                if (comprobarDNI(usuarios, usuarioDTO))
+                {
+                    usuario.Nombre = usuarioDTO.Nombre;
+                    usuario.Apellidos = usuarioDTO.Apellidos;
+                    usuario.Telefono = usuarioDTO.Telefono;
+                    usuario.DNI = usuarioDTO.DNI;
+                    usuario.Direccion = usuarioDTO.Direccion;
+                    usuario.Cuenta_Corriente = usuarioDTO.Cuenta_Corriente;
+                    usuario.Email = usuarioDTO.Email;
+                    usuario.Passwd = cifrar(usuarioDTO.Passwd);
 
-            return new Datos.Repositorys.UsuarioRepository().altaUsuario(usuario);
+                    return datos.altaUsuario(usuario);
+                }
+                else{
+                    return "Ya hay un usuario registrado con ese DNI";
+                }
+
+            }
+            else
+            {
+                return "Ya hay un usuario registrado con ese email";
+            }
+
+        }
+
+        private bool comprobarDNI(List<Usuario> usuarios, UsuarioDTO usuario)
+        {
+            List<String> dnis = usuarios.Select(x=> x.DNI).ToList();
+            if (dnis.Contains(usuario.DNI))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool comprobarEmail(List<Usuario> usuarios,UsuarioDTO usuario)
+        {
+           List<String> emails = usuarios.Select(x => x.Email).ToList();
+
+            if (emails.Contains(usuario.Email))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
 
         }
 
@@ -54,6 +99,7 @@ namespace Negocio.Managment
 
             return resultado;
         }
+
 
     }
 

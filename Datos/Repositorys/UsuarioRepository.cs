@@ -22,5 +22,23 @@ namespace Datos.Repositorys
                 }
             return "Usuario añadido con exito";
         }
+
+        public List<Usuario> ObtenerUsuarios()
+        {
+            List<Usuario> usuarios = new List<Usuario>();
+            try
+            {
+                //Abrir la BD
+                using (var contexto = new equipobEntitiesBueno())
+                {
+                    usuarios = contexto.Usuario.ToList();
+                }
+                return usuarios;
+            }
+            catch (Exception)
+            {
+                return usuarios;
+            }
+        }
     }
 }
