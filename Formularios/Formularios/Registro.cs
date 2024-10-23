@@ -114,6 +114,10 @@ namespace Formularios.Formularios
 
                 MessageBox.Show(mensaje);
 
+                this.Hide();
+                Login loginForm = new Login();
+                loginForm.ShowDialog();
+
             }
             else
             {
