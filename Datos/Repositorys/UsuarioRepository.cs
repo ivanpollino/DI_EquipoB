@@ -12,13 +12,15 @@ namespace Datos.Repositorys
     public class UsuarioRepository
     {
 
-        public void altaUsuario(Usuario usuario)
+        public String altaUsuario(Usuario usuario)
         {
                 using (var contexto = new equipobEntitiesBueno())
                 {
                     contexto.Usuario.Add(usuario);
                     contexto.SaveChanges();
+                    
                 }
+            return "Usuario añadido con exito";
         }
     }
 }

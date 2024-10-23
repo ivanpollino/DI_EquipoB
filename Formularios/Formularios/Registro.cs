@@ -90,6 +90,7 @@ namespace Formularios.Formularios
 
         private void BTNRegistrar_Click(object sender, EventArgs e)
         {
+            String mensaje;
             if (contraValida)
             {
                 UsuarioDTO usuarioDTO = new UsuarioDTO();
@@ -109,7 +110,9 @@ namespace Formularios.Formularios
                 usuarioDTO.Email = TXTBEmail.Text;
                 usuarioDTO.Passwd = TXTBContrasena.Text;
 
-                new Negocio.Managment.UsuarioManagment().altaUsuario(usuarioDTO);
+                mensaje = new Negocio.Managment.UsuarioManagment().altaUsuario(usuarioDTO);
+
+                MessageBox.Show(mensaje);
 
             }
             else

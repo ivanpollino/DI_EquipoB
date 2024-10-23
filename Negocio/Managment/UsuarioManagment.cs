@@ -10,8 +10,9 @@ namespace Negocio.Managment
 {
     public class UsuarioManagment
     {
+        public string mensaje;
 
-        public void altaUsuario(UsuarioDTO usuarioDTO)
+        public String altaUsuario(UsuarioDTO usuarioDTO)
         {
             Usuario usuario = new Usuario();
 
@@ -24,7 +25,7 @@ namespace Negocio.Managment
             usuario.Email = usuarioDTO.Email;
             usuario.Passwd = cifrar(usuarioDTO.Passwd);
 
-            new Datos.Repositorys.UsuarioRepository().altaUsuario(usuario);
+            return new Datos.Repositorys.UsuarioRepository().altaUsuario(usuario);
 
         }
 

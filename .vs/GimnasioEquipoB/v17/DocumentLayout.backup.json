@@ -11,19 +11,19 @@
       "RelativeMoniker": "D:0:0:{EEE11E13-28AC-4A48-B165-D8CB07C4EC6B}|Negocio\\Negocio.csproj|solutionrelative:negocio\\managment\\usuariomanagment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6242C94A-741C-4BC5-B81D-9BC7020B572E}|Datos\\Datos.csproj|c:\\users\\user\\desktop\\proyectodi\\di_equipob\\datos\\repositorys\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6242C94A-741C-4BC5-B81D-9BC7020B572E}|Datos\\Datos.csproj|C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\datos\\repositorys\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6242C94A-741C-4BC5-B81D-9BC7020B572E}|Datos\\Datos.csproj|solutionrelative:datos\\repositorys\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|c:\\users\\user\\desktop\\proyectodi\\di_equipob\\formularios\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\formularios\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|solutionrelative:formularios\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|c:\\users\\user\\desktop\\proyectodi\\di_equipob\\formularios\\formularios\\registro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\formularios\\formularios\\registro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formularios\\registro.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|c:\\users\\user\\desktop\\proyectodi\\di_equipob\\formularios\\formularios\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\formularios\\formularios\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formularios\\registro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -54,9 +54,9 @@
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\Datos\\Repositorys\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "Datos\\Repositorys\\UsuarioRepository.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\Datos\\Repositorys\\UsuarioRepository.cs*",
-              "RelativeToolTip": "Datos\\Repositorys\\UsuarioRepository.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAARAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\Datos\\Repositorys\\UsuarioRepository.cs",
+              "RelativeToolTip": "Datos\\Repositorys\\UsuarioRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T09:29:35.948Z",
               "EditorCaption": ""
@@ -71,20 +71,19 @@
               "RelativeToolTip": "Formularios\\Formularios\\Registro.Designer.cs",
               "ViewState": "AgIAAFIAAAAAAAAAAAAowGkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T09:24:12.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T09:24:12.557Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Registro.cs [Dise\u00F1o]",
+              "Title": "Registro.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Registro.cs",
               "RelativeDocumentMoniker": "Formularios\\Formularios\\Registro.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Registro.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\Formularios\\Registro.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Registro.cs [Design]",
+              "RelativeToolTip": "Formularios\\Formularios\\Registro.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T07:33:54.286Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -94,7 +93,7 @@
               "RelativeDocumentMoniker": "Negocio\\Managment\\UsuarioManagment.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\Negocio\\Managment\\UsuarioManagment.cs",
               "RelativeToolTip": "Negocio\\Managment\\UsuarioManagment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T07:11:10.546Z",
               "EditorCaption": ""
@@ -109,8 +108,7 @@
               "RelativeToolTip": "Negocio\\EntitiesDTO\\UsuarioDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T07:04:29.585Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T07:04:29.585Z"
             },
             {
               "$type": "Document",
@@ -122,8 +120,7 @@
               "RelativeToolTip": "Formularios\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-23T07:01:43.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T07:01:43.455Z"
             },
             {
               "$type": "Document",
@@ -133,7 +130,7 @@
               "RelativeDocumentMoniker": "Formularios\\Formularios\\Registro.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Registro.cs",
               "RelativeToolTip": "Formularios\\Formularios\\Registro.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAA6wGwAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAUwHIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T07:45:59.224Z",
               "EditorCaption": ""
@@ -148,8 +145,7 @@
               "RelativeToolTip": "Formularios\\Program.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAD4vxIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T07:42:48.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T07:42:48.445Z"
             }
           ]
         }
