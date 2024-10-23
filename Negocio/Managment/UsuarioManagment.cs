@@ -100,6 +100,28 @@ namespace Negocio.Managment
             return resultado;
         }
 
+        public UsuarioDTO comprobarLogin(String email, String pass)
+        {
+            pass = cifrar(pass);
+            Datos.Repositorys.UsuarioRepository datos = new Datos.Repositorys.UsuarioRepository();
+            UsuarioDTO usuarioDTO = new UsuarioDTO();
+            Usuario usuario = datos.ObtenerUsuarios().Where(x => x.Email == email && x.Passwd == pass).FirstOrDefault();
+            if (usuario != null) {
+                usuarioDTO.Nombre = usuario.Nombre;
+                usuarioDTO.Apellidos = usuario.Apellidos;
+                usuarioDTO.Telefono = usuario.Telefono;
+                usuarioDTO.DNI = usuario.DNI;
+                usuarioDTO.Direccion = usuario.Direccion;
+                usuarioDTO.Cuenta_Corriente = usuario.Cuenta_Corriente;
+                usuarioDTO.Email = usuario.Email;
+                usuarioDTO.Passwd = cifrar(usuario.Passwd);
+                return usuarioDTO;
+            }
+
+            return null;
+
+        }
+
 
     }
 

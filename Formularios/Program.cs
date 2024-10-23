@@ -16,7 +16,7 @@ namespace Formularios
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formularios.Registro());
+            Application.Run(new Formularios.Login());
         }
     }
 }
