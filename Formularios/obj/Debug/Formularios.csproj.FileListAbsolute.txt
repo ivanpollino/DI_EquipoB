@@ -64,3 +64,5 @@ C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formular
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.pdb
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.Formularios.Login.resources
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.Formularios.Landing.resources
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.Formularios.Landing.resources
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.Formularios.Login.resources
