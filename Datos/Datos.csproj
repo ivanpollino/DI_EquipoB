@@ -60,9 +60,6 @@
     <Compile Include="Infrastructure\Administrador.cs">
       <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\Empleado.cs">
-      <DependentUpon>equipob.tt</DependentUpon>
-    </Compile>
     <Compile Include="Infrastructure\equipob.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -79,12 +76,6 @@
       <DependentUpon>equipob.edmx</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Monitor.cs">
-      <DependentUpon>equipob.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\pruebaTabla.cs">
-      <DependentUpon>equipob.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\sysdiagrams.cs">
       <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario.cs">

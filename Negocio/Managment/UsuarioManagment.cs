@@ -4,6 +4,7 @@ using Negocio.EntitiesDTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -73,34 +74,38 @@ namespace Negocio.Managment
             }
 
         }
-
-        private string cifrar(string contrasena)
+        /// <summary>
+        /// Cifrars the specified contrasena.
+        /// </summary>
+        /// <param name="contrasena">The contrasena.</param>
+        /// <returns></returns>
+        public string cifrar(string contrasena)
         {
-            const int claveSecreta = 12345;
-            StringBuilder cifrado = new StringBuilder();
-
-            for (int i = 0; i < contrasena.Length; i++)
+            // Utilizamos SHA256 para el hash
+            using (SHA256 sha256 = SHA256.Create())
             {
-                int asciiValue = (int)contrasena[i];
+                // Convertimos la contraseña a un array de bytes
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(contrasena));
 
-                int valorCifrado = asciiValue * (i + 1);
-                valorCifrado = valorCifrado ^ claveSecreta;
-                valorCifrado += (i * 17);
+                // Convertimos los bytes a una representación hexadecimal
+                StringBuilder hashString = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    hashString.Append(bytes[i].ToString("X2"));
+                }
 
-                cifrado.Append(valorCifrado.ToString("X").PadLeft(2, '0').Substring(0, 2));
+                // Limitamos la longitud a 30 caracteres
+                string resultado = hashString.ToString();
+                if (resultado.Length > 30)
+                {
+                    resultado = resultado.Substring(0, 30);
+                }
+
+                return resultado;
             }
-
-            string resultado = cifrado.ToString();
-
-            if (resultado.Length > 30)
-            {
-                resultado = resultado.Substring(0, 30);
-            }
-
-            return resultado;
         }
 
-        public UsuarioDTO comprobarLogin(String email, String pass)
+            public UsuarioDTO comprobarLogin(String email, String pass)
         {
             pass = cifrar(pass);
             Datos.Repositorys.UsuarioRepository datos = new Datos.Repositorys.UsuarioRepository();

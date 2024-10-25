@@ -14,7 +14,7 @@ namespace Datos.Repositorys
 
         public String altaUsuario(Usuario usuario)
         {
-                using (var contexto = new equipobEntitiesBueno())
+                using (var contexto = new equipobEntities())
                 {
                     contexto.Usuario.Add(usuario);
                     contexto.SaveChanges();
@@ -29,7 +29,7 @@ namespace Datos.Repositorys
             try
             {
                 //Abrir la BD
-                using (var contexto = new equipobEntitiesBueno())
+                using (var contexto = new equipobEntities())
                 {
                     usuarios = contexto.Usuario.ToList();
                 }

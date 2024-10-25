@@ -23,40 +23,11 @@
     </Key>
     <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
-  <EntityType Name="Empleado">
-    <Key>
-      <PropertyRef Name="DNI" />
-    </Key>
-    <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="Apellidos" Type="varchar" MaxLength="60" Nullable="false" />
-    <Property Name="Telefono" Type="int" />
-    <Property Name="Direccion" Type="varchar" MaxLength="60" />
-    <Property Name="Cuenta_Corriente" Type="varchar" MaxLength="1" Nullable="false" />
-  </EntityType>
   <EntityType Name="Monitor">
     <Key>
       <PropertyRef Name="DNI" />
     </Key>
     <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
-  </EntityType>
-  <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'equipob.dbo.pruebaTabla' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
-  <EntityType Name="pruebaTabla">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="nchar" MaxLength="10" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
@@ -69,7 +40,7 @@ advertencia 6002: La tabla o vista 'equipob.dbo.pruebaTabla' no tiene definida n
     <Property Name="Direccion" Type="varchar" MaxLength="60" />
     <Property Name="Cuenta_Corriente" Type="varchar" MaxLength="60" Nullable="false" />
     <Property Name="Email" Type="varchar" MaxLength="60" Nullable="false" />
-    <Property Name="Passwd" Type="varchar" MaxLength="30" />
+    <Property Name="Passwd" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="Ususario_Normal">
     <Key>
@@ -166,16 +137,9 @@ advertencia 6002: La tabla o vista 'equipob.dbo.pruebaTabla' no tiene definida n
     <EntitySet Name="Actividad" EntityType="Self.Actividad" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Actividades" EntityType="Self.Actividades" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Administrador" EntityType="Self.Administrador" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Monitor" EntityType="Self.Monitor" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ususario_Normal" EntityType="Self.Ususario_Normal" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="pruebaTabla" EntityType="Self.pruebaTabla" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [pruebaTabla].[id] AS [id]
-    FROM [dbo].[pruebaTabla] AS [pruebaTabla]</DefiningQuery>
-    </EntitySet>
     <AssociationSet Name="FK_Actividad_Monitor" Association="Self.FK_Actividad_Monitor">
       <End Role="Monitor" EntitySet="Monitor" />
       <End Role="Actividad" EntitySet="Actividad" />
