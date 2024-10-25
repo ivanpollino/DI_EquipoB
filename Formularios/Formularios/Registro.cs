@@ -114,9 +114,12 @@ namespace Formularios.Formularios
 
                 MessageBox.Show(mensaje);
 
-                this.Hide();
-                Login loginForm = new Login();
-                loginForm.ShowDialog();
+                if (mensaje!= "Ya hay un usuario registrado con ese email" && mensaje!= "Ya hay un usuario registrado con ese dni")
+                {
+                    this.Hide();
+                    Login loginForm = new Login();
+                    loginForm.ShowDialog();
+                }
 
             }
             else

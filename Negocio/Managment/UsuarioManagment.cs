@@ -94,13 +94,7 @@ namespace Negocio.Managment
                     hashString.Append(bytes[i].ToString("X2"));
                 }
 
-                // Limitamos la longitud a 30 caracteres
                 string resultado = hashString.ToString();
-                if (resultado.Length > 30)
-                {
-                    resultado = resultado.Substring(0, 30);
-                }
-
                 return resultado;
             }
         }

@@ -34,7 +34,7 @@ namespace Formularios.Formularios
             {
                 // Si está logeado mostramos el nombre de la base de datos
                 lbInfoUsuario.Visible = true;
-                lbInfoUsuario.Text = $"Usuario: {databaseName}";
+                lbInfoUsuario.Text = $"Usuario: " + usuario.Nombre;
             }
             else
             {
@@ -53,6 +53,9 @@ namespace Formularios.Formularios
         {
             Login loginForm = new Login(); // Abrir formulario de login
             loginForm.ShowDialog();
+            usuario = loginForm.UsuarioAutenticado;
+            logeado = true;
+            cargarHeader();
         }
 
         private void lbLinkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

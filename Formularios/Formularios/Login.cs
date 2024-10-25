@@ -14,6 +14,7 @@ namespace Formularios.Formularios
 {
     public partial class Login : Form
     {
+        public UsuarioDTO UsuarioAutenticado { get; private set; }
         public Login()
         {
             InitializeComponent();
@@ -28,6 +29,8 @@ namespace Formularios.Formularios
             if (usuario != null)
             {
                 MessageBox.Show("Inicio de sesion correcto");
+                UsuarioAutenticado = usuario;
+                this.Hide();
             }
             else
             {
@@ -74,5 +77,6 @@ namespace Formularios.Formularios
             // Evento Click del botón
             this.BTNLogin.Click += new System.EventHandler(this.BTNLogin_Click);
         }
+
     }
 }
