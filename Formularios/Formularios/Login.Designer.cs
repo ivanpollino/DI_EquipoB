@@ -98,7 +98,7 @@ namespace Formularios.Formularios
             this.LBLEmail.Name = "LBLEmail";
             this.LBLEmail.Size = new System.Drawing.Size(91, 13);
             this.LBLEmail.TabIndex = 1;
-            this.LBLEmail.Text = "CorreoElectronico";
+            this.LBLEmail.Text = "Correo Electronico";
             // 
             // LBLTitulo
             // 
