@@ -86,11 +86,17 @@ namespace Formularios.Formularios
             if (TXTBPass.PasswordChar == '\0')
             {
                 TXTBPass.PasswordChar = '*';
+                
             }
             else
             {               
                 TXTBPass.PasswordChar = '\0';
             }
+        }
+
+        private void BTNLogin_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,6 +30,7 @@ namespace Formularios.Formularios
             TXTBNombre.TextChanged += new EventHandler(ComprobarTextBox);
             TXTBCCC.TextChanged += new EventHandler(ComprobarTextBox);
             TXTBApellidos.TextChanged += new EventHandler(ComprobarTextBox);
+            TXTBRepetirContra.TextChanged += new EventHandler(ComprobarTextBox);
         }
 
 
@@ -43,6 +44,7 @@ namespace Formularios.Formularios
             TXTBEmail.Text = String.Empty;
             TXTBTelefono.Text = String.Empty;
             TXTBDireccion.Text = String.Empty;
+            TXTBRepetirContra.Text = String.Empty;
         }
 
         private void ComprobarTextBox(object sender, EventArgs e)
@@ -53,12 +55,14 @@ namespace Formularios.Formularios
             String dni = TXTBDNI.Text;
             String apellidos = TXTBApellidos.Text;
             String ccc = TXTBCCC.Text;
+            String repeContra = TXTBRepetirContra.Text;
 
 
 
             if (!string.IsNullOrWhiteSpace(contraseña) && !string.IsNullOrWhiteSpace(nombre) && 
                 !string.IsNullOrWhiteSpace(correo) && !string.IsNullOrWhiteSpace(dni) && 
-                !string.IsNullOrWhiteSpace(apellidos) && !string.IsNullOrWhiteSpace(ccc))
+                !string.IsNullOrWhiteSpace(apellidos) && !string.IsNullOrWhiteSpace(ccc) &&
+                !string.IsNullOrWhiteSpace(repeContra) && comprobarContraseñaRepetida())
             {
                 BTNRegistrar.Enabled = true;
             }
@@ -133,6 +137,22 @@ namespace Formularios.Formularios
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private bool comprobarContraseñaRepetida()
+        {
+            String contraseña = TXTBContrasena.Text;
+            String contraseñaRepe = TXTBRepetirContra.Text;
+            if (contraseña == contraseñaRepe)
+            {
+                LBLAvisoContraRepetida.Text = "";
+                return true;
+            }
+            else
+            {
+                LBLAvisoContraRepetida.Text = "Las contraseñas no coinciden";
+                return false;
             }
         }
     }
