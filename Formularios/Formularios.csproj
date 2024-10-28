@@ -136,6 +136,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\contraNoVisible.ico" />
     <Content Include="Resources\contraNoVisible.png" />
     <Content Include="Resources\contraVisible.png" />
   </ItemGroup>

@@ -63,7 +63,7 @@ namespace Formularios.Formularios
             // 
             // BTNAlternarContrasena
             // 
-            this.BTNAlternarContrasena.Image = global::Formularios.Properties.Resources.contraNoVisible;
+            this.BTNAlternarContrasena.Image = global::Formularios.Properties.Resources.contraVisible;
             this.BTNAlternarContrasena.Location = new System.Drawing.Point(281, 179);
             this.BTNAlternarContrasena.Name = "BTNAlternarContrasena";
             this.BTNAlternarContrasena.Size = new System.Drawing.Size(27, 23);

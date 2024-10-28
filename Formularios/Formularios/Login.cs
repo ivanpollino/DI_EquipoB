@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -86,10 +87,13 @@ namespace Formularios.Formularios
             if (TXTBPass.PasswordChar == '\0')
             {
                 TXTBPass.PasswordChar = '*';
+                BTNAlternarContrasena.Image = Properties.Resources.contraVisible;
             }
             else
             {               
                 TXTBPass.PasswordChar = '\0';
+                BTNAlternarContrasena.Image = Properties.Resources.contraNoVisible;
+
             }
         }
     }
