@@ -30,7 +30,7 @@ namespace Formularios.Formularios
             TXTBNombre.TextChanged += new EventHandler(ComprobarTextBox);
             TXTBCCC.TextChanged += new EventHandler(ComprobarTextBox);
             TXTBApellidos.TextChanged += new EventHandler(ComprobarTextBox);
-            TXTBRepetirContra.TextChanged += new EventHandler(ComprobarTextBox);
+            TXTBRepetirContra.TextChanged += new EventHandler(comprobarContraseñaRepetida);
         }
 
 
@@ -62,7 +62,7 @@ namespace Formularios.Formularios
             if (!string.IsNullOrWhiteSpace(contraseña) && !string.IsNullOrWhiteSpace(nombre) && 
                 !string.IsNullOrWhiteSpace(correo) && !string.IsNullOrWhiteSpace(dni) && 
                 !string.IsNullOrWhiteSpace(apellidos) && !string.IsNullOrWhiteSpace(ccc) &&
-                !string.IsNullOrWhiteSpace(repeContra) && comprobarContraseñaRepetida())
+                !string.IsNullOrWhiteSpace(repeContra))
             {
                 BTNRegistrar.Enabled = true;
             }
@@ -140,19 +140,19 @@ namespace Formularios.Formularios
             }
         }
 
-        private bool comprobarContraseñaRepetida()
+        private void comprobarContraseñaRepetida(object sender, EventArgs e)
         {
             String contraseña = TXTBContrasena.Text;
             String contraseñaRepe = TXTBRepetirContra.Text;
             if (contraseña == contraseñaRepe)
             {
                 LBLAvisoContraRepetida.Text = "";
-                return true;
+               
             }
             else
             {
                 LBLAvisoContraRepetida.Text = "Las contraseñas no coinciden";
-                return false;
+               
             }
         }
     }
