@@ -63,6 +63,7 @@ namespace Formularios.Formularios
             // 
             // BTNAlternarContrasena
             // 
+            this.BTNAlternarContrasena.Image = global::Formularios.Properties.Resources.contraVisible;
             this.BTNAlternarContrasena.Location = new System.Drawing.Point(281, 179);
             this.BTNAlternarContrasena.Name = "BTNAlternarContrasena";
             this.BTNAlternarContrasena.Size = new System.Drawing.Size(27, 23);
@@ -73,11 +74,10 @@ namespace Formularios.Formularios
             // BTNLogin
             // 
             this.BTNLogin.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.BTNLogin.Location = new System.Drawing.Point(200, 230);
+            this.BTNLogin.Location = new System.Drawing.Point(0, 0);
             this.BTNLogin.Name = "BTNLogin";
             this.BTNLogin.Size = new System.Drawing.Size(75, 23);
             this.BTNLogin.TabIndex = 0;
-            this.BTNLogin.Click += new System.EventHandler(this.BTNLogin_Click_1);
             // 
             // TXTBPass
             // 
