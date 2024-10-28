@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="equipobModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Actividad">
+    <Key>
+      <PropertyRef Name="Id_Actividad" />
+    </Key>
+    <Property Name="Id_Actividad" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Monitor" Relationship="Self.FK_Actividad_Monitor" FromRole="Actividad" ToRole="Monitor" />
+    <NavigationProperty Name="Actividades" Relationship="Self.FK_Actividades_Actividad" FromRole="Actividad" ToRole="Actividades" />
+    <NavigationProperty Name="Ususario_Normal" Relationship="Self.FK_Usuario_Actividad" FromRole="Actividad" ToRole="Ususario_Normal" />
+  </EntityType>
+  <EntityType Name="Actividades">
+    <Key>
+      <PropertyRef Name="Id_Actividad" />
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="Id_Actividad" Type="Int32" Nullable="false" />
+    <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valoracion" Type="Byte" />
+    <NavigationProperty Name="Actividad" Relationship="Self.FK_Actividades_Actividad" FromRole="Actividades" ToRole="Actividad" />
+    <NavigationProperty Name="Ususario_Normal" Relationship="Self.FK_Actividades_UsuarioNormal" FromRole="Actividades" ToRole="Ususario_Normal" />
+  </EntityType>
+  <EntityType Name="Administrador">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Administrador" FromRole="Administrador" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Monitor">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Actividad" Relationship="Self.FK_Actividad_Monitor" FromRole="Monitor" ToRole="Actividad" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Monitor" FromRole="Monitor" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefono" Type="Int32" />
+    <Property Name="Direccion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Cuenta_Corriente" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Passwd" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Administrador" Relationship="Self.FK_Usuario_Administrador" FromRole="Usuario" ToRole="Administrador" />
+    <NavigationProperty Name="Monitor" Relationship="Self.FK_Usuario_Monitor" FromRole="Usuario" ToRole="Monitor" />
+    <NavigationProperty Name="Ususario_Normal" Relationship="Self.FK_Usuario_UsuarioNormal" FromRole="Usuario" ToRole="Ususario_Normal" />
+  </EntityType>
+  <EntityType Name="Ususario_Normal">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Id_Actividad" Type="Int32" />
+    <NavigationProperty Name="Actividad" Relationship="Self.FK_Usuario_Actividad" FromRole="Ususario_Normal" ToRole="Actividad" />
+    <NavigationProperty Name="Actividades" Relationship="Self.FK_Actividades_UsuarioNormal" FromRole="Ususario_Normal" ToRole="Actividades" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_UsuarioNormal" FromRole="Ususario_Normal" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="FK_Actividad_Monitor">
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="0..1" />
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Monitor">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Actividad">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Actividades_Actividad">
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="1" />
+    <End Role="Actividades" Type="Self.Actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actividad">
+        <PropertyRef Name="Id_Actividad" />
+      </Principal>
+      <Dependent Role="Actividades">
+        <PropertyRef Name="Id_Actividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Actividad">
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="0..1" />
+    <End Role="Ususario_Normal" Type="Self.Ususario_Normal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actividad">
+        <PropertyRef Name="Id_Actividad" />
+      </Principal>
+      <Dependent Role="Ususario_Normal">
+        <PropertyRef Name="Id_Actividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Actividades_UsuarioNormal">
+    <End Role="Ususario_Normal" Type="Self.Ususario_Normal" Multiplicity="1" />
+    <End Role="Actividades" Type="Self.Actividades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ususario_Normal">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Actividades">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Administrador">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Administrador" Type="Self.Administrador" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Administrador">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Monitor">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Monitor">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_UsuarioNormal">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Ususario_Normal" Type="Self.Ususario_Normal" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Ususario_Normal">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="equipobEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Actividad" EntityType="Self.Actividad" />
+    <EntitySet Name="Actividades" EntityType="Self.Actividades" />
+    <EntitySet Name="Administrador" EntityType="Self.Administrador" />
+    <EntitySet Name="Monitor" EntityType="Self.Monitor" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="Ususario_Normal" EntityType="Self.Ususario_Normal" />
+    <AssociationSet Name="FK_Actividad_Monitor" Association="Self.FK_Actividad_Monitor">
+      <End Role="Monitor" EntitySet="Monitor" />
+      <End Role="Actividad" EntitySet="Actividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Actividades_Actividad" Association="Self.FK_Actividades_Actividad">
+      <End Role="Actividad" EntitySet="Actividad" />
+      <End Role="Actividades" EntitySet="Actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Actividad" Association="Self.FK_Usuario_Actividad">
+      <End Role="Actividad" EntitySet="Actividad" />
+      <End Role="Ususario_Normal" EntitySet="Ususario_Normal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Actividades_UsuarioNormal" Association="Self.FK_Actividades_UsuarioNormal">
+      <End Role="Ususario_Normal" EntitySet="Ususario_Normal" />
+      <End Role="Actividades" EntitySet="Actividades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Administrador" Association="Self.FK_Usuario_Administrador">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Administrador" EntitySet="Administrador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Monitor" Association="Self.FK_Usuario_Monitor">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Monitor" EntitySet="Monitor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_UsuarioNormal" Association="Self.FK_Usuario_UsuarioNormal">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Ususario_Normal" EntitySet="Ususario_Normal" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
