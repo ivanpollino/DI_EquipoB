@@ -47,15 +47,26 @@ namespace Formularios.Formularios
         {
             Registro registroForm = new Registro();
             registroForm.ShowDialog();
+            if (registroForm.registroCorrecto)
+            {
+                btLogin_Click(sender, e);
+            }
         }
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            Login loginForm = new Login(); // Abrir formulario de login
+            Login loginForm = new Login(); 
             loginForm.ShowDialog();
-            usuario = loginForm.UsuarioAutenticado;
-            logeado = true;
-            cargarHeader();
+            if (loginForm.UsuarioAutenticado != null)
+            {
+                usuario = loginForm.UsuarioAutenticado;
+                logeado = true;
+                cargarHeader();
+            }
+            else
+            {
+                logeado = false;
+            }
         }
 
         private void lbLinkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

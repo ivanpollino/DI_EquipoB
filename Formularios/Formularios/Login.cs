@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,8 @@ namespace Formularios.Formularios
 {
     public partial class Login : Form
     {
-        public UsuarioDTO UsuarioAutenticado { get; private set; }
+        private bool mostrarContrasena = false;
+        public UsuarioDTO UsuarioAutenticado { get; set; }
         public Login()
         {
             InitializeComponent();
@@ -30,7 +32,8 @@ namespace Formularios.Formularios
             {
                 MessageBox.Show("Inicio de sesion correcto");
                 UsuarioAutenticado = usuario;
-                this.Hide();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             else
             {
@@ -78,5 +81,16 @@ namespace Formularios.Formularios
             this.BTNLogin.Click += new System.EventHandler(this.BTNLogin_Click);
         }
 
+        private void BTNAlternarContrasena_Click(object sender, EventArgs e)
+        {
+            if (TXTBPass.PasswordChar == '\0')
+            {
+                TXTBPass.PasswordChar = '*';
+            }
+            else
+            {               
+                TXTBPass.PasswordChar = '\0';
+            }
+        }
     }
 }

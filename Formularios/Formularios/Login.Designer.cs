@@ -34,6 +34,7 @@ namespace Formularios.Formularios
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelDerecho = new System.Windows.Forms.Panel();
+            this.BTNAlternarContrasena = new System.Windows.Forms.Button();
             this.BTNLogin = new System.Windows.Forms.Button();
             this.TXTBPass = new System.Windows.Forms.TextBox();
             this.LBLPass = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@ namespace Formularios.Formularios
             // panelDerecho
             // 
             this.panelDerecho.BackColor = System.Drawing.Color.White;
+            this.panelDerecho.Controls.Add(this.BTNAlternarContrasena);
             this.panelDerecho.Controls.Add(this.BTNLogin);
             this.panelDerecho.Controls.Add(this.TXTBPass);
             this.panelDerecho.Controls.Add(this.LBLPass);
@@ -58,6 +60,16 @@ namespace Formularios.Formularios
             this.panelDerecho.Name = "panelDerecho";
             this.panelDerecho.Size = new System.Drawing.Size(351, 311);
             this.panelDerecho.TabIndex = 0;
+            // 
+            // BTNAlternarContrasena
+            // 
+            this.BTNAlternarContrasena.Image = global::Formularios.Properties.Resources.contraNoVisible;
+            this.BTNAlternarContrasena.Location = new System.Drawing.Point(281, 179);
+            this.BTNAlternarContrasena.Name = "BTNAlternarContrasena";
+            this.BTNAlternarContrasena.Size = new System.Drawing.Size(27, 23);
+            this.BTNAlternarContrasena.TabIndex = 5;
+            this.BTNAlternarContrasena.UseVisualStyleBackColor = true;
+            this.BTNAlternarContrasena.Click += new System.EventHandler(this.BTNAlternarContrasena_Click);
             // 
             // BTNLogin
             // 
@@ -144,5 +156,6 @@ namespace Formularios.Formularios
         private Label LBLPass;
         private TextBox TXTBEmail;
         private Label LBLEmail;
+        private Button BTNAlternarContrasena;
     }
 }

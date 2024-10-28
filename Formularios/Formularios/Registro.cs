@@ -17,6 +17,7 @@ namespace Formularios.Formularios
 {
     public partial class Registro : Form
     {
+        public bool registroCorrecto = false;
         private bool contraValida;
         public Registro()
         {
@@ -114,11 +115,11 @@ namespace Formularios.Formularios
 
                 MessageBox.Show(mensaje);
 
-                if (mensaje!= "Ya hay un usuario registrado con ese email" && mensaje!= "Ya hay un usuario registrado con ese dni")
+                if (mensaje!= "Ya hay un usuario registrado con ese email" && mensaje!= "Ya hay un usuario registrado con ese DNI")
                 {
-                    this.Hide();
-                    Login loginForm = new Login();
-                    loginForm.ShowDialog();
+                    registroCorrecto = true;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
                 }
 
             }
