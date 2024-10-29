@@ -168,3 +168,7 @@ E:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.csproj.CoreCompileI
 E:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formular.9034CDC0.Up2Date
 E:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.exe
 E:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.pdb
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Formularios\bin\Debug\Formularios.exe.manifest
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Formularios\bin\Debug\Formularios.application
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.exe.manifest
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.application

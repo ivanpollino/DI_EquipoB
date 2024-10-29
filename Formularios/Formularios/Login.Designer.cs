@@ -32,7 +32,6 @@ namespace Formularios.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelDerecho = new System.Windows.Forms.Panel();
             this.BTNAlternarContrasena = new System.Windows.Forms.Button();
             this.BTNLogin = new System.Windows.Forms.Button();
@@ -42,15 +41,14 @@ namespace Formularios.Formularios
             this.LBLEmail = new System.Windows.Forms.Label();
             this.LBLTitulo = new System.Windows.Forms.Label();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.LinkLoginLabel = new System.Windows.Forms.LinkLabel();
             this.panelDerecho.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDerecho
             // 
-            this.panelDerecho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDerecho.BackColor = System.Drawing.Color.White;
+            this.panelDerecho.Controls.Add(this.LinkLoginLabel);
             this.panelDerecho.Controls.Add(this.BTNAlternarContrasena);
             this.panelDerecho.Controls.Add(this.BTNLogin);
             this.panelDerecho.Controls.Add(this.TXTBPass);
@@ -58,6 +56,7 @@ namespace Formularios.Formularios
             this.panelDerecho.Controls.Add(this.TXTBEmail);
             this.panelDerecho.Controls.Add(this.LBLEmail);
             this.panelDerecho.Controls.Add(this.LBLTitulo);
+            this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelDerecho.Location = new System.Drawing.Point(434, 0);
             this.panelDerecho.Name = "panelDerecho";
             this.panelDerecho.Size = new System.Drawing.Size(450, 461);
@@ -81,7 +80,6 @@ namespace Formularios.Formularios
             this.BTNLogin.Name = "BTNLogin";
             this.BTNLogin.Size = new System.Drawing.Size(75, 23);
             this.BTNLogin.TabIndex = 0;
-            this.BTNLogin.Click += new System.EventHandler(this.BTNLogin_Click_1);
             // 
             // TXTBPass
             // 
@@ -91,7 +89,6 @@ namespace Formularios.Formularios
             this.TXTBPass.PasswordChar = '*';
             this.TXTBPass.Size = new System.Drawing.Size(321, 32);
             this.TXTBPass.TabIndex = 4;
-            this.TXTBPass.TextChanged += new System.EventHandler(this.TXTBPass_TextChanged);
             // 
             // LBLPass
             // 
@@ -133,16 +130,26 @@ namespace Formularios.Formularios
             // 
             // panelIzquierdo
             // 
-            this.panelIzquierdo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelIzquierdo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelIzquierdo.BackgroundImage")));
+            this.panelIzquierdo.BackgroundImage = global::Formularios.Properties.Resources.gym;
             this.panelIzquierdo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
             this.panelIzquierdo.Size = new System.Drawing.Size(435, 461);
             this.panelIzquierdo.TabIndex = 1;
             this.panelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIzquierdo_Paint);
+            // 
+            // LinkLoginLabel
+            // 
+            this.LinkLoginLabel.AutoSize = true;
+            this.LinkLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLoginLabel.Location = new System.Drawing.Point(150, 399);
+            this.LinkLoginLabel.Name = "LinkLoginLabel";
+            this.LinkLoginLabel.Size = new System.Drawing.Size(225, 20);
+            this.LinkLoginLabel.TabIndex = 7;
+            this.LinkLoginLabel.TabStop = true;
+            this.LinkLoginLabel.Text = "¿No tienes cuenta? Regístrate";
+            this.LinkLoginLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLoginLabel_LinkClicked);
             // 
             // Login
             // 
@@ -151,10 +158,8 @@ namespace Formularios.Formularios
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.panelDerecho);
             this.Controls.Add(this.panelIzquierdo);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(900, 500);
-            this.MinimumSize = new System.Drawing.Size(900, 500);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panelDerecho.ResumeLayout(false);
@@ -173,5 +178,6 @@ namespace Formularios.Formularios
         private TextBox TXTBEmail;
         private Label LBLEmail;
         private Button BTNAlternarContrasena;
+        private LinkLabel LinkLoginLabel;
     }
 }

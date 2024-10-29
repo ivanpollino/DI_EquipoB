@@ -81,7 +81,7 @@ namespace Formularios.Formularios
             // Evento Click del botón
             this.BTNLogin.Click += new System.EventHandler(this.BTNLogin_Click);
         }
-        
+
         private void BTNAlternarContrasena_Click(object sender, EventArgs e)
         {
             if (TXTBPass.PasswordChar == '\0')
@@ -102,7 +102,7 @@ namespace Formularios.Formularios
 
         }
 
-        private void BTNLogin_Click_1(object sender, EventArgs e)
+        private void panelDerecho_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -112,14 +112,19 @@ namespace Formularios.Formularios
 
         }
 
-        private void panelDerecho_Paint(object sender, PaintEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void TXTBPass_TextChanged(object sender, EventArgs e)
+        private void LinkLoginLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
 
+            Registro RegistroForm = new Registro();
+            RegistroForm.ShowDialog();
+
+            this.Close();
         }
     }
 }
