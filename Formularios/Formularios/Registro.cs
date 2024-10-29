@@ -155,5 +155,35 @@ namespace Formularios.Formularios
                
             }
         }
+
+        private void BTNVerContraNormal_Click(object sender, EventArgs e)
+        {
+            if (TXTBContrasena.PasswordChar == '\0')
+            {
+                TXTBContrasena.PasswordChar = '*';
+                BTNVerContraNormal.Image = Properties.Resources.contraVisible;
+            }
+            else
+            {
+                TXTBContrasena.PasswordChar = '\0';
+                BTNVerContraNormal.Image = Properties.Resources.contraNoVisible;
+
+            }
+        }
+
+        private void BTNVerContraRepe_Click(object sender, EventArgs e)
+        {
+            if (TXTBRepetirContra.PasswordChar == '\0')
+            {
+                TXTBRepetirContra.PasswordChar = '*';
+                BTNVerContraRepe.Image = Properties.Resources.contraVisible;
+            }
+            else
+            {
+                TXTBRepetirContra.PasswordChar = '\0';
+                BTNVerContraRepe.Image = Properties.Resources.contraNoVisible;
+
+            }
+        }
     }
 }

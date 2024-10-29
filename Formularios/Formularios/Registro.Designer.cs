@@ -56,6 +56,8 @@ namespace Formularios.Formularios
             this.TXTBRepetirContra = new System.Windows.Forms.TextBox();
             this.LBLConfirmarContrasena = new System.Windows.Forms.Label();
             this.TXTBRepetirContrasena = new System.Windows.Forms.Panel();
+            this.BTNVerContraNormal = new System.Windows.Forms.Button();
+            this.BTNVerContraRepe = new System.Windows.Forms.Button();
             this.panelIzquierdo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -239,6 +241,8 @@ namespace Formularios.Formularios
             // 
             // panelIzquierdo
             // 
+            this.panelIzquierdo.Controls.Add(this.BTNVerContraRepe);
+            this.panelIzquierdo.Controls.Add(this.BTNVerContraNormal);
             this.panelIzquierdo.Controls.Add(this.LBLAvisoContraRepetida);
             this.panelIzquierdo.Controls.Add(this.LBLAvisoContrasena);
             this.panelIzquierdo.Controls.Add(this.TXTBRepetirContra);
@@ -300,6 +304,27 @@ namespace Formularios.Formularios
             this.TXTBRepetirContrasena.Size = new System.Drawing.Size(450, 500);
             this.TXTBRepetirContrasena.TabIndex = 21;
             // 
+            // BTNVerContraNormal
+            // 
+            this.BTNVerContraNormal.AutoEllipsis = true;
+            this.BTNVerContraNormal.Image = global::Formularios.Properties.Resources.contraVisible;
+            this.BTNVerContraNormal.Location = new System.Drawing.Point(273, 329);
+            this.BTNVerContraNormal.Name = "BTNVerContraNormal";
+            this.BTNVerContraNormal.Size = new System.Drawing.Size(27, 23);
+            this.BTNVerContraNormal.TabIndex = 22;
+            this.BTNVerContraNormal.UseVisualStyleBackColor = true;
+            this.BTNVerContraNormal.Click += new System.EventHandler(this.BTNVerContraNormal_Click);
+            // 
+            // BTNVerContraRepe
+            // 
+            this.BTNVerContraRepe.Image = global::Formularios.Properties.Resources.contraVisible;
+            this.BTNVerContraRepe.Location = new System.Drawing.Point(273, 385);
+            this.BTNVerContraRepe.Name = "BTNVerContraRepe";
+            this.BTNVerContraRepe.Size = new System.Drawing.Size(27, 23);
+            this.BTNVerContraRepe.TabIndex = 23;
+            this.BTNVerContraRepe.UseVisualStyleBackColor = true;
+            this.BTNVerContraRepe.Click += new System.EventHandler(this.BTNVerContraRepe_Click);
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,5 +367,7 @@ namespace Formularios.Formularios
         private System.Windows.Forms.TextBox TXTBRepetirContra;
         private System.Windows.Forms.Label LBLConfirmarContrasena;
         private System.Windows.Forms.Label LBLAvisoContraRepetida;
+        private System.Windows.Forms.Button BTNVerContraNormal;
+        private System.Windows.Forms.Button BTNVerContraRepe;
     }
 }
