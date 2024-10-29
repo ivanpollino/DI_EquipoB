@@ -205,7 +205,7 @@ namespace Formularios.Formularios
             // 
             // BTNRegistrar
             // 
-            this.BTNRegistrar.Location = new System.Drawing.Point(44, 438);
+            this.BTNRegistrar.Location = new System.Drawing.Point(41, 427);
             this.BTNRegistrar.Name = "BTNRegistrar";
             this.BTNRegistrar.Size = new System.Drawing.Size(84, 23);
             this.BTNRegistrar.TabIndex = 19;
@@ -215,7 +215,7 @@ namespace Formularios.Formularios
             // 
             // BTNBorrarForm
             // 
-            this.BTNBorrarForm.Location = new System.Drawing.Point(311, 438);
+            this.BTNBorrarForm.Location = new System.Drawing.Point(311, 426);
             this.BTNBorrarForm.Name = "BTNBorrarForm";
             this.BTNBorrarForm.Size = new System.Drawing.Size(80, 23);
             this.BTNBorrarForm.TabIndex = 20;
@@ -265,9 +265,9 @@ namespace Formularios.Formularios
             this.panelIzquierdo.Controls.Add(this.LBLCCC);
             this.panelIzquierdo.Controls.Add(this.LBLDireccion);
             this.panelIzquierdo.Controls.Add(this.TXTBDireccion);
-            this.panelIzquierdo.Location = new System.Drawing.Point(2, 0);
+            this.panelIzquierdo.Location = new System.Drawing.Point(-2, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(450, 500);
+            this.panelIzquierdo.Size = new System.Drawing.Size(454, 461);
             this.panelIzquierdo.TabIndex = 20;
             // 
             // LBLAvisoContraRepetida
@@ -301,7 +301,7 @@ namespace Formularios.Formularios
             // 
             this.TXTBRepetirContrasena.Location = new System.Drawing.Point(450, 0);
             this.TXTBRepetirContrasena.Name = "TXTBRepetirContrasena";
-            this.TXTBRepetirContrasena.Size = new System.Drawing.Size(450, 500);
+            this.TXTBRepetirContrasena.Size = new System.Drawing.Size(433, 461);
             this.TXTBRepetirContrasena.TabIndex = 21;
             // 
             // BTNVerContraNormal
@@ -329,7 +329,7 @@ namespace Formularios.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 500);
+            this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.panelIzquierdo);
             this.Controls.Add(this.TXTBRepetirContrasena);
             this.Name = "Registro";
