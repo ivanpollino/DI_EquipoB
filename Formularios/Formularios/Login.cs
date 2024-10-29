@@ -101,5 +101,30 @@ namespace Formularios.Formularios
         {
 
         }
+
+        private void panelDerecho_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelIzquierdo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LinkLoginLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+
+            Registro RegistroForm = new Registro();
+            RegistroForm.ShowDialog();
+
+            this.Close();
+        }
     }
 }

@@ -80,11 +80,13 @@ namespace Formularios.Formularios
             {
                 contraValida = false;
                 LBLAvisoContrasena.Text = "La contraseña no cumple los requisitos";
+                BTNRegistrar.Enabled = false ;
             }
             else
             {
                 contraValida = true;
                 LBLAvisoContrasena.Text = "";
+                BTNRegistrar.Enabled = true;
             }
         }
 
@@ -147,12 +149,14 @@ namespace Formularios.Formularios
             if (contraseña == contraseñaRepe)
             {
                 LBLAvisoContraRepetida.Text = "";
+                BTNRegistrar.Enabled = true;
                
             }
             else
             {
                 LBLAvisoContraRepetida.Text = "Las contraseñas no coinciden";
-               
+                BTNRegistrar.Enabled = false;
+
             }
         }
 

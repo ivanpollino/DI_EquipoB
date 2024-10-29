@@ -32,7 +32,6 @@ namespace Formularios.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelDerecho = new System.Windows.Forms.Panel();
             this.BTNAlternarContrasena = new System.Windows.Forms.Button();
             this.BTNLogin = new System.Windows.Forms.Button();
@@ -42,12 +41,14 @@ namespace Formularios.Formularios
             this.LBLEmail = new System.Windows.Forms.Label();
             this.LBLTitulo = new System.Windows.Forms.Label();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.LinkLoginLabel = new System.Windows.Forms.LinkLabel();
             this.panelDerecho.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDerecho
             // 
             this.panelDerecho.BackColor = System.Drawing.Color.White;
+            this.panelDerecho.Controls.Add(this.LinkLoginLabel);
             this.panelDerecho.Controls.Add(this.BTNAlternarContrasena);
             this.panelDerecho.Controls.Add(this.BTNLogin);
             this.panelDerecho.Controls.Add(this.TXTBPass);
@@ -60,6 +61,7 @@ namespace Formularios.Formularios
             this.panelDerecho.Name = "panelDerecho";
             this.panelDerecho.Size = new System.Drawing.Size(450, 461);
             this.panelDerecho.TabIndex = 0;
+            this.panelDerecho.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDerecho_Paint);
             // 
             // BTNAlternarContrasena
             // 
@@ -128,13 +130,26 @@ namespace Formularios.Formularios
             // 
             // panelIzquierdo
             // 
-            this.panelIzquierdo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelIzquierdo.BackgroundImage")));
+            this.panelIzquierdo.BackgroundImage = global::Formularios.Properties.Resources.gym;
             this.panelIzquierdo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
             this.panelIzquierdo.Size = new System.Drawing.Size(435, 461);
             this.panelIzquierdo.TabIndex = 1;
+            this.panelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIzquierdo_Paint);
+            // 
+            // LinkLoginLabel
+            // 
+            this.LinkLoginLabel.AutoSize = true;
+            this.LinkLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLoginLabel.Location = new System.Drawing.Point(150, 399);
+            this.LinkLoginLabel.Name = "LinkLoginLabel";
+            this.LinkLoginLabel.Size = new System.Drawing.Size(225, 20);
+            this.LinkLoginLabel.TabIndex = 7;
+            this.LinkLoginLabel.TabStop = true;
+            this.LinkLoginLabel.Text = "¿No tienes cuenta? Regístrate";
+            this.LinkLoginLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLoginLabel_LinkClicked);
             // 
             // Login
             // 
@@ -144,6 +159,7 @@ namespace Formularios.Formularios
             this.Controls.Add(this.panelDerecho);
             this.Controls.Add(this.panelIzquierdo);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panelDerecho.ResumeLayout(false);
@@ -162,5 +178,6 @@ namespace Formularios.Formularios
         private TextBox TXTBEmail;
         private Label LBLEmail;
         private Button BTNAlternarContrasena;
+        private LinkLabel LinkLoginLabel;
     }
 }
