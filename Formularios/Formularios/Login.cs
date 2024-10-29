@@ -46,8 +46,8 @@ namespace Formularios.Formularios
             // Configuraciones del botón
             this.BTNLogin.Enabled = false;
             this.BTNLogin.Text = "Login";
-            this.BTNLogin.Size = new Size(120, 35);
-            this.BTNLogin.Location = new Point(120, 220);
+            this.BTNLogin.Size = new Size(150, 45);
+            this.BTNLogin.Location = new Point(225,353);
             this.BTNLogin.BackColor = Color.RoyalBlue;
             this.BTNLogin.ForeColor = Color.White;
             this.BTNLogin.FlatStyle = FlatStyle.Flat;
@@ -95,6 +95,11 @@ namespace Formularios.Formularios
                 BTNAlternarContrasena.Image = Properties.Resources.contraNoVisible;
 
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
