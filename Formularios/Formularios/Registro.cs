@@ -57,18 +57,33 @@ namespace Formularios.Formularios
             String ccc = TXTBCCC.Text;
             String repeContra = TXTBRepetirContra.Text;
 
+            // Patrón para validar el correo electrónico
+            string patronCorreo = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
+            // Verificar si el correo es válido
+            bool correoValido = Regex.IsMatch(correo, patronCorreo);
 
-            if (!string.IsNullOrWhiteSpace(contraseña) && !string.IsNullOrWhiteSpace(nombre) && 
-                !string.IsNullOrWhiteSpace(correo) && !string.IsNullOrWhiteSpace(dni) && 
+            // Verificar que todos los campos no estén vacíos y que el correo sea válido
+            if (!string.IsNullOrWhiteSpace(contraseña) && !string.IsNullOrWhiteSpace(nombre) &&
+                !string.IsNullOrWhiteSpace(correo) && !string.IsNullOrWhiteSpace(dni) &&
                 !string.IsNullOrWhiteSpace(apellidos) && !string.IsNullOrWhiteSpace(ccc) &&
-                !string.IsNullOrWhiteSpace(repeContra))
+                !string.IsNullOrWhiteSpace(repeContra) && correoValido)
             {
                 BTNRegistrar.Enabled = true;
             }
             else
             {
                 BTNRegistrar.Enabled = false;
+            }
+
+            // Mostrar mensaje de error si el correo no es válido
+            if (!correoValido)
+            {
+                LBLAvisoCorreo.Text = "El correo electrónico no es válido";
+            }
+            else
+            {
+                LBLAvisoCorreo.Text = "";
             }
         }
 
@@ -184,6 +199,16 @@ namespace Formularios.Formularios
                 BTNVerContraRepe.Image = Properties.Resources.contraNoVisible;
 
             }
+        }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelIzquierdo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

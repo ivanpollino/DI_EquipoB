@@ -52,12 +52,13 @@ namespace Formularios.Formularios
             this.LBLAvisoContrasena = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.BTNVerContraRepe = new System.Windows.Forms.Button();
+            this.BTNVerContraNormal = new System.Windows.Forms.Button();
             this.LBLAvisoContraRepetida = new System.Windows.Forms.Label();
             this.TXTBRepetirContra = new System.Windows.Forms.TextBox();
             this.LBLConfirmarContrasena = new System.Windows.Forms.Label();
             this.TXTBRepetirContrasena = new System.Windows.Forms.Panel();
-            this.BTNVerContraNormal = new System.Windows.Forms.Button();
-            this.BTNVerContraRepe = new System.Windows.Forms.Button();
+            this.LBLAvisoCorreo = new System.Windows.Forms.Label();
             this.panelIzquierdo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -241,6 +242,7 @@ namespace Formularios.Formularios
             // 
             // panelIzquierdo
             // 
+            this.panelIzquierdo.Controls.Add(this.LBLAvisoCorreo);
             this.panelIzquierdo.Controls.Add(this.BTNVerContraRepe);
             this.panelIzquierdo.Controls.Add(this.BTNVerContraNormal);
             this.panelIzquierdo.Controls.Add(this.LBLAvisoContraRepetida);
@@ -269,6 +271,28 @@ namespace Formularios.Formularios
             this.panelIzquierdo.Name = "panelIzquierdo";
             this.panelIzquierdo.Size = new System.Drawing.Size(454, 461);
             this.panelIzquierdo.TabIndex = 20;
+            this.panelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIzquierdo_Paint);
+            // 
+            // BTNVerContraRepe
+            // 
+            this.BTNVerContraRepe.Image = global::Formularios.Properties.Resources.contraVisible;
+            this.BTNVerContraRepe.Location = new System.Drawing.Point(273, 385);
+            this.BTNVerContraRepe.Name = "BTNVerContraRepe";
+            this.BTNVerContraRepe.Size = new System.Drawing.Size(27, 23);
+            this.BTNVerContraRepe.TabIndex = 23;
+            this.BTNVerContraRepe.UseVisualStyleBackColor = true;
+            this.BTNVerContraRepe.Click += new System.EventHandler(this.BTNVerContraRepe_Click);
+            // 
+            // BTNVerContraNormal
+            // 
+            this.BTNVerContraNormal.AutoEllipsis = true;
+            this.BTNVerContraNormal.Image = global::Formularios.Properties.Resources.contraVisible;
+            this.BTNVerContraNormal.Location = new System.Drawing.Point(273, 329);
+            this.BTNVerContraNormal.Name = "BTNVerContraNormal";
+            this.BTNVerContraNormal.Size = new System.Drawing.Size(27, 23);
+            this.BTNVerContraNormal.TabIndex = 22;
+            this.BTNVerContraNormal.UseVisualStyleBackColor = true;
+            this.BTNVerContraNormal.Click += new System.EventHandler(this.BTNVerContraNormal_Click);
             // 
             // LBLAvisoContraRepetida
             // 
@@ -304,26 +328,13 @@ namespace Formularios.Formularios
             this.TXTBRepetirContrasena.Size = new System.Drawing.Size(433, 461);
             this.TXTBRepetirContrasena.TabIndex = 21;
             // 
-            // BTNVerContraNormal
+            // LBLAvisoCorreo
             // 
-            this.BTNVerContraNormal.AutoEllipsis = true;
-            this.BTNVerContraNormal.Image = global::Formularios.Properties.Resources.contraVisible;
-            this.BTNVerContraNormal.Location = new System.Drawing.Point(273, 329);
-            this.BTNVerContraNormal.Name = "BTNVerContraNormal";
-            this.BTNVerContraNormal.Size = new System.Drawing.Size(27, 23);
-            this.BTNVerContraNormal.TabIndex = 22;
-            this.BTNVerContraNormal.UseVisualStyleBackColor = true;
-            this.BTNVerContraNormal.Click += new System.EventHandler(this.BTNVerContraNormal_Click);
-            // 
-            // BTNVerContraRepe
-            // 
-            this.BTNVerContraRepe.Image = global::Formularios.Properties.Resources.contraVisible;
-            this.BTNVerContraRepe.Location = new System.Drawing.Point(273, 385);
-            this.BTNVerContraRepe.Name = "BTNVerContraRepe";
-            this.BTNVerContraRepe.Size = new System.Drawing.Size(27, 23);
-            this.BTNVerContraRepe.TabIndex = 23;
-            this.BTNVerContraRepe.UseVisualStyleBackColor = true;
-            this.BTNVerContraRepe.Click += new System.EventHandler(this.BTNVerContraRepe_Click);
+            this.LBLAvisoCorreo.AutoSize = true;
+            this.LBLAvisoCorreo.Location = new System.Drawing.Point(274, 298);
+            this.LBLAvisoCorreo.Name = "LBLAvisoCorreo";
+            this.LBLAvisoCorreo.Size = new System.Drawing.Size(0, 13);
+            this.LBLAvisoCorreo.TabIndex = 24;
             // 
             // Registro
             // 
@@ -335,6 +346,7 @@ namespace Formularios.Formularios
             this.Name = "Registro";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.Registro_Load);
             this.panelIzquierdo.ResumeLayout(false);
             this.panelIzquierdo.PerformLayout();
             this.ResumeLayout(false);
@@ -369,5 +381,6 @@ namespace Formularios.Formularios
         private System.Windows.Forms.Label LBLAvisoContraRepetida;
         private System.Windows.Forms.Button BTNVerContraNormal;
         private System.Windows.Forms.Button BTNVerContraRepe;
+        private System.Windows.Forms.Label LBLAvisoCorreo;
     }
 }

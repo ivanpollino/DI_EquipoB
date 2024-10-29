@@ -81,7 +81,7 @@ namespace Formularios.Formularios
             // Evento Click del botón
             this.BTNLogin.Click += new System.EventHandler(this.BTNLogin_Click);
         }
-
+        
         private void BTNAlternarContrasena_Click(object sender, EventArgs e)
         {
             if (TXTBPass.PasswordChar == '\0')
@@ -98,6 +98,26 @@ namespace Formularios.Formularios
         }
 
         private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTNLogin_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelIzquierdo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelDerecho_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TXTBPass_TextChanged(object sender, EventArgs e)
         {
 
         }

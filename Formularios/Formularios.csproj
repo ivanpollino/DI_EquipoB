@@ -139,6 +139,8 @@
     <Content Include="Resources\contraNoVisible.ico" />
     <Content Include="Resources\contraNoVisible.png" />
     <Content Include="Resources\contraVisible.png" />
+    <Content Include="Resources\Logo.png" />
+    <Content Include="Resources\LogoIco.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
