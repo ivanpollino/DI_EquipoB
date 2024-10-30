@@ -169,6 +169,7 @@
     <Content Include="Resources\contraNoVisible.png" />
     <Content Include="Resources\contraVisible.png" />
     <Content Include="Resources\gym.png" />
+    <None Include="Resources\img_gym.PNG" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

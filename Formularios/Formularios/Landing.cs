@@ -73,5 +73,10 @@ namespace Formularios.Formularios
         {
             btLogin_Click(sender, e);
         }
+
+        private void lbTexto1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
