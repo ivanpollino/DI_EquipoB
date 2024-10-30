@@ -70,3 +70,15 @@ C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Datos.dll
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Datos.pdb
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Datos.dll.config
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
