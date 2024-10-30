@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,8 @@ namespace Formularios.Formularios
         {
             InitializeComponent();
             cargarHeader();
+            ConfigurarBotones(btLogin);
+            ConfigurarBotones(btRegistro);
         }
 
         private void Landing_Load(object sender, EventArgs e)
@@ -74,9 +77,44 @@ namespace Formularios.Formularios
             btLogin_Click(sender, e);
         }
 
-        private void lbTexto1_Click(object sender, EventArgs e)
+        private void lbTexto2_Paint(object sender, PaintEventArgs e)
         {
+            string texto = "ES POSIBLE";
+            Font fuente = lbTexto2.Font;
+            Color colorBorde = Color.DarkCyan;  // Color del borde
+            int grosorBorde = 3;
 
+            //Contorno del texto
+            GraphicsPath rutaTexto = new GraphicsPath();
+            rutaTexto.AddString(texto, fuente.FontFamily, (int)fuente.Style, e.Graphics.DpiY * fuente.Size / 72,
+                                lbTexto2.ClientRectangle.Location, StringFormat.GenericDefault);
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            using (Pen pen = new Pen(colorBorde, grosorBorde) { LineJoin = LineJoin.Round })
+            {
+                e.Graphics.DrawPath(pen, rutaTexto);
+            }
+        }
+        private void ConfigurarBotones(Button button)
+        {
+                button.Font = btRegistro.Font; 
+                button.BackColor = Color.DarkCyan;
+                button.ForeColor = Color.Black;
+                button.FlatStyle = FlatStyle.Flat;
+                button.Cursor = Cursors.Hand; // Cambia el cursor
+                button.FlatAppearance.BorderSize = 0; 
+
+                // Crear un GraphicsPath para bordes redondeados
+                GraphicsPath path = new GraphicsPath();
+                int radius = 35; 
+                path.AddArc(0, 0, radius, radius, 180, 90);
+                path.AddArc(button.Width - radius, 0, radius, radius, 270, 90);
+                path.AddArc(button.Width - radius, button.Height - radius, radius, radius, 0, 90);
+                path.AddArc(0, button.Height - radius, radius, radius, 90, 90);
+                path.CloseFigure();
+
+                // Asignar el área del botón
+                button.Region = new Region(path);
+            
         }
     }
 }
