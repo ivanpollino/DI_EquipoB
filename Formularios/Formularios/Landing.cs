@@ -37,7 +37,7 @@ namespace Formularios.Formularios
             {
                 // Si está logeado mostramos el nombre de la base de datos
                 lbInfoUsuario.Visible = true;
-                lbInfoUsuario.Text = $"Usuario: " + usuario.Nombre;
+                lbInfoUsuario.Text = $"Usuario: " + usuario.Nombre + " " + usuario.Apellidos;
             }
             else
             {

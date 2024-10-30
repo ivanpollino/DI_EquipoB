@@ -57,6 +57,9 @@ namespace Formularios.Formularios
             String ccc = TXTBCCC.Text;
             String repeContra = TXTBRepetirContra.Text;
 
+            ValidarDNI();
+            ValidarCuentaCorriente();
+
             // Patrón para validar el correo electrónico
             string patronCorreo = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
@@ -86,6 +89,36 @@ namespace Formularios.Formularios
                 LBLAvisoCorreo.Text = "";
             }
         }
+
+        private void ValidarDNI()
+        {
+            var regex = new Regex(@"^\d{8}[A-Z]$");
+
+            if (!regex.IsMatch(TXTBDNI.Text))
+            {
+                LBLAvisoDNI.Text = "DNI inválido";
+            }
+            else
+            {
+                LBLAvisoDNI.Text = "";
+            }
+        }
+
+        private void ValidarCuentaCorriente()
+        {
+            var regex = new Regex(@"^ES\d{20}$");
+
+            if (!regex.IsMatch(TXTBCCC.Text))
+            {
+                lblAvisoCuenta.Text = "Cuenta corriente inválida";
+            }
+            else
+            {
+                lblAvisoCuenta.Text = "";
+            }
+        }
+
+
 
         private void comprobarContraseña()
         {
@@ -211,6 +244,11 @@ namespace Formularios.Formularios
         }
 
         private void panelIzquierdo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TXTBEmail_TextChanged(object sender, EventArgs e)
         {
 
         }

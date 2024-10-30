@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Formularios.exe" size="1339864">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Formularios.exe" size="1340376">
       <assemblyIdentity name="Formularios" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>X7KFJg5mjK9d9EW2gtcVoWCgAjr2NVS7snl/uph39M8=</dsig:DigestValue>
+        <dsig:DigestValue>fKQS/oIPJd03oEc7FJaU9fiZfaOZXIwTKohoCXDR2ys=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,7 +97,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uG1YT3ZttMfxypvaBlst+3yp4htT0n0S79S9EbMFZ/4=</dsig:DigestValue>
+        <dsig:DigestValue>v1J2i++9jAzmD2Av8+sck9pSdX2GqA4BhLPqq/QET3Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

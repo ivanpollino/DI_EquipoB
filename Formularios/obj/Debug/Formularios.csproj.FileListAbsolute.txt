@@ -248,3 +248,7 @@ C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Formularios\obj\Debug\Formularios
 C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Formularios\obj\Debug\Formular.9034CDC0.Up2Date
 C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Formularios\obj\Debug\Formularios.exe
 C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Formularios\obj\Debug\Formularios.pdb
+H:\MULWEB 2\DesInt\EquipoB\Formularios\bin\Debug\Formularios.exe.manifest
+H:\MULWEB 2\DesInt\EquipoB\Formularios\bin\Debug\Formularios.application
+H:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.exe.manifest
+H:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.application

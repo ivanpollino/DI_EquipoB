@@ -52,13 +52,15 @@ namespace Formularios.Formularios
             this.LBLAvisoContrasena = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelIzquierdo = new System.Windows.Forms.Panel();
+            this.LBLAvisoDNI = new System.Windows.Forms.Label();
+            this.lblAvisoCuenta = new System.Windows.Forms.Label();
+            this.LBLAvisoCorreo = new System.Windows.Forms.Label();
             this.BTNVerContraRepe = new System.Windows.Forms.Button();
             this.BTNVerContraNormal = new System.Windows.Forms.Button();
             this.LBLAvisoContraRepetida = new System.Windows.Forms.Label();
             this.TXTBRepetirContra = new System.Windows.Forms.TextBox();
             this.LBLConfirmarContrasena = new System.Windows.Forms.Label();
             this.panelDerecho = new System.Windows.Forms.Panel();
-            this.LBLAvisoCorreo = new System.Windows.Forms.Label();
             this.panelIzquierdo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,7 +162,7 @@ namespace Formularios.Formularios
             // TXTBCCC
             // 
             this.TXTBCCC.Location = new System.Drawing.Point(157, 146);
-            this.TXTBCCC.MaxLength = 60;
+            this.TXTBCCC.MaxLength = 22;
             this.TXTBCCC.Name = "TXTBCCC";
             this.TXTBCCC.Size = new System.Drawing.Size(100, 20);
             this.TXTBCCC.TabIndex = 12;
@@ -184,11 +186,12 @@ namespace Formularios.Formularios
             this.TXTBEmail.Name = "TXTBEmail";
             this.TXTBEmail.Size = new System.Drawing.Size(232, 20);
             this.TXTBEmail.TabIndex = 14;
+            this.TXTBEmail.TextChanged += new System.EventHandler(this.TXTBEmail_TextChanged);
             // 
             // LBLContrasena
             // 
             this.LBLContrasena.AutoSize = true;
-            this.LBLContrasena.Location = new System.Drawing.Point(29, 220);
+            this.LBLContrasena.Location = new System.Drawing.Point(29, 231);
             this.LBLContrasena.Name = "LBLContrasena";
             this.LBLContrasena.Size = new System.Drawing.Size(61, 13);
             this.LBLContrasena.TabIndex = 15;
@@ -196,7 +199,7 @@ namespace Formularios.Formularios
             // 
             // TXTBContrasena
             // 
-            this.TXTBContrasena.Location = new System.Drawing.Point(25, 236);
+            this.TXTBContrasena.Location = new System.Drawing.Point(25, 245);
             this.TXTBContrasena.MaxLength = 30;
             this.TXTBContrasena.Name = "TXTBContrasena";
             this.TXTBContrasena.PasswordChar = '*';
@@ -229,7 +232,7 @@ namespace Formularios.Formularios
             this.LBLAvisoContrasena.AutoSize = true;
             this.LBLAvisoContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLAvisoContrasena.ForeColor = System.Drawing.Color.Red;
-            this.LBLAvisoContrasena.Location = new System.Drawing.Point(110, 354);
+            this.LBLAvisoContrasena.Location = new System.Drawing.Point(21, 266);
             this.LBLAvisoContrasena.Name = "LBLAvisoContrasena";
             this.LBLAvisoContrasena.Size = new System.Drawing.Size(0, 13);
             this.LBLAvisoContrasena.TabIndex = 21;
@@ -242,6 +245,8 @@ namespace Formularios.Formularios
             // 
             // panelIzquierdo
             // 
+            this.panelIzquierdo.Controls.Add(this.LBLAvisoDNI);
+            this.panelIzquierdo.Controls.Add(this.lblAvisoCuenta);
             this.panelIzquierdo.Controls.Add(this.LBLAvisoCorreo);
             this.panelIzquierdo.Controls.Add(this.BTNVerContraRepe);
             this.panelIzquierdo.Controls.Add(this.BTNVerContraNormal);
@@ -272,10 +277,40 @@ namespace Formularios.Formularios
             this.panelIzquierdo.Size = new System.Drawing.Size(454, 461);
             this.panelIzquierdo.TabIndex = 20;
             // 
+            // LBLAvisoDNI
+            // 
+            this.LBLAvisoDNI.AutoSize = true;
+            this.LBLAvisoDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLAvisoDNI.ForeColor = System.Drawing.Color.Red;
+            this.LBLAvisoDNI.Location = new System.Drawing.Point(154, 118);
+            this.LBLAvisoDNI.Name = "LBLAvisoDNI";
+            this.LBLAvisoDNI.Size = new System.Drawing.Size(0, 13);
+            this.LBLAvisoDNI.TabIndex = 26;
+            // 
+            // lblAvisoCuenta
+            // 
+            this.lblAvisoCuenta.AutoSize = true;
+            this.lblAvisoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvisoCuenta.ForeColor = System.Drawing.Color.Red;
+            this.lblAvisoCuenta.Location = new System.Drawing.Point(154, 169);
+            this.lblAvisoCuenta.Name = "lblAvisoCuenta";
+            this.lblAvisoCuenta.Size = new System.Drawing.Size(0, 13);
+            this.lblAvisoCuenta.TabIndex = 25;
+            // 
+            // LBLAvisoCorreo
+            // 
+            this.LBLAvisoCorreo.AutoSize = true;
+            this.LBLAvisoCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLAvisoCorreo.ForeColor = System.Drawing.Color.Red;
+            this.LBLAvisoCorreo.Location = new System.Drawing.Point(22, 218);
+            this.LBLAvisoCorreo.Name = "LBLAvisoCorreo";
+            this.LBLAvisoCorreo.Size = new System.Drawing.Size(0, 13);
+            this.LBLAvisoCorreo.TabIndex = 24;
+            // 
             // BTNVerContraRepe
             // 
             this.BTNVerContraRepe.Image = global::Formularios.Properties.Resources.contraVisible;
-            this.BTNVerContraRepe.Location = new System.Drawing.Point(231, 284);
+            this.BTNVerContraRepe.Location = new System.Drawing.Point(231, 294);
             this.BTNVerContraRepe.Name = "BTNVerContraRepe";
             this.BTNVerContraRepe.Size = new System.Drawing.Size(27, 23);
             this.BTNVerContraRepe.TabIndex = 23;
@@ -286,7 +321,7 @@ namespace Formularios.Formularios
             // 
             this.BTNVerContraNormal.AutoEllipsis = true;
             this.BTNVerContraNormal.Image = global::Formularios.Properties.Resources.contraVisible;
-            this.BTNVerContraNormal.Location = new System.Drawing.Point(231, 233);
+            this.BTNVerContraNormal.Location = new System.Drawing.Point(231, 242);
             this.BTNVerContraNormal.Name = "BTNVerContraNormal";
             this.BTNVerContraNormal.Size = new System.Drawing.Size(27, 23);
             this.BTNVerContraNormal.TabIndex = 22;
@@ -298,14 +333,14 @@ namespace Formularios.Formularios
             this.LBLAvisoContraRepetida.AutoSize = true;
             this.LBLAvisoContraRepetida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLAvisoContraRepetida.ForeColor = System.Drawing.Color.Red;
-            this.LBLAvisoContraRepetida.Location = new System.Drawing.Point(125, 411);
+            this.LBLAvisoContraRepetida.Location = new System.Drawing.Point(22, 320);
             this.LBLAvisoContraRepetida.Name = "LBLAvisoContraRepetida";
             this.LBLAvisoContraRepetida.Size = new System.Drawing.Size(0, 13);
             this.LBLAvisoContraRepetida.TabIndex = 18;
             // 
             // TXTBRepetirContra
             // 
-            this.TXTBRepetirContra.Location = new System.Drawing.Point(25, 287);
+            this.TXTBRepetirContra.Location = new System.Drawing.Point(25, 297);
             this.TXTBRepetirContra.Name = "TXTBRepetirContra";
             this.TXTBRepetirContra.PasswordChar = '*';
             this.TXTBRepetirContra.Size = new System.Drawing.Size(200, 20);
@@ -314,7 +349,7 @@ namespace Formularios.Formularios
             // LBLConfirmarContrasena
             // 
             this.LBLConfirmarContrasena.AutoSize = true;
-            this.LBLConfirmarContrasena.Location = new System.Drawing.Point(22, 271);
+            this.LBLConfirmarContrasena.Location = new System.Drawing.Point(22, 280);
             this.LBLConfirmarContrasena.Name = "LBLConfirmarContrasena";
             this.LBLConfirmarContrasena.Size = new System.Drawing.Size(105, 13);
             this.LBLConfirmarContrasena.TabIndex = 19;
@@ -328,15 +363,6 @@ namespace Formularios.Formularios
             this.panelDerecho.Name = "panelDerecho";
             this.panelDerecho.Size = new System.Drawing.Size(433, 461);
             this.panelDerecho.TabIndex = 21;
-            // 
-            // LBLAvisoCorreo
-            // 
-            this.LBLAvisoCorreo.AutoSize = true;
-            this.LBLAvisoCorreo.Location = new System.Drawing.Point(211, 354);
-            this.LBLAvisoCorreo.Name = "LBLAvisoCorreo";
-            this.LBLAvisoCorreo.Size = new System.Drawing.Size(35, 13);
-            this.LBLAvisoCorreo.TabIndex = 24;
-            this.LBLAvisoCorreo.Text = "label1";
             // 
             // Registro
             // 
@@ -384,5 +410,7 @@ namespace Formularios.Formularios
         private System.Windows.Forms.Button BTNVerContraNormal;
         private System.Windows.Forms.Button BTNVerContraRepe;
         private System.Windows.Forms.Label LBLAvisoCorreo;
+        private System.Windows.Forms.Label LBLAvisoDNI;
+        private System.Windows.Forms.Label lblAvisoCuenta;
     }
 }
