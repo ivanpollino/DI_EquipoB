@@ -18,19 +18,23 @@ namespace Formularios.Formularios
     public partial class Registro : Form
     {
         public bool registroCorrecto = false;
-        private bool contraValida;
+        private bool bNombre,bApellido,bDni,bEmail,bCcc,bContraseña,bRepecontraseña;
+        private bool comprobacionFinal = true;
         public Registro()
         {
             InitializeComponent();
             BTNRegistrar.Enabled = false;
 
-            TXTBContrasena.TextChanged += new EventHandler(ComprobarTextBox);
-            TXTBEmail.TextChanged += new EventHandler(ComprobarTextBox);
-            TXTBDNI.TextChanged += new EventHandler(ComprobarTextBox);
-            TXTBNombre.TextChanged += new EventHandler(ComprobarTextBox);
-            TXTBCCC.TextChanged += new EventHandler(ComprobarTextBox);
-            TXTBApellidos.TextChanged += new EventHandler(ComprobarTextBox);
+            TXTBContrasena.TextChanged += new EventHandler(comprobarContraseña);
+            TXTBEmail.TextChanged += new EventHandler(ValidarEmail);
+            TXTBDNI.TextChanged += new EventHandler(ValidarDNI);
+            TXTBNombre.TextChanged += new EventHandler(ComprobarNombre);
+            TXTBCCC.TextChanged += new EventHandler(ValidarCuentaCorriente);
+            TXTBApellidos.TextChanged += new EventHandler(ComprobarApellidos);
+            TXTBContrasena.TextChanged += new EventHandler(comprobarContraseñaRepetida);
             TXTBRepetirContra.TextChanged += new EventHandler(comprobarContraseñaRepetida);
+
+
         }
 
 
@@ -47,106 +51,137 @@ namespace Formularios.Formularios
             TXTBRepetirContra.Text = String.Empty;
         }
 
-        private void ComprobarTextBox(object sender, EventArgs e)
+        private void ComprobarNombre(object sender, EventArgs e)
         {
-            String contraseña = TXTBContrasena.Text;
             String nombre = TXTBNombre.Text;
-            String correo = TXTBEmail.Text;
-            String dni = TXTBDNI.Text;
+            if (!string.IsNullOrWhiteSpace(nombre)) {
+                bNombre = true;
+            }
+            else
+            {
+                bNombre=false;  
+            }
+            habilitarBotonRegistro();
+        }
+        private void ComprobarApellidos(object sender, EventArgs e)
+        {
             String apellidos = TXTBApellidos.Text;
-            String ccc = TXTBCCC.Text;
-            String repeContra = TXTBRepetirContra.Text;
-
-            ValidarDNI();
-            ValidarCuentaCorriente();
-
-            // Patrón para validar el correo electrónico
-            string patronCorreo = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-
-            // Verificar si el correo es válido
-            bool correoValido = Regex.IsMatch(correo, patronCorreo);
-
-            // Verificar que todos los campos no estén vacíos y que el correo sea válido
-            if (!string.IsNullOrWhiteSpace(contraseña) && !string.IsNullOrWhiteSpace(nombre) &&
-                !string.IsNullOrWhiteSpace(correo) && !string.IsNullOrWhiteSpace(dni) &&
-                !string.IsNullOrWhiteSpace(apellidos) && !string.IsNullOrWhiteSpace(ccc) &&
-                !string.IsNullOrWhiteSpace(repeContra) && correoValido)
+            if (!string.IsNullOrWhiteSpace(apellidos))
             {
-                BTNRegistrar.Enabled = true;
+                bApellido = true;
             }
             else
             {
-                BTNRegistrar.Enabled = false;
+                bApellido=false;
             }
-
-            // Mostrar mensaje de error si el correo no es válido
-            if (!correoValido)
-            {
-                LBLAvisoCorreo.Text = "El correo electrónico no es válido";
-            }
-            else
-            {
-                LBLAvisoCorreo.Text = "";
-            }
+            habilitarBotonRegistro();
         }
 
-        private void ValidarDNI()
+        private void ValidarDNI(object sender, EventArgs e)
         {
             var regex = new Regex(@"^\d{8}[A-Z]$");
 
             if (!regex.IsMatch(TXTBDNI.Text))
             {
                 LBLAvisoDNI.Text = "DNI inválido";
+                bDni = false;
             }
             else
             {
                 LBLAvisoDNI.Text = "";
+                bDni = true;
             }
+            habilitarBotonRegistro();
         }
-
-        private void ValidarCuentaCorriente()
+        private void ValidarCuentaCorriente(object sender, EventArgs e)
         {
             var regex = new Regex(@"^ES\d{20}$");
 
             if (!regex.IsMatch(TXTBCCC.Text))
             {
                 lblAvisoCuenta.Text = "Cuenta corriente inválida";
+                bCcc = false;
             }
             else
             {
                 lblAvisoCuenta.Text = "";
+                bCcc = true;
             }
+            habilitarBotonRegistro();
         }
 
+        private void ValidarEmail(object sender, EventArgs e)
+        {
+            String correo = TXTBEmail.Text;
+            string patronCorreo = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
+            if(Regex.IsMatch(correo, patronCorreo))
+            {
+                LBLAvisoCorreo.Text = "";
+                bEmail = true;
+            }
+            else
+            {
+                LBLAvisoCorreo.Text = "El correo electrónico no es válido";
+                bEmail = false;
+            }
+            habilitarBotonRegistro();
+        }
 
-        private void comprobarContraseña()
+        private void comprobarContraseña(object sender, EventArgs e)
         {
             string patron = @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[%&$/\*]).{8,}$";
 
             if (!(Regex.IsMatch(TXTBContrasena.Text, patron)))
             {
-                contraValida = false;
                 LBLAvisoContrasena.Text = "La contraseña no cumple los requisitos";
-                BTNRegistrar.Enabled = false ;
+                bContraseña = false;
             }
             else
             {
-                contraValida = true;
                 LBLAvisoContrasena.Text = "";
-                BTNRegistrar.Enabled = true;
+                bContraseña = true;
             }
+            habilitarBotonRegistro();
+        }
+        private void comprobarContraseñaRepetida(object sender, EventArgs e)
+        {
+            String contraseña = TXTBContrasena.Text;
+            String contraseñaRepe = TXTBRepetirContra.Text;
+            if (contraseña == contraseñaRepe)
+            {
+                LBLAvisoContraRepetida.Text = "";
+                bRepecontraseña = true;
+            }
+            else
+            {
+                LBLAvisoContraRepetida.Text = "Las contraseñas no coinciden";
+                bRepecontraseña
+                    = false;
+            }
+            habilitarBotonRegistro();
         }
 
-        private void TXTBContrasena_TextChanged(object sender, EventArgs e)
+
+        private void habilitarBotonRegistro()
         {
-            comprobarContraseña();
+            if(bContraseña && bApellido && bNombre && bEmail && bDni && bCcc && bRepecontraseña)
+            {
+                BTNRegistrar.Enabled = true;
+                comprobacionFinal = true;
+            }
+            else
+            {
+                BTNRegistrar.Enabled = false;
+                comprobacionFinal = false;
+            }
+
         }
 
         private void BTNRegistrar_Click(object sender, EventArgs e)
         {
             String mensaje;
-            if (contraValida)
+            if (comprobacionFinal)
             {
                 UsuarioDTO usuarioDTO = new UsuarioDTO();
                 usuarioDTO.Nombre = TXTBNombre.Text;
@@ -179,7 +214,7 @@ namespace Formularios.Formularios
             }
             else
             {
-                MessageBox.Show("La contraseña no es valida");
+                MessageBox.Show("Falta algun campo obligatorio");
             }
         }
         private void caparSoloNumeros(object sender, KeyPressEventArgs e)
@@ -187,24 +222,6 @@ namespace Formularios.Formularios
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
-            }
-        }
-
-        private void comprobarContraseñaRepetida(object sender, EventArgs e)
-        {
-            String contraseña = TXTBContrasena.Text;
-            String contraseñaRepe = TXTBRepetirContra.Text;
-            if (contraseña == contraseñaRepe)
-            {
-                LBLAvisoContraRepetida.Text = "";
-                BTNRegistrar.Enabled = true;
-               
-            }
-            else
-            {
-                LBLAvisoContraRepetida.Text = "Las contraseñas no coinciden";
-                BTNRegistrar.Enabled = false;
-
             }
         }
 
@@ -236,21 +253,6 @@ namespace Formularios.Formularios
                 BTNVerContraRepe.Image = Properties.Resources.contraNoVisible;
 
             }
-        }
-
-        private void Registro_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelIzquierdo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void TXTBEmail_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -186,7 +186,6 @@ namespace Formularios.Formularios
             this.TXTBEmail.Name = "TXTBEmail";
             this.TXTBEmail.Size = new System.Drawing.Size(232, 20);
             this.TXTBEmail.TabIndex = 14;
-            this.TXTBEmail.TextChanged += new System.EventHandler(this.TXTBEmail_TextChanged);
             // 
             // LBLContrasena
             // 
@@ -205,7 +204,6 @@ namespace Formularios.Formularios
             this.TXTBContrasena.PasswordChar = '*';
             this.TXTBContrasena.Size = new System.Drawing.Size(200, 20);
             this.TXTBContrasena.TabIndex = 16;
-            this.TXTBContrasena.TextChanged += new System.EventHandler(this.TXTBContrasena_TextChanged);
             // 
             // BTNRegistrar
             // 
