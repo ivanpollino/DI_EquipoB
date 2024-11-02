@@ -1,4 +1,6 @@
-﻿namespace Formularios.Formularios
+﻿using System.Windows.Forms;
+
+namespace Formularios.Formularios
 {
     partial class Landing
     {
@@ -45,10 +47,9 @@
             this.lbInfoUsuario.BackColor = System.Drawing.Color.Transparent;
             this.lbInfoUsuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInfoUsuario.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbInfoUsuario.Location = new System.Drawing.Point(521, 36);
-            this.lbInfoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbInfoUsuario.Location = new System.Drawing.Point(391, 29);
             this.lbInfoUsuario.Name = "lbInfoUsuario";
-            this.lbInfoUsuario.Size = new System.Drawing.Size(104, 37);
+            this.lbInfoUsuario.Size = new System.Drawing.Size(81, 30);
             this.lbInfoUsuario.TabIndex = 0;
             this.lbInfoUsuario.Text = "usuario";
             // 
@@ -61,10 +62,9 @@
             this.lbLinkLogin.ForeColor = System.Drawing.Color.Cyan;
             this.lbLinkLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lbLinkLogin.LinkColor = System.Drawing.Color.DarkGray;
-            this.lbLinkLogin.Location = new System.Drawing.Point(459, 45);
-            this.lbLinkLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbLinkLogin.Location = new System.Drawing.Point(344, 37);
             this.lbLinkLogin.Name = "lbLinkLogin";
-            this.lbLinkLogin.Size = new System.Drawing.Size(222, 31);
+            this.lbLinkLogin.Size = new System.Drawing.Size(186, 25);
             this.lbLinkLogin.TabIndex = 1;
             this.lbLinkLogin.TabStop = true;
             this.lbLinkLogin.Text = "━━━━   LOGIN   ━━━━";
@@ -74,10 +74,9 @@
             // 
             this.btLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLogin.ForeColor = System.Drawing.Color.Black;
-            this.btLogin.Location = new System.Drawing.Point(461, 418);
-            this.btLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLogin.Location = new System.Drawing.Point(346, 340);
             this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(219, 37);
+            this.btLogin.Size = new System.Drawing.Size(164, 30);
             this.btLogin.TabIndex = 2;
             this.btLogin.Text = "LOGIN";
             this.btLogin.UseVisualStyleBackColor = true;
@@ -87,10 +86,9 @@
             // 
             this.btRegistro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btRegistro.ForeColor = System.Drawing.Color.Black;
-            this.btRegistro.Location = new System.Drawing.Point(461, 466);
-            this.btRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btRegistro.Location = new System.Drawing.Point(346, 379);
             this.btRegistro.Name = "btRegistro";
-            this.btRegistro.Size = new System.Drawing.Size(219, 37);
+            this.btRegistro.Size = new System.Drawing.Size(164, 30);
             this.btRegistro.TabIndex = 3;
             this.btRegistro.Text = "REGISTRO";
             this.btRegistro.UseVisualStyleBackColor = true;
@@ -100,6 +98,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.BackgroundImage = global::Formularios.Properties.Resources.img_gym;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.lbTexto2);
             this.panel1.Controls.Add(this.lbTexto1);
             this.panel1.Controls.Add(this.lbLinkLogin);
@@ -108,9 +107,8 @@
             this.panel1.Controls.Add(this.btLogin);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1179, 567);
+            this.panel1.Size = new System.Drawing.Size(884, 461);
             this.panel1.TabIndex = 4;
             // 
             // lbTexto2
@@ -119,10 +117,9 @@
             this.lbTexto2.BackColor = System.Drawing.Color.Transparent;
             this.lbTexto2.Font = new System.Drawing.Font("Segoe UI Black", 60F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lbTexto2.ForeColor = System.Drawing.Color.Black;
-            this.lbTexto2.Location = new System.Drawing.Point(250, 238);
-            this.lbTexto2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTexto2.Location = new System.Drawing.Point(188, 193);
             this.lbTexto2.Name = "lbTexto2";
-            this.lbTexto2.Size = new System.Drawing.Size(651, 133);
+            this.lbTexto2.Size = new System.Drawing.Size(529, 106);
             this.lbTexto2.TabIndex = 5;
             this.lbTexto2.Text = "                      ";
             this.lbTexto2.Paint += new System.Windows.Forms.PaintEventHandler(this.lbTexto2_Paint);
@@ -133,23 +130,23 @@
             this.lbTexto1.BackColor = System.Drawing.Color.Transparent;
             this.lbTexto1.Font = new System.Drawing.Font("Segoe UI Black", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTexto1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbTexto1.Location = new System.Drawing.Point(177, 147);
-            this.lbTexto1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTexto1.Location = new System.Drawing.Point(133, 119);
             this.lbTexto1.Name = "lbTexto1";
-            this.lbTexto1.Size = new System.Drawing.Size(799, 106);
+            this.lbTexto1.Size = new System.Drawing.Size(641, 86);
             this.lbTexto1.TabIndex = 4;
             this.lbTexto1.Text = "TU MÁXIMO NIVEL";
             // 
             // Landing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 567);
+            this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Landing";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Landing";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Landing_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

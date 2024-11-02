@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8dDL9ZH/pdctHYfXg3AKBgwZuIYRTRe0EGT1q3260PE=</dsig:DigestValue>
+        <dsig:DigestValue>rjB0VUwgYpPKZ1uuQdkQ7Zz4SsqDmyMaFH6YE+dpQqo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Formularios.exe" size="1340888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Formularios.exe" size="1341912">
       <assemblyIdentity name="Formularios" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>W9epMAkYKo3de0ZgxQnd2tkSP5YBUxuzqVVG5XClDuk=</dsig:DigestValue>
+        <dsig:DigestValue>fR8X0hpwwnKQiD9eEsg75kPxGIX5ZBi8+3RoWDBq5C8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -173,13 +173,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Formularios.exe.config" size="760">
+  <file name="Formularios.exe.config" size="1195">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>i/1w8AJTaNVBOhetc/UM5+siORuXE8mP4CyxuIqzgFU=</dsig:DigestValue>
+      <dsig:DigestValue>pUYnMZ2EuRVmFLWNq7gslssVlMPl92KOsxlZOXXUoQA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\contraNoVisible.ico" size="181694">

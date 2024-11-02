@@ -61,6 +61,7 @@ namespace Formularios.Formularios
             this.TXTBRepetirContra = new System.Windows.Forms.TextBox();
             this.LBLConfirmarContrasena = new System.Windows.Forms.Label();
             this.panelDerecho = new System.Windows.Forms.Panel();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.panelIzquierdo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -294,6 +295,7 @@ namespace Formularios.Formularios
             this.lblAvisoCuenta.Name = "lblAvisoCuenta";
             this.lblAvisoCuenta.Size = new System.Drawing.Size(0, 13);
             this.lblAvisoCuenta.TabIndex = 25;
+            this.toolTip2.SetToolTip(this.lblAvisoCuenta, "La CCC debe tener:\n- Empezar por ES\n- Y tener 20 digitos numericos\n");
             // 
             // LBLAvisoCorreo
             // 
@@ -362,6 +364,10 @@ namespace Formularios.Formularios
             this.panelDerecho.Size = new System.Drawing.Size(433, 461);
             this.panelDerecho.TabIndex = 21;
             // 
+            // toolTip2
+            // 
+            this.toolTip2.ToolTipTitle = "Como tener un formato de CCC valido";
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,5 +416,6 @@ namespace Formularios.Formularios
         private System.Windows.Forms.Label LBLAvisoCorreo;
         private System.Windows.Forms.Label LBLAvisoDNI;
         private System.Windows.Forms.Label lblAvisoCuenta;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }
