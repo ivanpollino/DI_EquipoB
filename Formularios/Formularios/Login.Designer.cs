@@ -33,6 +33,7 @@ namespace Formularios.Formularios
         private void InitializeComponent()
         {
             this.panelDerecho = new System.Windows.Forms.Panel();
+            this.LinkLoginLabel = new System.Windows.Forms.LinkLabel();
             this.BTNAlternarContrasena = new System.Windows.Forms.Button();
             this.BTNLogin = new System.Windows.Forms.Button();
             this.TXTBPass = new System.Windows.Forms.TextBox();
@@ -41,13 +42,12 @@ namespace Formularios.Formularios
             this.LBLEmail = new System.Windows.Forms.Label();
             this.LBLTitulo = new System.Windows.Forms.Label();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.LinkLoginLabel = new System.Windows.Forms.LinkLabel();
             this.panelDerecho.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDerecho
             // 
-            this.panelDerecho.BackColor = System.Drawing.Color.White;
+            this.panelDerecho.BackColor = System.Drawing.Color.Transparent;
             this.panelDerecho.Controls.Add(this.LinkLoginLabel);
             this.panelDerecho.Controls.Add(this.BTNAlternarContrasena);
             this.panelDerecho.Controls.Add(this.BTNLogin);
@@ -62,6 +62,19 @@ namespace Formularios.Formularios
             this.panelDerecho.Size = new System.Drawing.Size(450, 461);
             this.panelDerecho.TabIndex = 0;
             this.panelDerecho.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDerecho_Paint);
+            // 
+            // LinkLoginLabel
+            // 
+            this.LinkLoginLabel.AutoSize = true;
+            this.LinkLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLoginLabel.LinkColor = System.Drawing.Color.White;
+            this.LinkLoginLabel.Location = new System.Drawing.Point(150, 399);
+            this.LinkLoginLabel.Name = "LinkLoginLabel";
+            this.LinkLoginLabel.Size = new System.Drawing.Size(225, 20);
+            this.LinkLoginLabel.TabIndex = 7;
+            this.LinkLoginLabel.TabStop = true;
+            this.LinkLoginLabel.Text = "¿No tienes cuenta? Regístrate";
+            this.LinkLoginLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLoginLabel_LinkClicked);
             // 
             // BTNAlternarContrasena
             // 
@@ -83,6 +96,7 @@ namespace Formularios.Formularios
             // 
             // TXTBPass
             // 
+            this.TXTBPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TXTBPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXTBPass.Location = new System.Drawing.Point(54, 277);
             this.TXTBPass.Name = "TXTBPass";
@@ -93,15 +107,17 @@ namespace Formularios.Formularios
             // LBLPass
             // 
             this.LBLPass.AutoSize = true;
-            this.LBLPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLPass.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLPass.ForeColor = System.Drawing.Color.Teal;
             this.LBLPass.Location = new System.Drawing.Point(49, 234);
             this.LBLPass.Name = "LBLPass";
-            this.LBLPass.Size = new System.Drawing.Size(124, 26);
+            this.LBLPass.Size = new System.Drawing.Size(123, 30);
             this.LBLPass.TabIndex = 3;
             this.LBLPass.Text = "Contraseña";
             // 
             // TXTBEmail
             // 
+            this.TXTBEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TXTBEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXTBEmail.Location = new System.Drawing.Point(54, 179);
             this.TXTBEmail.Name = "TXTBEmail";
@@ -111,10 +127,11 @@ namespace Formularios.Formularios
             // LBLEmail
             // 
             this.LBLEmail.AutoSize = true;
-            this.LBLEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLEmail.ForeColor = System.Drawing.Color.Teal;
             this.LBLEmail.Location = new System.Drawing.Point(49, 140);
             this.LBLEmail.Name = "LBLEmail";
-            this.LBLEmail.Size = new System.Drawing.Size(192, 26);
+            this.LBLEmail.Size = new System.Drawing.Size(194, 30);
             this.LBLEmail.TabIndex = 1;
             this.LBLEmail.Text = "Correo Electronico";
             // 
@@ -122,6 +139,7 @@ namespace Formularios.Formularios
             // 
             this.LBLTitulo.AutoSize = true;
             this.LBLTitulo.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.LBLTitulo.ForeColor = System.Drawing.Color.DarkCyan;
             this.LBLTitulo.Location = new System.Drawing.Point(45, 55);
             this.LBLTitulo.Name = "LBLTitulo";
             this.LBLTitulo.Size = new System.Drawing.Size(127, 54);
@@ -130,26 +148,14 @@ namespace Formularios.Formularios
             // 
             // panelIzquierdo
             // 
-            this.panelIzquierdo.BackgroundImage = global::Formularios.Properties.Resources.gym;
+            this.panelIzquierdo.BackgroundImage = global::Formularios.Properties.Resources.img_gym;
             this.panelIzquierdo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
             this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(435, 461);
+            this.panelIzquierdo.Size = new System.Drawing.Size(884, 461);
             this.panelIzquierdo.TabIndex = 1;
             this.panelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIzquierdo_Paint);
-            // 
-            // LinkLoginLabel
-            // 
-            this.LinkLoginLabel.AutoSize = true;
-            this.LinkLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLoginLabel.Location = new System.Drawing.Point(150, 399);
-            this.LinkLoginLabel.Name = "LinkLoginLabel";
-            this.LinkLoginLabel.Size = new System.Drawing.Size(225, 20);
-            this.LinkLoginLabel.TabIndex = 7;
-            this.LinkLoginLabel.TabStop = true;
-            this.LinkLoginLabel.Text = "¿No tienes cuenta? Regístrate";
-            this.LinkLoginLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLoginLabel_LinkClicked);
             // 
             // Login
             // 

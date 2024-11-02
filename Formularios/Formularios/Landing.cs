@@ -20,6 +20,7 @@ namespace Formularios.Formularios
         public Landing()
         {
             InitializeComponent();
+            this.Resize += new System.EventHandler(this.Landing_Resize);
             cargarHeader();
             ConfigurarBotones(btLogin);
             ConfigurarBotones(btRegistro);
@@ -115,6 +116,24 @@ namespace Formularios.Formularios
                 // Asignar el área del botón
                 button.Region = new Region(path);
             
+        }
+
+        private void Landing_Resize(object sender, EventArgs e)
+        {
+            CenterElements();
+        }
+
+        private void CenterElements()
+        {
+            int panelWidth = panel1.ClientSize.Width;
+            int panelHeight = panel1.ClientSize.Height;
+
+            lbInfoUsuario.Left = (panel1.ClientSize.Width - lbInfoUsuario.Width) / 2;
+            lbLinkLogin.Left = (panel1.ClientSize.Width - lbLinkLogin.Width) / 2;
+            lbTexto1.Location = new Point((panelWidth - lbTexto1.Width) / 2, (panelHeight - lbTexto1.Height) / 2 - 100);
+            lbTexto2.Location = new Point((panelWidth - lbTexto2.Width) / 2, lbTexto1.Location.Y + lbTexto1.Height + 10);
+            btLogin.Location = new Point((panelWidth - btLogin.Width) / 2, lbTexto2.Location.Y + lbTexto2.Height + 30);
+            btRegistro.Location = new Point((panelWidth - btRegistro.Width) / 2, btLogin.Location.Y + btLogin.Height + 10);
         }
     }
 }

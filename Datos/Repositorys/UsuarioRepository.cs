@@ -14,9 +14,13 @@ namespace Datos.Repositorys
 
         public String altaUsuario(Usuario usuario)
         {
-                using (var contexto = new equipobEntities())
+                //Ususario_Normal ususarioNormal = new Ususario_Normal();
+                //ususarioNormal.DNI = usuario.DNI;
+                //ususarioNormal.Id_Actividad = 0;
+            using (var contexto = new equipobEntities1())
                 {
                     contexto.Usuario.Add(usuario);
+                    //contexto.Ususario_Normal.Add(ususarioNormal);
                     contexto.SaveChanges();
                     
                 }
@@ -29,7 +33,7 @@ namespace Datos.Repositorys
             try
             {
                 //Abrir la BD
-                using (var contexto = new equipobEntities())
+                using (var contexto = new equipobEntities1())
                 {
                     usuarios = contexto.Usuario.ToList();
                 }
