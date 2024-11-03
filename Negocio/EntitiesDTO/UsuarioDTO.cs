@@ -17,5 +17,20 @@ namespace Negocio.EntitiesDTO
         public string Email { get; set; }
         public string Passwd { get; set; }
 
+        public UsuarioDTO(string dNI, string nombre, string apellidos, int? telefono, string direccion, string cuenta_Corriente, string email, string passwd)
+        {
+            DNI = dNI;
+            Nombre = nombre;
+            Apellidos = apellidos;
+            Telefono = telefono;
+            Direccion = direccion;
+            Cuenta_Corriente = cuenta_Corriente;
+            Email = email;
+            Passwd = passwd;
+        }
+        public UsuarioDTO()
+        {
+
+        }
     }
 }

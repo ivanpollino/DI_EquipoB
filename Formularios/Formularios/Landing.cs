@@ -15,7 +15,7 @@ namespace Formularios.Formularios
     public partial class Landing : Form
     {
         private UsuarioDTO usuario;
-        private string databaseName = "Usuario del gimasio";//Simulación de base de datos
+        private string databaseName = "Usuario del gimasio";
         private bool logeado = false; //Por predeterminado NO está logeado
         public Landing()
         {
@@ -30,6 +30,9 @@ namespace Formularios.Formularios
         {
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
         private void cargarHeader()
         {   // Ocultar todo
             lbInfoUsuario.Visible = false;

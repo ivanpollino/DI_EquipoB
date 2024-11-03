@@ -20,6 +20,11 @@ namespace Negocio.Managment
             Datos.Repositorys.UsuarioRepository datos = new Datos.Repositorys.UsuarioRepository();
             List<Usuario> usuarios = datos.ObtenerUsuarios();
 
+            if (usuarios.Count == 0)
+            {
+                return "La conexión a la base de datos ha fallado";
+            }
+
             if (comprobarEmail(usuarios,usuarioDTO))
             {
                 if (comprobarDNI(usuarios, usuarioDTO))
@@ -38,7 +43,7 @@ namespace Negocio.Managment
                 else{
                     return "Ya hay un usuario registrado con ese DNI";
                 }
-
+                
             }
             else
             {
