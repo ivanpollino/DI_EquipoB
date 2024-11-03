@@ -45,11 +45,11 @@ namespace Formularios.Formularios
         {
             // Configuraciones del botón
             this.BTNLogin.Enabled = false;
-            this.BTNLogin.Text = "Login";
+            this.BTNLogin.Text = "LOGIN";
             this.BTNLogin.Size = new Size(150, 45);
-            this.BTNLogin.Location = new Point(225,353);
-            this.BTNLogin.BackColor = Color.RoyalBlue;
-            this.BTNLogin.ForeColor = Color.White;
+            this.BTNLogin.Location = new Point(665,320);
+            this.BTNLogin.BackColor = Color.Aquamarine;
+            this.BTNLogin.ForeColor = Color.Black;
             this.BTNLogin.FlatStyle = FlatStyle.Flat;
             this.BTNLogin.FlatAppearance.BorderSize = 0;
 
@@ -64,7 +64,7 @@ namespace Formularios.Formularios
                 path.AddArc(this.BTNLogin.Width - 20, this.BTNLogin.Height - 20, 20, 20, 0, 90);
                 path.AddArc(0, this.BTNLogin.Height - 20, 20, 20, 90, 90);
                 path.CloseFigure();
-                this.BTNLogin.ForeColor = Color.White;
+                this.BTNLogin.ForeColor = Color.Black;
                 this.BTNLogin.Region = new Region(path);
             };
 

@@ -144,6 +144,8 @@ namespace Formularios.Formularios
             }
             habilitarBotonRegistro();
         }
+
+
         private void comprobarContraseñaRepetida(object sender, EventArgs e)
         {
             String contraseña = TXTBContrasena.Text;
