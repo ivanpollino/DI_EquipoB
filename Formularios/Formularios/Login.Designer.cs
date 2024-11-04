@@ -32,7 +32,8 @@ namespace Formularios.Formularios
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelDerecho = new System.Windows.Forms.Panel();
+            System.Windows.Forms.Panel panelDerecho;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.LinkLoginLabel = new System.Windows.Forms.LinkLabel();
             this.BTNAlternarContrasena = new System.Windows.Forms.Button();
             this.BTNLogin = new System.Windows.Forms.Button();
@@ -41,34 +42,39 @@ namespace Formularios.Formularios
             this.TXTBEmail = new System.Windows.Forms.TextBox();
             this.LBLEmail = new System.Windows.Forms.Label();
             this.LBLTitulo = new System.Windows.Forms.Label();
-            this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.panelDerecho.SuspendLayout();
+            panelDerecho = new System.Windows.Forms.Panel();
+            panelDerecho.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDerecho
             // 
-            this.panelDerecho.BackColor = System.Drawing.Color.Transparent;
-            this.panelDerecho.Controls.Add(this.LinkLoginLabel);
-            this.panelDerecho.Controls.Add(this.BTNAlternarContrasena);
-            this.panelDerecho.Controls.Add(this.BTNLogin);
-            this.panelDerecho.Controls.Add(this.TXTBPass);
-            this.panelDerecho.Controls.Add(this.LBLPass);
-            this.panelDerecho.Controls.Add(this.TXTBEmail);
-            this.panelDerecho.Controls.Add(this.LBLEmail);
-            this.panelDerecho.Controls.Add(this.LBLTitulo);
-            this.panelDerecho.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelDerecho.Location = new System.Drawing.Point(434, 0);
-            this.panelDerecho.Name = "panelDerecho";
-            this.panelDerecho.Size = new System.Drawing.Size(450, 461);
-            this.panelDerecho.TabIndex = 0;
-            this.panelDerecho.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDerecho_Paint);
+            panelDerecho.BackColor = System.Drawing.Color.Transparent;
+            panelDerecho.BackgroundImage = global::Formularios.Properties.Resources.imagenFondoLogin;
+            panelDerecho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            panelDerecho.Controls.Add(this.LinkLoginLabel);
+            panelDerecho.Controls.Add(this.BTNAlternarContrasena);
+            panelDerecho.Controls.Add(this.BTNLogin);
+            panelDerecho.Controls.Add(this.TXTBPass);
+            panelDerecho.Controls.Add(this.LBLPass);
+            panelDerecho.Controls.Add(this.TXTBEmail);
+            panelDerecho.Controls.Add(this.LBLEmail);
+            panelDerecho.Controls.Add(this.LBLTitulo);
+            panelDerecho.Dock = System.Windows.Forms.DockStyle.Right;
+            panelDerecho.ForeColor = System.Drawing.Color.Coral;
+            panelDerecho.Location = new System.Drawing.Point(0, 0);
+            panelDerecho.Name = "panelDerecho";
+            panelDerecho.Size = new System.Drawing.Size(884, 461);
+            panelDerecho.TabIndex = 0;
+            panelDerecho.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDerecho_Paint);
             // 
             // LinkLoginLabel
             // 
             this.LinkLoginLabel.AutoSize = true;
+            this.LinkLoginLabel.DisabledLinkColor = System.Drawing.Color.Aquamarine;
             this.LinkLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLoginLabel.LinkColor = System.Drawing.Color.White;
-            this.LinkLoginLabel.Location = new System.Drawing.Point(150, 399);
+            this.LinkLoginLabel.ForeColor = System.Drawing.Color.Aquamarine;
+            this.LinkLoginLabel.LinkColor = System.Drawing.Color.Aquamarine;
+            this.LinkLoginLabel.Location = new System.Drawing.Point(591, 389);
             this.LinkLoginLabel.Name = "LinkLoginLabel";
             this.LinkLoginLabel.Size = new System.Drawing.Size(225, 20);
             this.LinkLoginLabel.TabIndex = 7;
@@ -79,7 +85,7 @@ namespace Formularios.Formularios
             // BTNAlternarContrasena
             // 
             this.BTNAlternarContrasena.Image = global::Formularios.Properties.Resources.contraVisible;
-            this.BTNAlternarContrasena.Location = new System.Drawing.Point(381, 275);
+            this.BTNAlternarContrasena.Location = new System.Drawing.Point(827, 275);
             this.BTNAlternarContrasena.Name = "BTNAlternarContrasena";
             this.BTNAlternarContrasena.Size = new System.Drawing.Size(45, 34);
             this.BTNAlternarContrasena.TabIndex = 5;
@@ -88,8 +94,9 @@ namespace Formularios.Formularios
             // 
             // BTNLogin
             // 
-            this.BTNLogin.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.BTNLogin.Location = new System.Drawing.Point(300, 353);
+            this.BTNLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNLogin.ForeColor = System.Drawing.Color.DarkCyan;
+            this.BTNLogin.Location = new System.Drawing.Point(741, 333);
             this.BTNLogin.Name = "BTNLogin";
             this.BTNLogin.Size = new System.Drawing.Size(75, 23);
             this.BTNLogin.TabIndex = 0;
@@ -98,7 +105,8 @@ namespace Formularios.Formularios
             // 
             this.TXTBPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TXTBPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBPass.Location = new System.Drawing.Point(54, 277);
+            this.TXTBPass.ForeColor = System.Drawing.Color.White;
+            this.TXTBPass.Location = new System.Drawing.Point(495, 274);
             this.TXTBPass.Name = "TXTBPass";
             this.TXTBPass.PasswordChar = '*';
             this.TXTBPass.Size = new System.Drawing.Size(321, 32);
@@ -108,8 +116,8 @@ namespace Formularios.Formularios
             // 
             this.LBLPass.AutoSize = true;
             this.LBLPass.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLPass.ForeColor = System.Drawing.Color.Teal;
-            this.LBLPass.Location = new System.Drawing.Point(49, 234);
+            this.LBLPass.ForeColor = System.Drawing.Color.Aquamarine;
+            this.LBLPass.Location = new System.Drawing.Point(490, 226);
             this.LBLPass.Name = "LBLPass";
             this.LBLPass.Size = new System.Drawing.Size(123, 30);
             this.LBLPass.TabIndex = 3;
@@ -119,7 +127,8 @@ namespace Formularios.Formularios
             // 
             this.TXTBEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TXTBEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBEmail.Location = new System.Drawing.Point(54, 179);
+            this.TXTBEmail.ForeColor = System.Drawing.Color.White;
+            this.TXTBEmail.Location = new System.Drawing.Point(495, 182);
             this.TXTBEmail.Name = "TXTBEmail";
             this.TXTBEmail.Size = new System.Drawing.Size(321, 32);
             this.TXTBEmail.TabIndex = 2;
@@ -128,8 +137,8 @@ namespace Formularios.Formularios
             // 
             this.LBLEmail.AutoSize = true;
             this.LBLEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLEmail.ForeColor = System.Drawing.Color.Teal;
-            this.LBLEmail.Location = new System.Drawing.Point(49, 140);
+            this.LBLEmail.ForeColor = System.Drawing.Color.Aquamarine;
+            this.LBLEmail.Location = new System.Drawing.Point(490, 137);
             this.LBLEmail.Name = "LBLEmail";
             this.LBLEmail.Size = new System.Drawing.Size(194, 30);
             this.LBLEmail.TabIndex = 1;
@@ -139,44 +148,31 @@ namespace Formularios.Formularios
             // 
             this.LBLTitulo.AutoSize = true;
             this.LBLTitulo.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.LBLTitulo.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLTitulo.Location = new System.Drawing.Point(45, 55);
+            this.LBLTitulo.ForeColor = System.Drawing.Color.Aquamarine;
+            this.LBLTitulo.Location = new System.Drawing.Point(486, 63);
             this.LBLTitulo.Name = "LBLTitulo";
             this.LBLTitulo.Size = new System.Drawing.Size(127, 54);
             this.LBLTitulo.TabIndex = 0;
             this.LBLTitulo.Text = "Login";
-            // 
-            // panelIzquierdo
-            // 
-            this.panelIzquierdo.BackgroundImage = global::Formularios.Properties.Resources.img_gym;
-            this.panelIzquierdo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelIzquierdo.Location = new System.Drawing.Point(0, 0);
-            this.panelIzquierdo.Name = "panelIzquierdo";
-            this.panelIzquierdo.Size = new System.Drawing.Size(884, 461);
-            this.panelIzquierdo.TabIndex = 1;
-            this.panelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIzquierdo_Paint);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 461);
-            this.Controls.Add(this.panelDerecho);
-            this.Controls.Add(this.panelIzquierdo);
+            this.Controls.Add(panelDerecho);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
-            this.panelDerecho.ResumeLayout(false);
-            this.panelDerecho.PerformLayout();
+            panelDerecho.ResumeLayout(false);
+            panelDerecho.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelIzquierdo;
-        private Panel panelDerecho;
         private Label LBLTitulo;
         private Button BTNLogin;
         private TextBox TXTBPass;

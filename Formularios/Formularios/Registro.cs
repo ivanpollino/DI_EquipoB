@@ -37,11 +37,7 @@ namespace Formularios.Formularios
 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void BTNBorrarForm_Click(object sender, EventArgs e)
         {
             TXTBNombre.Text = String.Empty;
@@ -55,12 +51,7 @@ namespace Formularios.Formularios
             TXTBRepetirContra.Text = String.Empty;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-       private void ComprobarNombre(object sender, EventArgs e)
+        private void ComprobarNombre(object sender, EventArgs e)
         {
             String nombre = TXTBNombre.Text;
             if (!string.IsNullOrWhiteSpace(nombre)) {
@@ -72,11 +63,6 @@ namespace Formularios.Formularios
             }
             habilitarBotonRegistro();
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void ComprobarApellidos(object sender, EventArgs e)
         {
             String apellidos = TXTBApellidos.Text;
@@ -90,11 +76,7 @@ namespace Formularios.Formularios
             }
             habilitarBotonRegistro();
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void ValidarDNI(object sender, EventArgs e)
         {
             var regex = new Regex(@"^\d{8}[A-Z]$");
@@ -111,11 +93,6 @@ namespace Formularios.Formularios
             }
             habilitarBotonRegistro();
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void ValidarCuentaCorriente(object sender, EventArgs e)
         {
             var regex = new Regex(@"^ES\d{20}$");
@@ -132,11 +109,7 @@ namespace Formularios.Formularios
             }
             habilitarBotonRegistro();
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void ValidarEmail(object sender, EventArgs e)
         {
             String correo = TXTBEmail.Text;
@@ -154,11 +127,7 @@ namespace Formularios.Formularios
             }
             habilitarBotonRegistro();
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void comprobarContraseña(object sender, EventArgs e)
         {
             string patron = @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[%&$/\*]).{8,}$";
@@ -175,11 +144,8 @@ namespace Formularios.Formularios
             }
             habilitarBotonRegistro();
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
+
         private void comprobarContraseñaRepetida(object sender, EventArgs e)
         {
             String contraseña = TXTBContrasena.Text;
@@ -198,9 +164,7 @@ namespace Formularios.Formularios
             habilitarBotonRegistro();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+
         private void habilitarBotonRegistro()
         {
             if(bContraseña && bApellido && bNombre && bEmail && bDni && bCcc && bRepecontraseña)
@@ -215,11 +179,7 @@ namespace Formularios.Formularios
             }
 
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void BTNRegistrar_Click(object sender, EventArgs e)
         {
             String mensaje;
@@ -259,12 +219,6 @@ namespace Formularios.Formularios
                 MessageBox.Show("Falta algun campo obligatorio");
             }
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void caparSoloNumeros(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -272,11 +226,7 @@ namespace Formularios.Formularios
                 e.Handled = true;
             }
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void BTNVerContraNormal_Click(object sender, EventArgs e)
         {
             if (TXTBContrasena.PasswordChar == '\0')
@@ -291,11 +241,7 @@ namespace Formularios.Formularios
 
             }
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         private void BTNVerContraRepe_Click(object sender, EventArgs e)
         {
             if (TXTBRepetirContra.PasswordChar == '\0')

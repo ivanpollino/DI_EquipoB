@@ -78,26 +78,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Formularios.exe" size="1341912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Formularios.exe" size="1585112">
       <assemblyIdentity name="Formularios" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fR8X0hpwwnKQiD9eEsg75kPxGIX5ZBi8+3RoWDBq5C8=</dsig:DigestValue>
+        <dsig:DigestValue>C0dzP4Pu4DxWT3pEdpzrVPXLfIRhrwryRP/zNE8HxOg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Negocio.dll" size="8192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Negocio.dll" size="8704">
       <assemblyIdentity name="Negocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/McPR7gdKTWbg/EBDMLCIPHDgc1uF9UktD64vhNHoSk=</dsig:DigestValue>
+        <dsig:DigestValue>ch7PGl3XrvfF5G33Uh4xy/G8Od4jiVLUXqPRKKPuoNg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
