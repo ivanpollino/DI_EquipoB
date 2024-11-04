@@ -412,6 +412,7 @@ namespace Formularios.Formularios
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.Registro_Load);
             this.panelIzquierdo.ResumeLayout(false);
             this.panelIzquierdo.PerformLayout();
             this.ResumeLayout(false);

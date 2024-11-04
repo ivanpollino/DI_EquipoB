@@ -10,14 +10,26 @@ using System.Threading.Tasks;
 
 namespace Negocio.Managment
 {
+    /// <summary>
+    /// Clase que gestiona la lógica de negocio para la entidad Usuario,
+    /// incluyendo operaciones de alta, verificación de login y cifrado de contraseñas.
+    /// </summary>
     public class UsuarioManagment
     {
+        /// <summary>
+        /// Mensaje de estado para operaciones realizadas en la clase.
+        /// </summary>
         public string mensaje;
 
+        /// <summary>
+        /// Registra un nuevo usuario en la base de datos, comprobando la existencia previa de email y DNI.
+        /// </summary>
+        /// <param name="usuarioDTO">DTO del usuario a registrar.</param>
+        /// <returns>Mensaje indicando el estado de la operación.</returns>
         public String altaUsuario(UsuarioDTO usuarioDTO)
         {
             Usuario usuario = new Usuario();
-            Datos.Repositorys.UsuarioRepository datos = new Datos.Repositorys.UsuarioRepository();
+            UsuarioRepository datos = new UsuarioRepository();
             List<Usuario> usuarios = datos.ObtenerUsuarios();
 
             if (usuarios.Count == 0)
@@ -25,7 +37,7 @@ namespace Negocio.Managment
                 return "La conexión a la base de datos ha fallado";
             }
 
-            if (comprobarEmail(usuarios,usuarioDTO))
+            if (comprobarEmail(usuarios, usuarioDTO))
             {
                 if (comprobarDNI(usuarios, usuarioDTO))
                 {
@@ -40,94 +52,90 @@ namespace Negocio.Managment
 
                     return datos.altaUsuario(usuario);
                 }
-                else{
+                else
+                {
                     return "Ya hay un usuario registrado con ese DNI";
                 }
-                
             }
             else
             {
                 return "Ya hay un usuario registrado con ese email";
             }
-
         }
 
+        /// <summary>
+        /// Comprueba si un DNI ya está registrado en la lista de usuarios.
+        /// </summary>
+        /// <param name="usuarios">Lista de usuarios existentes.</param>
+        /// <param name="usuario">DTO del usuario a verificar.</param>
+        /// <returns>Verdadero si el DNI no existe en la lista; falso en caso contrario.</returns>
         private bool comprobarDNI(List<Usuario> usuarios, UsuarioDTO usuario)
         {
-            List<String> dnis = usuarios.Select(x=> x.DNI).ToList();
-            if (dnis.Contains(usuario.DNI))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            List<String> dnis = usuarios.Select(x => x.DNI).ToList();
+            return !dnis.Contains(usuario.DNI);
         }
 
-        private bool comprobarEmail(List<Usuario> usuarios,UsuarioDTO usuario)
-        {
-           List<String> emails = usuarios.Select(x => x.Email).ToList();
-
-            if (emails.Contains(usuario.Email))
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-
-        }
         /// <summary>
-        /// Cifrars the specified contrasena.
+        /// Comprueba si un email ya está registrado en la lista de usuarios.
         /// </summary>
-        /// <param name="contrasena">The contrasena.</param>
-        /// <returns></returns>
+        /// <param name="usuarios">Lista de usuarios existentes.</param>
+        /// <param name="usuario">DTO del usuario a verificar.</param>
+        /// <returns>Verdadero si el email no existe en la lista; falso en caso contrario.</returns>
+        private bool comprobarEmail(List<Usuario> usuarios, UsuarioDTO usuario)
+        {
+            List<String> emails = usuarios.Select(x => x.Email).ToList();
+            return !emails.Contains(usuario.Email);
+        }
+
+        /// <summary>
+        /// Cifra una contraseña usando el algoritmo SHA-256.
+        /// </summary>
+        /// <param name="contrasena">Contraseña en texto plano a cifrar.</param>
+        /// <returns>Contraseña cifrada en formato hexadecimal.</returns>
         public string cifrar(string contrasena)
         {
-            // Utilizamos SHA256 para el hash
             using (SHA256 sha256 = SHA256.Create())
             {
-                // Convertimos la contraseña a un array de bytes
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(contrasena));
-
-                // Convertimos los bytes a una representación hexadecimal
                 StringBuilder hashString = new StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
+                foreach (byte b in bytes)
                 {
-                    hashString.Append(bytes[i].ToString("X2"));
+                    hashString.Append(b.ToString("X2"));
                 }
 
-                string resultado = hashString.ToString();
-                return resultado;
+                return hashString.ToString();
             }
         }
 
-            public UsuarioDTO comprobarLogin(String email, String pass)
+        /// <summary>
+        /// Verifica las credenciales de login del usuario.
+        /// </summary>
+        /// <param name="email">Email del usuario.</param>
+        /// <param name="pass">Contraseña en texto plano del usuario.</param>
+        /// <returns>Un objeto UsuarioDTO si las credenciales son correctas; null en caso contrario.</returns>
+        public UsuarioDTO comprobarLogin(String email, String pass)
         {
             pass = cifrar(pass);
-            Datos.Repositorys.UsuarioRepository datos = new Datos.Repositorys.UsuarioRepository();
-            UsuarioDTO usuarioDTO = new UsuarioDTO();
-            Usuario usuario = datos.ObtenerUsuarios().Where(x => x.Email == email && x.Passwd == pass).FirstOrDefault();
-            if (usuario != null) {
-                usuarioDTO.Nombre = usuario.Nombre;
-                usuarioDTO.Apellidos = usuario.Apellidos;
-                usuarioDTO.Telefono = usuario.Telefono;
-                usuarioDTO.DNI = usuario.DNI;
-                usuarioDTO.Direccion = usuario.Direccion;
-                usuarioDTO.Cuenta_Corriente = usuario.Cuenta_Corriente;
-                usuarioDTO.Email = usuario.Email;
-                usuarioDTO.Passwd = cifrar(usuario.Passwd);
+            UsuarioRepository datos = new UsuarioRepository();
+            Usuario usuario = datos.ObtenerUsuarios().FirstOrDefault(x => x.Email == email && x.Passwd == pass);
+
+            if (usuario != null)
+            {
+                UsuarioDTO usuarioDTO = new UsuarioDTO
+                {
+                    Nombre = usuario.Nombre,
+                    Apellidos = usuario.Apellidos,
+                    Telefono = usuario.Telefono,
+                    DNI = usuario.DNI,
+                    Direccion = usuario.Direccion,
+                    Cuenta_Corriente = usuario.Cuenta_Corriente,
+                    Email = usuario.Email,
+                    Passwd = cifrar(usuario.Passwd) // Cifrado de nuevo por seguridad
+                };
                 return usuarioDTO;
             }
 
             return null;
-
         }
-
-
     }
-
-   
 }

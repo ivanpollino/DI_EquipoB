@@ -9,24 +9,31 @@ using System.Threading.Tasks;
 
 namespace Datos.Repositorys
 {
+    /// <summary>
+    /// Clase que proporciona métodos para gestionar los usuarios en la base de datos.
+    /// </summary>
     public class UsuarioRepository
     {
 
+        /// <summary>
+        /// Registra un nuevo usuario en la base de datos.
+        /// </summary>
+        /// <param name="usuario">Objeto <see cref="Usuario"/> que contiene la información del usuario a añadir.</param>
+        /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
         public String altaUsuario(Usuario usuario)
         {
-                //Ususario_Normal ususarioNormal = new Ususario_Normal();
-                //ususarioNormal.DNI = usuario.DNI;
-                //ususarioNormal.Id_Actividad = 0;
             using (var contexto = new equipobEntities1())
                 {
                     contexto.Usuario.Add(usuario);
-                    //contexto.Ususario_Normal.Add(ususarioNormal);
                     contexto.SaveChanges();
                     
                 }
             return "Usuario añadido con exito";
         }
-
+        /// <summary>
+        /// Obtiene la lista de todos los usuarios registrados en la base de datos.
+        /// </summary>
+        /// <returns>Lista de objetos <see cref="Usuario"/> con la información de cada usuario.</returns>
         public List<Usuario> ObtenerUsuarios()
         {
             List<Usuario> usuarios = new List<Usuario>();
