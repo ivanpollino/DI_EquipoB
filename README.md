@@ -28,6 +28,7 @@ El archivo `InicioSesionTests` contiene pruebas que verifican los casos de uso r
 El archivo `RegistroUsuarioTests` contiene pruebas que validan diferentes casos de registro de usuario utilizando la clase `Registro`. Estas pruebas aseguran que todos los datos requeridos sean válidos antes de añadir un usuario al sistema.
 
 #### Casos de Prueba
+Todos los casos de prueba estan basados en el archivo de Caja Negra
 
 - **CP1_1_1**: Registrar usuario con todos los campos válidos.
 - **CP1_1_2**: Registrar usuario sin dirección y teléfono.
@@ -47,10 +48,3 @@ Para ejecutar las pruebas:
 2. Navega a **Test > Run All Tests** para ejecutar todas las pruebas.
 3. Observa los resultados en la ventana **Test Explorer** para verificar que todas las pruebas pasen o encuentren problemas específicos.
 
-## Contribuciones
-
-Las contribuciones son bienvenidas. Si tienes ideas para mejorar el sistema de pruebas o detectas errores, por favor crea un issue o envía un pull request.
-
-## Licencia
-
-Este proyecto está licenciado bajo MIT License.
