@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formularios\\landing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|c:\\users\\vespertino\\desktop\\proyectodi\\di_equipob\\formularios\\formularios\\landing.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formularios\\landing.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\formularios\\formularios\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{376E41BC-F38B-44C0-A80C-3E02F471BE32}|Formularios\\Formularios.csproj|solutionrelative:formularios\\formularios\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -66,11 +70,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "Landing.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Landing.Designer.cs",
+              "RelativeDocumentMoniker": "Formularios\\Formularios\\Landing.Designer.cs",
+              "ToolTip": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Landing.Designer.cs",
+              "RelativeToolTip": "Formularios\\Formularios\\Landing.Designer.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAUwDgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T16:23:28.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "equipob.edmx [Diagram1]",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Datos\\Infrastructure\\equipob.edmx",
               "RelativeDocumentMoniker": "Datos\\Infrastructure\\equipob.edmx",
@@ -87,7 +104,7 @@
               "RelativeDocumentMoniker": "Formularios\\Formularios\\Landing.cs",
               "ToolTip": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Landing.cs",
               "RelativeToolTip": "Formularios\\Formularios\\Landing.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAIAwwGUAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAALMAAAAAAAAAAAA9wL8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T15:12:13.547Z",
               "EditorCaption": ""
@@ -106,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UsuarioManagment.cs",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Negocio\\Managment\\UsuarioManagment.cs",
               "RelativeDocumentMoniker": "Negocio\\Managment\\UsuarioManagment.cs",
@@ -114,12 +131,11 @@
               "RelativeToolTip": "Negocio\\Managment\\UsuarioManagment.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAgwCoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T16:17:41.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T16:17:41.078Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Login.cs",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Login.cs",
               "RelativeDocumentMoniker": "Formularios\\Formularios\\Login.cs",
@@ -132,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Login.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Login.cs",
               "RelativeDocumentMoniker": "Formularios\\Formularios\\Login.cs",
@@ -144,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\TestLogin\\App.config",
               "RelativeDocumentMoniker": "TestLogin\\App.config",
@@ -156,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Registro.cs",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Registro.cs",
               "RelativeDocumentMoniker": "Formularios\\Formularios\\Registro.cs",
@@ -168,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Registro.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Registro.cs",
               "RelativeDocumentMoniker": "Formularios\\Formularios\\Registro.cs",
@@ -179,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Registro.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\Formularios\\Registro.Designer.cs",
               "RelativeDocumentMoniker": "Formularios\\Formularios\\Registro.Designer.cs",
@@ -191,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Formularios\\App.config",
               "RelativeDocumentMoniker": "Formularios\\App.config",
@@ -204,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "App.Config",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Datos\\App.Config",
               "RelativeDocumentMoniker": "Datos\\App.Config",
@@ -216,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\Datos\\Repositorys\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "Datos\\Repositorys\\UsuarioRepository.cs",
@@ -228,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\Vespertino\\Desktop\\ProyectoDI\\DI_EquipoB\\TestLogin\\UnitTest1.cs",
               "RelativeDocumentMoniker": "TestLogin\\UnitTest1.cs",

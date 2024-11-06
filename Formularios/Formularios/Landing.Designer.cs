@@ -38,7 +38,11 @@ namespace Formularios.Formularios
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbTexto2 = new System.Windows.Forms.Label();
             this.lbTexto1 = new System.Windows.Forms.Label();
+            this.panelAdministador = new System.Windows.Forms.Panel();
+            this.BTNOpcionesAdministrador = new System.Windows.Forms.Button();
+            this.BTNCerrarSesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panelAdministador.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbInfoUsuario
@@ -50,7 +54,9 @@ namespace Formularios.Formularios
             this.lbInfoUsuario.Location = new System.Drawing.Point(391, 29);
             this.lbInfoUsuario.Name = "lbInfoUsuario";
             this.lbInfoUsuario.Size = new System.Drawing.Size(81, 30);
+            this.lbInfoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbInfoUsuario.TabIndex = 0;
+            this.lbInfoUsuario.Click += new System.EventHandler(this.lbInfoUsuario_Click);
             this.lbInfoUsuario.Text = "usuario";
             // 
             // lbLinkLogin
@@ -58,6 +64,7 @@ namespace Formularios.Formularios
             this.lbLinkLogin.ActiveLinkColor = System.Drawing.Color.Cyan;
             this.lbLinkLogin.AutoSize = true;
             this.lbLinkLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lbLinkLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbLinkLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLinkLogin.ForeColor = System.Drawing.Color.Cyan;
             this.lbLinkLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -99,6 +106,7 @@ namespace Formularios.Formularios
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.BackgroundImage = global::Formularios.Properties.Resources.img_gym;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.panelAdministador);
             this.panel1.Controls.Add(this.lbTexto2);
             this.panel1.Controls.Add(this.lbTexto1);
             this.panel1.Controls.Add(this.lbLinkLogin);
@@ -108,7 +116,7 @@ namespace Formularios.Formularios
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(884, 461);
+            this.panel1.Size = new System.Drawing.Size(1232, 641);
             this.panel1.TabIndex = 4;
             // 
             // lbTexto2
@@ -136,11 +144,41 @@ namespace Formularios.Formularios
             this.lbTexto1.TabIndex = 4;
             this.lbTexto1.Text = "TU MÁXIMO NIVEL";
             // 
+            // panelAdministador
+            // 
+            this.panelAdministador.BackColor = System.Drawing.Color.Black;
+            this.panelAdministador.Controls.Add(this.BTNCerrarSesion);
+            this.panelAdministador.Controls.Add(this.BTNOpcionesAdministrador);
+            this.panelAdministador.Location = new System.Drawing.Point(331, 65);
+            this.panelAdministador.Name = "panelAdministador";
+            this.panelAdministador.Size = new System.Drawing.Size(208, 125);
+            this.panelAdministador.TabIndex = 6;
+            // 
+            // BTNOpcionesAdministrador
+            // 
+            this.BTNOpcionesAdministrador.Location = new System.Drawing.Point(0, 0);
+            this.BTNOpcionesAdministrador.Name = "BTNOpcionesAdministrador";
+            this.BTNOpcionesAdministrador.Size = new System.Drawing.Size(208, 66);
+            this.BTNOpcionesAdministrador.TabIndex = 0;
+            this.BTNOpcionesAdministrador.Text = "button1";
+            this.BTNOpcionesAdministrador.UseVisualStyleBackColor = true;
+            // 
+            // BTNCerrarSesion
+            // 
+            this.BTNCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.BTNCerrarSesion.ForeColor = System.Drawing.Color.Black;
+            this.BTNCerrarSesion.Location = new System.Drawing.Point(0, 64);
+            this.BTNCerrarSesion.Name = "BTNCerrarSesion";
+            this.BTNCerrarSesion.Size = new System.Drawing.Size(208, 66);
+            this.BTNCerrarSesion.TabIndex = 1;
+            this.BTNCerrarSesion.Text = "button2";
+            this.BTNCerrarSesion.UseVisualStyleBackColor = false;
+            // 
             // Landing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 461);
+            this.ClientSize = new System.Drawing.Size(1232, 641);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Landing";
@@ -150,6 +188,7 @@ namespace Formularios.Formularios
             this.Load += new System.EventHandler(this.Landing_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelAdministador.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -163,5 +202,8 @@ namespace Formularios.Formularios
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbTexto1;
         private System.Windows.Forms.Label lbTexto2;
+        private Panel panelAdministador;
+        private Button BTNOpcionesAdministrador;
+        private Button BTNCerrarSesion;
     }
 }

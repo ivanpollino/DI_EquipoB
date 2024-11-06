@@ -44,7 +44,8 @@ namespace Formularios.Formularios
         /// Muestra u oculta los elementos de la cabecera en función del estado de autenticación del usuario.
         /// </summary>
         private void cargarHeader()
-        {
+        {   
+            panelAdministador.Visible = false;
             lbInfoUsuario.Visible = false;
             lbLinkLogin.Visible = false;
             if (logeado)
@@ -101,8 +102,9 @@ namespace Formularios.Formularios
         {
             if (usuario != null)
             {
+                MessageBox.Show("Si");
                 btLogin.Visible = false;
-                btLogin.Visible = true;
+                btRegistro.Visible = false;
             }
         }
 
@@ -118,6 +120,14 @@ namespace Formularios.Formularios
         {
             btLogin_Click(sender, e);
         }
+
+        private void lbInfoUsuario_Click(object sender, EventArgs e)
+        {
+
+            panelAdministador.Visible = true;
+
+        }
+
 
         /// <summary>
         /// Dibuja un contorno en el texto del label `lbTexto2` para estilizarlo con un borde personalizado.
@@ -179,7 +189,7 @@ namespace Formularios.Formularios
         {
             int panelWidth = panel1.ClientSize.Width;
             int panelHeight = panel1.ClientSize.Height;
-
+            
             lbInfoUsuario.Left = (panel1.ClientSize.Width - lbInfoUsuario.Width) / 2;
             lbLinkLogin.Left = (panel1.ClientSize.Width - lbLinkLogin.Width) / 2;
             lbTexto1.Location = new Point((panelWidth - lbTexto1.Width) / 2, (panelHeight - lbTexto1.Height) / 2 - 100);
