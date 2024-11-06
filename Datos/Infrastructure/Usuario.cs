@@ -25,6 +25,6 @@ namespace Datos.Infrastructure
     
         public virtual Administrador Administrador { get; set; }
         public virtual Monitor Monitor { get; set; }
-        public virtual Ususario_Normal Ususario_Normal { get; set; }
+        public virtual Usuario_Normal Usuario_Normal { get; set; }
     }
 }

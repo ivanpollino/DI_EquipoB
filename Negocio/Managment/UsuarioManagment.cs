@@ -32,10 +32,10 @@ namespace Negocio.Managment
             UsuarioRepository datos = new UsuarioRepository();
             List<Usuario> usuarios = datos.ObtenerUsuarios();
 
-            if (usuarios.Count == 0)
+            /*if (usuarios.Count == 0)
             {
                 return "La conexión a la base de datos ha fallado";
-            }
+            }*/
 
             if (comprobarEmail(usuarios, usuarioDTO))
             {
