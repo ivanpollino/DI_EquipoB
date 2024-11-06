@@ -147,7 +147,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="equipobEntities1" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="equipobEntities2" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Actividad" EntityType="Self.Actividad" />
     <EntitySet Name="Actividades" EntityType="Self.Actividades" />
     <EntitySet Name="Administrador" EntityType="Self.Administrador" />

@@ -256,3 +256,7 @@ E:\MULWEB 2\DesInt\EquipoB\Formularios\bin\Debug\Formularios.exe.manifest
 E:\MULWEB 2\DesInt\EquipoB\Formularios\bin\Debug\Formularios.application
 E:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.exe.manifest
 E:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.application
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\bin\Debug\Formularios.exe.manifest
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\bin\Debug\Formularios.application
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.exe.manifest
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.application

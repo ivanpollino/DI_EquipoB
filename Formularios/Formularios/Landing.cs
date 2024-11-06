@@ -87,11 +87,28 @@ namespace Formularios.Formularios
                 usuario = loginForm.UsuarioAutenticado;
                 logeado = true;
                 cargarHeader();
+                Landing_Resize(sender, e);
+                habilitarBotones();
+                comprobarAdministrador();
             }
             else
             {
                 logeado = false;
             }
+        }
+
+        private void habilitarBotones()
+        {
+            if (usuario != null)
+            {
+                btLogin.Visible = false;
+                btLogin.Visible = true;
+            }
+        }
+
+        private void comprobarAdministrador()
+        {
+            
         }
 
         /// <summary>

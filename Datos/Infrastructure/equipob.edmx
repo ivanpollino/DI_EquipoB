@@ -326,7 +326,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="equipobEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="equipobEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Actividad" EntityType="Self.Actividad" />
           <EntitySet Name="Actividades" EntityType="Self.Actividades" />
           <EntitySet Name="Administrador" EntityType="Self.Administrador" />
@@ -367,7 +367,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="equipobModelStoreContainer" CdmEntityContainer="equipobEntities1">
+        <EntityContainerMapping StorageEntityContainer="equipobModelStoreContainer" CdmEntityContainer="equipobEntities2">
           <EntitySetMapping Name="Actividad">
             <EntityTypeMapping TypeName="equipobModel.Actividad">
               <MappingFragment StoreEntitySet="Actividad">

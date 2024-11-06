@@ -60,3 +60,7 @@ E:\MULWEB 2\DesInt\EquipoB\TestLogin\obj\Debug\TestLogin.csproj.CoreCompileInput
 E:\MULWEB 2\DesInt\EquipoB\TestLogin\obj\Debug\TestLogin.csproj.Up2Date
 E:\MULWEB 2\DesInt\EquipoB\TestLogin\obj\Debug\TestLogin.dll
 E:\MULWEB 2\DesInt\EquipoB\TestLogin\obj\Debug\TestLogin.pdb
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\TestLogin\obj\Debug\TestLogin.csproj.AssemblyReference.cache
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\TestLogin\obj\Debug\TestLogin.csproj.CoreCompileInputs.cache
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\TestLogin\obj\Debug\TestLogin.dll
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\TestLogin\obj\Debug\TestLogin.pdb
