@@ -169,6 +169,9 @@
     <Content Include="Resources\contraNoVisible.png" />
     <Content Include="Resources\contraVisible.png" />
     <Content Include="Resources\gym.png" />
+    <None Include="Resources\Registro.PNG" />
+    <None Include="Resources\imagenFondoRegistro1.jpg" />
+    <None Include="Resources\imagenFondoRegistro.jpg" />
     <None Include="Resources\imagenFondoLogin.jpg" />
     <None Include="Resources\prueba79.jpg" />
     <None Include="Resources\img_gym.PNG" />
