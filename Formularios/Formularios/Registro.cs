@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -43,6 +44,8 @@ namespace Formularios.Formularios
         public Registro()
         {
             InitializeComponent();
+            ConfigurarBotones(BTNBorrarForm);
+            ConfigurarBotones(BTNRegistrar);
             BTNRegistrar.Enabled = false;
 
             // Eventos de validación de campos
@@ -194,6 +197,11 @@ namespace Formularios.Formularios
             habilitarBotonRegistro();
         }
 
+        private void panelIzquierdo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// Activa el botón de registro si todos los campos requeridos son válidos.
         /// </summary>
@@ -281,6 +289,30 @@ namespace Formularios.Formularios
                 TXTBRepetirContra.PasswordChar = '\0';
                 BTNVerContraRepe.Image = Properties.Resources.contraNoVisible;
             }
+        }
+        /// <summary>
+        /// Configura los botones de la interfaz con bordes redondeados y estilo personalizado.
+        /// </summary>
+        /// <param name="button">Botón a personalizar</param>
+        private void ConfigurarBotones(Button button)
+        {
+            button.Font = BTNBorrarForm.Font;
+            button.BackColor = Color.DarkCyan;
+            button.ForeColor = Color.Black;
+            button.FlatStyle = FlatStyle.Flat;
+            button.Cursor = Cursors.Hand;
+            button.FlatAppearance.BorderSize = 0;
+
+            // Crear un GraphicsPath para bordes redondeados
+            GraphicsPath path = new GraphicsPath();
+            int radius = 30;
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(button.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(button.Width - radius, button.Height - radius, radius, radius, 0, 90);
+            path.AddArc(0, button.Height - radius, radius, radius, 90, 90);
+            path.CloseFigure();
+
+            button.Region = new Region(path);
         }
     }
 }

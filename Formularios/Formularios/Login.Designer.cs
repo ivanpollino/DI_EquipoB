@@ -36,12 +36,12 @@ namespace Formularios.Formularios
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.LinkLoginLabel = new System.Windows.Forms.LinkLabel();
             this.BTNAlternarContrasena = new System.Windows.Forms.Button();
-            this.BTNLogin = new System.Windows.Forms.Button();
             this.TXTBPass = new System.Windows.Forms.TextBox();
             this.LBLPass = new System.Windows.Forms.Label();
             this.TXTBEmail = new System.Windows.Forms.TextBox();
             this.LBLEmail = new System.Windows.Forms.Label();
             this.LBLTitulo = new System.Windows.Forms.Label();
+            this.BTNLogin = new System.Windows.Forms.Button();
             panelDerecho = new System.Windows.Forms.Panel();
             panelDerecho.SuspendLayout();
             this.SuspendLayout();
@@ -51,9 +51,9 @@ namespace Formularios.Formularios
             panelDerecho.BackColor = System.Drawing.Color.Transparent;
             panelDerecho.BackgroundImage = global::Formularios.Properties.Resources.imagenFondoLogin;
             panelDerecho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            panelDerecho.Controls.Add(this.BTNLogin);
             panelDerecho.Controls.Add(this.LinkLoginLabel);
             panelDerecho.Controls.Add(this.BTNAlternarContrasena);
-            panelDerecho.Controls.Add(this.BTNLogin);
             panelDerecho.Controls.Add(this.TXTBPass);
             panelDerecho.Controls.Add(this.LBLPass);
             panelDerecho.Controls.Add(this.TXTBEmail);
@@ -70,10 +70,10 @@ namespace Formularios.Formularios
             // LinkLoginLabel
             // 
             this.LinkLoginLabel.AutoSize = true;
-            this.LinkLoginLabel.DisabledLinkColor = System.Drawing.Color.Aquamarine;
+            this.LinkLoginLabel.DisabledLinkColor = System.Drawing.Color.DarkSlateGray;
             this.LinkLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLoginLabel.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LinkLoginLabel.LinkColor = System.Drawing.Color.Aquamarine;
+            this.LinkLoginLabel.ForeColor = System.Drawing.Color.Cyan;
+            this.LinkLoginLabel.LinkColor = System.Drawing.Color.DarkCyan;
             this.LinkLoginLabel.Location = new System.Drawing.Point(591, 389);
             this.LinkLoginLabel.Name = "LinkLoginLabel";
             this.LinkLoginLabel.Size = new System.Drawing.Size(225, 20);
@@ -92,15 +92,6 @@ namespace Formularios.Formularios
             this.BTNAlternarContrasena.UseVisualStyleBackColor = true;
             this.BTNAlternarContrasena.Click += new System.EventHandler(this.BTNAlternarContrasena_Click);
             // 
-            // BTNLogin
-            // 
-            this.BTNLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNLogin.ForeColor = System.Drawing.Color.DarkCyan;
-            this.BTNLogin.Location = new System.Drawing.Point(741, 333);
-            this.BTNLogin.Name = "BTNLogin";
-            this.BTNLogin.Size = new System.Drawing.Size(75, 23);
-            this.BTNLogin.TabIndex = 0;
-            // 
             // TXTBPass
             // 
             this.TXTBPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -116,7 +107,7 @@ namespace Formularios.Formularios
             // 
             this.LBLPass.AutoSize = true;
             this.LBLPass.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLPass.ForeColor = System.Drawing.Color.Aquamarine;
+            this.LBLPass.ForeColor = System.Drawing.Color.DarkCyan;
             this.LBLPass.Location = new System.Drawing.Point(490, 226);
             this.LBLPass.Name = "LBLPass";
             this.LBLPass.Size = new System.Drawing.Size(123, 30);
@@ -137,7 +128,7 @@ namespace Formularios.Formularios
             // 
             this.LBLEmail.AutoSize = true;
             this.LBLEmail.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLEmail.ForeColor = System.Drawing.Color.Aquamarine;
+            this.LBLEmail.ForeColor = System.Drawing.Color.DarkCyan;
             this.LBLEmail.Location = new System.Drawing.Point(490, 137);
             this.LBLEmail.Name = "LBLEmail";
             this.LBLEmail.Size = new System.Drawing.Size(194, 30);
@@ -148,12 +139,23 @@ namespace Formularios.Formularios
             // 
             this.LBLTitulo.AutoSize = true;
             this.LBLTitulo.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.LBLTitulo.ForeColor = System.Drawing.Color.Aquamarine;
+            this.LBLTitulo.ForeColor = System.Drawing.Color.DarkCyan;
             this.LBLTitulo.Location = new System.Drawing.Point(486, 63);
             this.LBLTitulo.Name = "LBLTitulo";
             this.LBLTitulo.Size = new System.Drawing.Size(127, 54);
             this.LBLTitulo.TabIndex = 0;
             this.LBLTitulo.Text = "Login";
+            // 
+            // BTNLogin
+            // 
+            this.BTNLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNLogin.ForeColor = System.Drawing.Color.Black;
+            this.BTNLogin.Location = new System.Drawing.Point(713, 330);
+            this.BTNLogin.Name = "BTNLogin";
+            this.BTNLogin.Size = new System.Drawing.Size(103, 30);
+            this.BTNLogin.TabIndex = 8;
+            this.BTNLogin.Text = "LOGIN";
+            this.BTNLogin.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -174,12 +176,12 @@ namespace Formularios.Formularios
 
         #endregion
         private Label LBLTitulo;
-        private Button BTNLogin;
         private TextBox TXTBPass;
         private Label LBLPass;
         private TextBox TXTBEmail;
         private Label LBLEmail;
         private Button BTNAlternarContrasena;
         private LinkLabel LinkLoginLabel;
+        private Button BTNLogin;
     }
 }
