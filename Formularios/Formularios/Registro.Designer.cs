@@ -33,15 +33,15 @@ namespace Formularios.Formularios
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.LBLAvisoContrasena = new System.Windows.Forms.Label();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.lblAvisoCuenta = new System.Windows.Forms.Label();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
             this.LBLAvisoDNI = new System.Windows.Forms.Label();
+            this.lblAvisoCuenta = new System.Windows.Forms.Label();
             this.LBLAvisoCorreo = new System.Windows.Forms.Label();
             this.BTNVerContraRepe = new System.Windows.Forms.Button();
             this.BTNVerContraNormal = new System.Windows.Forms.Button();
             this.LBLAvisoContraRepetida = new System.Windows.Forms.Label();
+            this.LBLAvisoContrasena = new System.Windows.Forms.Label();
             this.TXTBRepetirContra = new System.Windows.Forms.TextBox();
             this.LBLConfirmarContrasena = new System.Windows.Forms.Label();
             this.LBLNombre = new System.Windows.Forms.Label();
@@ -62,6 +62,7 @@ namespace Formularios.Formularios
             this.LBLCCC = new System.Windows.Forms.Label();
             this.LBLDireccion = new System.Windows.Forms.Label();
             this.TXTBDireccion = new System.Windows.Forms.TextBox();
+            this.LBLTitulo = new System.Windows.Forms.Label();
             this.panelIzquierdo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,39 +70,15 @@ namespace Formularios.Formularios
             // 
             this.toolTip1.ToolTipTitle = "Como tener una contraseña valida";
             // 
-            // LBLAvisoContrasena
-            // 
-            this.LBLAvisoContrasena.AutoSize = true;
-            this.LBLAvisoContrasena.BackColor = System.Drawing.Color.Transparent;
-            this.LBLAvisoContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLAvisoContrasena.ForeColor = System.Drawing.Color.Red;
-            this.LBLAvisoContrasena.Location = new System.Drawing.Point(21, 266);
-            this.LBLAvisoContrasena.Name = "LBLAvisoContrasena";
-            this.LBLAvisoContrasena.Size = new System.Drawing.Size(0, 13);
-            this.LBLAvisoContrasena.TabIndex = 21;
-            this.toolTip1.SetToolTip(this.LBLAvisoContrasena, "La contraseña debe tener:\n- Más de 8 caracteres\n- Letras mayúsculas y minúsculas\n" +
-        "- Al menos un número\n- Al menos un carácter especial (% & $ / *)");
-            // 
             // toolTip2
             // 
             this.toolTip2.ToolTipTitle = "Como tener un formato de CCC valido";
             // 
-            // lblAvisoCuenta
-            // 
-            this.lblAvisoCuenta.AutoSize = true;
-            this.lblAvisoCuenta.BackColor = System.Drawing.Color.Transparent;
-            this.lblAvisoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvisoCuenta.ForeColor = System.Drawing.Color.Red;
-            this.lblAvisoCuenta.Location = new System.Drawing.Point(154, 169);
-            this.lblAvisoCuenta.Name = "lblAvisoCuenta";
-            this.lblAvisoCuenta.Size = new System.Drawing.Size(0, 13);
-            this.lblAvisoCuenta.TabIndex = 25;
-            this.toolTip2.SetToolTip(this.lblAvisoCuenta, "La CCC debe tener:\n- Empezar por ES\n- Y tener 20 digitos numericos\n");
-            // 
             // panelIzquierdo
             // 
-            this.panelIzquierdo.BackgroundImage = global::Formularios.Properties.Resources.prueba79;
+            this.panelIzquierdo.BackgroundImage = global::Formularios.Properties.Resources.Registro;
             this.panelIzquierdo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelIzquierdo.Controls.Add(this.LBLTitulo);
             this.panelIzquierdo.Controls.Add(this.LBLAvisoDNI);
             this.panelIzquierdo.Controls.Add(this.lblAvisoCuenta);
             this.panelIzquierdo.Controls.Add(this.LBLAvisoCorreo);
@@ -133,6 +110,7 @@ namespace Formularios.Formularios
             this.panelIzquierdo.Name = "panelIzquierdo";
             this.panelIzquierdo.Size = new System.Drawing.Size(894, 461);
             this.panelIzquierdo.TabIndex = 20;
+            this.panelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIzquierdo_Paint);
             // 
             // LBLAvisoDNI
             // 
@@ -140,10 +118,22 @@ namespace Formularios.Formularios
             this.LBLAvisoDNI.BackColor = System.Drawing.Color.Transparent;
             this.LBLAvisoDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLAvisoDNI.ForeColor = System.Drawing.Color.Red;
-            this.LBLAvisoDNI.Location = new System.Drawing.Point(154, 118);
+            this.LBLAvisoDNI.Location = new System.Drawing.Point(208, 166);
             this.LBLAvisoDNI.Name = "LBLAvisoDNI";
             this.LBLAvisoDNI.Size = new System.Drawing.Size(0, 13);
             this.LBLAvisoDNI.TabIndex = 26;
+            // 
+            // lblAvisoCuenta
+            // 
+            this.lblAvisoCuenta.AutoSize = true;
+            this.lblAvisoCuenta.BackColor = System.Drawing.Color.Transparent;
+            this.lblAvisoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvisoCuenta.ForeColor = System.Drawing.Color.Red;
+            this.lblAvisoCuenta.Location = new System.Drawing.Point(208, 217);
+            this.lblAvisoCuenta.Name = "lblAvisoCuenta";
+            this.lblAvisoCuenta.Size = new System.Drawing.Size(0, 13);
+            this.lblAvisoCuenta.TabIndex = 25;
+            this.toolTip2.SetToolTip(this.lblAvisoCuenta, "La CCC debe tener:\n- Empezar por ES\n- Y tener 20 digitos numericos\n");
             // 
             // LBLAvisoCorreo
             // 
@@ -151,7 +141,7 @@ namespace Formularios.Formularios
             this.LBLAvisoCorreo.BackColor = System.Drawing.Color.Transparent;
             this.LBLAvisoCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLAvisoCorreo.ForeColor = System.Drawing.Color.Red;
-            this.LBLAvisoCorreo.Location = new System.Drawing.Point(22, 218);
+            this.LBLAvisoCorreo.Location = new System.Drawing.Point(76, 266);
             this.LBLAvisoCorreo.Name = "LBLAvisoCorreo";
             this.LBLAvisoCorreo.Size = new System.Drawing.Size(0, 13);
             this.LBLAvisoCorreo.TabIndex = 24;
@@ -159,9 +149,9 @@ namespace Formularios.Formularios
             // BTNVerContraRepe
             // 
             this.BTNVerContraRepe.Image = global::Formularios.Properties.Resources.contraVisible;
-            this.BTNVerContraRepe.Location = new System.Drawing.Point(231, 294);
+            this.BTNVerContraRepe.Location = new System.Drawing.Point(285, 343);
             this.BTNVerContraRepe.Name = "BTNVerContraRepe";
-            this.BTNVerContraRepe.Size = new System.Drawing.Size(27, 23);
+            this.BTNVerContraRepe.Size = new System.Drawing.Size(38, 23);
             this.BTNVerContraRepe.TabIndex = 23;
             this.BTNVerContraRepe.UseVisualStyleBackColor = true;
             this.BTNVerContraRepe.Click += new System.EventHandler(this.BTNVerContraRepe_Click);
@@ -170,9 +160,9 @@ namespace Formularios.Formularios
             // 
             this.BTNVerContraNormal.AutoEllipsis = true;
             this.BTNVerContraNormal.Image = global::Formularios.Properties.Resources.contraVisible;
-            this.BTNVerContraNormal.Location = new System.Drawing.Point(231, 242);
+            this.BTNVerContraNormal.Location = new System.Drawing.Point(285, 291);
             this.BTNVerContraNormal.Name = "BTNVerContraNormal";
-            this.BTNVerContraNormal.Size = new System.Drawing.Size(27, 23);
+            this.BTNVerContraNormal.Size = new System.Drawing.Size(38, 23);
             this.BTNVerContraNormal.TabIndex = 22;
             this.BTNVerContraNormal.UseVisualStyleBackColor = true;
             this.BTNVerContraNormal.Click += new System.EventHandler(this.BTNVerContraNormal_Click);
@@ -183,29 +173,42 @@ namespace Formularios.Formularios
             this.LBLAvisoContraRepetida.BackColor = System.Drawing.Color.Transparent;
             this.LBLAvisoContraRepetida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLAvisoContraRepetida.ForeColor = System.Drawing.Color.Red;
-            this.LBLAvisoContraRepetida.Location = new System.Drawing.Point(22, 320);
+            this.LBLAvisoContraRepetida.Location = new System.Drawing.Point(76, 368);
             this.LBLAvisoContraRepetida.Name = "LBLAvisoContraRepetida";
             this.LBLAvisoContraRepetida.Size = new System.Drawing.Size(0, 13);
             this.LBLAvisoContraRepetida.TabIndex = 18;
             // 
+            // LBLAvisoContrasena
+            // 
+            this.LBLAvisoContrasena.AutoSize = true;
+            this.LBLAvisoContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.LBLAvisoContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLAvisoContrasena.ForeColor = System.Drawing.Color.Red;
+            this.LBLAvisoContrasena.Location = new System.Drawing.Point(75, 314);
+            this.LBLAvisoContrasena.Name = "LBLAvisoContrasena";
+            this.LBLAvisoContrasena.Size = new System.Drawing.Size(0, 13);
+            this.LBLAvisoContrasena.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.LBLAvisoContrasena, "La contraseña debe tener:\n- Más de 8 caracteres\n- Letras mayúsculas y minúsculas\n" +
+        "- Al menos un número\n- Al menos un carácter especial (% & $ / *)");
+            // 
             // TXTBRepetirContra
             // 
             this.TXTBRepetirContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBRepetirContra.Location = new System.Drawing.Point(25, 297);
+            this.TXTBRepetirContra.Location = new System.Drawing.Point(79, 345);
             this.TXTBRepetirContra.Name = "TXTBRepetirContra";
             this.TXTBRepetirContra.PasswordChar = '*';
-            this.TXTBRepetirContra.Size = new System.Drawing.Size(200, 20);
+            this.TXTBRepetirContra.Size = new System.Drawing.Size(197, 20);
             this.TXTBRepetirContra.TabIndex = 17;
             // 
             // LBLConfirmarContrasena
             // 
             this.LBLConfirmarContrasena.AutoSize = true;
             this.LBLConfirmarContrasena.BackColor = System.Drawing.Color.Transparent;
-            this.LBLConfirmarContrasena.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLConfirmarContrasena.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LBLConfirmarContrasena.Location = new System.Drawing.Point(24, 280);
+            this.LBLConfirmarContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLConfirmarContrasena.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLConfirmarContrasena.Location = new System.Drawing.Point(76, 329);
             this.LBLConfirmarContrasena.Name = "LBLConfirmarContrasena";
-            this.LBLConfirmarContrasena.Size = new System.Drawing.Size(112, 13);
+            this.LBLConfirmarContrasena.Size = new System.Drawing.Size(133, 17);
             this.LBLConfirmarContrasena.TabIndex = 19;
             this.LBLConfirmarContrasena.Text = "Repite la contraseña";
             // 
@@ -213,19 +216,20 @@ namespace Formularios.Formularios
             // 
             this.LBLNombre.AutoSize = true;
             this.LBLNombre.BackColor = System.Drawing.Color.Transparent;
-            this.LBLNombre.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLNombre.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LBLNombre.Location = new System.Drawing.Point(49, 33);
+            this.LBLNombre.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.LBLNombre.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLNombre.Location = new System.Drawing.Point(76, 78);
             this.LBLNombre.Name = "LBLNombre";
-            this.LBLNombre.Size = new System.Drawing.Size(50, 13);
+            this.LBLNombre.Size = new System.Drawing.Size(65, 19);
             this.LBLNombre.TabIndex = 0;
             this.LBLNombre.Text = "Nombre";
             // 
             // BTNBorrarForm
             // 
-            this.BTNBorrarForm.Location = new System.Drawing.Point(104, 398);
+            this.BTNBorrarForm.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNBorrarForm.Location = new System.Drawing.Point(78, 393);
             this.BTNBorrarForm.Name = "BTNBorrarForm";
-            this.BTNBorrarForm.Size = new System.Drawing.Size(80, 23);
+            this.BTNBorrarForm.Size = new System.Drawing.Size(110, 33);
             this.BTNBorrarForm.TabIndex = 20;
             this.BTNBorrarForm.Text = "Limpiar Form";
             this.BTNBorrarForm.UseVisualStyleBackColor = true;
@@ -234,17 +238,18 @@ namespace Formularios.Formularios
             // TXTBNombre
             // 
             this.TXTBNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBNombre.Location = new System.Drawing.Point(25, 49);
+            this.TXTBNombre.Location = new System.Drawing.Point(79, 97);
             this.TXTBNombre.MaxLength = 30;
             this.TXTBNombre.Name = "TXTBNombre";
-            this.TXTBNombre.Size = new System.Drawing.Size(100, 20);
+            this.TXTBNombre.Size = new System.Drawing.Size(111, 20);
             this.TXTBNombre.TabIndex = 1;
             // 
             // BTNRegistrar
             // 
-            this.BTNRegistrar.Location = new System.Drawing.Point(104, 352);
+            this.BTNRegistrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNRegistrar.Location = new System.Drawing.Point(208, 393);
             this.BTNRegistrar.Name = "BTNRegistrar";
-            this.BTNRegistrar.Size = new System.Drawing.Size(84, 23);
+            this.BTNRegistrar.Size = new System.Drawing.Size(114, 33);
             this.BTNRegistrar.TabIndex = 19;
             this.BTNRegistrar.Text = "Registrarse";
             this.BTNRegistrar.UseVisualStyleBackColor = true;
@@ -254,42 +259,42 @@ namespace Formularios.Formularios
             // 
             this.LBLApellidos.AutoSize = true;
             this.LBLApellidos.BackColor = System.Drawing.Color.Transparent;
-            this.LBLApellidos.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLApellidos.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LBLApellidos.Location = new System.Drawing.Point(181, 33);
+            this.LBLApellidos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLApellidos.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLApellidos.Location = new System.Drawing.Point(210, 78);
             this.LBLApellidos.Name = "LBLApellidos";
-            this.LBLApellidos.Size = new System.Drawing.Size(56, 13);
+            this.LBLApellidos.Size = new System.Drawing.Size(66, 17);
             this.LBLApellidos.TabIndex = 2;
             this.LBLApellidos.Text = "Apellidos";
             // 
             // TXTBContrasena
             // 
             this.TXTBContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBContrasena.Location = new System.Drawing.Point(25, 245);
+            this.TXTBContrasena.Location = new System.Drawing.Point(79, 293);
             this.TXTBContrasena.MaxLength = 30;
             this.TXTBContrasena.Name = "TXTBContrasena";
             this.TXTBContrasena.PasswordChar = '*';
-            this.TXTBContrasena.Size = new System.Drawing.Size(200, 20);
+            this.TXTBContrasena.Size = new System.Drawing.Size(197, 20);
             this.TXTBContrasena.TabIndex = 16;
             // 
             // TXTBApellidos
             // 
             this.TXTBApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBApellidos.Location = new System.Drawing.Point(157, 49);
+            this.TXTBApellidos.Location = new System.Drawing.Point(211, 97);
             this.TXTBApellidos.MaxLength = 60;
             this.TXTBApellidos.Name = "TXTBApellidos";
-            this.TXTBApellidos.Size = new System.Drawing.Size(100, 20);
+            this.TXTBApellidos.Size = new System.Drawing.Size(111, 20);
             this.TXTBApellidos.TabIndex = 3;
             // 
             // LBLContrasena
             // 
             this.LBLContrasena.AutoSize = true;
             this.LBLContrasena.BackColor = System.Drawing.Color.Transparent;
-            this.LBLContrasena.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLContrasena.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LBLContrasena.Location = new System.Drawing.Point(30, 231);
+            this.LBLContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLContrasena.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLContrasena.Location = new System.Drawing.Point(76, 277);
             this.LBLContrasena.Name = "LBLContrasena";
-            this.LBLContrasena.Size = new System.Drawing.Size(66, 13);
+            this.LBLContrasena.Size = new System.Drawing.Size(77, 17);
             this.LBLContrasena.TabIndex = 15;
             this.LBLContrasena.Text = "Contraseña";
             // 
@@ -297,11 +302,11 @@ namespace Formularios.Formularios
             // 
             this.LBLTelefono.AutoSize = true;
             this.LBLTelefono.BackColor = System.Drawing.Color.Transparent;
-            this.LBLTelefono.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLTelefono.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LBLTelefono.Location = new System.Drawing.Point(48, 82);
+            this.LBLTelefono.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTelefono.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLTelefono.Location = new System.Drawing.Point(75, 130);
             this.LBLTelefono.Name = "LBLTelefono";
-            this.LBLTelefono.Size = new System.Drawing.Size(52, 13);
+            this.LBLTelefono.Size = new System.Drawing.Size(62, 17);
             this.LBLTelefono.TabIndex = 4;
             this.LBLTelefono.Text = "Teléfono";
             // 
@@ -310,19 +315,19 @@ namespace Formularios.Formularios
             this.TXTBEmail.BackColor = System.Drawing.SystemColors.Window;
             this.TXTBEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXTBEmail.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.TXTBEmail.Location = new System.Drawing.Point(25, 197);
+            this.TXTBEmail.Location = new System.Drawing.Point(79, 245);
             this.TXTBEmail.MaxLength = 60;
             this.TXTBEmail.Name = "TXTBEmail";
-            this.TXTBEmail.Size = new System.Drawing.Size(232, 20);
+            this.TXTBEmail.Size = new System.Drawing.Size(243, 20);
             this.TXTBEmail.TabIndex = 14;
             // 
             // TXTBTelefono
             // 
             this.TXTBTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBTelefono.Location = new System.Drawing.Point(25, 98);
+            this.TXTBTelefono.Location = new System.Drawing.Point(79, 146);
             this.TXTBTelefono.MaxLength = 9;
             this.TXTBTelefono.Name = "TXTBTelefono";
-            this.TXTBTelefono.Size = new System.Drawing.Size(100, 20);
+            this.TXTBTelefono.Size = new System.Drawing.Size(111, 20);
             this.TXTBTelefono.TabIndex = 6;
             this.TXTBTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.caparSoloNumeros);
             // 
@@ -330,11 +335,11 @@ namespace Formularios.Formularios
             // 
             this.LBLEmail.AutoSize = true;
             this.LBLEmail.BackColor = System.Drawing.Color.Transparent;
-            this.LBLEmail.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLEmail.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LBLEmail.Location = new System.Drawing.Point(28, 181);
+            this.LBLEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLEmail.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLEmail.Location = new System.Drawing.Point(78, 229);
             this.LBLEmail.Name = "LBLEmail";
-            this.LBLEmail.Size = new System.Drawing.Size(102, 13);
+            this.LBLEmail.Size = new System.Drawing.Size(121, 17);
             this.LBLEmail.TabIndex = 13;
             this.LBLEmail.Text = "Correo electronico";
             // 
@@ -342,41 +347,41 @@ namespace Formularios.Formularios
             // 
             this.LBLDNI.AutoSize = true;
             this.LBLDNI.BackColor = System.Drawing.Color.Transparent;
-            this.LBLDNI.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLDNI.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LBLDNI.Location = new System.Drawing.Point(194, 83);
+            this.LBLDNI.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDNI.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLDNI.Location = new System.Drawing.Point(209, 130);
             this.LBLDNI.Name = "LBLDNI";
-            this.LBLDNI.Size = new System.Drawing.Size(27, 13);
+            this.LBLDNI.Size = new System.Drawing.Size(32, 17);
             this.LBLDNI.TabIndex = 7;
             this.LBLDNI.Text = "DNI";
             // 
             // TXTBCCC
             // 
             this.TXTBCCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBCCC.Location = new System.Drawing.Point(157, 146);
+            this.TXTBCCC.Location = new System.Drawing.Point(211, 194);
             this.TXTBCCC.MaxLength = 22;
             this.TXTBCCC.Name = "TXTBCCC";
-            this.TXTBCCC.Size = new System.Drawing.Size(100, 20);
+            this.TXTBCCC.Size = new System.Drawing.Size(111, 20);
             this.TXTBCCC.TabIndex = 12;
             // 
             // TXTBDNI
             // 
             this.TXTBDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBDNI.Location = new System.Drawing.Point(157, 98);
+            this.TXTBDNI.Location = new System.Drawing.Point(211, 146);
             this.TXTBDNI.MaxLength = 9;
             this.TXTBDNI.Name = "TXTBDNI";
-            this.TXTBDNI.Size = new System.Drawing.Size(100, 20);
+            this.TXTBDNI.Size = new System.Drawing.Size(111, 20);
             this.TXTBDNI.TabIndex = 8;
             // 
             // LBLCCC
             // 
             this.LBLCCC.AutoSize = true;
             this.LBLCCC.BackColor = System.Drawing.Color.Transparent;
-            this.LBLCCC.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLCCC.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LBLCCC.Location = new System.Drawing.Point(194, 130);
+            this.LBLCCC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLCCC.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLCCC.Location = new System.Drawing.Point(209, 178);
             this.LBLCCC.Name = "LBLCCC";
-            this.LBLCCC.Size = new System.Drawing.Size(28, 13);
+            this.LBLCCC.Size = new System.Drawing.Size(32, 17);
             this.LBLCCC.TabIndex = 11;
             this.LBLCCC.Text = "CCC";
             // 
@@ -384,22 +389,34 @@ namespace Formularios.Formularios
             // 
             this.LBLDireccion.AutoSize = true;
             this.LBLDireccion.BackColor = System.Drawing.Color.Transparent;
-            this.LBLDireccion.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLDireccion.ForeColor = System.Drawing.Color.Aquamarine;
-            this.LBLDireccion.Location = new System.Drawing.Point(46, 130);
+            this.LBLDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDireccion.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLDireccion.Location = new System.Drawing.Point(76, 178);
             this.LBLDireccion.Name = "LBLDireccion";
-            this.LBLDireccion.Size = new System.Drawing.Size(55, 13);
+            this.LBLDireccion.Size = new System.Drawing.Size(66, 17);
             this.LBLDireccion.TabIndex = 9;
             this.LBLDireccion.Text = "Dirección";
             // 
             // TXTBDireccion
             // 
             this.TXTBDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBDireccion.Location = new System.Drawing.Point(25, 146);
+            this.TXTBDireccion.Location = new System.Drawing.Point(79, 194);
             this.TXTBDireccion.MaxLength = 60;
             this.TXTBDireccion.Name = "TXTBDireccion";
-            this.TXTBDireccion.Size = new System.Drawing.Size(100, 20);
+            this.TXTBDireccion.Size = new System.Drawing.Size(111, 20);
             this.TXTBDireccion.TabIndex = 10;
+            // 
+            // LBLTitulo
+            // 
+            this.LBLTitulo.AutoSize = true;
+            this.LBLTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.LBLTitulo.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
+            this.LBLTitulo.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLTitulo.Location = new System.Drawing.Point(71, 13);
+            this.LBLTitulo.Name = "LBLTitulo";
+            this.LBLTitulo.Size = new System.Drawing.Size(172, 51);
+            this.LBLTitulo.TabIndex = 27;
+            this.LBLTitulo.Text = "Registro";
             // 
             // Registro
             // 
@@ -450,5 +467,6 @@ namespace Formularios.Formularios
         private System.Windows.Forms.Label LBLAvisoDNI;
         private System.Windows.Forms.Label lblAvisoCuenta;
         private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.Label LBLTitulo;
     }
 }

@@ -29,7 +29,7 @@ namespace Formularios.Formularios
         public Login()
         {
             InitializeComponent();
-            PersonalizarBotonLogin();
+            ConfigurarBotones(BTNLogin);
         }
 
         /// <summary>
@@ -53,37 +53,29 @@ namespace Formularios.Formularios
                 MessageBox.Show("Los datos introducidos no son válidos");
             }
         }
-
         /// <summary>
-        /// Personaliza el botón de inicio de sesión con estilo visual y funcionalidad para habilitar o deshabilitar
-        /// en función de la validez de los campos de texto.
+        /// Configura los botones de la interfaz con bordes redondeados y estilo personalizado.
         /// </summary>
-        private void PersonalizarBotonLogin()
+        /// <param name="button">Botón a personalizar</param>
+        private void ConfigurarBotones(Button button)
         {
-            // Configuraciones del botón
-            this.BTNLogin.Enabled = false;
-            this.BTNLogin.Text = "LOGIN";
-            this.BTNLogin.Size = new Size(150, 45);
-            this.BTNLogin.Location = new Point(665, 320);
-            this.BTNLogin.BackColor = Color.Aquamarine;
-            this.BTNLogin.ForeColor = Color.Black;
-            this.BTNLogin.FlatStyle = FlatStyle.Flat;
-            this.BTNLogin.FlatAppearance.BorderSize = 0;
+            button.Font = BTNLogin.Font;
+            button.BackColor = Color.DarkCyan;
+            button.ForeColor = Color.Black;
+            button.FlatStyle = FlatStyle.Flat;
+            button.Cursor = Cursors.Hand;
+            button.FlatAppearance.BorderSize = 0;
 
-            // Redondear bordes del botón
-            this.BTNLogin.Paint += (sender, e) =>
-            {
-                Graphics g = e.Graphics;
-                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-                GraphicsPath path = new GraphicsPath();
-                path.AddArc(0, 0, 20, 20, 180, 90);
-                path.AddArc(this.BTNLogin.Width - 20, 0, 20, 20, 270, 90);
-                path.AddArc(this.BTNLogin.Width - 20, this.BTNLogin.Height - 20, 20, 20, 0, 90);
-                path.AddArc(0, this.BTNLogin.Height - 20, 20, 20, 90, 90);
-                path.CloseFigure();
-                this.BTNLogin.ForeColor = Color.Black;
-                this.BTNLogin.Region = new Region(path);
-            };
+            // Crear un GraphicsPath para bordes redondeados
+            GraphicsPath path = new GraphicsPath();
+            int radius = 35;
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(button.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(button.Width - radius, button.Height - radius, radius, radius, 0, 90);
+            path.AddArc(0, button.Height - radius, radius, radius, 90, 90);
+            path.CloseFigure();
+
+            button.Region = new Region(path);
 
             // Habilitar el botón solo si los campos están llenos
             TXTBEmail.TextChanged += (sender, e) =>
@@ -98,7 +90,7 @@ namespace Formularios.Formularios
             // Evento Click del botón
             this.BTNLogin.Click += new System.EventHandler(this.BTNLogin_Click);
         }
-
+        
         /// <summary>
         /// Alterna la visibilidad de la contraseña en el campo de texto de la contraseña.
         /// Cambia entre mostrar y ocultar el texto de la contraseña.
