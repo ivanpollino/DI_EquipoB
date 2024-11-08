@@ -197,5 +197,11 @@ namespace Formularios.Formularios
             btLogin.Location = new Point((panelWidth - btLogin.Width) / 2, lbTexto2.Location.Y + lbTexto2.Height + 30);
             btRegistro.Location = new Point((panelWidth - btRegistro.Width) / 2, btLogin.Location.Y + btLogin.Height + 10);
         }
+
+        private void BTNOpcionesAdministrador_Click(object sender, EventArgs e)
+        {
+            Administracion administracion = new Administracion();
+            administracion.ShowDialog();
+        }
     }
 }

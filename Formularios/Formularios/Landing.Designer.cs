@@ -36,11 +36,11 @@ namespace Formularios.Formularios
             this.btLogin = new System.Windows.Forms.Button();
             this.btRegistro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelAdministador = new System.Windows.Forms.Panel();
+            this.BTNCerrarSesion = new System.Windows.Forms.Button();
+            this.BTNOpcionesAdministrador = new System.Windows.Forms.Button();
             this.lbTexto2 = new System.Windows.Forms.Label();
             this.lbTexto1 = new System.Windows.Forms.Label();
-            this.panelAdministador = new System.Windows.Forms.Panel();
-            this.BTNOpcionesAdministrador = new System.Windows.Forms.Button();
-            this.BTNCerrarSesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelAdministador.SuspendLayout();
             this.SuspendLayout();
@@ -49,15 +49,15 @@ namespace Formularios.Formularios
             // 
             this.lbInfoUsuario.AutoSize = true;
             this.lbInfoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lbInfoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbInfoUsuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbInfoUsuario.ForeColor = System.Drawing.Color.DarkGray;
             this.lbInfoUsuario.Location = new System.Drawing.Point(391, 29);
             this.lbInfoUsuario.Name = "lbInfoUsuario";
             this.lbInfoUsuario.Size = new System.Drawing.Size(81, 30);
-            this.lbInfoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbInfoUsuario.TabIndex = 0;
-            this.lbInfoUsuario.Click += new System.EventHandler(this.lbInfoUsuario_Click);
             this.lbInfoUsuario.Text = "usuario";
+            this.lbInfoUsuario.Click += new System.EventHandler(this.lbInfoUsuario_Click);
             // 
             // lbLinkLogin
             // 
@@ -119,6 +119,37 @@ namespace Formularios.Formularios
             this.panel1.Size = new System.Drawing.Size(1232, 641);
             this.panel1.TabIndex = 4;
             // 
+            // panelAdministador
+            // 
+            this.panelAdministador.BackColor = System.Drawing.Color.Black;
+            this.panelAdministador.Controls.Add(this.BTNCerrarSesion);
+            this.panelAdministador.Controls.Add(this.BTNOpcionesAdministrador);
+            this.panelAdministador.Location = new System.Drawing.Point(331, 65);
+            this.panelAdministador.Name = "panelAdministador";
+            this.panelAdministador.Size = new System.Drawing.Size(208, 125);
+            this.panelAdministador.TabIndex = 6;
+            // 
+            // BTNCerrarSesion
+            // 
+            this.BTNCerrarSesion.BackColor = System.Drawing.Color.Transparent;
+            this.BTNCerrarSesion.ForeColor = System.Drawing.Color.Black;
+            this.BTNCerrarSesion.Location = new System.Drawing.Point(0, 64);
+            this.BTNCerrarSesion.Name = "BTNCerrarSesion";
+            this.BTNCerrarSesion.Size = new System.Drawing.Size(208, 66);
+            this.BTNCerrarSesion.TabIndex = 1;
+            this.BTNCerrarSesion.Text = "button2";
+            this.BTNCerrarSesion.UseVisualStyleBackColor = false;
+            // 
+            // BTNOpcionesAdministrador
+            // 
+            this.BTNOpcionesAdministrador.Location = new System.Drawing.Point(0, 0);
+            this.BTNOpcionesAdministrador.Name = "BTNOpcionesAdministrador";
+            this.BTNOpcionesAdministrador.Size = new System.Drawing.Size(208, 66);
+            this.BTNOpcionesAdministrador.TabIndex = 0;
+            this.BTNOpcionesAdministrador.Text = "button1";
+            this.BTNOpcionesAdministrador.UseVisualStyleBackColor = true;
+            this.BTNOpcionesAdministrador.Click += new System.EventHandler(this.BTNOpcionesAdministrador_Click);
+            // 
             // lbTexto2
             // 
             this.lbTexto2.AutoSize = true;
@@ -143,36 +174,6 @@ namespace Formularios.Formularios
             this.lbTexto1.Size = new System.Drawing.Size(641, 86);
             this.lbTexto1.TabIndex = 4;
             this.lbTexto1.Text = "TU MÁXIMO NIVEL";
-            // 
-            // panelAdministador
-            // 
-            this.panelAdministador.BackColor = System.Drawing.Color.Black;
-            this.panelAdministador.Controls.Add(this.BTNCerrarSesion);
-            this.panelAdministador.Controls.Add(this.BTNOpcionesAdministrador);
-            this.panelAdministador.Location = new System.Drawing.Point(331, 65);
-            this.panelAdministador.Name = "panelAdministador";
-            this.panelAdministador.Size = new System.Drawing.Size(208, 125);
-            this.panelAdministador.TabIndex = 6;
-            // 
-            // BTNOpcionesAdministrador
-            // 
-            this.BTNOpcionesAdministrador.Location = new System.Drawing.Point(0, 0);
-            this.BTNOpcionesAdministrador.Name = "BTNOpcionesAdministrador";
-            this.BTNOpcionesAdministrador.Size = new System.Drawing.Size(208, 66);
-            this.BTNOpcionesAdministrador.TabIndex = 0;
-            this.BTNOpcionesAdministrador.Text = "button1";
-            this.BTNOpcionesAdministrador.UseVisualStyleBackColor = true;
-            // 
-            // BTNCerrarSesion
-            // 
-            this.BTNCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.BTNCerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.BTNCerrarSesion.Location = new System.Drawing.Point(0, 64);
-            this.BTNCerrarSesion.Name = "BTNCerrarSesion";
-            this.BTNCerrarSesion.Size = new System.Drawing.Size(208, 66);
-            this.BTNCerrarSesion.TabIndex = 1;
-            this.BTNCerrarSesion.Text = "button2";
-            this.BTNCerrarSesion.UseVisualStyleBackColor = false;
             // 
             // Landing
             // 

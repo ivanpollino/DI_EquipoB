@@ -17,15 +17,67 @@ namespace Formularios.Formularios
             InitializeComponent();
         }
 
-        private void BTNAdminitracion_Click(object sender, EventArgs e)
+        private void panelFormularios_Paint(object sender, PaintEventArgs e)
         {
-            panelMonitores.Visible = !panelMonitores.Visible;
-            panelActividades.Visible = !panelActividades.Visible;
+
+        }
+
+        bool menuExpandMonitores = false;
+        bool menuExpandActividades = false;
+
+        private void menuTransicion_Tick(object sender, EventArgs e)
+        {
+            if(menuExpandMonitores == false)
+            {
+                flowLayoutGestioMonitores.Height += 10;
+                if(flowLayoutGestioMonitores.Height >= 111)
+                {
+                    menuTransicion.Stop();
+                    menuExpandMonitores = true;
+                }
+            }
+            else
+            {
+                flowLayoutGestioMonitores.Height -= 10;
+                if (flowLayoutGestioMonitores.Height <= 56)
+                {
+                    menuTransicion.Stop();
+                    menuExpandMonitores = false;
+                }
+            }
+
+        }
+
+        private void BTNGestionarMonitores_Click(object sender, EventArgs e)
+        {
+            menuTransicion.Start();
         }
 
         private void BTNGestionActividades_Click(object sender, EventArgs e)
         {
+            menuTransacionActividades.Start();
+        }
 
+        private void menuTransacionActividades_Tick(object sender, EventArgs e)
+        {
+            if (menuExpandActividades == false)
+            {
+                flowLayoutGestioMonitores.Height += 10;
+                if (flowLayoutGestioMonitores.Height >= 169)
+                {
+                    menuTransicion.Stop();
+                    menuExpandActividades = true;
+                }
+            }
+            else
+            {
+                flowLayoutGestioMonitores.Height -= 10;
+                if (flowLayoutGestioMonitores.Height <= 56)
+                {
+                    menuTransicion.Stop();
+                    menuExpandActividades = false;
+                }
+            }
         }
     }
 }
