@@ -12,20 +12,18 @@ namespace Datos.Infrastructure
     using System;
     using System.Collections.Generic;
     
-    public partial class Ususario_Normal
+    public partial class Usuario_Normal
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Ususario_Normal()
+        public Usuario_Normal()
         {
-            this.Actividades = new HashSet<Actividades>();
+            this.Usuario_Actividad = new HashSet<Usuario_Actividad>();
         }
     
         public string DNI { get; set; }
-        public Nullable<int> Id_Actividad { get; set; }
     
-        public virtual Actividad Actividad { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Actividades> Actividades { get; set; }
         public virtual Usuario Usuario { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Usuario_Actividad> Usuario_Actividad { get; set; }
     }
 }

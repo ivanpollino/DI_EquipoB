@@ -54,9 +54,6 @@
     <Compile Include="Infrastructure\Actividad.cs">
       <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\Actividades.cs">
-      <DependentUpon>equipob.tt</DependentUpon>
-    </Compile>
     <Compile Include="Infrastructure\Administrador.cs">
       <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
@@ -81,10 +78,14 @@
     <Compile Include="Infrastructure\Usuario.cs">
       <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\Ususario_Normal.cs">
+    <Compile Include="Infrastructure\Usuario_Actividad.cs">
+      <DependentUpon>equipob.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\Usuario_Normal.cs">
       <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorys\ActividadRepository.cs" />
     <Compile Include="Repositorys\UsuarioRepository.cs" />
   </ItemGroup>
   <ItemGroup>

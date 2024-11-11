@@ -17,18 +17,17 @@ namespace Datos.Infrastructure
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Actividad()
         {
-            this.Actividades = new HashSet<Actividades>();
-            this.Ususario_Normal = new HashSet<Ususario_Normal>();
+            this.Usuario_Actividad = new HashSet<Usuario_Actividad>();
+            this.Monitor = new HashSet<Monitor>();
         }
     
         public int Id_Actividad { get; set; }
         public string Nombre { get; set; }
-        public string DNI { get; set; }
+        public string Descripcion { get; set; }
     
-        public virtual Monitor Monitor { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Actividades> Actividades { get; set; }
+        public virtual ICollection<Usuario_Actividad> Usuario_Actividad { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ususario_Normal> Ususario_Normal { get; set; }
+        public virtual ICollection<Monitor> Monitor { get; set; }
     }
 }

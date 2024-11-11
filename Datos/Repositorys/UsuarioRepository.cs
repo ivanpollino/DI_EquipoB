@@ -22,7 +22,7 @@ namespace Datos.Repositorys
         /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
         public String altaUsuario(Usuario usuario)
         {
-            using (var contexto = new equipobEntities2())
+            using (var contexto = new equipobEntities3())
                 {
                     contexto.Usuario.Add(usuario);
                     contexto.SaveChanges();
@@ -40,7 +40,7 @@ namespace Datos.Repositorys
             try
             {
                 //Abrir la BD
-                using (var contexto = new equipobEntities2())
+                using (var contexto = new equipobEntities3())
                 {
                     usuarios = contexto.Usuario.ToList();
                 }

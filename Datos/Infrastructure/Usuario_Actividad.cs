@@ -12,13 +12,13 @@ namespace Datos.Infrastructure
     using System;
     using System.Collections.Generic;
     
-    public partial class Actividades
+    public partial class Usuario_Actividad
     {
-        public int Id_Actividad { get; set; }
         public string DNI { get; set; }
+        public int Id_Actividad { get; set; }
         public Nullable<byte> Valoracion { get; set; }
     
         public virtual Actividad Actividad { get; set; }
-        public virtual Ususario_Normal Ususario_Normal { get; set; }
+        public virtual Usuario_Normal Usuario_Normal { get; set; }
     }
 }

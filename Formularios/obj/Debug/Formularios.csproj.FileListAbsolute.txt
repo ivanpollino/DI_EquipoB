@@ -262,3 +262,4 @@ C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formular
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.application
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.Formularios.Administracion.resources
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.Formularios.Administracion.resources
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Formularios\obj\Debug\Formularios.Formularios.ControlActividades.resources
