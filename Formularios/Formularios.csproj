@@ -122,6 +122,12 @@
     <Compile Include="Formularios\Landing.Designer.cs">
       <DependentUpon>Landing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ListadoActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ListadoActividades.Designer.cs">
+      <DependentUpon>ListadoActividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Landing.resx">
       <DependentUpon>Landing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ListadoActividades.resx">
+      <DependentUpon>ListadoActividades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -32,7 +32,6 @@
             System.Windows.Forms.Button BTNAdminitracion;
             this.flowLayoutGestionActividades = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutGestioMonitores = new System.Windows.Forms.FlowLayoutPanel();
-            this.BTNRegistrarMonitor = new System.Windows.Forms.Button();
             this.panelFormularios = new System.Windows.Forms.Panel();
             this.menuTransicion = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -40,6 +39,7 @@
             this.menuTransacionActividades = new System.Windows.Forms.Timer(this.components);
             this.menuTransicionAdministracion = new System.Windows.Forms.Timer(this.components);
             this.BTNGestionarMonitores = new System.Windows.Forms.Button();
+            this.BTNRegistrarMonitor = new System.Windows.Forms.Button();
             this.BTNGestionActividades = new System.Windows.Forms.Button();
             this.BTNRegistrarActividad = new System.Windows.Forms.Button();
             this.BTNListadoActividades = new System.Windows.Forms.Button();
@@ -68,19 +68,6 @@
             this.flowLayoutGestioMonitores.Name = "flowLayoutGestioMonitores";
             this.flowLayoutGestioMonitores.Size = new System.Drawing.Size(279, 56);
             this.flowLayoutGestioMonitores.TabIndex = 3;
-            // 
-            // BTNRegistrarMonitor
-            // 
-            this.BTNRegistrarMonitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.BTNRegistrarMonitor.ForeColor = System.Drawing.Color.White;
-            this.BTNRegistrarMonitor.Image = global::Formularios.Properties.Resources.Añadir;
-            this.BTNRegistrarMonitor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNRegistrarMonitor.Location = new System.Drawing.Point(3, 58);
-            this.BTNRegistrarMonitor.Name = "BTNRegistrarMonitor";
-            this.BTNRegistrarMonitor.Size = new System.Drawing.Size(276, 49);
-            this.BTNRegistrarMonitor.TabIndex = 0;
-            this.BTNRegistrarMonitor.Text = "REGISTRAR MONITOR";
-            this.BTNRegistrarMonitor.UseVisualStyleBackColor = false;
             // 
             // panelFormularios
             // 
@@ -158,6 +145,19 @@
             this.BTNGestionarMonitores.UseVisualStyleBackColor = false;
             this.BTNGestionarMonitores.Click += new System.EventHandler(this.BTNGestionarMonitores_Click);
             // 
+            // BTNRegistrarMonitor
+            // 
+            this.BTNRegistrarMonitor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.BTNRegistrarMonitor.ForeColor = System.Drawing.Color.White;
+            this.BTNRegistrarMonitor.Image = global::Formularios.Properties.Resources.Añadir;
+            this.BTNRegistrarMonitor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTNRegistrarMonitor.Location = new System.Drawing.Point(3, 58);
+            this.BTNRegistrarMonitor.Name = "BTNRegistrarMonitor";
+            this.BTNRegistrarMonitor.Size = new System.Drawing.Size(276, 49);
+            this.BTNRegistrarMonitor.TabIndex = 0;
+            this.BTNRegistrarMonitor.Text = "REGISTRAR MONITOR";
+            this.BTNRegistrarMonitor.UseVisualStyleBackColor = false;
+            // 
             // BTNGestionActividades
             // 
             this.BTNGestionActividades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
@@ -199,6 +199,7 @@
             this.BTNListadoActividades.TabIndex = 2;
             this.BTNListadoActividades.Text = "LISTADO ACTIVIDADES";
             this.BTNListadoActividades.UseVisualStyleBackColor = false;
+            this.BTNListadoActividades.Click += new System.EventHandler(this.BTNListadoActividades_Click);
             // 
             // Administracion
             // 

@@ -107,5 +107,18 @@ namespace Formularios.Formularios
         {
 
         }
+
+        private void BTNListadoActividades_Click(object sender, EventArgs e)
+        {
+            ListadoActividades formulario = new ListadoActividades();
+
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+            panelFormularios.Controls.Add(formulario);
+            panelFormularios.Tag = formulario;
+            formulario.BringToFront();
+            formulario.Show();
+        }
     }
 }

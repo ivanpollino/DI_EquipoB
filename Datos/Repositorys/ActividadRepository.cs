@@ -19,7 +19,6 @@ namespace Datos.Repositorys
             }
             return "Actividad borrada con exito";
         }
-
         public Actividad sacarActividad(Actividad actividad) {
             Actividad actividadAux = new Actividad();
             using (var contexto = new equipobEntities3())
