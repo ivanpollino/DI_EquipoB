@@ -10,8 +10,7 @@ using System.Windows.Forms;
 using Negocio.EntitiesDTO;
 using Negocio.Managment;
 
-namespace Formularios.Formularios
-{
+namespace Formularios.Formularios{
     public partial class ControlActividades : UserControl
     {
         public ControlActividades()

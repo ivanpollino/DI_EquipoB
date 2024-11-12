@@ -110,10 +110,10 @@
     <Compile Include="Formularios\Administracion.Designer.cs">
       <DependentUpon>Administracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\ControlActividades.cs">
+    <Compile Include="ControlesPersonalizados\ControlActividades.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Formularios\ControlActividades.Designer.cs">
+    <Compile Include="ControlesPersonalizados\ControlActividades.Designer.cs">
       <DependentUpon>ControlActividades.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Landing.cs">
@@ -145,7 +145,7 @@
     <EmbeddedResource Include="Formularios\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\ControlActividades.resx">
+    <EmbeddedResource Include="ControlesPersonalizados\ControlActividades.resx">
       <DependentUpon>ControlActividades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Landing.resx">

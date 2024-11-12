@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Formularios.Formularios;
 
 namespace Formularios.Formularios
 {
@@ -15,6 +16,16 @@ namespace Formularios.Formularios
         public ListadoActividades()
         {
             InitializeComponent();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void controlActividades1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
