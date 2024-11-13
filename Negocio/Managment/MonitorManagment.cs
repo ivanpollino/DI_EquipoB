@@ -44,12 +44,12 @@ namespace Negocio.Managment
                 }
                 else
                 {
-                    return "Ya hay un usuario registrado con ese DNI";
+                    return "Ya hay un monitor registrado con ese DNI";
                 }
             }
             else
             {
-                return "Ya hay un usuario registrado con ese email";
+                return "Ya hay un monitor registrado con ese email";
             }
         }
 
