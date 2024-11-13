@@ -6,6 +6,7 @@
     </Key>
     <Property Name="Id_Actividad" Type="int" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="Administrador">
     <Key>
@@ -36,7 +37,7 @@
     <Property Name="Apellidos" Type="varchar" MaxLength="60" Nullable="false" />
     <Property Name="Telefono" Type="int" />
     <Property Name="Direccion" Type="varchar" MaxLength="60" />
-    <Property Name="Cuenta_Corriente" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Cuenta_Corriente" Type="varchar" MaxLength="60" />
     <Property Name="Email" Type="varchar" MaxLength="60" Nullable="false" />
     <Property Name="Passwd" Type="varchar" MaxLength="100" Nullable="false" />
   </EntityType>

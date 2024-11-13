@@ -4,13 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="equipobFinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="equipobFinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Actividad">
           <Key>
             <PropertyRef Name="Id_Actividad" />
           </Key>
           <Property Name="Id_Actividad" Type="int" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Administrador">
           <Key>
@@ -41,7 +42,7 @@
           <Property Name="Apellidos" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="Telefono" Type="int" />
           <Property Name="Direccion" Type="varchar" MaxLength="60" />
-          <Property Name="Cuenta_Corriente" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Cuenta_Corriente" Type="varchar" MaxLength="60" />
           <Property Name="Email" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="Passwd" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
@@ -195,8 +196,7 @@
             <End Role="Usuario_Normal" EntitySet="Usuario_Normal" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="equipobFinalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -208,6 +208,7 @@
           <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Usuario_Actividad" Relationship="Self.FK_Actividad_Usuario" FromRole="Actividad" ToRole="Usuario_Actividad" />
           <NavigationProperty Name="Monitor" Relationship="Self.Monitor_Actividad" FromRole="Actividad" ToRole="Monitor" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Administrador">
           <Key>
@@ -233,7 +234,7 @@
           <Property Name="Apellidos" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Telefono" Type="Int32" />
           <Property Name="Direccion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
-          <Property Name="Cuenta_Corriente" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cuenta_Corriente" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Passwd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Administrador" Relationship="Self.FK_Usuario_Administrador" FromRole="Usuario" ToRole="Administrador" />
@@ -374,6 +375,7 @@
           <EntitySetMapping Name="Actividad">
             <EntityTypeMapping TypeName="equipobFinalModel.Actividad">
               <MappingFragment StoreEntitySet="Actividad">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
                 <ScalarProperty Name="Id_Actividad" ColumnName="Id_Actividad" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
               </MappingFragment>

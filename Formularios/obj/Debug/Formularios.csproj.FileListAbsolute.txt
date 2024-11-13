@@ -256,3 +256,5 @@ E:\MULWEB 2\DesInt\EquipoB\Formularios\bin\Debug\Formularios.exe.manifest
 E:\MULWEB 2\DesInt\EquipoB\Formularios\bin\Debug\Formularios.application
 E:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.exe.manifest
 E:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.application
+H:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.Formularios.RegistroMonitor.resources
+H:\MULWEB 2\DesInt\EquipoB\Formularios\obj\Debug\Formularios.ControlesPersonalizados.Pruebaç.resources

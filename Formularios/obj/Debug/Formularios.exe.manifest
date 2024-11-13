@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Datos.dll" size="31744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Datos.dll" size="54784">
       <assemblyIdentity name="Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UHdH81jBMtrQCM+DNwQ8z6f6fE1JBedgF0xofcRZEKA=</dsig:DigestValue>
+        <dsig:DigestValue>DfDo904/fu+3SQdFhO+lsl98u63xhn1rZ7aBw21jkGk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,26 +78,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Formularios.exe" size="2090968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Formularios.exe" size="2099672">
       <assemblyIdentity name="Formularios" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IFxU+xyZ4q6o4IO+5CDt3ad1Q8rc/UUOkDYxtPRfAB4=</dsig:DigestValue>
+        <dsig:DigestValue>73cGovcBqvUHF+SR70BSw9wfo5YiDQtDqH+cdEFYA40=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Negocio.dll" size="8704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Negocio.dll" size="9216">
       <assemblyIdentity name="Negocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1V8/U4d2u5H3007LyYaQvTneJFc1uq0KCf87h89aE/o=</dsig:DigestValue>
+        <dsig:DigestValue>k5hgM+EZy+liuvGBImX4PtNHOyZrhpGZTfTZ9VxAJAg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -173,13 +173,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Formularios.exe.config" size="1195">
+  <file name="Formularios.exe.config" size="696">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>pUYnMZ2EuRVmFLWNq7gslssVlMPl92KOsxlZOXXUoQA=</dsig:DigestValue>
+      <dsig:DigestValue>Q2D7Dl8Fn5ZpGrroiO44gI451Gq9Wd4dvCAk/5FT1P8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\contraNoVisible.ico" size="181694">

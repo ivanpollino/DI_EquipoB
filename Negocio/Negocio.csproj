@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="EntitiesDTO\MonitorDTO.cs" />
     <Compile Include="EntitiesDTO\UsuarioDTO.cs" />
+    <Compile Include="Managment\MonitorManagment.cs" />
     <Compile Include="Managment\UsuarioManagment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
