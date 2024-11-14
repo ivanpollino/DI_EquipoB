@@ -1,0 +1,9 @@
+H:\MULWEB 2\DesInt\EquipoB\ControlesPersonalizados\bin\Debug\ControlesPersonalizados.exe.config
+H:\MULWEB 2\DesInt\EquipoB\ControlesPersonalizados\bin\Debug\ControlesPersonalizados.exe
+H:\MULWEB 2\DesInt\EquipoB\ControlesPersonalizados\bin\Debug\ControlesPersonalizados.pdb
+H:\MULWEB 2\DesInt\EquipoB\ControlesPersonalizados\obj\Debug\ControlesPersonalizados.csproj.AssemblyReference.cache
+H:\MULWEB 2\DesInt\EquipoB\ControlesPersonalizados\obj\Debug\ControlesPersonalizados.Properties.Resources.resources
+H:\MULWEB 2\DesInt\EquipoB\ControlesPersonalizados\obj\Debug\ControlesPersonalizados.csproj.GenerateResource.cache
+H:\MULWEB 2\DesInt\EquipoB\ControlesPersonalizados\obj\Debug\ControlesPersonalizados.csproj.CoreCompileInputs.cache
+H:\MULWEB 2\DesInt\EquipoB\ControlesPersonalizados\obj\Debug\ControlesPersonalizados.exe
+H:\MULWEB 2\DesInt\EquipoB\ControlesPersonalizados\obj\Debug\ControlesPersonalizados.pdb

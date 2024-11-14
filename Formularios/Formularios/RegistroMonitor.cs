@@ -214,6 +214,11 @@ namespace Formularios.Formularios
             }
         }
 
+        private void miControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
 
         /// <summary>
         /// Verifica si la contraseña y su repetición coinciden.
