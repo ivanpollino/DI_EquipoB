@@ -129,10 +129,8 @@ namespace Presentacion
             {
                 ActividadPestaña aP = new ActividadPestaña();
 
-                // Asignar el nombre de la actividad al Label3 dentro del control
                 aP.LBLDondeVaNombreActividad.Text = actividad.Nombre;
 
-                // Añadir el control ActividadPestaña al contenedor en el formulario
                 formulario.contenedorActividades.Controls.Add(aP);
             }
         }

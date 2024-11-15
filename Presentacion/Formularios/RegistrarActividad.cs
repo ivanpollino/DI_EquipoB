@@ -22,7 +22,7 @@ namespace Presentacion
             btRegistrarAct.Enabled = false;
             tbxNombreAct.TextChanged += new EventHandler(CamposModificados); //Obligatorio
             tbxDescripcionAct.TextChanged += new EventHandler(CamposModificados); //Obligatorio
-            LlenarComboBoxMonitores();
+            //LlenarComboBoxMonitores();
         }
         /// <summary>
         /// Obtiene la lista de monitores desde la base de datos y la asigna al ComboBox `cbMonitores`.
@@ -46,7 +46,6 @@ namespace Presentacion
         private List<string> ObtenerMonitoresDesdeDB()
         {
             throw new NotImplementedException();
-            /////////////////////////////Añadir codigo para obetner los monitores
         }
 
         /// <summary>
