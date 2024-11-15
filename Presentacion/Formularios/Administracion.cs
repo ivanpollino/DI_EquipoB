@@ -103,10 +103,6 @@ namespace Presentacion
             }
         }
 
-        private void flowLayoutMenuAdministracion_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void BTNListadoActividades_Click(object sender, EventArgs e)
         {
@@ -131,6 +127,18 @@ namespace Presentacion
             panelFormularios.Tag =registroMonitor;
             registroMonitor.BringToFront();
             registroMonitor.Show();
+        }
+
+        private void BTNRegistrarActividad_Click(object sender, EventArgs e)
+        {
+            RegistrarActividad registrarActividad = new RegistrarActividad();
+            registrarActividad.TopLevel = false;
+            registrarActividad.FormBorderStyle = FormBorderStyle.None;
+            registrarActividad.Dock = DockStyle.Fill;
+            panelFormularios.Controls.Add(registrarActividad);
+            panelFormularios.Tag = registrarActividad;
+            registrarActividad.BringToFront();
+            registrarActividad.Show();
         }
     }
 }

@@ -82,6 +82,12 @@
     <Compile Include="Formularios\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\RegistrarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RegistrarActividad.Designer.cs">
+      <DependentUpon>RegistrarActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Registro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RegistrarActividad.resx">
+      <DependentUpon>RegistrarActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
