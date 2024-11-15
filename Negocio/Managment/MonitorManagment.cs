@@ -12,25 +12,36 @@ namespace Negocio.Managment
 {
     public class MonitorManagment
     {
+        /// <summary>
+        /// Recupera una lista de monitores registrados en la base de datos y la convierte
+        /// en una lista de objetos UsuarioDTO (solo con los campos necesarios).
+        /// </summary>
+        /// <returns>
+        /// Una lista de objetos <see cref="UsuarioDTO"/> que contienen el DNI y el Nombre de cada monitor.
+        /// </returns>
         public List<UsuarioDTO> ObtenerUsuariosMonitores()
         {
-            // Obtener la lista de todos los usuarios
-            List<Usuario> usuarios = new UsuarioRepository().ObtenerUsuarios();
-
-            // Obtener la lista de todos los monitores (solo el DNI)
-            List<Monitor> monitores = new MonitorRepository().ObtenerMonitores();
-
-            List<UsuarioDTO> monitoresDTO = usuarios
-                .Where(u => monitores.Any(m => m.DNI == u.DNI)) // Filtramos solo los usuarios que son monitores
-                .Select(u => new UsuarioDTO
-                {
-                    DNI = u.DNI,
-                    Nombre = u.Nombre
-                })
-                .ToList();
+            // Obtener los monitores de la capa de datos
+            var monitorRepository = new MonitorRepository();
+            var monitores = monitorRepository.ObtenerMonitores();
+            var monitoresDTO = monitores.Select(u => new UsuarioDTO
+            {
+                DNI = u.DNI,
+                Nombre = u.Nombre
+            }).ToList();
 
             return monitoresDTO;
         }
+
+        /// <summary>
+        /// Registra un nuevo monitor en la base de datos.
+        /// </summary>
+        /// <param name="usuarioDTO">Objeto <see cref="UsuarioDTO"/> que contiene la información del monitor a registrar.</param>
+        /// <returns>
+        /// Un mensaje que indica el resultado de la operación:
+        /// - "Ya hay un monitor registrado con ese DNI" si el DNI ya existe.
+        /// - "Ya hay un monitor registrado con ese email" si el correo electrónico ya existe.
+        /// </returns>
         public String altaMonitor(UsuarioDTO usuarioDTO)
         {
             Usuario usuario = new Usuario();
@@ -59,7 +70,7 @@ namespace Negocio.Managment
                     datos.altaUsuario(usuario);
 
                     monitor.DNI = usuario.DNI;
-                    return dMonitores.altaMonitor(monitor); ;
+                    return dMonitores.altaMonitor(monitor);
                 }
                 else
                 {
@@ -95,7 +106,13 @@ namespace Negocio.Managment
             List<String> emails = usuarios.Select(x => x.Email).ToList();
             return !emails.Contains(usuario.Email);
         }
-
+        /// <summary>
+        /// Cifra una contraseña utilizando el algoritmo de hash SHA-256.
+        /// </summary>
+        /// <param name="contrasena">La contraseña en texto plano a cifrar.</param>
+        /// <returns>
+        /// La contraseña cifrada como un string hexadecimal.
+        /// </returns>
         public string cifrar(string contrasena)
         {
             using (SHA256 sha256 = SHA256.Create())

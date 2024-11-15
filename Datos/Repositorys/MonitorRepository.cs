@@ -9,7 +9,25 @@ namespace Datos.Repositorys
 {
     public class MonitorRepository
     {
+        // <summary>
+        /// Recupera una lista de monitores registrados en la base de datos, 
+        /// devolviendo las entidades Usuario correspondientes a los monitores.
+        /// </summary>
+        /// <returns>
+        /// Una lista de objetos <see cref="Usuario"/> que representan a los monitores.
+        /// </returns>
+        public List<Usuario> ObtenerMonitores()
+        {
+            using (var contexto = new equipobEntities())
+            {
+                // Realizar el join entre la tabla Usuario y Monitor por el campo DNI
+                var monitores = (from u in contexto.Usuario
+                                 join m in contexto.Monitor on u.DNI equals m.DNI
+                                 select u).ToList(); // Ejecutamos la consulta y obtenemos los resultados en una lista de Usuario
 
+                return monitores;
+            }
+        }
         /// <summary>
         /// Registra un nuevo usuario en la base de datos.
         /// </summary>
@@ -24,23 +42,6 @@ namespace Datos.Repositorys
 
             }
             return "Monitor añadido con exito";
-        }
-        public List<Monitor> ObtenerMonitores()
-        {
-            List<Monitor> monitores = new List<Monitor>();
-            try
-            {
-                using (var contexto = new equipobEntities())
-                {
-                    monitores = contexto.Monitor.ToList();
-                }
-                return monitores;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error al obtener los monitores: {ex.Message}");
-                return monitores;
-            }
         }
     }
 }

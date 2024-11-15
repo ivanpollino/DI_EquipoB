@@ -1,4 +1,5 @@
 ﻿using Negocio.EntitiesDTO;
+using Negocio.Managment;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,30 +23,35 @@ namespace Presentacion
             btRegistrarAct.Enabled = false;
             tbxNombreAct.TextChanged += new EventHandler(CamposModificados); //Obligatorio
             tbxDescripcionAct.TextChanged += new EventHandler(CamposModificados); //Obligatorio
-            //LlenarComboBoxMonitores();
+            LlenarComboBoxMonitores();
         }
         /// <summary>
-        /// Obtiene la lista de monitores desde la base de datos y la asigna al ComboBox `cbMonitores`.
-        /// Este método obtiene los monitores utilizando el método <see cref="ObtenerMonitoresDesdeDB"/> y los carga en el ComboBox.
+        /// Método que llena el ComboBox de monitores con los datos obtenidos de la base de datos.
+        /// Este método obtiene la lista de monitores mediante el servicio `MonitorManagment`, 
+        /// asigna los valores del ComboBox y maneja posibles errores en el proceso.
         /// </summary>
         private void LlenarComboBoxMonitores()
         {
-            List<string> monitores = ObtenerMonitoresDesdeDB();
-            cbMonitores.DataSource = monitores; // Asignar la lista de monitores al ComboBox
+            try
+            {
+                var monitorManagment = new MonitorManagment();
+                var monitores = monitorManagment.ObtenerUsuariosMonitores();
 
-        }
-
-        /// <summary>
-        /// Obtiene los nombres de los monitores desde la base de datos.
-        /// Este método debe implementar la lógica para conectarse a la base de datos y recuperar los monitores.
-        /// Actualmente, se encuentra como un método no implementado.
-        /// </summary>
-        /// <returns>
-        /// Retorna una lista de cadenas (`List<string>`) con los nombres de los monitores obtenidos de la base de datos.
-        /// </returns>
-        private List<string> ObtenerMonitoresDesdeDB()
-        {
-            throw new NotImplementedException();
+                if (monitores.Any())
+                {
+                    cbMonitores.DisplayMember = "Nombre"; // Nombre visible
+                    cbMonitores.ValueMember = "DNI"; // El valor es el DNI
+                    cbMonitores.DataSource = monitores; // Asigna la lista
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron monitores disponibles.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los monitores: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
