@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<configuration>
-    <startup> 
-        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
-    </startup>
-	<connectionStrings>
-		<add name="equipobEntities" connectionString="metadata=res://*/Infrastructure.equipob.csdl|res://*/Infrastructure.equipob.ssdl|res://*/Infrastructure.equipob.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=pruebasqlserver.cpokq0cuyobk.eu-west-3.rds.amazonaws.com;initial catalog=equipob;persist security info=True;user id=admin;password=Root2_root22;encrypt=True;trustservercertificate=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
-	</connectionStrings>
-</configuration>
