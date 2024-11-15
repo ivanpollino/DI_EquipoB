@@ -1,5 +1,7 @@
-﻿using Presentacion.Formularios;
+﻿using Negocio.EntitiesDTO;
+using Presentacion.ComponentesPersonalizados;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -104,10 +106,6 @@ namespace Presentacion
             }
         }
 
-        private void flowLayoutMenuAdministracion_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void BTNListadoActividades_Click(object sender, EventArgs e)
         {
@@ -118,8 +116,23 @@ namespace Presentacion
             formulario.Dock = DockStyle.Fill;
             panelFormularios.Controls.Add(formulario);
             panelFormularios.Tag = formulario;
+            cargarActividades(formulario);
             formulario.BringToFront();
             formulario.Show();
+        }
+
+        private void cargarActividades(ListadoActividades formulario)
+        {
+            List<ActividadDTO> listaActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
+
+            foreach (var actividad in listaActividades)
+            {
+                ActividadPestaña aP = new ActividadPestaña();
+
+                aP.LBLDondeVaNombreActividad.Text = actividad.Nombre;
+
+                formulario.contenedorActividades.Controls.Add(aP);
+            }
         }
 
         private void BTNRegistrarMonitor_Click(object sender, EventArgs e)
@@ -136,14 +149,14 @@ namespace Presentacion
 
         private void BTNRegistrarActividad_Click(object sender, EventArgs e)
         {
-            RegistroActividad registroact = new RegistroActividad();
-            registroact.TopLevel = false;
-            registroact.FormBorderStyle = FormBorderStyle.None;
-            registroact.Dock = DockStyle.Fill;
-            registroact.Controls.Add(registroact);
-            registroact.Tag = registroact;
-            registroact.BringToFront();
-            registroact.Show();
+            RegistrarActividad registrarActividad = new RegistrarActividad();
+            registrarActividad.TopLevel = false;
+            registrarActividad.FormBorderStyle = FormBorderStyle.None;
+            registrarActividad.Dock = DockStyle.Fill;
+            panelFormularios.Controls.Add(registrarActividad);
+            panelFormularios.Tag = registrarActividad;
+            registrarActividad.BringToFront();
+            registrarActividad.Show();
         }
     }
 }

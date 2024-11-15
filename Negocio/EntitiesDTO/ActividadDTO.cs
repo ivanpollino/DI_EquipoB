@@ -11,5 +11,7 @@ namespace Negocio.EntitiesDTO
         public int Id_Actividad { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
+        public string Monitor { get; set; }
+
     }
 }
