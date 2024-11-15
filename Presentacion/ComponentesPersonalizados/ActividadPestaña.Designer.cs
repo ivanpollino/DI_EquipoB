@@ -102,9 +102,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label LBLIndicadorNombreActividad;
-        private System.Windows.Forms.Label LBLDondeVaNombreActividad;
-        private System.Windows.Forms.Label LBLIndicadorNombreMonitor;
-        private System.Windows.Forms.Label LBLDonveVaNombreMonitor;
+        public System.Windows.Forms.Label LBLIndicadorNombreActividad;
+        public System.Windows.Forms.Label LBLDondeVaNombreActividad;
+        public System.Windows.Forms.Label LBLIndicadorNombreMonitor;
+        public System.Windows.Forms.Label LBLDonveVaNombreMonitor;
     }
 }
