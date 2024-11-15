@@ -25,5 +25,22 @@ namespace Datos.Repositorys
             }
             return "Monitor añadido con exito";
         }
+        public List<Monitor> ObtenerMonitores()
+        {
+            List<Monitor> monitores = new List<Monitor>();
+            try
+            {
+                using (var contexto = new equipobEntities3())
+                {
+                    monitores = contexto.Monitor.ToList();
+                }
+                return monitores;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al obtener los monitores: {ex.Message}");
+                return monitores;
+            }
+        }
     }
 }

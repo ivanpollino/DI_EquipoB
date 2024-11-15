@@ -12,6 +12,25 @@ namespace Negocio.Managment
 {
     public class MonitorManagment
     {
+        public List<UsuarioDTO> ObtenerUsuariosMonitores()
+        {
+            // Obtener la lista de todos los usuarios
+            List<Usuario> usuarios = new UsuarioRepository().ObtenerUsuarios();
+
+            // Obtener la lista de todos los monitores (solo el DNI)
+            List<Monitor> monitores = new MonitorRepository().ObtenerMonitores();
+
+            List<UsuarioDTO> monitoresDTO = usuarios
+                .Where(u => monitores.Any(m => m.DNI == u.DNI)) // Filtramos solo los usuarios que son monitores
+                .Select(u => new UsuarioDTO
+                {
+                    DNI = u.DNI,
+                    Nombre = u.Nombre
+                })
+                .ToList();
+
+            return monitoresDTO;
+        }
         public String altaMonitor(UsuarioDTO usuarioDTO)
         {
             Usuario usuario = new Usuario();

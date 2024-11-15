@@ -25,5 +25,23 @@ namespace Negocio.Managment
             return datos.bajaActividad(actividad);
 
         }
+        /// <summary>
+        /// Registra una nueva actividad junto con su monitor asociado.
+        /// </summary>
+        /// <param name="actividadDTO">Datos de la actividad a registrar.</param>
+        /// <param name="dniMonitor">DNI del monitor asociado a la actividad.</param>
+        public void RegistrarActividad(ActividadDTO actividadDTO, string dniMonitor)
+        {
+            ActividadRepository actividadRepository = new ActividadRepository();
+            int nuevoId = actividadRepository.ObtenerProximoIdActividad();
+            Actividad nuevaActividad = new Actividad
+            {
+                Id_Actividad = nuevoId,
+                Nombre = actividadDTO.Nombre,
+                Descripcion = actividadDTO.Descripcion
+            };
+            actividadRepository.RegistrarActividad(nuevaActividad);
+            //actividadRepository.RegistrarMonitorActividad(nuevoId, dniMonitor);
+        }
     }
 }

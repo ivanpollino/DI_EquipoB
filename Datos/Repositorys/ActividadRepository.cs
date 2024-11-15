@@ -27,5 +27,37 @@ namespace Datos.Repositorys
             }
             return actividadAux;
         }
+
+        public int ObtenerProximoIdActividad()
+        {
+            using (var contexto = new equipobEntities3())
+            {
+                return contexto.Actividad.Any() ?
+                    contexto.Actividad.Max(a => a.Id_Actividad) + 1 : 1;
+            }
+        }
+
+        public void RegistrarActividad(Actividad nuevaActividad)
+        {
+            using (var contexto = new equipobEntities3())
+            {
+                contexto.Actividad.Add(nuevaActividad);
+                contexto.SaveChanges();
+            }
+        }
+        /*public void RegistrarMonitorActividad(int idActividad, string dniMonitor)
+        {
+            using (var contexto = new equipobEntities3())
+            {
+                var relacion = new Monitor_Actividad
+                {
+                    Id_Actividad = idActividad,  
+                    DNI = dniMonitor 
+                };
+
+                contexto.Monitor_Actividad.Add(relacion);
+                contexto.SaveChanges(); 
+            }
+        }*/
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentacion.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -131,6 +132,18 @@ namespace Presentacion
             panelFormularios.Tag =registroMonitor;
             registroMonitor.BringToFront();
             registroMonitor.Show();
+        }
+
+        private void BTNRegistrarActividad_Click(object sender, EventArgs e)
+        {
+            RegistroActividad registroact = new RegistroActividad();
+            registroact.TopLevel = false;
+            registroact.FormBorderStyle = FormBorderStyle.None;
+            registroact.Dock = DockStyle.Fill;
+            registroact.Controls.Add(registroact);
+            registroact.Tag = registroact;
+            registroact.BringToFront();
+            registroact.Show();
         }
     }
 }
