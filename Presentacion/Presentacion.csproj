@@ -52,11 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComponentesPersonalizados\UserControl1.cs">
+    <Compile Include="ComponentesPersonalizados\ActividadPestaña.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ComponentesPersonalizados\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="ComponentesPersonalizados\ActividadPestaña.Designer.cs">
+      <DependentUpon>ActividadPestaña.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Administracion.cs">
       <SubType>Form</SubType>
@@ -90,8 +90,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ComponentesPersonalizados\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="ComponentesPersonalizados\ActividadPestaña.resx">
+      <DependentUpon>ActividadPestaña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
@@ -176,5 +176,6 @@
   <ItemGroup>
     <None Include="Resources\Registro.PNG" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
