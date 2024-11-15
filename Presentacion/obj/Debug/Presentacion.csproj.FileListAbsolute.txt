@@ -23,3 +23,4 @@ C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presenta.BC77
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.pdb
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadPestaña.resources
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistroMonitor.resources

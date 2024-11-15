@@ -120,5 +120,17 @@ namespace Presentacion
             formulario.BringToFront();
             formulario.Show();
         }
+
+        private void BTNRegistrarMonitor_Click(object sender, EventArgs e)
+        {
+            RegistroMonitor registroMonitor = new RegistroMonitor();
+            registroMonitor.TopLevel = false;
+            registroMonitor.FormBorderStyle = FormBorderStyle.None;
+            registroMonitor.Dock = DockStyle.Fill;
+            panelFormularios.Controls.Add(registroMonitor);
+            panelFormularios.Tag =registroMonitor;
+            registroMonitor.BringToFront();
+            registroMonitor.Show();
+        }
     }
 }
