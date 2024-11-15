@@ -219,6 +219,56 @@ namespace Presentacion
 
         }
 
+        private void LBLNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBLApellidos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXTBNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXTBApellidos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBLDNI_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBLTelefono_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXTBTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TXTBDNI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBLAvisoDNI_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
 
         /// <summary>
         /// Verifica si la contraseña y su repetición coinciden.
@@ -274,6 +324,20 @@ namespace Presentacion
             comprobacionFinal = BTNRegistrar.Enabled;
         }
 
+        /// <summary>
+        /// Centra el panel1 en el formulario actual.
+        /// </summary>
+        private void CentrarPanel()
+        {
+            if (panel1 != null)
+            {
+                int x = (this.ClientSize.Width - panel1.Width) / 2;
+                int y = (this.ClientSize.Height - panel1.Height) / 2;
+                panel1.Location = new Point(x, y);
+            }
+        }
+
+
         private void LBLTitulo_Click(object sender, EventArgs e)
         {
 
@@ -281,7 +345,12 @@ namespace Presentacion
 
         private void RegistroMonitor_Load(object sender, EventArgs e)
         {
+            CentrarPanel();
+        }
 
+        private void RegistroMonitor_Resize(object sender, EventArgs e)
+        {
+            CentrarPanel();
         }
 
         private void LBLAvisoDNI_Click(object sender, EventArgs e)

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c5ce1751062c49cb8aaefe36b0524d0d" Name="Diagram1">
+        <EntityTypeShape EntityType="equipobFinal2Model.Actividad" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.Administrador" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.Monitor" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.Usuario" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.Usuario_Actividad" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.Usuario_Normal" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Actividad_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Usuario_Administrador" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Usuario_Monitor" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Usuario_Normal" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Usuario_Actividad" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2Model.Monitor_Actividad" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

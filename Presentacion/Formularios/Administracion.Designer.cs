@@ -43,9 +43,12 @@
             this.flowLayoutMenuAdministracion = new System.Windows.Forms.FlowLayoutPanel();
             this.menuTransacionActividades = new System.Windows.Forms.Timer(this.components);
             this.menuTransicionAdministracion = new System.Windows.Forms.Timer(this.components);
+            this.lblPanelAdministracion = new System.Windows.Forms.Label();
+            this.lblAdministracion = new System.Windows.Forms.Label();
             BTNAdminitracion = new System.Windows.Forms.Button();
             this.flowLayoutGestionActividades.SuspendLayout();
             this.flowLayoutGestioMonitores.SuspendLayout();
+            this.panelFormularios.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutMenuAdministracion.SuspendLayout();
             this.SuspendLayout();
@@ -162,10 +165,13 @@
             // panelFormularios
             // 
             this.panelFormularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.panelFormularios.Controls.Add(this.lblAdministracion);
+            this.panelFormularios.Controls.Add(this.lblPanelAdministracion);
             this.panelFormularios.Location = new System.Drawing.Point(288, 0);
             this.panelFormularios.Name = "panelFormularios";
             this.panelFormularios.Size = new System.Drawing.Size(897, 610);
             this.panelFormularios.TabIndex = 1;
+            this.panelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormularios_Paint);
             // 
             // menuTransicion
             // 
@@ -202,6 +208,33 @@
             this.menuTransicionAdministracion.Interval = 6;
             this.menuTransicionAdministracion.Tick += new System.EventHandler(this.menuTransicionAdministracion_Tick);
             // 
+            // lblPanelAdministracion
+            // 
+            this.lblPanelAdministracion.AutoSize = true;
+            this.lblPanelAdministracion.BackColor = System.Drawing.Color.Transparent;
+            this.lblPanelAdministracion.Font = new System.Drawing.Font("Segoe UI Black", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPanelAdministracion.ForeColor = System.Drawing.Color.DarkCyan;
+            this.lblPanelAdministracion.Location = new System.Drawing.Point(41, 128);
+            this.lblPanelAdministracion.Name = "lblPanelAdministracion";
+            this.lblPanelAdministracion.Size = new System.Drawing.Size(784, 97);
+            this.lblPanelAdministracion.TabIndex = 5;
+            this.lblPanelAdministracion.Text = "BIENVENIDO AL PANEL";
+            this.lblPanelAdministracion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblPanelAdministracion.UseCompatibleTextRendering = true;
+            // 
+            // lblAdministracion
+            // 
+            this.lblAdministracion.AutoSize = false; // Deshabilita el AutoSize
+            this.lblAdministracion.Size = new System.Drawing.Size(800, 150); // Ajusta el tamaño manualmente
+            this.lblAdministracion.Text = ""; // El texto puede estar vacío, ya que lo dibujas manualmente
+            this.lblAdministracion.BackColor = System.Drawing.Color.Transparent;
+            this.lblAdministracion.Font = new System.Drawing.Font("Segoe UI Black", 60F,
+                ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblAdministracion.ForeColor = System.Drawing.Color.Black;
+            this.lblAdministracion.Location = new System.Drawing.Point(136, 240);
+            this.lblAdministracion.Paint += new System.Windows.Forms.PaintEventHandler(this.lblAdministracion_Paint);
+
+            // 
             // Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,6 +246,8 @@
             this.Text = " bb";
             this.flowLayoutGestionActividades.ResumeLayout(false);
             this.flowLayoutGestioMonitores.ResumeLayout(false);
+            this.panelFormularios.ResumeLayout(false);
+            this.panelFormularios.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutMenuAdministracion.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -233,5 +268,7 @@
         private System.Windows.Forms.Timer menuTransacionActividades;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutMenuAdministracion;
         private System.Windows.Forms.Timer menuTransicionAdministracion;
+        private System.Windows.Forms.Label lblPanelAdministracion;
+        private System.Windows.Forms.Label lblAdministracion;
     }
 }
