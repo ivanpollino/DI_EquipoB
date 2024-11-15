@@ -1,0 +1,84 @@
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Datos.dll
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Datos.pdb
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Datos.dll.config
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\bin\Debug\Datos.dll
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\bin\Debug\Datos.pdb
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\bin\Debug\Datos.dll.config
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
+C:\Users\Vespertino\Source\Repos\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
+H:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\Negocio.dll
+H:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\Negocio.pdb
+H:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\Datos.dll
+H:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\EntityFramework.dll
+H:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\Datos.pdb
+H:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\Datos.dll.config
+H:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\EntityFramework.xml
+H:\MULWEB 2\DesInt\EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+H:\MULWEB 2\DesInt\EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+H:\MULWEB 2\DesInt\EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
+H:\MULWEB 2\DesInt\EquipoB\Negocio\obj\Debug\Negocio.dll
+H:\MULWEB 2\DesInt\EquipoB\Negocio\obj\Debug\Negocio.pdb
+E:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\Negocio.dll
+E:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\Negocio.pdb
+E:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\Datos.dll
+E:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\EntityFramework.dll
+E:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\Datos.pdb
+E:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\Datos.dll.config
+E:\MULWEB 2\DesInt\EquipoB\Negocio\bin\Debug\EntityFramework.xml
+E:\MULWEB 2\DesInt\EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+E:\MULWEB 2\DesInt\EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+E:\MULWEB 2\DesInt\EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
+E:\MULWEB 2\DesInt\EquipoB\Negocio\obj\Debug\Negocio.dll
+E:\MULWEB 2\DesInt\EquipoB\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Datos.dll
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Datos.pdb
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Datos.dll.config
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Datos.dll
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Datos.pdb
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Datos.dll.config
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Negocio.pdb
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Datos.dll
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Datos.pdb
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Datos.dll.config
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
