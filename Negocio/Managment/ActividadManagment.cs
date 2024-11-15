@@ -40,5 +40,10 @@ namespace Negocio.Managment
             }
             return listaDTO;
         }
+
+        public void RegistrarActividad(ActividadDTO nuevaActividad, string dniMonitor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

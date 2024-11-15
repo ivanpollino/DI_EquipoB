@@ -30,7 +30,7 @@ namespace Datos.Repositorys
             List<Monitor> monitores = new List<Monitor>();
             try
             {
-                using (var contexto = new equipobEntities3())
+                using (var contexto = new equipobEntities())
                 {
                     monitores = contexto.Monitor.ToList();
                 }
