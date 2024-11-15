@@ -17,7 +17,7 @@ namespace Datos.Repositorys
         /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
         public String altaMonitor(Monitor monitor)
         {
-            using (var contexto = new equipobEntities3())
+            using (var contexto = new equipobEntities())
             {
                 contexto.Monitor.Add(monitor);
                 contexto.SaveChanges();

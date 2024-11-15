@@ -25,5 +25,20 @@ namespace Negocio.Managment
             return datos.bajaActividad(actividad);
 
         }
+        public List<ActividadDTO> ObtenerActividades()
+        {
+            List<Actividad> actividades = new Datos.Repositorys.ActividadRepository().listadoActividades();
+            List<ActividadDTO> listaDTO = new List<ActividadDTO>();
+            foreach (Actividad actividadNormal in actividades)
+            {
+                ActividadDTO aux = new ActividadDTO();
+                aux.Id_Actividad = actividadNormal.Id_Actividad;
+                aux.Nombre = actividadNormal.Nombre;
+                aux.Descripcion = actividadNormal.Descripcion;
+
+                listaDTO.Add(aux);
+            }
+            return listaDTO;
+        }
     }
 }

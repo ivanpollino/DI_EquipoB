@@ -13,10 +13,10 @@ namespace Datos.Infrastructure
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class equipobEntities3 : DbContext
+    public partial class equipobEntities : DbContext
     {
-        public equipobEntities3()
-            : base("name=equipobEntities3")
+        public equipobEntities()
+            : base("name=equipobEntities")
         {
         }
     

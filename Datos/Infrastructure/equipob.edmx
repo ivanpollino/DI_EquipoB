@@ -335,7 +335,7 @@
           <End Role="Monitor" Type="Self.Monitor" Multiplicity="*" />
           <End Role="Actividad" Type="Self.Actividad" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="equipobEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="equipobEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Actividad" EntityType="Self.Actividad" />
           <EntitySet Name="Administrador" EntityType="Self.Administrador" />
           <EntitySet Name="Monitor" EntityType="Self.Monitor" />
@@ -372,7 +372,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="equipobModelStoreContainer" CdmEntityContainer="equipobEntities3">
+        <EntityContainerMapping StorageEntityContainer="equipobModelStoreContainer" CdmEntityContainer="equipobEntities">
           <EntitySetMapping Name="Actividad">
             <EntityTypeMapping TypeName="equipobModel.Actividad">
               <MappingFragment StoreEntitySet="Actividad">

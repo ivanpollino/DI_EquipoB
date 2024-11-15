@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Negocio.EntitiesDTO;
+using Presentacion.ComponentesPersonalizados;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -117,8 +120,25 @@ namespace Presentacion
             formulario.Dock = DockStyle.Fill;
             panelFormularios.Controls.Add(formulario);
             panelFormularios.Tag = formulario;
+            cargarActividades(formulario);
             formulario.BringToFront();
             formulario.Show();
+        }
+
+        private void cargarActividades(ListadoActividades formulario)
+        {
+            List<ActividadDTO> listaActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
+
+            foreach (var actividad in listaActividades)
+            {
+                ActividadPestaña aP = new ActividadPestaña();
+
+                // Asignar el nombre de la actividad al Label3 dentro del control
+                aP.LBLDondeVaNombreActividad.Text = actividad.Nombre;
+
+                // Añadir el control ActividadPestaña al contenedor en el formulario
+                formulario.contenedorActividades.Controls.Add(aP);
+            }
         }
 
         private void BTNRegistrarMonitor_Click(object sender, EventArgs e)
