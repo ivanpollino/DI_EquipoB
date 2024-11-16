@@ -19,15 +19,13 @@ namespace Negocio.Managment
         public String bajaActividad(ActividadDTO actividadDTO)
         {
             Actividad actividad = new Actividad();
-            ActividadRepository datos = new ActividadRepository();
+
+            actividad.Id_Actividad = actividadDTO.Id_Actividad;
             actividad.Nombre = actividadDTO.Nombre;
-            Actividad actividadBase = datos.sacarActividad(actividad);
+            actividad.Descripcion = actividadDTO.Descripcion;
+            actividad.DNI_Monitor = actividadDTO.DNI_Monitor;
 
-            actividad.Id_Actividad = actividadBase.Id_Actividad;
-            actividad.Nombre = actividadBase.Nombre;
-            actividad.Descripcion = actividadBase.Descripcion;
-
-            return datos.bajaActividad(actividad);
+            return new Datos.Repositorys.ActividadRepository().bajaActividad(actividad);
 
         }
         /// <summary>
@@ -44,6 +42,7 @@ namespace Negocio.Managment
                 aux.Id_Actividad = actividadNormal.Id_Actividad;
                 aux.Nombre = actividadNormal.Nombre;
                 aux.Descripcion = actividadNormal.Descripcion;
+                aux.DNI_Monitor = actividadNormal.DNI_Monitor;
 
                 listaDTO.Add(aux);
             }
@@ -58,61 +57,14 @@ namespace Negocio.Managment
         public void RegistrarActividad(ActividadDTO nuevaActividad)
         {
             ActividadRepository actividadRepository = new ActividadRepository();
-            MonitorRepository monitorRepository = new MonitorRepository();
-
-            // Obtenemos un nuevo ID para la actividad
             int nuevoId = actividadRepository.ObtenerNuevoIdActividad();
-
-            // Creamos una nueva instancia de actividad
             Actividad actividad = new Actividad
             {
                 Id_Actividad = nuevoId,
                 Nombre = nuevaActividad.Nombre,
                 Descripcion = nuevaActividad.Descripcion,
+                DNI_Monitor = nuevaActividad.DNI_Monitor
             };
-
-            List<Monitor> monitores = new List<Monitor>();
-
-            // Procesamos cada monitor
-            foreach (var dto in nuevaActividad.Monitor)
-            {
-                // Verificamos si el monitor ya existe en la base de datos
-                var monitorExistente = monitorRepository.ObtenerMonitorPorDni(dto.DNI);
-
-                if (monitorExistente != null)
-                {
-                    // Si el monitor ya existe, simplemente lo asociamos
-                    monitores.Add(monitorExistente);
-                }
-                else
-                {
-                    // Si el monitor no existe, lo creamos e insertamos
-                    Monitor nuevoMonitor = new Monitor
-                    {
-                        DNI = dto.DNI
-                    };
-
-                    // Insertamos el nuevo monitor
-                    string resultadoInsercion = monitorRepository.AltaMonitor(nuevoMonitor);
-
-                    // Verificamos el resultado de la inserción
-                    if (resultadoInsercion.Contains("ya existe"))
-                    {
-                        // Si ya existe, lo asociamos sin intentar insertarlo nuevamente
-                        monitores.Add(monitorRepository.ObtenerMonitorPorDni(dto.DNI));
-                    }
-                    else
-                    {
-                        // Si el monitor fue insertado correctamente, lo agregamos a la lista
-                        monitores.Add(nuevoMonitor);
-                    }
-                }
-            }
-
-            // Asociamos los monitores a la actividad
-            actividad.Monitor = monitores;
-
-            // Guardamos la actividad en la base de datos
             actividadRepository.GuardarActividad(actividad);
         }
     }

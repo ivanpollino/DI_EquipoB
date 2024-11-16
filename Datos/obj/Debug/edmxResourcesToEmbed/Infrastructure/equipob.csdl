@@ -7,8 +7,9 @@
     <Property Name="Id_Actividad" Type="Int32" Nullable="false" />
     <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DNI_Monitor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Usuario_Actividad" Relationship="Self.FK_Actividad_Usuario" FromRole="Actividad" ToRole="Usuario_Actividad" />
-    <NavigationProperty Name="Monitor" Relationship="Self.Monitor_Actividad" FromRole="Actividad" ToRole="Monitor" />
+    <NavigationProperty Name="Monitor" Relationship="Self.FK_Monitor_Actividad" FromRole="Actividad" ToRole="Monitor" />
   </EntityType>
   <EntityType Name="Administrador">
     <Key>
@@ -22,8 +23,8 @@
       <PropertyRef Name="DNI" />
     </Key>
     <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Actividad" Relationship="Self.FK_Monitor_Actividad" FromRole="Monitor" ToRole="Actividad" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Monitor" FromRole="Monitor" ToRole="Usuario" />
-    <NavigationProperty Name="Actividad" Relationship="Self.Monitor_Actividad" FromRole="Monitor" ToRole="Actividad" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
@@ -71,6 +72,18 @@
       </Principal>
       <Dependent Role="Usuario_Actividad">
         <PropertyRef Name="Id_Actividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Monitor_Actividad">
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="0..1" />
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Monitor">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Actividad">
+        <PropertyRef Name="DNI_Monitor" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -130,10 +143,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="Monitor_Actividad">
-    <End Role="Monitor" Type="Self.Monitor" Multiplicity="*" />
-    <End Role="Actividad" Type="Self.Actividad" Multiplicity="*" />
-  </Association>
   <EntityContainer Name="equipobEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Actividad" EntityType="Self.Actividad" />
     <EntitySet Name="Administrador" EntityType="Self.Administrador" />
@@ -144,6 +153,10 @@
     <AssociationSet Name="FK_Actividad_Usuario" Association="Self.FK_Actividad_Usuario">
       <End Role="Actividad" EntitySet="Actividad" />
       <End Role="Usuario_Actividad" EntitySet="Usuario_Actividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Monitor_Actividad" Association="Self.FK_Monitor_Actividad">
+      <End Role="Monitor" EntitySet="Monitor" />
+      <End Role="Actividad" EntitySet="Actividad" />
     </AssociationSet>
     <AssociationSet Name="FK_Usuario_Administrador" Association="Self.FK_Usuario_Administrador">
       <End Role="Usuario" EntitySet="Usuario" />
@@ -160,10 +173,6 @@
     <AssociationSet Name="FK_Usuario_Actividad" Association="Self.FK_Usuario_Actividad">
       <End Role="Usuario_Normal" EntitySet="Usuario_Normal" />
       <End Role="Usuario_Actividad" EntitySet="Usuario_Actividad" />
-    </AssociationSet>
-    <AssociationSet Name="Monitor_Actividad" Association="Self.Monitor_Actividad">
-      <End Role="Monitor" EntitySet="Monitor" />
-      <End Role="Actividad" EntitySet="Actividad" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

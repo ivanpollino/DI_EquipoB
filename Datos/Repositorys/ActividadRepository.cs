@@ -20,9 +20,16 @@ namespace Datos.Repositorys
         {
             using (var contexto = new equipobEntities())
             {
-                contexto.Actividad.Remove(actividad);
-                contexto.SaveChanges();
-
+                var actividadExistente = contexto.Actividad.Find(actividad.Id_Actividad);
+                if (actividadExistente != null)
+                {
+                    contexto.Actividad.Remove(actividadExistente);
+                    contexto.SaveChanges();
+                }
+                else
+                {
+                    return "Actividad no encontrada";
+                }
             }
             return "Actividad borrada con exito";
         }
@@ -89,24 +96,7 @@ namespace Datos.Repositorys
         {
             using (var context = new equipobEntities())
             {
-                // Agregamos la actividad
                 context.Actividad.Add(actividad);
-
-                // Verificar y asociar monitores existentes
-                var monitores = actividad.Monitor.ToList();
-                foreach (var monitor in monitores)
-                {
-                    var monitorEnDb = context.Monitor.SingleOrDefault(m => m.DNI == monitor.DNI);
-                    if (monitorEnDb != null)
-                    {
-                        actividad.Monitor.Add(monitorEnDb); // Relacionar monitor existente
-                    }
-                    else
-                    {
-                        context.Monitor.Add(monitor); // Solo agregar si no existe
-                    }
-                }
-
                 context.SaveChanges();
             }
         }

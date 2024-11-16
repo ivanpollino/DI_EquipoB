@@ -51,5 +51,41 @@ namespace Datos.Repositorys
                 return usuarios;
             }
         }
+
+        public List<Administrador> obtenerAdministradores()
+        {
+            List<Administrador> usuarios = new List<Administrador>();
+            try
+            {
+                //Abrir la BD
+                using (var contexto = new equipobEntities())
+                {
+                    usuarios = contexto.Administrador.ToList();
+                }
+                return usuarios;
+            }
+            catch (Exception)
+            {
+                return usuarios;
+            }
+        }
+
+        public String sacarNombrePorDNI(String dni)
+        {
+            using (var contexto = new equipobEntities())
+            {
+                var usuario = contexto.Usuario
+                                      .FirstOrDefault(u => u.DNI == dni);
+
+                if (usuario != null)
+                {
+                    return usuario.Nombre + " " + usuario.Apellidos;
+                }
+                else
+                {
+                    return "Usuario no encontrado";
+                }
+            }
+        }
     }
 }

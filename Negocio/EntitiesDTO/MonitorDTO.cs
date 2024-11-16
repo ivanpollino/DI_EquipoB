@@ -9,13 +9,7 @@ namespace Negocio.EntitiesDTO
 {
     public class MonitorDTO
     {
-        public MonitorDTO()
-        {
-            this.Actividad = new HashSet<Actividad>();
-        }
-
         public string DNI { get; set; }
-        public virtual ICollection<Actividad> Actividad { get; set; }
     }
 }
 

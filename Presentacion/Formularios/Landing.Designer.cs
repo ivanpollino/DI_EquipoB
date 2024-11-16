@@ -36,13 +36,16 @@ namespace Presentacion
             this.btLogin = new System.Windows.Forms.Button();
             this.btRegistro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelAdministador = new System.Windows.Forms.Panel();
-            this.BTNCerrarSesion = new System.Windows.Forms.Button();
+            this.panelAdministrador = new System.Windows.Forms.Panel();
+            this.BTNCerrarSesionAdmin = new System.Windows.Forms.Button();
             this.BTNOpcionesAdministrador = new System.Windows.Forms.Button();
             this.lbTexto2 = new System.Windows.Forms.Label();
             this.lbTexto1 = new System.Windows.Forms.Label();
+            this.panelParaUsuarios = new System.Windows.Forms.Panel();
+            this.BTNCerrarSesionUsuario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panelAdministador.SuspendLayout();
+            this.panelAdministrador.SuspendLayout();
+            this.panelParaUsuarios.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbInfoUsuario
@@ -104,9 +107,10 @@ namespace Presentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.BackgroundImage = global::Presentacion.Properties.Resources.img_gym;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.panelAdministador);
+            this.panel1.Controls.Add(this.panelParaUsuarios);
+            this.panel1.Controls.Add(this.panelAdministrador);
             this.panel1.Controls.Add(this.lbTexto2);
             this.panel1.Controls.Add(this.lbTexto1);
             this.panel1.Controls.Add(this.lbLinkLogin);
@@ -119,26 +123,27 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(1232, 641);
             this.panel1.TabIndex = 4;
             // 
-            // panelAdministador
+            // panelAdministrador
             // 
-            this.panelAdministador.BackColor = System.Drawing.Color.Black;
-            this.panelAdministador.Controls.Add(this.BTNCerrarSesion);
-            this.panelAdministador.Controls.Add(this.BTNOpcionesAdministrador);
-            this.panelAdministador.Location = new System.Drawing.Point(331, 65);
-            this.panelAdministador.Name = "panelAdministador";
-            this.panelAdministador.Size = new System.Drawing.Size(208, 125);
-            this.panelAdministador.TabIndex = 6;
+            this.panelAdministrador.BackColor = System.Drawing.Color.Black;
+            this.panelAdministrador.Controls.Add(this.BTNCerrarSesionAdmin);
+            this.panelAdministrador.Controls.Add(this.BTNOpcionesAdministrador);
+            this.panelAdministrador.Location = new System.Drawing.Point(780, 174);
+            this.panelAdministrador.Name = "panelAdministrador";
+            this.panelAdministrador.Size = new System.Drawing.Size(208, 132);
+            this.panelAdministrador.TabIndex = 6;
             // 
-            // BTNCerrarSesion
+            // BTNCerrarSesionAdmin
             // 
-            this.BTNCerrarSesion.BackColor = System.Drawing.Color.Transparent;
-            this.BTNCerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.BTNCerrarSesion.Location = new System.Drawing.Point(0, 64);
-            this.BTNCerrarSesion.Name = "BTNCerrarSesion";
-            this.BTNCerrarSesion.Size = new System.Drawing.Size(208, 66);
-            this.BTNCerrarSesion.TabIndex = 1;
-            this.BTNCerrarSesion.Text = "button2";
-            this.BTNCerrarSesion.UseVisualStyleBackColor = false;
+            this.BTNCerrarSesionAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.BTNCerrarSesionAdmin.ForeColor = System.Drawing.Color.Black;
+            this.BTNCerrarSesionAdmin.Location = new System.Drawing.Point(0, 64);
+            this.BTNCerrarSesionAdmin.Name = "BTNCerrarSesionAdmin";
+            this.BTNCerrarSesionAdmin.Size = new System.Drawing.Size(208, 66);
+            this.BTNCerrarSesionAdmin.TabIndex = 1;
+            this.BTNCerrarSesionAdmin.Text = "Cerrar sesión";
+            this.BTNCerrarSesionAdmin.UseVisualStyleBackColor = false;
+            this.BTNCerrarSesionAdmin.Click += new System.EventHandler(this.BTNCerrarSesionAdmin_Click);
             // 
             // BTNOpcionesAdministrador
             // 
@@ -146,7 +151,7 @@ namespace Presentacion
             this.BTNOpcionesAdministrador.Name = "BTNOpcionesAdministrador";
             this.BTNOpcionesAdministrador.Size = new System.Drawing.Size(208, 66);
             this.BTNOpcionesAdministrador.TabIndex = 0;
-            this.BTNOpcionesAdministrador.Text = "button1";
+            this.BTNOpcionesAdministrador.Text = "Panel de Administración";
             this.BTNOpcionesAdministrador.UseVisualStyleBackColor = true;
             this.BTNOpcionesAdministrador.Click += new System.EventHandler(this.BTNOpcionesAdministrador_Click);
             // 
@@ -175,6 +180,24 @@ namespace Presentacion
             this.lbTexto1.TabIndex = 4;
             this.lbTexto1.Text = "TU MÁXIMO NIVEL";
             // 
+            // panelParaUsuarios
+            // 
+            this.panelParaUsuarios.Controls.Add(this.BTNCerrarSesionUsuario);
+            this.panelParaUsuarios.Location = new System.Drawing.Point(780, 379);
+            this.panelParaUsuarios.Name = "panelParaUsuarios";
+            this.panelParaUsuarios.Size = new System.Drawing.Size(208, 66);
+            this.panelParaUsuarios.TabIndex = 7;
+            // 
+            // BTNCerrarSesionUsuario
+            // 
+            this.BTNCerrarSesionUsuario.Location = new System.Drawing.Point(0, 0);
+            this.BTNCerrarSesionUsuario.Name = "BTNCerrarSesionUsuario";
+            this.BTNCerrarSesionUsuario.Size = new System.Drawing.Size(208, 66);
+            this.BTNCerrarSesionUsuario.TabIndex = 8;
+            this.BTNCerrarSesionUsuario.Text = "Cerrar sesión";
+            this.BTNCerrarSesionUsuario.UseVisualStyleBackColor = true;
+            this.BTNCerrarSesionUsuario.Click += new System.EventHandler(this.BTNCerrarSesionUsuario_Click);
+            // 
             // Landing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,7 +212,8 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.Landing_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelAdministador.ResumeLayout(false);
+            this.panelAdministrador.ResumeLayout(false);
+            this.panelParaUsuarios.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -203,8 +227,10 @@ namespace Presentacion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbTexto1;
         private System.Windows.Forms.Label lbTexto2;
-        private Panel panelAdministador;
+        private Panel panelAdministrador;
         private Button BTNOpcionesAdministrador;
-        private Button BTNCerrarSesion;
+        private Button BTNCerrarSesionAdmin;
+        private Button BTNCerrarSesionUsuario;
+        private Panel panelParaUsuarios;
     }
 }
