@@ -31,78 +31,22 @@ namespace Presentacion
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Landing));
-            this.lbInfoUsuario = new System.Windows.Forms.Label();
-            this.lbLinkLogin = new System.Windows.Forms.LinkLabel();
-            this.btLogin = new System.Windows.Forms.Button();
-            this.btRegistro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelParaUsuarios = new System.Windows.Forms.Panel();
+            this.BTNCerrarSesionUsuario = new System.Windows.Forms.Button();
             this.panelAdministrador = new System.Windows.Forms.Panel();
             this.BTNCerrarSesionAdmin = new System.Windows.Forms.Button();
             this.BTNOpcionesAdministrador = new System.Windows.Forms.Button();
             this.lbTexto2 = new System.Windows.Forms.Label();
             this.lbTexto1 = new System.Windows.Forms.Label();
-            this.panelParaUsuarios = new System.Windows.Forms.Panel();
-            this.BTNCerrarSesionUsuario = new System.Windows.Forms.Button();
+            this.lbLinkLogin = new System.Windows.Forms.LinkLabel();
+            this.btRegistro = new System.Windows.Forms.Button();
+            this.lbInfoUsuario = new System.Windows.Forms.Label();
+            this.btLogin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panelAdministrador.SuspendLayout();
             this.panelParaUsuarios.SuspendLayout();
+            this.panelAdministrador.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbInfoUsuario
-            // 
-            this.lbInfoUsuario.AutoSize = true;
-            this.lbInfoUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lbInfoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbInfoUsuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInfoUsuario.ForeColor = System.Drawing.Color.DarkGray;
-            this.lbInfoUsuario.Location = new System.Drawing.Point(391, 29);
-            this.lbInfoUsuario.Name = "lbInfoUsuario";
-            this.lbInfoUsuario.Size = new System.Drawing.Size(81, 30);
-            this.lbInfoUsuario.TabIndex = 0;
-            this.lbInfoUsuario.Text = "usuario";
-            this.lbInfoUsuario.Click += new System.EventHandler(this.lbInfoUsuario_Click);
-            // 
-            // lbLinkLogin
-            // 
-            this.lbLinkLogin.ActiveLinkColor = System.Drawing.Color.Cyan;
-            this.lbLinkLogin.AutoSize = true;
-            this.lbLinkLogin.BackColor = System.Drawing.Color.Transparent;
-            this.lbLinkLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbLinkLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLinkLogin.ForeColor = System.Drawing.Color.Cyan;
-            this.lbLinkLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lbLinkLogin.LinkColor = System.Drawing.Color.DarkGray;
-            this.lbLinkLogin.Location = new System.Drawing.Point(344, 37);
-            this.lbLinkLogin.Name = "lbLinkLogin";
-            this.lbLinkLogin.Size = new System.Drawing.Size(186, 25);
-            this.lbLinkLogin.TabIndex = 1;
-            this.lbLinkLogin.TabStop = true;
-            this.lbLinkLogin.Text = "━━━━   LOGIN   ━━━━";
-            this.lbLinkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbLinkLogin_LinkClicked);
-            // 
-            // btLogin
-            // 
-            this.btLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogin.ForeColor = System.Drawing.Color.Black;
-            this.btLogin.Location = new System.Drawing.Point(346, 340);
-            this.btLogin.Name = "btLogin";
-            this.btLogin.Size = new System.Drawing.Size(164, 30);
-            this.btLogin.TabIndex = 2;
-            this.btLogin.Text = "LOGIN";
-            this.btLogin.UseVisualStyleBackColor = true;
-            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
-            // 
-            // btRegistro
-            // 
-            this.btRegistro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btRegistro.ForeColor = System.Drawing.Color.Black;
-            this.btRegistro.Location = new System.Drawing.Point(346, 379);
-            this.btRegistro.Name = "btRegistro";
-            this.btRegistro.Size = new System.Drawing.Size(164, 30);
-            this.btRegistro.TabIndex = 3;
-            this.btRegistro.Text = "REGISTRO";
-            this.btRegistro.UseVisualStyleBackColor = true;
-            this.btRegistro.Click += new System.EventHandler(this.btRegistro_Click);
             // 
             // panel1
             // 
@@ -123,6 +67,31 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(1232, 641);
             this.panel1.TabIndex = 4;
             // 
+            // panelParaUsuarios
+            // 
+            this.panelParaUsuarios.Controls.Add(this.BTNCerrarSesionUsuario);
+            this.panelParaUsuarios.Location = new System.Drawing.Point(780, 379);
+            this.panelParaUsuarios.Name = "panelParaUsuarios";
+            this.panelParaUsuarios.Size = new System.Drawing.Size(208, 66);
+            this.panelParaUsuarios.TabIndex = 7;
+            // 
+            // BTNCerrarSesionUsuario
+            // 
+            this.BTNCerrarSesionUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.BTNCerrarSesionUsuario.FlatAppearance.BorderSize = 0;
+            this.BTNCerrarSesionUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNCerrarSesionUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNCerrarSesionUsuario.ForeColor = System.Drawing.Color.Cyan;
+            this.BTNCerrarSesionUsuario.Image = global::Presentacion.Properties.Resources.logOut;
+            this.BTNCerrarSesionUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTNCerrarSesionUsuario.Location = new System.Drawing.Point(0, 0);
+            this.BTNCerrarSesionUsuario.Name = "BTNCerrarSesionUsuario";
+            this.BTNCerrarSesionUsuario.Size = new System.Drawing.Size(208, 66);
+            this.BTNCerrarSesionUsuario.TabIndex = 8;
+            this.BTNCerrarSesionUsuario.Text = "Cerrar sesión";
+            this.BTNCerrarSesionUsuario.UseVisualStyleBackColor = false;
+            this.BTNCerrarSesionUsuario.Click += new System.EventHandler(this.BTNCerrarSesionUsuario_Click);
+            // 
             // panelAdministrador
             // 
             this.panelAdministrador.BackColor = System.Drawing.Color.Black;
@@ -135,8 +104,13 @@ namespace Presentacion
             // 
             // BTNCerrarSesionAdmin
             // 
-            this.BTNCerrarSesionAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.BTNCerrarSesionAdmin.ForeColor = System.Drawing.Color.Black;
+            this.BTNCerrarSesionAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.BTNCerrarSesionAdmin.FlatAppearance.BorderSize = 0;
+            this.BTNCerrarSesionAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNCerrarSesionAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNCerrarSesionAdmin.ForeColor = System.Drawing.Color.Cyan;
+            this.BTNCerrarSesionAdmin.Image = global::Presentacion.Properties.Resources.logOut;
+            this.BTNCerrarSesionAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTNCerrarSesionAdmin.Location = new System.Drawing.Point(0, 64);
             this.BTNCerrarSesionAdmin.Name = "BTNCerrarSesionAdmin";
             this.BTNCerrarSesionAdmin.Size = new System.Drawing.Size(208, 66);
@@ -147,12 +121,19 @@ namespace Presentacion
             // 
             // BTNOpcionesAdministrador
             // 
+            this.BTNOpcionesAdministrador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.BTNOpcionesAdministrador.FlatAppearance.BorderSize = 0;
+            this.BTNOpcionesAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNOpcionesAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNOpcionesAdministrador.ForeColor = System.Drawing.Color.Cyan;
+            this.BTNOpcionesAdministrador.Image = global::Presentacion.Properties.Resources.Services;
+            this.BTNOpcionesAdministrador.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTNOpcionesAdministrador.Location = new System.Drawing.Point(0, 0);
             this.BTNOpcionesAdministrador.Name = "BTNOpcionesAdministrador";
             this.BTNOpcionesAdministrador.Size = new System.Drawing.Size(208, 66);
             this.BTNOpcionesAdministrador.TabIndex = 0;
-            this.BTNOpcionesAdministrador.Text = "Panel de Administración";
-            this.BTNOpcionesAdministrador.UseVisualStyleBackColor = true;
+            this.BTNOpcionesAdministrador.Text = "              Panel de Administración";
+            this.BTNOpcionesAdministrador.UseVisualStyleBackColor = false;
             this.BTNOpcionesAdministrador.Click += new System.EventHandler(this.BTNOpcionesAdministrador_Click);
             // 
             // lbTexto2
@@ -180,23 +161,61 @@ namespace Presentacion
             this.lbTexto1.TabIndex = 4;
             this.lbTexto1.Text = "TU MÁXIMO NIVEL";
             // 
-            // panelParaUsuarios
+            // lbLinkLogin
             // 
-            this.panelParaUsuarios.Controls.Add(this.BTNCerrarSesionUsuario);
-            this.panelParaUsuarios.Location = new System.Drawing.Point(780, 379);
-            this.panelParaUsuarios.Name = "panelParaUsuarios";
-            this.panelParaUsuarios.Size = new System.Drawing.Size(208, 66);
-            this.panelParaUsuarios.TabIndex = 7;
+            this.lbLinkLogin.ActiveLinkColor = System.Drawing.Color.Cyan;
+            this.lbLinkLogin.AutoSize = true;
+            this.lbLinkLogin.BackColor = System.Drawing.Color.Transparent;
+            this.lbLinkLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbLinkLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLinkLogin.ForeColor = System.Drawing.Color.Cyan;
+            this.lbLinkLogin.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lbLinkLogin.LinkColor = System.Drawing.Color.DarkGray;
+            this.lbLinkLogin.Location = new System.Drawing.Point(344, 37);
+            this.lbLinkLogin.Name = "lbLinkLogin";
+            this.lbLinkLogin.Size = new System.Drawing.Size(186, 25);
+            this.lbLinkLogin.TabIndex = 1;
+            this.lbLinkLogin.TabStop = true;
+            this.lbLinkLogin.Text = "━━━━   LOGIN   ━━━━";
+            this.lbLinkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbLinkLogin_LinkClicked);
             // 
-            // BTNCerrarSesionUsuario
+            // btRegistro
             // 
-            this.BTNCerrarSesionUsuario.Location = new System.Drawing.Point(0, 0);
-            this.BTNCerrarSesionUsuario.Name = "BTNCerrarSesionUsuario";
-            this.BTNCerrarSesionUsuario.Size = new System.Drawing.Size(208, 66);
-            this.BTNCerrarSesionUsuario.TabIndex = 8;
-            this.BTNCerrarSesionUsuario.Text = "Cerrar sesión";
-            this.BTNCerrarSesionUsuario.UseVisualStyleBackColor = true;
-            this.BTNCerrarSesionUsuario.Click += new System.EventHandler(this.BTNCerrarSesionUsuario_Click);
+            this.btRegistro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btRegistro.ForeColor = System.Drawing.Color.Black;
+            this.btRegistro.Location = new System.Drawing.Point(346, 379);
+            this.btRegistro.Name = "btRegistro";
+            this.btRegistro.Size = new System.Drawing.Size(164, 30);
+            this.btRegistro.TabIndex = 3;
+            this.btRegistro.Text = "REGISTRO";
+            this.btRegistro.UseVisualStyleBackColor = true;
+            this.btRegistro.Click += new System.EventHandler(this.btRegistro_Click);
+            // 
+            // lbInfoUsuario
+            // 
+            this.lbInfoUsuario.AutoSize = true;
+            this.lbInfoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lbInfoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbInfoUsuario.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInfoUsuario.ForeColor = System.Drawing.Color.DarkGray;
+            this.lbInfoUsuario.Location = new System.Drawing.Point(391, 29);
+            this.lbInfoUsuario.Name = "lbInfoUsuario";
+            this.lbInfoUsuario.Size = new System.Drawing.Size(81, 30);
+            this.lbInfoUsuario.TabIndex = 0;
+            this.lbInfoUsuario.Text = "usuario";
+            this.lbInfoUsuario.Click += new System.EventHandler(this.lbInfoUsuario_Click);
+            // 
+            // btLogin
+            // 
+            this.btLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLogin.ForeColor = System.Drawing.Color.Black;
+            this.btLogin.Location = new System.Drawing.Point(346, 340);
+            this.btLogin.Name = "btLogin";
+            this.btLogin.Size = new System.Drawing.Size(164, 30);
+            this.btLogin.TabIndex = 2;
+            this.btLogin.Text = "LOGIN";
+            this.btLogin.UseVisualStyleBackColor = true;
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // Landing
             // 
@@ -212,8 +231,8 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.Landing_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelAdministrador.ResumeLayout(false);
             this.panelParaUsuarios.ResumeLayout(false);
+            this.panelAdministrador.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
