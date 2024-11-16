@@ -56,12 +56,15 @@ namespace Presentacion
 
         /// <summary>
         /// Habilita el botón de "Registrar Actividad" solo cuando ambos campos (nombre y descripción) están completos.
+        /// Además, verifica si se seleccionó un monitor en el ComboBox.
         /// </summary>
-        /// <param name="sender">El objeto que ha generado el evento (campo de texto)</param>
+        /// <param name="sender">El objeto que ha generado el evento (campo de texto o ComboBox)</param>
         /// <param name="e">Argumentos del evento</param>
         private void CamposModificados(object sender, EventArgs e)
         {
-            btRegistrarAct.Enabled = !string.IsNullOrWhiteSpace(tbxNombreAct.Text) && !string.IsNullOrWhiteSpace(tbxDescripcionAct.Text);
+            btRegistrarAct.Enabled = !string.IsNullOrWhiteSpace(tbxNombreAct.Text) &&
+                                     !string.IsNullOrWhiteSpace(tbxDescripcionAct.Text) &&
+                                     cbMonitores.SelectedIndex != -1;
         }
 
         /// <summary>
@@ -73,12 +76,31 @@ namespace Presentacion
         {
             string nombreActividad = tbxNombreAct.Text;
             string descripcionActividad = tbxDescripcionAct.Text;
-            string monitorSeleccionado = cbMonitores.SelectedItem?.ToString() ?? "Sin monitor";// Si no se ha seleccionado un monitor, asignamos "Sin monitor"
+            string dniMonitor = cbMonitores.SelectedValue?.ToString(); // Obtener el DNI del monitor
 
-            //////////////////////////////////GuardarActividad(nombreActividad, descripcionActividad, monitorSeleccionado);
-            MessageBox.Show($"La actividad '{nombreActividad}' ha sido registrada con éxito.\nMonitor asignado: {monitorSeleccionado}",
-                            "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LimpiarFormulario();
+            // Validación de campos obligatorios
+            if (string.IsNullOrWhiteSpace(nombreActividad) || string.IsNullOrWhiteSpace(descripcionActividad) || string.IsNullOrEmpty(dniMonitor))
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ActividadDTO nuevaActividad = new ActividadDTO
+            {
+                Nombre = nombreActividad,
+                Descripcion = descripcionActividad
+            };
+            ActividadManagment actividadManagment = new ActividadManagment();
+            try
+            {
+                actividadManagment.RegistrarActividad(nuevaActividad, dniMonitor);
+                MessageBox.Show($"La actividad '{nombreActividad}' ha sido registrada con éxito.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpiarFormulario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar la actividad: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>

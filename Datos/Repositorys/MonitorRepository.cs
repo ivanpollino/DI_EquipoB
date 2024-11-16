@@ -43,5 +43,6 @@ namespace Datos.Repositorys
             }
             return "Monitor añadido con exito";
         }
+
     }
 }

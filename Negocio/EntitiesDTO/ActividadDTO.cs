@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,8 @@ namespace Negocio.EntitiesDTO
         public int Id_Actividad { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public string Monitor { get; set; }
+        //public virtual ICollection<Monitor> Monitor { get; set; }
+        ///public string Monitor { get; set; }
 
     }
 }
