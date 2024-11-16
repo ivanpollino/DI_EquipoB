@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="equipobModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="equipobModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Actividad">
           <Key>
             <PropertyRef Name="Id_Actividad" />
@@ -196,8 +196,7 @@
             <End Role="Usuario_Normal" EntitySet="Usuario_Normal" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="equipobModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -335,7 +334,7 @@
           <End Role="Monitor" Type="Self.Monitor" Multiplicity="*" />
           <End Role="Actividad" Type="Self.Actividad" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="equipobEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="equipobEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Actividad" EntityType="Self.Actividad" />
           <EntitySet Name="Administrador" EntityType="Self.Administrador" />
           <EntitySet Name="Monitor" EntityType="Self.Monitor" />
@@ -372,7 +371,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="equipobModelStoreContainer" CdmEntityContainer="equipobEntities3">
+        <EntityContainerMapping StorageEntityContainer="equipobModelStoreContainer" CdmEntityContainer="equipobEntities">
           <EntitySetMapping Name="Actividad">
             <EntityTypeMapping TypeName="equipobModel.Actividad">
               <MappingFragment StoreEntitySet="Actividad">

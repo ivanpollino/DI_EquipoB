@@ -77,7 +77,7 @@
             this.flowLayoutGestionActividades.Controls.Add(this.BTNListadoActividades);
             this.flowLayoutGestionActividades.Location = new System.Drawing.Point(3, 122);
             this.flowLayoutGestionActividades.Name = "flowLayoutGestionActividades";
-            this.flowLayoutGestionActividades.Size = new System.Drawing.Size(283, 58);
+            this.flowLayoutGestionActividades.Size = new System.Drawing.Size(283, 56);
             this.flowLayoutGestionActividades.TabIndex = 4;
             // 
             // BTNGestionActividades
@@ -108,6 +108,7 @@
             this.BTNRegistrarActividad.TabIndex = 2;
             this.BTNRegistrarActividad.Text = "REGISTRAR ACTIVIDAD";
             this.BTNRegistrarActividad.UseVisualStyleBackColor = false;
+            this.BTNRegistrarActividad.Click += new System.EventHandler(this.BTNRegistrarActividad_Click);
             // 
             // BTNListadoActividades
             // 
@@ -194,9 +195,8 @@
             this.flowLayoutMenuAdministracion.Controls.Add(this.flowLayoutGestionActividades);
             this.flowLayoutMenuAdministracion.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutMenuAdministracion.Name = "flowLayoutMenuAdministracion";
-            this.flowLayoutMenuAdministracion.Size = new System.Drawing.Size(279, 58);
+            this.flowLayoutMenuAdministracion.Size = new System.Drawing.Size(279, 57);
             this.flowLayoutMenuAdministracion.TabIndex = 5;
-            this.flowLayoutMenuAdministracion.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutMenuAdministracion_Paint);
             // 
             // menuTransacionActividades
             // 

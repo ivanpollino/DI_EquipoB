@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Negocio.EntitiesDTO;
+using Presentacion.ComponentesPersonalizados;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -104,10 +106,6 @@ namespace Presentacion
             }
         }
 
-        private void flowLayoutMenuAdministracion_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void BTNListadoActividades_Click(object sender, EventArgs e)
         {
@@ -118,8 +116,23 @@ namespace Presentacion
             formulario.Dock = DockStyle.Fill;
             panelFormularios.Controls.Add(formulario);
             panelFormularios.Tag = formulario;
+            cargarActividades(formulario);
             formulario.BringToFront();
             formulario.Show();
+        }
+
+        private void cargarActividades(ListadoActividades formulario)
+        {
+            List<ActividadDTO> listaActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
+
+            foreach (var actividad in listaActividades)
+            {
+                ActividadPestaña aP = new ActividadPestaña();
+
+                aP.LBLDondeVaNombreActividad.Text = actividad.Nombre;
+
+                formulario.contenedorActividades.Controls.Add(aP);
+            }
         }
 
         private void BTNRegistrarMonitor_Click(object sender, EventArgs e)
@@ -134,64 +147,16 @@ namespace Presentacion
             registroMonitor.Show();
         }
 
-        private void CentrarLabels()
+        private void BTNRegistrarActividad_Click(object sender, EventArgs e)
         {
-            // Centrar lblAdministracion
-            lblAdministracion.Left = (panelFormularios.ClientSize.Width - lblAdministracion.Width) / 2;
-            lblAdministracion.Top = (panelFormularios.ClientSize.Height - lblAdministracion.Height) / 2;
-
-            // Centrar lblPanelAdministracion
-            lblPanelAdministracion.Left = (panelFormularios.ClientSize.Width - lblPanelAdministracion.Width) / 2;
-            lblPanelAdministracion.Top = (panelFormularios.ClientSize.Height - lblPanelAdministracion.Height) / 2;
-        }
-
-        private void Administracion_Load(object sender, EventArgs e)
-        {
-            // Llamamos al método para centrar los labels cuando se cargue el formulario
-            CentrarLabels();
-        }
-
-        private void panelFormularios_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblAdministracion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblAdministracion_Paint(object sender, PaintEventArgs e)
-        {
-            string texto = "DE ADMINISTRACION";
-            Font fuente = lblAdministracion.Font;
-            Color colorBorde = Color.DarkCyan;
-            int grosorBorde = 3;
-            
-
-            // Crea un GraphicsPath para el texto
-            GraphicsPath rutaTexto = new GraphicsPath();
-            rutaTexto.AddString(texto, fuente.FontFamily, (int)fuente.Style, fuente.Size,
-                                new Point(0, 0), StringFormat.GenericDefault);
-
-            // Calcula el área del texto
-            RectangleF rectTexto = rutaTexto.GetBounds();
-
-            // Calcula las posiciones para centrar el texto en el label
-            float posX = (lblAdministracion.ClientSize.Width - rectTexto.Width) / 2;
-            float posY = (lblAdministracion.ClientSize.Height - rectTexto.Height) / 2;
-
-            // Ajusta la ubicación del texto en el GraphicsPath
-            rutaTexto.Transform(new Matrix(1, 0, 0, 1, posX - rectTexto.Left, posY - rectTexto.Top));
-
-            // Habilita el suavizado de bordes
-            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-
-            // Dibuja el borde del texto
-            using (Pen pen = new Pen(colorBorde, grosorBorde) { LineJoin = LineJoin.Round })
-            {
-                e.Graphics.DrawPath(pen, rutaTexto);
-            }
+            RegistrarActividad registrarActividad = new RegistrarActividad();
+            registrarActividad.TopLevel = false;
+            registrarActividad.FormBorderStyle = FormBorderStyle.None;
+            registrarActividad.Dock = DockStyle.Fill;
+            panelFormularios.Controls.Add(registrarActividad);
+            panelFormularios.Tag = registrarActividad;
+            registrarActividad.BringToFront();
+            registrarActividad.Show();
         }
     }
 }
