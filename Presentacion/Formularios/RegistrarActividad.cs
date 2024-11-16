@@ -1,4 +1,5 @@
 ﻿using Negocio.EntitiesDTO;
+using Negocio.Managment;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace Presentacion
             btRegistrarAct.Enabled = false;
             tbxNombreAct.TextChanged += new EventHandler(CamposModificados); //Obligatorio
             tbxDescripcionAct.TextChanged += new EventHandler(CamposModificados); //Obligatorio
-            //LlenarComboBoxMonitores();
+            LlenarComboBoxMonitores();
         }
         /// <summary>
         /// Obtiene la lista de monitores desde la base de datos y la asigna al ComboBox `cbMonitores`.
@@ -30,22 +31,17 @@ namespace Presentacion
         /// </summary>
         private void LlenarComboBoxMonitores()
         {
-            List<string> monitores = ObtenerMonitoresDesdeDB();
-            cbMonitores.DataSource = monitores; // Asignar la lista de monitores al ComboBox
-
-        }
-
-        /// <summary>
-        /// Obtiene los nombres de los monitores desde la base de datos.
-        /// Este método debe implementar la lógica para conectarse a la base de datos y recuperar los monitores.
-        /// Actualmente, se encuentra como un método no implementado.
-        /// </summary>
-        /// <returns>
-        /// Retorna una lista de cadenas (`List<string>`) con los nombres de los monitores obtenidos de la base de datos.
-        /// </returns>
-        private List<string> ObtenerMonitoresDesdeDB()
-        {
-            throw new NotImplementedException();
+            try
+            {
+                var monitores = new MonitorManagment().ObtenerUsuariosMonitores();
+                cbMonitores.DisplayMember = "Nombre";
+                cbMonitores.ValueMember = "DNI";  // Usar el DNI como valor
+                cbMonitores.DataSource = monitores;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar los monitores: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
@@ -67,12 +63,35 @@ namespace Presentacion
         {
             string nombreActividad = tbxNombreAct.Text;
             string descripcionActividad = tbxDescripcionAct.Text;
-            string monitorSeleccionado = cbMonitores.SelectedItem?.ToString() ?? "Sin monitor";// Si no se ha seleccionado un monitor, asignamos "Sin monitor"
+            string dniMonitor = cbMonitores.SelectedValue?.ToString();
 
-            //////////////////////////////////GuardarActividad(nombreActividad, descripcionActividad, monitorSeleccionado);
-            MessageBox.Show($"La actividad '{nombreActividad}' ha sido registrada con éxito.\nMonitor asignado: {monitorSeleccionado}",
-                            "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LimpiarFormulario();
+            if (string.IsNullOrWhiteSpace(nombreActividad) || string.IsNullOrWhiteSpace(descripcionActividad) || cbMonitores.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            ActividadDTO nuevaActividad = new ActividadDTO
+            {
+                Nombre = nombreActividad,
+                Descripcion = descripcionActividad,
+                Monitor = new List<MonitorDTO>
+                    {
+                        new MonitorDTO { DNI = dniMonitor } 
+                    }
+            };
+
+            ActividadManagment actividadManagment = new ActividadManagment();
+            try
+            {
+                actividadManagment.RegistrarActividad(nuevaActividad);
+                MessageBox.Show($"La actividad '{nombreActividad}' ha sido registrada con éxito.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpiarFormulario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar la actividad: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>

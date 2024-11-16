@@ -12,6 +12,19 @@ namespace Negocio.Managment
 {
     public class MonitorManagment
     {
+        public List<UsuarioDTO> ObtenerUsuariosMonitores()
+        {
+            // Obtener los monitores de la capa de datos
+            var monitorRepository = new MonitorRepository();
+            var monitores = monitorRepository.ObtenerMonitores();
+            var monitoresDTO = monitores.Select(u => new UsuarioDTO
+            {
+                DNI = u.DNI,
+                Nombre = u.Nombre
+            }).ToList();
+
+            return monitoresDTO;
+        }
         public String altaMonitor(UsuarioDTO usuarioDTO)
         {
             Usuario usuario = new Usuario();
@@ -20,10 +33,6 @@ namespace Negocio.Managment
             Monitor monitor = new Monitor();
             MonitorRepository dMonitores = new MonitorRepository();
 
-            /*if (usuarios.Count == 0)
-            {
-                return "La conexión a la base de datos ha fallado";
-            }*/
 
             if (comprobarEmail(usuarios, usuarioDTO))
             {
@@ -37,10 +46,14 @@ namespace Negocio.Managment
                     usuario.Cuenta_Corriente = usuarioDTO.Cuenta_Corriente;
                     usuario.Email = usuarioDTO.Email;
                     usuario.Passwd = cifrar(usuarioDTO.Passwd);
+
+
                     datos.altaUsuario(usuario);
 
                     monitor.DNI = usuario.DNI;
-                    return dMonitores.altaMonitor(monitor); ;
+
+
+                    return dMonitores.AltaMonitor(monitor); ;
                 }
                 else
                 {
