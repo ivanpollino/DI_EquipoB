@@ -28,13 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LBLIndicadorNombreActividad = new System.Windows.Forms.Label();
             this.LBLDondeVaNombreActividad = new System.Windows.Forms.Label();
             this.LBLIndicadorNombreMonitor = new System.Windows.Forms.Label();
             this.LBLDonveVaNombreMonitor = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // LBLIndicadorNombreActividad
+            // 
+            this.LBLIndicadorNombreActividad.AutoSize = true;
+            this.LBLIndicadorNombreActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLIndicadorNombreActividad.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLIndicadorNombreActividad.Location = new System.Drawing.Point(14, 17);
+            this.LBLIndicadorNombreActividad.Name = "LBLIndicadorNombreActividad";
+            this.LBLIndicadorNombreActividad.Size = new System.Drawing.Size(110, 13);
+            this.LBLIndicadorNombreActividad.TabIndex = 1;
+            this.LBLIndicadorNombreActividad.Text = "Nombre actividad:";
+            // 
+            // LBLDondeVaNombreActividad
+            // 
+            this.LBLDondeVaNombreActividad.AutoSize = true;
+            this.LBLDondeVaNombreActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDondeVaNombreActividad.ForeColor = System.Drawing.Color.White;
+            this.LBLDondeVaNombreActividad.Location = new System.Drawing.Point(14, 39);
+            this.LBLDondeVaNombreActividad.Name = "LBLDondeVaNombreActividad";
+            this.LBLDondeVaNombreActividad.Size = new System.Drawing.Size(41, 13);
+            this.LBLDondeVaNombreActividad.TabIndex = 2;
+            this.LBLDondeVaNombreActividad.Text = "label2";
+            // 
+            // LBLIndicadorNombreMonitor
+            // 
+            this.LBLIndicadorNombreMonitor.AutoSize = true;
+            this.LBLIndicadorNombreMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLIndicadorNombreMonitor.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLIndicadorNombreMonitor.Location = new System.Drawing.Point(14, 61);
+            this.LBLIndicadorNombreMonitor.Name = "LBLIndicadorNombreMonitor";
+            this.LBLIndicadorNombreMonitor.Size = new System.Drawing.Size(108, 13);
+            this.LBLIndicadorNombreMonitor.TabIndex = 3;
+            this.LBLIndicadorNombreMonitor.Text = "Monitor asignado:";
+            // 
+            // LBLDonveVaNombreMonitor
+            // 
+            this.LBLDonveVaNombreMonitor.AutoSize = true;
+            this.LBLDonveVaNombreMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDonveVaNombreMonitor.ForeColor = System.Drawing.Color.White;
+            this.LBLDonveVaNombreMonitor.Location = new System.Drawing.Point(14, 84);
+            this.LBLDonveVaNombreMonitor.Name = "LBLDonveVaNombreMonitor";
+            this.LBLDonveVaNombreMonitor.Size = new System.Drawing.Size(41, 13);
+            this.LBLDonveVaNombreMonitor.TabIndex = 4;
+            this.LBLDonveVaNombreMonitor.Text = "label4";
             // 
             // pictureBox1
             // 
@@ -46,46 +90,11 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // LBLIndicadorNombreActividad
-            // 
-            this.LBLIndicadorNombreActividad.AutoSize = true;
-            this.LBLIndicadorNombreActividad.Location = new System.Drawing.Point(14, 17);
-            this.LBLIndicadorNombreActividad.Name = "LBLIndicadorNombreActividad";
-            this.LBLIndicadorNombreActividad.Size = new System.Drawing.Size(93, 13);
-            this.LBLIndicadorNombreActividad.TabIndex = 1;
-            this.LBLIndicadorNombreActividad.Text = "Nombre actividad:";
-            // 
-            // LBLDondeVaNombreActividad
-            // 
-            this.LBLDondeVaNombreActividad.AutoSize = true;
-            this.LBLDondeVaNombreActividad.Location = new System.Drawing.Point(14, 39);
-            this.LBLDondeVaNombreActividad.Name = "LBLDondeVaNombreActividad";
-            this.LBLDondeVaNombreActividad.Size = new System.Drawing.Size(35, 13);
-            this.LBLDondeVaNombreActividad.TabIndex = 2;
-            this.LBLDondeVaNombreActividad.Text = "label2";
-            // 
-            // LBLIndicadorNombreMonitor
-            // 
-            this.LBLIndicadorNombreMonitor.AutoSize = true;
-            this.LBLIndicadorNombreMonitor.Location = new System.Drawing.Point(14, 61);
-            this.LBLIndicadorNombreMonitor.Name = "LBLIndicadorNombreMonitor";
-            this.LBLIndicadorNombreMonitor.Size = new System.Drawing.Size(91, 13);
-            this.LBLIndicadorNombreMonitor.TabIndex = 3;
-            this.LBLIndicadorNombreMonitor.Text = "Monitor asignado:";
-            // 
-            // LBLDonveVaNombreMonitor
-            // 
-            this.LBLDonveVaNombreMonitor.AutoSize = true;
-            this.LBLDonveVaNombreMonitor.Location = new System.Drawing.Point(14, 84);
-            this.LBLDonveVaNombreMonitor.Name = "LBLDonveVaNombreMonitor";
-            this.LBLDonveVaNombreMonitor.Size = new System.Drawing.Size(35, 13);
-            this.LBLDonveVaNombreMonitor.TabIndex = 4;
-            this.LBLDonveVaNombreMonitor.Text = "label4";
-            // 
             // ActividadPestaña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.Controls.Add(this.LBLDonveVaNombreMonitor);
             this.Controls.Add(this.LBLIndicadorNombreMonitor);
             this.Controls.Add(this.LBLDondeVaNombreActividad);

@@ -113,7 +113,7 @@ namespace Presentacion
             this.BTNCerrarSesionAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BTNCerrarSesionAdmin.Location = new System.Drawing.Point(0, 64);
             this.BTNCerrarSesionAdmin.Name = "BTNCerrarSesionAdmin";
-            this.BTNCerrarSesionAdmin.Size = new System.Drawing.Size(208, 66);
+            this.BTNCerrarSesionAdmin.Size = new System.Drawing.Size(208, 68);
             this.BTNCerrarSesionAdmin.TabIndex = 1;
             this.BTNCerrarSesionAdmin.Text = "Cerrar sesión";
             this.BTNCerrarSesionAdmin.UseVisualStyleBackColor = false;
