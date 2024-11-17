@@ -11,11 +11,13 @@ namespace Negocio.EntitiesDTO
     {
         public MonitorDTO()
         {
-            this.Actividad = new HashSet<Actividad>();
+            this.Actividades = new HashSet<ActividadDTO>();
         }
 
         public string DNI { get; set; }
-        public virtual ICollection<Actividad> Actividad { get; set; }
+
+        // Relación uno a muchos: Un monitor tiene múltiples actividades
+        public virtual ICollection<ActividadDTO> Actividades { get; set; }
     }
 }
 

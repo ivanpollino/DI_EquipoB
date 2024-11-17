@@ -18,7 +18,7 @@ namespace Datos.Repositorys
         /// <returns>Un mensaje de éxito indicando que la actividad ha sido eliminada correctamente.</returns>
         public String bajaActividad(Actividad actividad)
         {
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobPortatilIvan())
             {
                 contexto.Actividad.Remove(actividad);
                 contexto.SaveChanges();
@@ -34,7 +34,7 @@ namespace Datos.Repositorys
         public Actividad sacarActividad(Actividad actividad)
         {
             Actividad actividadAux = new Actividad();
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobPortatilIvan())
             {
                 actividadAux = contexto.Actividad.FirstOrDefault(a => a.Nombre == actividad.Nombre);
             }
@@ -48,7 +48,7 @@ namespace Datos.Repositorys
         {
             List<Actividad> actividades = new List<Actividad>();
 
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobPortatilIvan())
             {
                 actividades = contexto.Actividad.ToList();
             }
@@ -61,7 +61,7 @@ namespace Datos.Repositorys
         /// <returns>El siguiente ID disponible para una nueva actividad.</returns>
         public int ObtenerNuevoIdActividad()
         {
-            using (var context = new equipobEntities())
+            using (var context = new equipobPortatilIvan())
             {
                 var ultimoId = context.Actividad
                                       .OrderByDescending(a => a.Id_Actividad)
@@ -76,7 +76,7 @@ namespace Datos.Repositorys
         /// <returns>El monitor encontrado o null si no se encuentra ningún monitor con ese DNI.</returns>
         public Monitor ObtenerMonitorPorDni(string dniMonitor)
         {
-            using (var context = new equipobEntities())
+            using (var context = new equipobPortatilIvan())
             {
                 return context.Monitor.FirstOrDefault(m => m.DNI == dniMonitor);
             }
@@ -87,7 +87,7 @@ namespace Datos.Repositorys
         /// <param name="actividad">La actividad que se desea guardar.</param>
         public void GuardarActividad(Actividad actividad)
         {
-            using (var context = new equipobEntities())
+            using (var context = new equipobPortatilIvan())
             {
                 // Agregamos la actividad
                 context.Actividad.Add(actividad);
@@ -96,19 +96,27 @@ namespace Datos.Repositorys
                 var monitores = actividad.Monitor.ToList();
                 foreach (var monitor in monitores)
                 {
+                    // Verificamos si el monitor ya existe en la base de datos
                     var monitorEnDb = context.Monitor.SingleOrDefault(m => m.DNI == monitor.DNI);
-                    if (monitorEnDb != null)
+                    if (monitorEnDb == null)
                     {
-                        actividad.Monitor.Add(monitorEnDb); // Relacionar monitor existente
+                        // Si no existe, lo agregamos a la base de datos
+                        context.Monitor.Add(monitor);
                     }
                     else
                     {
-                        context.Monitor.Add(monitor); // Solo agregar si no existe
+                        // Si ya existe, lo agregamos a la colección de la actividad sin volver a insertarlo
+                        // Solo asociamos el monitor existente
+                        actividad.Monitor.Remove(monitor);
+                        actividad.Monitor.Add(monitorEnDb); // Relacionar monitor existente
                     }
                 }
 
+                // Guardamos los cambios en la base de datos
                 context.SaveChanges();
             }
         }
+
     }
+
 }

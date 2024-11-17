@@ -51,3 +51,30 @@ C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Present
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.pdb
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistrarActividad.resources
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadPestaña.resources
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Administracion.resources
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Landing.resources
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ListadoActividades.resources
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Login.resources
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistrarActividad.resources
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Registro.resources
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistroMonitor.resources
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.pdb
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe.config
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Presentacion.pdb
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.dll
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.dll
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Negocio.dll
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Datos.dll
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Negocio.pdb
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.xml
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.xml
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Datos.pdb
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Datos.dll.config
+D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date

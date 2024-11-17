@@ -158,5 +158,10 @@ namespace Presentacion
             registrarActividad.BringToFront();
             registrarActividad.Show();
         }
+
+        private void panelFormularios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Datos.Repositorys
     {
         public List<Usuario> ObtenerMonitores()
         {
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobPortatilIvan())
             {
                 // Realizar el join entre la tabla Usuario y Monitor por el campo DNI
                 var monitores = (from u in contexto.Usuario
@@ -28,7 +28,7 @@ namespace Datos.Repositorys
         /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
         public Monitor ObtenerMonitorPorDni(string dni)
         {
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobPortatilIvan())
             {
                 // Buscamos el monitor por su DNI
                 return contexto.Monitor.SingleOrDefault(m => m.DNI == dni);
@@ -37,7 +37,7 @@ namespace Datos.Repositorys
 
         public String AltaMonitor(Monitor monitor)
         {
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobPortatilIvan())
             {
                 var monitorExistente = contexto.Monitor.SingleOrDefault(m => m.DNI == monitor.DNI);
                 if (monitorExistente != null)
