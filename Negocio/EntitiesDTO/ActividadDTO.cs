@@ -12,12 +12,8 @@ namespace Negocio.EntitiesDTO
         public int Id_Actividad { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public virtual ICollection<MonitorDTO> Monitor { get; set; }
+        public string DNI_Monitor { get; set; }
 
-        public ActividadDTO()
-        {
-            Monitor = new HashSet<MonitorDTO>();
-        }
+
     }
-
 }

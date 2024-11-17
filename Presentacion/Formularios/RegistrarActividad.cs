@@ -75,10 +75,7 @@ namespace Presentacion
             {
                 Nombre = nombreActividad,
                 Descripcion = descripcionActividad,
-                Monitor = new List<MonitorDTO>
-                    {
-                        new MonitorDTO { DNI = dniMonitor } 
-                    }
+                DNI_Monitor = dniMonitor
             };
 
             ActividadManagment actividadManagment = new ActividadManagment();

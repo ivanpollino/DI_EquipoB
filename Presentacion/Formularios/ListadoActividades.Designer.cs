@@ -34,9 +34,10 @@
             // contenedorActividades
             // 
             this.contenedorActividades.AutoScroll = true;
+            this.contenedorActividades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.contenedorActividades.Location = new System.Drawing.Point(0, -2);
             this.contenedorActividades.Name = "contenedorActividades";
-            this.contenedorActividades.Size = new System.Drawing.Size(897, 610);
+            this.contenedorActividades.Size = new System.Drawing.Size(897, 618);
             this.contenedorActividades.TabIndex = 0;
             this.contenedorActividades.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 

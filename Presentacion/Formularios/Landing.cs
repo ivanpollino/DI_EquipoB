@@ -21,6 +21,7 @@ namespace Presentacion
         private UsuarioDTO usuario; // Almacena los datos del usuario autenticado
         private string databaseName = "Usuario del gimnasio"; // Nombre de la base de datos asociada
         private bool logeado = false; // Estado de autenticación del usuario
+        private bool administrador = false;
 
         /// <summary>
         /// Inicializa una nueva instancia del formulario Landing, configura los eventos
@@ -45,7 +46,8 @@ namespace Presentacion
         /// </summary>
         private void cargarHeader()
         {   
-            panelAdministador.Visible = false;
+            panelAdministrador.Visible = false;
+            panelParaUsuarios.Visible = false;
             lbInfoUsuario.Visible = false;
             lbLinkLogin.Visible = false;
             if (logeado)
@@ -102,7 +104,7 @@ namespace Presentacion
         {
             if (usuario != null)
             {
-                MessageBox.Show("Si");
+
                 btLogin.Visible = false;
                 btRegistro.Visible = false;
             }
@@ -110,7 +112,16 @@ namespace Presentacion
 
         private void comprobarAdministrador()
         {
-            
+            UsuarioDTO usuarioAuxiliar = new UsuarioDTO();
+            usuarioAuxiliar = new Negocio.Managment.UsuarioManagment().comprobarAdministrador(usuario.DNI);
+            if (usuarioAuxiliar.DNI == null)
+            {
+                administrador = false;
+            }
+            else
+            {
+                administrador = true;
+            }
         }
 
         /// <summary>
@@ -123,9 +134,14 @@ namespace Presentacion
 
         private void lbInfoUsuario_Click(object sender, EventArgs e)
         {
-
-            panelAdministador.Visible = true;
-
+            if (administrador)
+            {
+                panelAdministrador.Visible = !panelAdministrador.Visible;
+            }
+            else
+            {
+                panelParaUsuarios.Visible = !panelParaUsuarios.Visible;
+            }
         }
 
 
@@ -189,7 +205,11 @@ namespace Presentacion
         {
             int panelWidth = panel1.ClientSize.Width;
             int panelHeight = panel1.ClientSize.Height;
-            
+
+            int labelUsuarioBottom = lbInfoUsuario.Bottom;
+            panelAdministrador.Location = new Point((panelWidth - panelAdministrador.Width) / 2 ,labelUsuarioBottom +10);
+            panelParaUsuarios.Location = new Point((panelWidth - panelParaUsuarios.Width) / 2, labelUsuarioBottom + 10);
+
             lbInfoUsuario.Left = (panel1.ClientSize.Width - lbInfoUsuario.Width) / 2;
             lbLinkLogin.Left = (panel1.ClientSize.Width - lbLinkLogin.Width) / 2;
             lbTexto1.Location = new Point((panelWidth - lbTexto1.Width) / 2, (panelHeight - lbTexto1.Height) / 2 - 100);
@@ -202,6 +222,25 @@ namespace Presentacion
         {
             Administracion administracion = new Administracion();
             administracion.ShowDialog();
+        }
+
+        private void BTNCerrarSesionAdmin_Click(object sender, EventArgs e)
+        {
+            cerrarSesion();
+        }
+
+        private void cerrarSesion()
+        {
+            usuario = null;
+            logeado = false;
+            cargarHeader();
+            btLogin.Visible = true;
+            btRegistro.Visible = true;
+        }
+
+        private void BTNCerrarSesionUsuario_Click(object sender, EventArgs e)
+        {
+            cerrarSesion();
         }
     }
 }

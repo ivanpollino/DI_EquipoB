@@ -7,6 +7,7 @@
     <Property Name="Id_Actividad" Type="int" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="Descripcion" Type="varchar(max)" />
+    <Property Name="DNI_Monitor" Type="varchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="Administrador">
     <Key>
@@ -18,14 +19,6 @@
     <Key>
       <PropertyRef Name="DNI" />
     </Key>
-    <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Monitor_Actividad">
-    <Key>
-      <PropertyRef Name="Id_Actividad" />
-      <PropertyRef Name="DNI" />
-    </Key>
-    <Property Name="Id_Actividad" Type="int" Nullable="false" />
     <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="Usuario">
@@ -70,31 +63,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Monitor">
-    <End Role="Monitor" Type="Self.Monitor" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Monitor_Actividad" Type="Self.Monitor_Actividad" Multiplicity="*" />
+  <Association Name="FK_Monitor_Actividad">
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="0..1" />
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Monitor">
         <PropertyRef Name="DNI" />
       </Principal>
-      <Dependent Role="Monitor_Actividad">
-        <PropertyRef Name="DNI" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Monitor_Actividad">
-    <End Role="Actividad" Type="Self.Actividad" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Monitor_Actividad" Type="Self.Monitor_Actividad" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Actividad">
-        <PropertyRef Name="Id_Actividad" />
-      </Principal>
-      <Dependent Role="Monitor_Actividad">
-        <PropertyRef Name="Id_Actividad" />
+      <Dependent Role="Actividad">
+        <PropertyRef Name="DNI_Monitor" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -158,7 +135,6 @@
     <EntitySet Name="Actividad" EntityType="Self.Actividad" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Administrador" EntityType="Self.Administrador" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Monitor" EntityType="Self.Monitor" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Monitor_Actividad" EntityType="Self.Monitor_Actividad" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario_Actividad" EntityType="Self.Usuario_Actividad" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario_Normal" EntityType="Self.Usuario_Normal" Schema="dbo" store:Type="Tables" />
@@ -166,13 +142,9 @@
       <End Role="Actividad" EntitySet="Actividad" />
       <End Role="Usuario_Actividad" EntitySet="Usuario_Actividad" />
     </AssociationSet>
-    <AssociationSet Name="FK_Monitor" Association="Self.FK_Monitor">
-      <End Role="Monitor" EntitySet="Monitor" />
-      <End Role="Monitor_Actividad" EntitySet="Monitor_Actividad" />
-    </AssociationSet>
     <AssociationSet Name="FK_Monitor_Actividad" Association="Self.FK_Monitor_Actividad">
+      <End Role="Monitor" EntitySet="Monitor" />
       <End Role="Actividad" EntitySet="Actividad" />
-      <End Role="Monitor_Actividad" EntitySet="Monitor_Actividad" />
     </AssociationSet>
     <AssociationSet Name="FK_Usuario_Actividad" Association="Self.FK_Usuario_Actividad">
       <End Role="Usuario_Normal" EntitySet="Usuario_Normal" />

@@ -11,7 +11,7 @@ namespace Datos.Repositorys
     {
         public List<Usuario> ObtenerMonitores()
         {
-            using (var contexto = new equipobPortatilIvan())
+            using (var contexto = new equipobEntities())
             {
                 // Realizar el join entre la tabla Usuario y Monitor por el campo DNI
                 var monitores = (from u in contexto.Usuario
@@ -28,28 +28,28 @@ namespace Datos.Repositorys
         /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
         public Monitor ObtenerMonitorPorDni(string dni)
         {
-            using (var contexto = new equipobPortatilIvan())
+            using (var contexto = new equipobEntities())
             {
                 // Buscamos el monitor por su DNI
                 return contexto.Monitor.SingleOrDefault(m => m.DNI == dni);
             }
         }
 
-        public String AltaMonitor(Monitor monitor)
+        public string AltaMonitor(Monitor monitor)
         {
-            using (var contexto = new equipobPortatilIvan())
+            using (var context = new equipobEntities())
             {
-                var monitorExistente = contexto.Monitor.SingleOrDefault(m => m.DNI == monitor.DNI);
+                // Verificar si el monitor ya existe en la base de datos
+                var monitorExistente = context.Monitor.FirstOrDefault(m => m.DNI == monitor.DNI);
                 if (monitorExistente != null)
                 {
-                    return "El monitor con el DNI " + monitor.DNI + " ya existe en la base de datos.";
+                    return "El monitor ya existe.";
                 }
-                else
-                {
-                    contexto.Monitor.Add(monitor);
-                    contexto.SaveChanges();
-                    return "Monitor añadido con éxito";
-                }
+
+                // Si no existe, insertar el nuevo monitor
+                context.Monitor.Add(monitor);
+                context.SaveChanges();
+                return "Monitor insertado correctamente.";
             }
         }
     }

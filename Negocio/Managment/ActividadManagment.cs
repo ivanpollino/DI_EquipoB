@@ -19,15 +19,13 @@ namespace Negocio.Managment
         public String bajaActividad(ActividadDTO actividadDTO)
         {
             Actividad actividad = new Actividad();
-            ActividadRepository datos = new ActividadRepository();
-            actividad.Nombre = acztividadDTO.Nombre;
-            Actividad actividadBase = datos.sacarActividad(actividad);
 
-            actividad.Id_Actividad = actividadBase.Id_Actividad;
-            actividad.Nombre = actividadBase.Nombre;
-            actividad.Descripcion = actividadBase.Descripcion;
+            actividad.Id_Actividad = actividadDTO.Id_Actividad;
+            actividad.Nombre = actividadDTO.Nombre;
+            actividad.Descripcion = actividadDTO.Descripcion;
+            actividad.DNI_Monitor = actividadDTO.DNI_Monitor;
 
-            return datos.bajaActividad(actividad);
+            return new Datos.Repositorys.ActividadRepository().bajaActividad(actividad);
 
         }
         /// <summary>
@@ -44,6 +42,7 @@ namespace Negocio.Managment
                 aux.Id_Actividad = actividadNormal.Id_Actividad;
                 aux.Nombre = actividadNormal.Nombre;
                 aux.Descripcion = actividadNormal.Descripcion;
+                aux.DNI_Monitor = actividadNormal.DNI_Monitor;
 
                 listaDTO.Add(aux);
             }
@@ -57,7 +56,16 @@ namespace Negocio.Managment
         /// <param name="dniMonitor">El DNI del monitor que se asociará con la actividad.</param>
         public void RegistrarActividad(ActividadDTO nuevaActividad)
         {
-            
+            ActividadRepository actividadRepository = new ActividadRepository();
+            int nuevoId = actividadRepository.ObtenerNuevoIdActividad();
+            Actividad actividad = new Actividad
+            {
+                Id_Actividad = nuevoId,
+                Nombre = nuevaActividad.Nombre,
+                Descripcion = nuevaActividad.Descripcion,
+                DNI_Monitor = nuevaActividad.DNI_Monitor
+            };
+            actividadRepository.GuardarActividad(actividad);
         }
     }
 }

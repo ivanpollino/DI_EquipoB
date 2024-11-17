@@ -137,5 +137,27 @@ namespace Negocio.Managment
 
             return null;
         }
+        public UsuarioDTO comprobarAdministrador(String dni)
+        {
+            UsuarioDTO usuario = new UsuarioDTO();
+            List<Administrador> administradores = new Datos.Repositorys.UsuarioRepository().obtenerAdministradores();
+
+            foreach (Administrador admin in administradores)
+            {
+                if(dni == admin.DNI)
+                {
+                    usuario.DNI = admin.DNI;
+                }
+            }
+
+            return usuario;
+
+        }
+
+        public String sacarNombreApellidosDeUsuario(String dni)
+        {
+            return new Datos.Repositorys.UsuarioRepository().sacarNombrePorDNI(dni);
+        }
+
     }
 }

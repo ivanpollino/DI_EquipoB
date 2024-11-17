@@ -7,6 +7,7 @@
           <ScalarProperty Name="Id_Actividad" ColumnName="Id_Actividad" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="DNI_Monitor" ColumnName="DNI_Monitor" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -54,13 +55,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="Monitor_Actividad" TypeName="equipobModel.Monitor_Actividad" StoreEntitySet="Monitor_Actividad">
-      <EndProperty Name="Monitor">
-        <ScalarProperty Name="DNI" ColumnName="DNI" />
-      </EndProperty>
-      <EndProperty Name="Actividad">
-        <ScalarProperty Name="Id_Actividad" ColumnName="Id_Actividad" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

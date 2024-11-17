@@ -170,7 +170,7 @@
             this.panelFormularios.Controls.Add(this.lblPanelAdministracion);
             this.panelFormularios.Location = new System.Drawing.Point(288, 0);
             this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(897, 610);
+            this.panelFormularios.Size = new System.Drawing.Size(897, 623);
             this.panelFormularios.TabIndex = 1;
             this.panelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormularios_Paint);
             // 
@@ -209,7 +209,7 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutMenuAdministracion);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(289, 610);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(289, 620);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // flowLayoutMenuAdministracion
@@ -219,7 +219,7 @@
             this.flowLayoutMenuAdministracion.Controls.Add(this.flowLayoutGestionActividades);
             this.flowLayoutMenuAdministracion.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutMenuAdministracion.Name = "flowLayoutMenuAdministracion";
-            this.flowLayoutMenuAdministracion.Size = new System.Drawing.Size(279, 57);
+            this.flowLayoutMenuAdministracion.Size = new System.Drawing.Size(279, 58);
             this.flowLayoutMenuAdministracion.TabIndex = 5;
             // 
             // menuTransacionActividades
@@ -239,8 +239,11 @@
             this.ClientSize = new System.Drawing.Size(1184, 611);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panelFormularios);
+            this.MaximumSize = new System.Drawing.Size(1200, 650);
+            this.MinimumSize = new System.Drawing.Size(1200, 650);
             this.Name = "Administracion";
-            this.Text = " bb";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Panel de administración";
             this.flowLayoutGestionActividades.ResumeLayout(false);
             this.flowLayoutGestioMonitores.ResumeLayout(false);
             this.panelFormularios.ResumeLayout(false);
