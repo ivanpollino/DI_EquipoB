@@ -34,7 +34,7 @@ namespace Presentacion
             try
             {
                 var monitores = new MonitorManagment().ObtenerUsuariosMonitores();
-                cbMonitores.DisplayMember = "Nombre";
+                cbMonitores.DisplayMember = "NombreCompleto";
                 cbMonitores.ValueMember = "DNI";  // Usar el DNI como valor
                 cbMonitores.DataSource = monitores;
             }
@@ -137,5 +137,9 @@ namespace Presentacion
             button.Region = new Region(path);
         }
 
+        private void copiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

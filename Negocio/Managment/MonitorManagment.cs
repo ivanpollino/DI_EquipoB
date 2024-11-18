@@ -20,7 +20,8 @@ namespace Negocio.Managment
             var monitoresDTO = monitores.Select(u => new UsuarioDTO
             {
                 DNI = u.DNI,
-                Nombre = u.Nombre
+                Nombre = u.Nombre,
+                Apellidos = u.Apellidos
             }).ToList();
 
             return monitoresDTO;

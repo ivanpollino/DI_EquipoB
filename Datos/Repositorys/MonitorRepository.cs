@@ -16,7 +16,7 @@ namespace Datos.Repositorys
                 // Realizar el join entre la tabla Usuario y Monitor por el campo DNI
                 var monitores = (from u in contexto.Usuario
                                  join m in contexto.Monitor on u.DNI equals m.DNI
-                                 select u).ToList(); // Ejecutamos la consulta y obtenemos los resultados en una lista de Usuario
+                                 select u).ToList();
 
                 return monitores;
             }

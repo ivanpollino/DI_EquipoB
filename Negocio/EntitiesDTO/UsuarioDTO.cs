@@ -81,5 +81,6 @@ namespace Negocio.EntitiesDTO
         public UsuarioDTO()
         {
         }
+        public string NombreCompleto => $"{Nombre} {Apellidos}";
     }
 }
