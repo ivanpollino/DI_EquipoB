@@ -14,6 +14,17 @@ namespace Negocio.EntitiesDTO
         public string Descripcion { get; set; }
         public string DNI_Monitor { get; set; }
 
+        public ActividadDTO()
+        {
+        }
+
+        public ActividadDTO(int idActividad, string nombre, string descripcion, string dniMonitor)
+        {
+            Id_Actividad = idActividad;
+            Nombre = nombre;
+            Descripcion = descripcion;
+            DNI_Monitor = dniMonitor;
+        }
 
     }
 }

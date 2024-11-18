@@ -54,7 +54,7 @@ namespace Negocio.Managment
         /// </summary>
         /// <param name="nuevaActividad">El DTO que representa la nueva actividad que se desea registrar.</param>
         /// <param name="dniMonitor">El DNI del monitor que se asociará con la actividad.</param>
-        public void RegistrarActividad(ActividadDTO nuevaActividad)
+        public String RegistrarActividad(ActividadDTO nuevaActividad)
         {
             ActividadRepository actividadRepository = new ActividadRepository();
             int nuevoId = actividadRepository.ObtenerNuevoIdActividad();
@@ -65,7 +65,7 @@ namespace Negocio.Managment
                 Descripcion = nuevaActividad.Descripcion,
                 DNI_Monitor = nuevaActividad.DNI_Monitor
             };
-            actividadRepository.GuardarActividad(actividad);
+            return actividadRepository.GuardarActividad(actividad);
         }
     }
 }

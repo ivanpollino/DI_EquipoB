@@ -81,9 +81,17 @@ namespace Presentacion
             ActividadManagment actividadManagment = new ActividadManagment();
             try
             {
-                actividadManagment.RegistrarActividad(nuevaActividad);
-                MessageBox.Show($"La actividad '{nombreActividad}' ha sido registrada con éxito.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LimpiarFormulario();
+                String mensaje = actividadManagment.RegistrarActividad(nuevaActividad);
+                if(mensaje== "Error: El ID de la actividad ya está registrado.")
+                {
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarFormulario();
+                }
+                
             }
             catch (Exception ex)
             {
