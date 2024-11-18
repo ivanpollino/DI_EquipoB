@@ -29,6 +29,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbMonitores = new System.Windows.Forms.ComboBox();
             this.btLimpiarForm = new System.Windows.Forms.Button();
@@ -39,12 +40,17 @@ namespace Presentacion
             this.lbDescripcion = new System.Windows.Forms.Label();
             this.lbNombreActv = new System.Windows.Forms.Label();
             this.LBLTitulo = new System.Windows.Forms.Label();
+            this.MSRegistroActividad = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copiarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pegarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.MSRegistroActividad.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.panel1.ContextMenuStrip = this.MSRegistroActividad;
             this.panel1.Controls.Add(this.cbMonitores);
             this.panel1.Controls.Add(this.btLimpiarForm);
             this.panel1.Controls.Add(this.btRegistrarAct);
@@ -153,6 +159,27 @@ namespace Presentacion
             this.LBLTitulo.TabIndex = 28;
             this.LBLTitulo.Text = "Registro de Actividad";
             // 
+            // MSRegistroActividad
+            // 
+            this.MSRegistroActividad.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copiarToolStripMenuItem,
+            this.pegarToolStripMenuItem});
+            this.MSRegistroActividad.Name = "MSRegistroActividad";
+            this.MSRegistroActividad.Size = new System.Drawing.Size(181, 70);
+            // 
+            // copiarToolStripMenuItem
+            // 
+            this.copiarToolStripMenuItem.Name = "copiarToolStripMenuItem";
+            this.copiarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copiarToolStripMenuItem.Text = "Copiar";
+            this.copiarToolStripMenuItem.Click += new System.EventHandler(this.copiarToolStripMenuItem_Click);
+            // 
+            // pegarToolStripMenuItem
+            // 
+            this.pegarToolStripMenuItem.Name = "pegarToolStripMenuItem";
+            this.pegarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pegarToolStripMenuItem.Text = "Pegar";
+            // 
             // RegistrarActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +191,7 @@ namespace Presentacion
             this.Text = "RegistrarActividad";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.MSRegistroActividad.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -180,5 +208,8 @@ namespace Presentacion
         private System.Windows.Forms.Button btLimpiarForm;
         private System.Windows.Forms.Button btRegistrarAct;
         private System.Windows.Forms.ComboBox cbMonitores;
+        private System.Windows.Forms.ContextMenuStrip MSRegistroActividad;
+        private System.Windows.Forms.ToolStripMenuItem copiarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pegarToolStripMenuItem;
     }
 }

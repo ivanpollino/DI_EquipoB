@@ -32,9 +32,8 @@ namespace Presentacion.ComponentesPersonalizados
             if (confirmResult == DialogResult.Yes)
             {
                 // Llamar al método que elimina la actividad
-                var resultado = new Negocio.Managment.ActividadManagment().bajaActividad(actividadDto);
-
-                if (resultado == "Actividad borrada con exito")
+    
+                if (eliminarActividad() == "Actividad borrada con exito")
                 {
                     // Mostrar mensaje de confirmación
                     MessageBox.Show("La actividad ha sido eliminada exitosamente.",
@@ -45,15 +44,12 @@ namespace Presentacion.ComponentesPersonalizados
                     // Eliminar el control personalizado del contenedor
                     this.Parent.Controls.Remove(this);
                 }
-                else
-                {
-                    // Mostrar mensaje de error
-                    MessageBox.Show("No se pudo eliminar la actividad: " + resultado,
-                                    "Error",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                }
             }
+        }
+
+        public String eliminarActividad()
+        {
+            return new Negocio.Managment.ActividadManagment().bajaActividad(actividadDto);
         }
     }
 }
