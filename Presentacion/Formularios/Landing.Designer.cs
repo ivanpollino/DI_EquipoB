@@ -90,7 +90,7 @@ namespace Presentacion
             this.BTNCerrarSesionUsuario.TabIndex = 8;
             this.BTNCerrarSesionUsuario.Text = "Cerrar sesión";
             this.BTNCerrarSesionUsuario.UseVisualStyleBackColor = false;
-            this.BTNCerrarSesionUsuario.Click += new System.EventHandler(this.BTNCerrarSesionUsuario_Click);
+            //this.BTNCerrarSesionUsuario.Click += new System.EventHandler(this.BTNCerrarSesionUsuario_Click);
             // 
             // panelAdministrador
             // 
@@ -117,7 +117,7 @@ namespace Presentacion
             this.BTNCerrarSesionAdmin.TabIndex = 1;
             this.BTNCerrarSesionAdmin.Text = "Cerrar sesión";
             this.BTNCerrarSesionAdmin.UseVisualStyleBackColor = false;
-            this.BTNCerrarSesionAdmin.Click += new System.EventHandler(this.BTNCerrarSesionAdmin_Click);
+            //this.BTNCerrarSesionAdmin.Click += new System.EventHandler(this.BTNCerrarSesionAdmin_Click);
             // 
             // BTNOpcionesAdministrador
             // 
@@ -134,7 +134,7 @@ namespace Presentacion
             this.BTNOpcionesAdministrador.TabIndex = 0;
             this.BTNOpcionesAdministrador.Text = "              Panel de Administración";
             this.BTNOpcionesAdministrador.UseVisualStyleBackColor = false;
-            this.BTNOpcionesAdministrador.Click += new System.EventHandler(this.BTNOpcionesAdministrador_Click);
+            //this.BTNOpcionesAdministrador.Click += new System.EventHandler(this.BTNOpcionesAdministrador_Click);
             // 
             // lbTexto2
             // 

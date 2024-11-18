@@ -3,12 +3,12 @@ using Datos.Repositorys;
 using Negocio.EntitiesDTO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Negocio.Managment
 {
+    /// <summary>
+    /// Clase que gestiona las operaciones relacionadas con las actividades en el sistema.
+    /// </summary>
     public class ActividadManagment
     {
         /// <summary>
@@ -18,46 +18,59 @@ namespace Negocio.Managment
         /// <returns>Un mensaje de éxito indicando que la actividad fue eliminada.</returns>
         public String bajaActividad(ActividadDTO actividadDTO)
         {
-            Actividad actividad = new Actividad();
+            // Crear una instancia de Actividad y asignar valores del DTO
+            Actividad actividad = new Actividad
+            {
+                Id_Actividad = actividadDTO.Id_Actividad,
+                Nombre = actividadDTO.Nombre,
+                Descripcion = actividadDTO.Descripcion,
+                DNI_Monitor = actividadDTO.DNI_Monitor
+            };
 
-            actividad.Id_Actividad = actividadDTO.Id_Actividad;
-            actividad.Nombre = actividadDTO.Nombre;
-            actividad.Descripcion = actividadDTO.Descripcion;
-            actividad.DNI_Monitor = actividadDTO.DNI_Monitor;
-
-            return new Datos.Repositorys.ActividadRepository().bajaActividad(actividad);
-
+            // Llamar al método del repositorio para eliminar la actividad
+            return new ActividadRepository().bajaActividad(actividad);
         }
+
         /// <summary>
         /// Obtiene todas las actividades desde la base de datos y las convierte en una lista de DTOs.
         /// </summary>
         /// <returns>Una lista de DTOs que representa todas las actividades.</returns>
         public List<ActividadDTO> ObtenerActividades()
         {
-            List<Actividad> actividades = new Datos.Repositorys.ActividadRepository().listadoActividades();
+            // Obtener la lista de actividades desde el repositorio
+            List<Actividad> actividades = new ActividadRepository().listadoActividades();
             List<ActividadDTO> listaDTO = new List<ActividadDTO>();
+
+            // Convertir cada Actividad en un ActividadDTO
             foreach (Actividad actividadNormal in actividades)
             {
-                ActividadDTO aux = new ActividadDTO();
-                aux.Id_Actividad = actividadNormal.Id_Actividad;
-                aux.Nombre = actividadNormal.Nombre;
-                aux.Descripcion = actividadNormal.Descripcion;
-                aux.DNI_Monitor = actividadNormal.DNI_Monitor;
+                ActividadDTO aux = new ActividadDTO
+                {
+                    Id_Actividad = actividadNormal.Id_Actividad,
+                    Nombre = actividadNormal.Nombre,
+                    Descripcion = actividadNormal.Descripcion,
+                    DNI_Monitor = actividadNormal.DNI_Monitor
+                };
 
                 listaDTO.Add(aux);
             }
+
             return listaDTO;
         }
+
         /// <summary>
         /// Registra una nueva actividad en la base de datos.
-        /// Asocia un monitor con la actividad usando su DNI.
         /// </summary>
         /// <param name="nuevaActividad">El DTO que representa la nueva actividad que se desea registrar.</param>
-        /// <param name="dniMonitor">El DNI del monitor que se asociará con la actividad.</param>
         public void RegistrarActividad(ActividadDTO nuevaActividad)
         {
+            // Crear una instancia del repositorio de actividades
             ActividadRepository actividadRepository = new ActividadRepository();
+
+            // Obtener un nuevo ID para la actividad
             int nuevoId = actividadRepository.ObtenerNuevoIdActividad();
+
+            // Crear la entidad Actividad a partir del DTO
             Actividad actividad = new Actividad
             {
                 Id_Actividad = nuevoId,
@@ -65,6 +78,8 @@ namespace Negocio.Managment
                 Descripcion = nuevaActividad.Descripcion,
                 DNI_Monitor = nuevaActividad.DNI_Monitor
             };
+
+            // Guardar la nueva actividad en la base de datos
             actividadRepository.GuardarActividad(actividad);
         }
     }

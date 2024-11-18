@@ -1,0 +1,91 @@
+\doxysection{Datos\+::Repositorys\+::Usuario\+Repository Class Reference}
+\hypertarget{class_datos_1_1_repositorys_1_1_usuario_repository}{}\label{class_datos_1_1_repositorys_1_1_usuario_repository}\index{Datos::Repositorys::UsuarioRepository@{Datos::Repositorys::UsuarioRepository}}
+
+
+Clase que proporciona métodos para gestionar los usuarios en la base de datos.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_repository_af401ae73b27b612f16a4134fe7673458}{alta\+Usuario}} (Usuario usuario)
+\begin{DoxyCompactList}\small\item\em Registra un nuevo usuario en la base de datos. \end{DoxyCompactList}\item 
+List$<$ Usuario $>$ \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_repository_ab4f623529289111a8981ab14bbb9085d}{Obtener\+Usuarios}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de todos los usuarios registrados en la base de datos. \end{DoxyCompactList}\item 
+List$<$ Administrador $>$ \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_repository_ad07a3de06e2cb993af1b3570defdd466}{obtener\+Administradores}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de todos los administradores registrados en la base de datos. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_repository_a87b0b4c1d4a95100c2b19627d7617099}{sacar\+Nombre\+Por\+DNI}} (String dni)
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre y apellidos de un usuario por su DNI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que proporciona métodos para gestionar los usuarios en la base de datos. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_repository_af401ae73b27b612f16a4134fe7673458}\index{Datos::Repositorys::UsuarioRepository@{Datos::Repositorys::UsuarioRepository}!altaUsuario@{altaUsuario}}
+\index{altaUsuario@{altaUsuario}!Datos::Repositorys::UsuarioRepository@{Datos::Repositorys::UsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{altaUsuario()}{altaUsuario()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_repository_af401ae73b27b612f16a4134fe7673458} 
+String Datos\+::\+Repositorys\+::\+Usuario\+Repository\+::alta\+Usuario (\begin{DoxyParamCaption}\item[{Usuario}]{usuario}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registra un nuevo usuario en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usuario} & Objeto Usuario que contiene la información del usuario a añadir.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mensaje de confirmación de que el usuario fue añadido con éxito.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_repository_ad07a3de06e2cb993af1b3570defdd466}\index{Datos::Repositorys::UsuarioRepository@{Datos::Repositorys::UsuarioRepository}!obtenerAdministradores@{obtenerAdministradores}}
+\index{obtenerAdministradores@{obtenerAdministradores}!Datos::Repositorys::UsuarioRepository@{Datos::Repositorys::UsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{obtenerAdministradores()}{obtenerAdministradores()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_repository_ad07a3de06e2cb993af1b3570defdd466} 
+List$<$ Administrador $>$ Datos\+::\+Repositorys\+::\+Usuario\+Repository\+::obtener\+Administradores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la lista de todos los administradores registrados en la base de datos. 
+
+\begin{DoxyReturn}{Returns}
+Lista de objetos Administrador con la información de cada administrador.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_repository_ab4f623529289111a8981ab14bbb9085d}\index{Datos::Repositorys::UsuarioRepository@{Datos::Repositorys::UsuarioRepository}!ObtenerUsuarios@{ObtenerUsuarios}}
+\index{ObtenerUsuarios@{ObtenerUsuarios}!Datos::Repositorys::UsuarioRepository@{Datos::Repositorys::UsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{ObtenerUsuarios()}{ObtenerUsuarios()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_repository_ab4f623529289111a8981ab14bbb9085d} 
+List$<$ Usuario $>$ Datos\+::\+Repositorys\+::\+Usuario\+Repository\+::\+Obtener\+Usuarios (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la lista de todos los usuarios registrados en la base de datos. 
+
+\begin{DoxyReturn}{Returns}
+Lista de objetos Usuario con la información de cada usuario.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_repository_a87b0b4c1d4a95100c2b19627d7617099}\index{Datos::Repositorys::UsuarioRepository@{Datos::Repositorys::UsuarioRepository}!sacarNombrePorDNI@{sacarNombrePorDNI}}
+\index{sacarNombrePorDNI@{sacarNombrePorDNI}!Datos::Repositorys::UsuarioRepository@{Datos::Repositorys::UsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{sacarNombrePorDNI()}{sacarNombrePorDNI()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_repository_a87b0b4c1d4a95100c2b19627d7617099} 
+String Datos\+::\+Repositorys\+::\+Usuario\+Repository\+::sacar\+Nombre\+Por\+DNI (\begin{DoxyParamCaption}\item[{String}]{dni}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el nombre y apellidos de un usuario por su DNI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dni} & DNI del usuario.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre completo del usuario o un mensaje si no se encuentra.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Datos/\+Repositorys/\mbox{\hyperlink{_usuario_repository_8cs}{Usuario\+Repository.\+cs}}\end{DoxyCompactItemize}

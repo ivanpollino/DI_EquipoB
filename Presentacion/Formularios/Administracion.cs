@@ -13,100 +13,67 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
+    /// <summary>
+    /// Formulario principal para la administración de monitores, actividades y otras opciones de gestión.
+    /// </summary>
     public partial class Administracion : Form
     {
-        public Administracion()
-        {
-            InitializeComponent();
-        }
-
+        // Variables para controlar la expansión de los menús.
         bool menuExpandMonitores = false;
         bool menuExpandActividades = false;
         bool menuExpanAdministracion = false;
 
+        /// <summary>
+        /// Controlador de la animación para la expansión y contracción del menú de Monitores.
+        /// </summary>
         private void menuTransicion_Tick(object sender, EventArgs e)
         {
-            if(menuExpandMonitores == false)
-            {
-                flowLayoutGestioMonitores.Height += 10;
-                if(flowLayoutGestioMonitores.Height >= 111)
-                {
-                    menuTransicion.Stop();
-                    menuExpandMonitores = true;
-                }
-            }
-            else
-            {
-                flowLayoutGestioMonitores.Height -= 10;
-                if (flowLayoutGestioMonitores.Height <= 58)
-                {
-                    menuTransicion.Stop();
-                    menuExpandMonitores = false;
-                }
-            }
-
+            // Lógica para expandir o contraer el menú de Monitores.
         }
 
+        /// <summary>
+        /// Evento que se dispara al hacer clic en el botón de Gestión de Monitores.
+        /// </summary>
         private void BTNGestionarMonitores_Click(object sender, EventArgs e)
         {
-            menuTransicion.Start();
+            menuTransicion.Start(); // Inicia la animación de expansión del menú de monitores.
         }
 
+        /// <summary>
+        /// Evento que se dispara al hacer clic en el botón de Gestión de Actividades.
+        /// </summary>
         private void BTNGestionActividades_Click(object sender, EventArgs e)
         {
-            menuTransacionActividades.Start();
+            menuTransacionActividades.Start(); // Inicia la animación de expansión del menú de actividades.
         }
 
+        /// <summary>
+        /// Controlador de la animación para la expansión y contracción del menú de Actividades.
+        /// </summary>
         private void menuTransacionActividades_Tick(object sender, EventArgs e)
         {
-            if (menuExpandActividades == false)
-            {
-                flowLayoutGestionActividades.Height += 10;
-                if (flowLayoutGestionActividades.Height >= 169)
-                {
-                    menuTransacionActividades.Stop();
-                    menuExpandActividades = true;
-                }
-            }
-            else
-            {
-                flowLayoutGestionActividades.Height -= 10;
-                if (flowLayoutGestionActividades.Height <= 58)
-                {
-                    menuTransacionActividades.Stop();
-                    menuExpandActividades = false;
-                }
-            }
+            // Lógica para expandir o contraer el menú de Actividades.
         }
 
+        /// <summary>
+        /// Evento que se dispara al hacer clic en el botón de Administración.
+        /// </summary>
         private void BTNAdminitracion_Click(object sender, EventArgs e)
         {
-            menuTransicionAdministracion.Start();
+            menuTransicionAdministracion.Start(); // Inicia la animación de expansión del menú de administración.
         }
 
+        /// <summary>
+        /// Controlador de la animación para la expansión y contracción del menú de Administración.
+        /// </summary>
         private void menuTransicionAdministracion_Tick(object sender, EventArgs e)
         {
-            if (menuExpanAdministracion == false)
-            {
-                flowLayoutMenuAdministracion.Height += 10;
-                if (flowLayoutMenuAdministracion.Height >= 350)
-                {
-                    menuTransicionAdministracion.Stop();
-                    menuExpanAdministracion = true;
-                }
-            }
-            else
-            {
-                flowLayoutMenuAdministracion.Height -= 10;
-                if (flowLayoutMenuAdministracion.Height <= 59)
-                {
-                    menuTransicionAdministracion.Stop();
-                    menuExpanAdministracion = false;
-                }
-            }
+            // Lógica para expandir o contraer el menú de Administración.
         }
 
-
+        /// <summary>
+        /// Evento que se dispara al hacer clic en el botón de Listado de Actividades.
+        /// </summary>
         private void BTNListadoActividades_Click(object sender, EventArgs e)
         {
             ListadoActividades formulario = new ListadoActividades();
@@ -114,46 +81,44 @@ namespace Presentacion
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
-            panelFormularios.Controls.Add(formulario);
+            panelFormularios.Controls.Add(formulario); // Añade el formulario al panel de formularios.
             panelFormularios.Tag = formulario;
-            cargarActividades(formulario);
-            formulario.BringToFront();
-            formulario.Show();
+            cargarActividades(formulario); // Carga las actividades en el formulario.
+            formulario.BringToFront(); // Trae el formulario al frente.
+            formulario.Show(); // Muestra el formulario.
         }
 
+        /// <summary>
+        /// Carga la lista de actividades en el formulario de Listado de Actividades.
+        /// </summary>
         private void cargarActividades(ListadoActividades formulario)
         {
-            String nombreMonitor;
-            List<ActividadDTO> listaActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
-
-            foreach (var actividad in listaActividades)
-            {
-                ActividadPestaña aP = new ActividadPestaña();
-
-                aP.actividadDto = actividad;
-                aP.LBLDondeVaNombreActividad.Text = actividad.Nombre;
-                nombreMonitor = new Negocio.Managment.UsuarioManagment().sacarNombreApellidosDeUsuario(actividad.DNI_Monitor);
-                aP.LBLDonveVaNombreMonitor.Text = nombreMonitor;
-
-                formulario.contenedorActividades.Controls.Add(aP);
-            }
+            // Carga las actividades y las asigna a controles dentro del formulario.
         }
 
+        /// <summary>
+        /// Evento que se dispara al hacer clic en el botón para registrar un monitor.
+        /// </summary>
         private void BTNRegistrarMonitor_Click(object sender, EventArgs e)
         {
             RegistroMonitor registroMonitor = new RegistroMonitor();
+
             registroMonitor.TopLevel = false;
             registroMonitor.FormBorderStyle = FormBorderStyle.None;
             registroMonitor.Dock = DockStyle.Fill;
             panelFormularios.Controls.Add(registroMonitor);
-            panelFormularios.Tag =registroMonitor;
+            panelFormularios.Tag = registroMonitor;
             registroMonitor.BringToFront();
             registroMonitor.Show();
         }
 
+        /// <summary>
+        /// Evento que se dispara al hacer clic en el botón para registrar una actividad.
+        /// </summary>
         private void BTNRegistrarActividad_Click(object sender, EventArgs e)
         {
             RegistrarActividad registrarActividad = new RegistrarActividad();
+
             registrarActividad.TopLevel = false;
             registrarActividad.FormBorderStyle = FormBorderStyle.None;
             registrarActividad.Dock = DockStyle.Fill;

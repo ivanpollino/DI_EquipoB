@@ -1,0 +1,68 @@
+\doxysection{Datos\+::Repositorys\+::Monitor\+Repository Class Reference}
+\hypertarget{class_datos_1_1_repositorys_1_1_monitor_repository}{}\label{class_datos_1_1_repositorys_1_1_monitor_repository}\index{Datos::Repositorys::MonitorRepository@{Datos::Repositorys::MonitorRepository}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ Usuario $>$ \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_monitor_repository_ae6d00108d5397ed49bca34afd188f239}{Obtener\+Monitores}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene una lista de todos los monitores registrados. \end{DoxyCompactList}\item 
+Monitor \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_monitor_repository_acb68a3b09e2d3899ab92a09120772aa0}{Obtener\+Monitor\+Por\+Dni}} (string dni)
+\begin{DoxyCompactList}\small\item\em Obtiene un monitor por su DNI. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_monitor_repository_aa341f326ce1d933b53efa0f341a2e481}{Alta\+Monitor}} (Monitor monitor)
+\begin{DoxyCompactList}\small\item\em Da de alta un nuevo monitor en la base de datos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_datos_1_1_repositorys_1_1_monitor_repository_aa341f326ce1d933b53efa0f341a2e481}\index{Datos::Repositorys::MonitorRepository@{Datos::Repositorys::MonitorRepository}!AltaMonitor@{AltaMonitor}}
+\index{AltaMonitor@{AltaMonitor}!Datos::Repositorys::MonitorRepository@{Datos::Repositorys::MonitorRepository}}
+\doxysubsubsection{\texorpdfstring{AltaMonitor()}{AltaMonitor()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_monitor_repository_aa341f326ce1d933b53efa0f341a2e481} 
+string Datos\+::\+Repositorys\+::\+Monitor\+Repository\+::\+Alta\+Monitor (\begin{DoxyParamCaption}\item[{Monitor}]{monitor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Da de alta un nuevo monitor en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em monitor} & Objeto Monitor con la información del monitor a añadir.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mensaje indicando si el monitor fue añadido o si ya existe.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_monitor_repository_ae6d00108d5397ed49bca34afd188f239}\index{Datos::Repositorys::MonitorRepository@{Datos::Repositorys::MonitorRepository}!ObtenerMonitores@{ObtenerMonitores}}
+\index{ObtenerMonitores@{ObtenerMonitores}!Datos::Repositorys::MonitorRepository@{Datos::Repositorys::MonitorRepository}}
+\doxysubsubsection{\texorpdfstring{ObtenerMonitores()}{ObtenerMonitores()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_monitor_repository_ae6d00108d5397ed49bca34afd188f239} 
+List$<$ Usuario $>$ Datos\+::\+Repositorys\+::\+Monitor\+Repository\+::\+Obtener\+Monitores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene una lista de todos los monitores registrados. 
+
+\begin{DoxyReturn}{Returns}
+Lista de objetos Usuario que representan a los monitores.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_monitor_repository_acb68a3b09e2d3899ab92a09120772aa0}\index{Datos::Repositorys::MonitorRepository@{Datos::Repositorys::MonitorRepository}!ObtenerMonitorPorDni@{ObtenerMonitorPorDni}}
+\index{ObtenerMonitorPorDni@{ObtenerMonitorPorDni}!Datos::Repositorys::MonitorRepository@{Datos::Repositorys::MonitorRepository}}
+\doxysubsubsection{\texorpdfstring{ObtenerMonitorPorDni()}{ObtenerMonitorPorDni()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_monitor_repository_acb68a3b09e2d3899ab92a09120772aa0} 
+Monitor Datos\+::\+Repositorys\+::\+Monitor\+Repository\+::\+Obtener\+Monitor\+Por\+Dni (\begin{DoxyParamCaption}\item[{string}]{dni}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene un monitor por su DNI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dni} & DNI del monitor a buscar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El objeto Monitor correspondiente o null si no se encuentra.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Datos/\+Repositorys/\mbox{\hyperlink{_monitor_repository_8cs}{Monitor\+Repository.\+cs}}\end{DoxyCompactItemize}

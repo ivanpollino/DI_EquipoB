@@ -1,0 +1,636 @@
+### YamlMime:ManagedReference
+items:
+- uid: Datos.Repositorys.UsuarioRepository
+  commentId: T:Datos.Repositorys.UsuarioRepository
+  id: UsuarioRepository
+  parent: Datos.Repositorys
+  children:
+  - Datos.Repositorys.UsuarioRepository.altaUsuario(Datos.Infrastructure.Usuario)
+  - Datos.Repositorys.UsuarioRepository.obtenerAdministradores
+  - Datos.Repositorys.UsuarioRepository.ObtenerUsuarios
+  - Datos.Repositorys.UsuarioRepository.sacarNombrePorDNI(System.String)
+  langs:
+  - csharp
+  - vb
+  name: UsuarioRepository
+  nameWithType: UsuarioRepository
+  fullName: Datos.Repositorys.UsuarioRepository
+  type: Class
+  source:
+    id: UsuarioRepository
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Repositorys\UsuarioRepository.cs
+    startLine: 14
+  assemblies:
+  - Datos
+  namespace: Datos.Repositorys
+  summary: "\nClase que proporciona métodos para gestionar los usuarios en la base de datos.\n"
+  example: []
+  syntax:
+    content: public class UsuarioRepository
+    content.vb: Public Class UsuarioRepository
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Datos.Repositorys.UsuarioRepository.altaUsuario(Datos.Infrastructure.Usuario)
+  commentId: M:Datos.Repositorys.UsuarioRepository.altaUsuario(Datos.Infrastructure.Usuario)
+  id: altaUsuario(Datos.Infrastructure.Usuario)
+  parent: Datos.Repositorys.UsuarioRepository
+  langs:
+  - csharp
+  - vb
+  name: altaUsuario(Usuario)
+  nameWithType: UsuarioRepository.altaUsuario(Usuario)
+  fullName: Datos.Repositorys.UsuarioRepository.altaUsuario(Datos.Infrastructure.Usuario)
+  type: Method
+  source:
+    id: altaUsuario
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Repositorys\UsuarioRepository.cs
+    startLine: 22
+  assemblies:
+  - Datos
+  namespace: Datos.Repositorys
+  summary: "\nRegistra un nuevo usuario en la base de datos.\n"
+  example: []
+  syntax:
+    content: public string altaUsuario(Usuario usuario)
+    parameters:
+    - id: usuario
+      type: Datos.Infrastructure.Usuario
+      description: Objeto <xref href="Datos.Infrastructure.Usuario" data-throw-if-not-resolved="false"></xref> que contiene la información del usuario a añadir.
+    return:
+      type: System.String
+      description: Mensaje de confirmación de que el usuario fue añadido con éxito.
+    content.vb: Public Function altaUsuario(usuario As Usuario) As String
+  overload: Datos.Repositorys.UsuarioRepository.altaUsuario*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Datos.Repositorys.UsuarioRepository.ObtenerUsuarios
+  commentId: M:Datos.Repositorys.UsuarioRepository.ObtenerUsuarios
+  id: ObtenerUsuarios
+  parent: Datos.Repositorys.UsuarioRepository
+  langs:
+  - csharp
+  - vb
+  name: ObtenerUsuarios()
+  nameWithType: UsuarioRepository.ObtenerUsuarios()
+  fullName: Datos.Repositorys.UsuarioRepository.ObtenerUsuarios()
+  type: Method
+  source:
+    id: ObtenerUsuarios
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Repositorys\UsuarioRepository.cs
+    startLine: 36
+  assemblies:
+  - Datos
+  namespace: Datos.Repositorys
+  summary: "\nObtiene la lista de todos los usuarios registrados en la base de datos.\n"
+  example: []
+  syntax:
+    content: public List<Usuario> ObtenerUsuarios()
+    return:
+      type: System.Collections.Generic.List{Datos.Infrastructure.Usuario}
+      description: Lista de objetos <xref href="Datos.Infrastructure.Usuario" data-throw-if-not-resolved="false"></xref> con la información de cada usuario.
+    content.vb: Public Function ObtenerUsuarios As List(Of Usuario)
+  overload: Datos.Repositorys.UsuarioRepository.ObtenerUsuarios*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Datos.Repositorys.UsuarioRepository.obtenerAdministradores
+  commentId: M:Datos.Repositorys.UsuarioRepository.obtenerAdministradores
+  id: obtenerAdministradores
+  parent: Datos.Repositorys.UsuarioRepository
+  langs:
+  - csharp
+  - vb
+  name: obtenerAdministradores()
+  nameWithType: UsuarioRepository.obtenerAdministradores()
+  fullName: Datos.Repositorys.UsuarioRepository.obtenerAdministradores()
+  type: Method
+  source:
+    id: obtenerAdministradores
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Repositorys\UsuarioRepository.cs
+    startLine: 54
+  assemblies:
+  - Datos
+  namespace: Datos.Repositorys
+  syntax:
+    content: public List<Administrador> obtenerAdministradores()
+    return:
+      type: System.Collections.Generic.List{Datos.Infrastructure.Administrador}
+    content.vb: Public Function obtenerAdministradores As List(Of Administrador)
+  overload: Datos.Repositorys.UsuarioRepository.obtenerAdministradores*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Datos.Repositorys.UsuarioRepository.sacarNombrePorDNI(System.String)
+  commentId: M:Datos.Repositorys.UsuarioRepository.sacarNombrePorDNI(System.String)
+  id: sacarNombrePorDNI(System.String)
+  parent: Datos.Repositorys.UsuarioRepository
+  langs:
+  - csharp
+  - vb
+  name: sacarNombrePorDNI(String)
+  nameWithType: UsuarioRepository.sacarNombrePorDNI(String)
+  fullName: Datos.Repositorys.UsuarioRepository.sacarNombrePorDNI(System.String)
+  type: Method
+  source:
+    id: sacarNombrePorDNI
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Repositorys\UsuarioRepository.cs
+    startLine: 72
+  assemblies:
+  - Datos
+  namespace: Datos.Repositorys
+  syntax:
+    content: public string sacarNombrePorDNI(string dni)
+    parameters:
+    - id: dni
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Function sacarNombrePorDNI(dni As String) As String
+  overload: Datos.Repositorys.UsuarioRepository.sacarNombrePorDNI*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Datos.Repositorys
+  commentId: N:Datos.Repositorys
+  name: Datos.Repositorys
+  nameWithType: Datos.Repositorys
+  fullName: Datos.Repositorys
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Datos.Infrastructure.Usuario
+  commentId: T:Datos.Infrastructure.Usuario
+  parent: Datos.Infrastructure
+  name: Usuario
+  nameWithType: Usuario
+  fullName: Datos.Infrastructure.Usuario
+- uid: Datos.Repositorys.UsuarioRepository.altaUsuario*
+  commentId: Overload:Datos.Repositorys.UsuarioRepository.altaUsuario
+  name: altaUsuario
+  nameWithType: UsuarioRepository.altaUsuario
+  fullName: Datos.Repositorys.UsuarioRepository.altaUsuario
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Datos.Infrastructure
+  commentId: N:Datos.Infrastructure
+  name: Datos.Infrastructure
+  nameWithType: Datos.Infrastructure
+  fullName: Datos.Infrastructure
+- uid: Datos.Repositorys.UsuarioRepository.ObtenerUsuarios*
+  commentId: Overload:Datos.Repositorys.UsuarioRepository.ObtenerUsuarios
+  name: ObtenerUsuarios
+  nameWithType: UsuarioRepository.ObtenerUsuarios
+  fullName: Datos.Repositorys.UsuarioRepository.ObtenerUsuarios
+- uid: System.Collections.Generic.List{Datos.Infrastructure.Usuario}
+  commentId: T:System.Collections.Generic.List{Datos.Infrastructure.Usuario}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Usuario>
+  nameWithType: List<Usuario>
+  fullName: System.Collections.Generic.List<Datos.Infrastructure.Usuario>
+  nameWithType.vb: List(Of Usuario)
+  fullName.vb: System.Collections.Generic.List(Of Datos.Infrastructure.Usuario)
+  name.vb: List(Of Usuario)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Datos.Infrastructure.Usuario
+    name: Usuario
+    nameWithType: Usuario
+    fullName: Datos.Infrastructure.Usuario
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Datos.Infrastructure.Usuario
+    name: Usuario
+    nameWithType: Usuario
+    fullName: Datos.Infrastructure.Usuario
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Datos.Repositorys.UsuarioRepository.obtenerAdministradores*
+  commentId: Overload:Datos.Repositorys.UsuarioRepository.obtenerAdministradores
+  name: obtenerAdministradores
+  nameWithType: UsuarioRepository.obtenerAdministradores
+  fullName: Datos.Repositorys.UsuarioRepository.obtenerAdministradores
+- uid: System.Collections.Generic.List{Datos.Infrastructure.Administrador}
+  commentId: T:System.Collections.Generic.List{Datos.Infrastructure.Administrador}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Administrador>
+  nameWithType: List<Administrador>
+  fullName: System.Collections.Generic.List<Datos.Infrastructure.Administrador>
+  nameWithType.vb: List(Of Administrador)
+  fullName.vb: System.Collections.Generic.List(Of Datos.Infrastructure.Administrador)
+  name.vb: List(Of Administrador)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Datos.Infrastructure.Administrador
+    name: Administrador
+    nameWithType: Administrador
+    fullName: Datos.Infrastructure.Administrador
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Datos.Infrastructure.Administrador
+    name: Administrador
+    nameWithType: Administrador
+    fullName: Datos.Infrastructure.Administrador
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Datos.Repositorys.UsuarioRepository.sacarNombrePorDNI*
+  commentId: Overload:Datos.Repositorys.UsuarioRepository.sacarNombrePorDNI
+  name: sacarNombrePorDNI
+  nameWithType: UsuarioRepository.sacarNombrePorDNI
+  fullName: Datos.Repositorys.UsuarioRepository.sacarNombrePorDNI

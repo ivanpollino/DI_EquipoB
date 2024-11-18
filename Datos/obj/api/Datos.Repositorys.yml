@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: Datos.Repositorys
+  commentId: N:Datos.Repositorys
+  id: Datos.Repositorys
+  children:
+  - Datos.Repositorys.ActividadRepository
+  - Datos.Repositorys.MonitorRepository
+  - Datos.Repositorys.UsuarioRepository
+  langs:
+  - csharp
+  - vb
+  name: Datos.Repositorys
+  nameWithType: Datos.Repositorys
+  fullName: Datos.Repositorys
+  type: Namespace
+  assemblies:
+  - Datos
+references:
+- uid: Datos.Repositorys.ActividadRepository
+  commentId: T:Datos.Repositorys.ActividadRepository
+  name: ActividadRepository
+  nameWithType: ActividadRepository
+  fullName: Datos.Repositorys.ActividadRepository
+- uid: Datos.Repositorys.MonitorRepository
+  commentId: T:Datos.Repositorys.MonitorRepository
+  name: MonitorRepository
+  nameWithType: MonitorRepository
+  fullName: Datos.Repositorys.MonitorRepository
+- uid: Datos.Repositorys.UsuarioRepository
+  commentId: T:Datos.Repositorys.UsuarioRepository
+  name: UsuarioRepository
+  nameWithType: UsuarioRepository
+  fullName: Datos.Repositorys.UsuarioRepository

@@ -1,0 +1,859 @@
+### YamlMime:ManagedReference
+items:
+- uid: Datos.Infrastructure.Usuario
+  commentId: T:Datos.Infrastructure.Usuario
+  id: Usuario
+  parent: Datos.Infrastructure
+  children:
+  - Datos.Infrastructure.Usuario.Administrador
+  - Datos.Infrastructure.Usuario.Apellidos
+  - Datos.Infrastructure.Usuario.Cuenta_Corriente
+  - Datos.Infrastructure.Usuario.Direccion
+  - Datos.Infrastructure.Usuario.DNI
+  - Datos.Infrastructure.Usuario.Email
+  - Datos.Infrastructure.Usuario.Monitor
+  - Datos.Infrastructure.Usuario.Nombre
+  - Datos.Infrastructure.Usuario.Passwd
+  - Datos.Infrastructure.Usuario.Telefono
+  - Datos.Infrastructure.Usuario.Usuario_Normal
+  langs:
+  - csharp
+  - vb
+  name: Usuario
+  nameWithType: Usuario
+  fullName: Datos.Infrastructure.Usuario
+  type: Class
+  source:
+    id: Usuario
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 14
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public class Usuario
+    content.vb: Public Class Usuario
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Datos.Infrastructure.Usuario.DNI
+  commentId: P:Datos.Infrastructure.Usuario.DNI
+  id: DNI
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: DNI
+  nameWithType: Usuario.DNI
+  fullName: Datos.Infrastructure.Usuario.DNI
+  type: Property
+  source:
+    id: DNI
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 16
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public string DNI { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DNI As String
+  overload: Datos.Infrastructure.Usuario.DNI*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Usuario.Nombre
+  commentId: P:Datos.Infrastructure.Usuario.Nombre
+  id: Nombre
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Nombre
+  nameWithType: Usuario.Nombre
+  fullName: Datos.Infrastructure.Usuario.Nombre
+  type: Property
+  source:
+    id: Nombre
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 17
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public string Nombre { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Nombre As String
+  overload: Datos.Infrastructure.Usuario.Nombre*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Usuario.Apellidos
+  commentId: P:Datos.Infrastructure.Usuario.Apellidos
+  id: Apellidos
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Apellidos
+  nameWithType: Usuario.Apellidos
+  fullName: Datos.Infrastructure.Usuario.Apellidos
+  type: Property
+  source:
+    id: Apellidos
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 18
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public string Apellidos { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Apellidos As String
+  overload: Datos.Infrastructure.Usuario.Apellidos*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Usuario.Telefono
+  commentId: P:Datos.Infrastructure.Usuario.Telefono
+  id: Telefono
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Telefono
+  nameWithType: Usuario.Telefono
+  fullName: Datos.Infrastructure.Usuario.Telefono
+  type: Property
+  source:
+    id: Telefono
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 19
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public int? Telefono { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Telefono As Integer?
+  overload: Datos.Infrastructure.Usuario.Telefono*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Usuario.Direccion
+  commentId: P:Datos.Infrastructure.Usuario.Direccion
+  id: Direccion
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Direccion
+  nameWithType: Usuario.Direccion
+  fullName: Datos.Infrastructure.Usuario.Direccion
+  type: Property
+  source:
+    id: Direccion
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 20
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public string Direccion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Direccion As String
+  overload: Datos.Infrastructure.Usuario.Direccion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Usuario.Cuenta_Corriente
+  commentId: P:Datos.Infrastructure.Usuario.Cuenta_Corriente
+  id: Cuenta_Corriente
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Cuenta_Corriente
+  nameWithType: Usuario.Cuenta_Corriente
+  fullName: Datos.Infrastructure.Usuario.Cuenta_Corriente
+  type: Property
+  source:
+    id: Cuenta_Corriente
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 21
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public string Cuenta_Corriente { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cuenta_Corriente As String
+  overload: Datos.Infrastructure.Usuario.Cuenta_Corriente*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Usuario.Email
+  commentId: P:Datos.Infrastructure.Usuario.Email
+  id: Email
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: Usuario.Email
+  fullName: Datos.Infrastructure.Usuario.Email
+  type: Property
+  source:
+    id: Email
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 22
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public string Email { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: Datos.Infrastructure.Usuario.Email*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Usuario.Passwd
+  commentId: P:Datos.Infrastructure.Usuario.Passwd
+  id: Passwd
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Passwd
+  nameWithType: Usuario.Passwd
+  fullName: Datos.Infrastructure.Usuario.Passwd
+  type: Property
+  source:
+    id: Passwd
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 23
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public string Passwd { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Passwd As String
+  overload: Datos.Infrastructure.Usuario.Passwd*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Usuario.Administrador
+  commentId: P:Datos.Infrastructure.Usuario.Administrador
+  id: Administrador
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Administrador
+  nameWithType: Usuario.Administrador
+  fullName: Datos.Infrastructure.Usuario.Administrador
+  type: Property
+  source:
+    id: Administrador
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 25
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public virtual Administrador Administrador { get; set; }
+    parameters: []
+    return:
+      type: Datos.Infrastructure.Administrador
+    content.vb: Public Overridable Property Administrador As Administrador
+  overload: Datos.Infrastructure.Usuario.Administrador*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Datos.Infrastructure.Usuario.Monitor
+  commentId: P:Datos.Infrastructure.Usuario.Monitor
+  id: Monitor
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Monitor
+  nameWithType: Usuario.Monitor
+  fullName: Datos.Infrastructure.Usuario.Monitor
+  type: Property
+  source:
+    id: Monitor
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 26
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public virtual Monitor Monitor { get; set; }
+    parameters: []
+    return:
+      type: Datos.Infrastructure.Monitor
+    content.vb: Public Overridable Property Monitor As Monitor
+  overload: Datos.Infrastructure.Usuario.Monitor*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Datos.Infrastructure.Usuario.Usuario_Normal
+  commentId: P:Datos.Infrastructure.Usuario.Usuario_Normal
+  id: Usuario_Normal
+  parent: Datos.Infrastructure.Usuario
+  langs:
+  - csharp
+  - vb
+  name: Usuario_Normal
+  nameWithType: Usuario.Usuario_Normal
+  fullName: Datos.Infrastructure.Usuario.Usuario_Normal
+  type: Property
+  source:
+    id: Usuario_Normal
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Usuario.cs
+    startLine: 27
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public virtual Usuario_Normal Usuario_Normal { get; set; }
+    parameters: []
+    return:
+      type: Datos.Infrastructure.Usuario_Normal
+    content.vb: Public Overridable Property Usuario_Normal As Usuario_Normal
+  overload: Datos.Infrastructure.Usuario.Usuario_Normal*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: Datos.Infrastructure
+  commentId: N:Datos.Infrastructure
+  name: Datos.Infrastructure
+  nameWithType: Datos.Infrastructure
+  fullName: Datos.Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Datos.Infrastructure.Usuario.DNI*
+  commentId: Overload:Datos.Infrastructure.Usuario.DNI
+  name: DNI
+  nameWithType: Usuario.DNI
+  fullName: Datos.Infrastructure.Usuario.DNI
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Datos.Infrastructure.Usuario.Nombre*
+  commentId: Overload:Datos.Infrastructure.Usuario.Nombre
+  name: Nombre
+  nameWithType: Usuario.Nombre
+  fullName: Datos.Infrastructure.Usuario.Nombre
+- uid: Datos.Infrastructure.Usuario.Apellidos*
+  commentId: Overload:Datos.Infrastructure.Usuario.Apellidos
+  name: Apellidos
+  nameWithType: Usuario.Apellidos
+  fullName: Datos.Infrastructure.Usuario.Apellidos
+- uid: Datos.Infrastructure.Usuario.Telefono*
+  commentId: Overload:Datos.Infrastructure.Usuario.Telefono
+  name: Telefono
+  nameWithType: Usuario.Telefono
+  fullName: Datos.Infrastructure.Usuario.Telefono
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Datos.Infrastructure.Usuario.Direccion*
+  commentId: Overload:Datos.Infrastructure.Usuario.Direccion
+  name: Direccion
+  nameWithType: Usuario.Direccion
+  fullName: Datos.Infrastructure.Usuario.Direccion
+- uid: Datos.Infrastructure.Usuario.Cuenta_Corriente*
+  commentId: Overload:Datos.Infrastructure.Usuario.Cuenta_Corriente
+  name: Cuenta_Corriente
+  nameWithType: Usuario.Cuenta_Corriente
+  fullName: Datos.Infrastructure.Usuario.Cuenta_Corriente
+- uid: Datos.Infrastructure.Usuario.Email*
+  commentId: Overload:Datos.Infrastructure.Usuario.Email
+  name: Email
+  nameWithType: Usuario.Email
+  fullName: Datos.Infrastructure.Usuario.Email
+- uid: Datos.Infrastructure.Usuario.Passwd*
+  commentId: Overload:Datos.Infrastructure.Usuario.Passwd
+  name: Passwd
+  nameWithType: Usuario.Passwd
+  fullName: Datos.Infrastructure.Usuario.Passwd
+- uid: Datos.Infrastructure.Usuario.Administrador*
+  commentId: Overload:Datos.Infrastructure.Usuario.Administrador
+  name: Administrador
+  nameWithType: Usuario.Administrador
+  fullName: Datos.Infrastructure.Usuario.Administrador
+- uid: Datos.Infrastructure.Administrador
+  commentId: T:Datos.Infrastructure.Administrador
+  parent: Datos.Infrastructure
+  name: Administrador
+  nameWithType: Administrador
+  fullName: Datos.Infrastructure.Administrador
+- uid: Datos.Infrastructure.Usuario.Monitor*
+  commentId: Overload:Datos.Infrastructure.Usuario.Monitor
+  name: Monitor
+  nameWithType: Usuario.Monitor
+  fullName: Datos.Infrastructure.Usuario.Monitor
+- uid: Datos.Infrastructure.Monitor
+  commentId: T:Datos.Infrastructure.Monitor
+  parent: Datos.Infrastructure
+  name: Monitor
+  nameWithType: Monitor
+  fullName: Datos.Infrastructure.Monitor
+- uid: Datos.Infrastructure.Usuario.Usuario_Normal*
+  commentId: Overload:Datos.Infrastructure.Usuario.Usuario_Normal
+  name: Usuario_Normal
+  nameWithType: Usuario.Usuario_Normal
+  fullName: Datos.Infrastructure.Usuario.Usuario_Normal
+- uid: Datos.Infrastructure.Usuario_Normal
+  commentId: T:Datos.Infrastructure.Usuario_Normal
+  parent: Datos.Infrastructure
+  name: Usuario_Normal
+  nameWithType: Usuario_Normal
+  fullName: Datos.Infrastructure.Usuario_Normal

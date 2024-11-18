@@ -1,0 +1,703 @@
+### YamlMime:ManagedReference
+items:
+- uid: Datos.Infrastructure.Actividad
+  commentId: T:Datos.Infrastructure.Actividad
+  id: Actividad
+  parent: Datos.Infrastructure
+  children:
+  - Datos.Infrastructure.Actividad.#ctor
+  - Datos.Infrastructure.Actividad.Descripcion
+  - Datos.Infrastructure.Actividad.DNI_Monitor
+  - Datos.Infrastructure.Actividad.Id_Actividad
+  - Datos.Infrastructure.Actividad.Monitor
+  - Datos.Infrastructure.Actividad.Nombre
+  - Datos.Infrastructure.Actividad.Usuario_Actividad
+  langs:
+  - csharp
+  - vb
+  name: Actividad
+  nameWithType: Actividad
+  fullName: Datos.Infrastructure.Actividad
+  type: Class
+  source:
+    id: Actividad
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Actividad.cs
+    startLine: 14
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public class Actividad
+    content.vb: Public Class Actividad
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Datos.Infrastructure.Actividad.#ctor
+  commentId: M:Datos.Infrastructure.Actividad.#ctor
+  id: '#ctor'
+  parent: Datos.Infrastructure.Actividad
+  langs:
+  - csharp
+  - vb
+  name: Actividad()
+  nameWithType: Actividad.Actividad()
+  fullName: Datos.Infrastructure.Actividad.Actividad()
+  type: Constructor
+  source:
+    id: .ctor
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Actividad.cs
+    startLine: 16
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public Actividad()
+    content.vb: Public Sub New
+  overload: Datos.Infrastructure.Actividad.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Actividad.Id_Actividad
+  commentId: P:Datos.Infrastructure.Actividad.Id_Actividad
+  id: Id_Actividad
+  parent: Datos.Infrastructure.Actividad
+  langs:
+  - csharp
+  - vb
+  name: Id_Actividad
+  nameWithType: Actividad.Id_Actividad
+  fullName: Datos.Infrastructure.Actividad.Id_Actividad
+  type: Property
+  source:
+    id: Id_Actividad
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Actividad.cs
+    startLine: 22
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public int Id_Actividad { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id_Actividad As Integer
+  overload: Datos.Infrastructure.Actividad.Id_Actividad*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Actividad.Nombre
+  commentId: P:Datos.Infrastructure.Actividad.Nombre
+  id: Nombre
+  parent: Datos.Infrastructure.Actividad
+  langs:
+  - csharp
+  - vb
+  name: Nombre
+  nameWithType: Actividad.Nombre
+  fullName: Datos.Infrastructure.Actividad.Nombre
+  type: Property
+  source:
+    id: Nombre
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Actividad.cs
+    startLine: 23
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public string Nombre { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Nombre As String
+  overload: Datos.Infrastructure.Actividad.Nombre*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Actividad.Descripcion
+  commentId: P:Datos.Infrastructure.Actividad.Descripcion
+  id: Descripcion
+  parent: Datos.Infrastructure.Actividad
+  langs:
+  - csharp
+  - vb
+  name: Descripcion
+  nameWithType: Actividad.Descripcion
+  fullName: Datos.Infrastructure.Actividad.Descripcion
+  type: Property
+  source:
+    id: Descripcion
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Actividad.cs
+    startLine: 24
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public string Descripcion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Descripcion As String
+  overload: Datos.Infrastructure.Actividad.Descripcion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Actividad.DNI_Monitor
+  commentId: P:Datos.Infrastructure.Actividad.DNI_Monitor
+  id: DNI_Monitor
+  parent: Datos.Infrastructure.Actividad
+  langs:
+  - csharp
+  - vb
+  name: DNI_Monitor
+  nameWithType: Actividad.DNI_Monitor
+  fullName: Datos.Infrastructure.Actividad.DNI_Monitor
+  type: Property
+  source:
+    id: DNI_Monitor
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Actividad.cs
+    startLine: 25
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public string DNI_Monitor { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DNI_Monitor As String
+  overload: Datos.Infrastructure.Actividad.DNI_Monitor*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Datos.Infrastructure.Actividad.Usuario_Actividad
+  commentId: P:Datos.Infrastructure.Actividad.Usuario_Actividad
+  id: Usuario_Actividad
+  parent: Datos.Infrastructure.Actividad
+  langs:
+  - csharp
+  - vb
+  name: Usuario_Actividad
+  nameWithType: Actividad.Usuario_Actividad
+  fullName: Datos.Infrastructure.Actividad.Usuario_Actividad
+  type: Property
+  source:
+    id: Usuario_Actividad
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Actividad.cs
+    startLine: 27
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public virtual ICollection<Usuario_Actividad> Usuario_Actividad { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Datos.Infrastructure.Usuario_Actividad}
+    content.vb: Public Overridable Property Usuario_Actividad As ICollection(Of Usuario_Actividad)
+  overload: Datos.Infrastructure.Actividad.Usuario_Actividad*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Datos.Infrastructure.Actividad.Monitor
+  commentId: P:Datos.Infrastructure.Actividad.Monitor
+  id: Monitor
+  parent: Datos.Infrastructure.Actividad
+  langs:
+  - csharp
+  - vb
+  name: Monitor
+  nameWithType: Actividad.Monitor
+  fullName: Datos.Infrastructure.Actividad.Monitor
+  type: Property
+  source:
+    id: Monitor
+    path: E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\Actividad.cs
+    startLine: 29
+  assemblies:
+  - Datos
+  namespace: Datos.Infrastructure
+  syntax:
+    content: public virtual Monitor Monitor { get; set; }
+    parameters: []
+    return:
+      type: Datos.Infrastructure.Monitor
+    content.vb: Public Overridable Property Monitor As Monitor
+  overload: Datos.Infrastructure.Actividad.Monitor*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: Datos.Infrastructure
+  commentId: N:Datos.Infrastructure
+  name: Datos.Infrastructure
+  nameWithType: Datos.Infrastructure
+  fullName: Datos.Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Datos.Infrastructure.Actividad.#ctor*
+  commentId: Overload:Datos.Infrastructure.Actividad.#ctor
+  name: Actividad
+  nameWithType: Actividad.Actividad
+  fullName: Datos.Infrastructure.Actividad.Actividad
+- uid: Datos.Infrastructure.Actividad.Id_Actividad*
+  commentId: Overload:Datos.Infrastructure.Actividad.Id_Actividad
+  name: Id_Actividad
+  nameWithType: Actividad.Id_Actividad
+  fullName: Datos.Infrastructure.Actividad.Id_Actividad
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Datos.Infrastructure.Actividad.Nombre*
+  commentId: Overload:Datos.Infrastructure.Actividad.Nombre
+  name: Nombre
+  nameWithType: Actividad.Nombre
+  fullName: Datos.Infrastructure.Actividad.Nombre
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Datos.Infrastructure.Actividad.Descripcion*
+  commentId: Overload:Datos.Infrastructure.Actividad.Descripcion
+  name: Descripcion
+  nameWithType: Actividad.Descripcion
+  fullName: Datos.Infrastructure.Actividad.Descripcion
+- uid: Datos.Infrastructure.Actividad.DNI_Monitor*
+  commentId: Overload:Datos.Infrastructure.Actividad.DNI_Monitor
+  name: DNI_Monitor
+  nameWithType: Actividad.DNI_Monitor
+  fullName: Datos.Infrastructure.Actividad.DNI_Monitor
+- uid: Datos.Infrastructure.Actividad.Usuario_Actividad*
+  commentId: Overload:Datos.Infrastructure.Actividad.Usuario_Actividad
+  name: Usuario_Actividad
+  nameWithType: Actividad.Usuario_Actividad
+  fullName: Datos.Infrastructure.Actividad.Usuario_Actividad
+- uid: System.Collections.Generic.ICollection{Datos.Infrastructure.Usuario_Actividad}
+  commentId: T:System.Collections.Generic.ICollection{Datos.Infrastructure.Usuario_Actividad}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Usuario_Actividad>
+  nameWithType: ICollection<Usuario_Actividad>
+  fullName: System.Collections.Generic.ICollection<Datos.Infrastructure.Usuario_Actividad>
+  nameWithType.vb: ICollection(Of Usuario_Actividad)
+  fullName.vb: System.Collections.Generic.ICollection(Of Datos.Infrastructure.Usuario_Actividad)
+  name.vb: ICollection(Of Usuario_Actividad)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Datos.Infrastructure.Usuario_Actividad
+    name: Usuario_Actividad
+    nameWithType: Usuario_Actividad
+    fullName: Datos.Infrastructure.Usuario_Actividad
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Datos.Infrastructure.Usuario_Actividad
+    name: Usuario_Actividad
+    nameWithType: Usuario_Actividad
+    fullName: Datos.Infrastructure.Usuario_Actividad
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Datos.Infrastructure.Actividad.Monitor*
+  commentId: Overload:Datos.Infrastructure.Actividad.Monitor
+  name: Monitor
+  nameWithType: Actividad.Monitor
+  fullName: Datos.Infrastructure.Actividad.Monitor
+- uid: Datos.Infrastructure.Monitor
+  commentId: T:Datos.Infrastructure.Monitor
+  parent: Datos.Infrastructure
+  name: Monitor
+  nameWithType: Monitor
+  fullName: Datos.Infrastructure.Monitor

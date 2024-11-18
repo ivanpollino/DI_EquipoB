@@ -1,0 +1,38 @@
+### YamlMime:TableOfContent
+- uid: Datos
+  name: Datos
+  items:
+  - uid: Datos.Class1
+    name: Class1
+- uid: Datos.Infrastructure
+  name: Datos.Infrastructure
+  items:
+  - uid: Datos.Infrastructure.Actividad
+    name: Actividad
+  - uid: Datos.Infrastructure.Administrador
+    name: Administrador
+  - uid: Datos.Infrastructure.equipobEntities
+    name: equipobEntities
+  - uid: Datos.Infrastructure.equipobFinal2Entities
+    name: equipobFinal2Entities
+  - uid: Datos.Infrastructure.equipobPortatilIvan
+    name: equipobPortatilIvan
+  - uid: Datos.Infrastructure.Monitor
+    name: Monitor
+  - uid: Datos.Infrastructure.sysdiagrams
+    name: sysdiagrams
+  - uid: Datos.Infrastructure.Usuario
+    name: Usuario
+  - uid: Datos.Infrastructure.Usuario_Actividad
+    name: Usuario_Actividad
+  - uid: Datos.Infrastructure.Usuario_Normal
+    name: Usuario_Normal
+- uid: Datos.Repositorys
+  name: Datos.Repositorys
+  items:
+  - uid: Datos.Repositorys.ActividadRepository
+    name: ActividadRepository
+  - uid: Datos.Repositorys.MonitorRepository
+    name: MonitorRepository
+  - uid: Datos.Repositorys.UsuarioRepository
+    name: UsuarioRepository

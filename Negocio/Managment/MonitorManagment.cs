@@ -6,17 +6,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Negocio.Managment
 {
+    /// <summary>
+    /// Clase que gestiona las operaciones relacionadas con los monitores en el sistema.
+    /// </summary>
     public class MonitorManagment
     {
+        /// <summary>
+        /// Obtiene la lista de usuarios que son monitores en el sistema y los convierte en DTOs.
+        /// </summary>
+        /// <returns>Lista de DTOs de usuarios que son monitores.</returns>
         public List<UsuarioDTO> ObtenerUsuariosMonitores()
         {
             // Obtener los monitores de la capa de datos
             var monitorRepository = new MonitorRepository();
             var monitores = monitorRepository.ObtenerMonitores();
+
+            // Convertir la lista de monitores a una lista de DTOs
             var monitoresDTO = monitores.Select(u => new UsuarioDTO
             {
                 DNI = u.DNI,
@@ -26,6 +34,12 @@ namespace Negocio.Managment
 
             return monitoresDTO;
         }
+
+        /// <summary>
+        /// Registra un nuevo monitor en el sistema utilizando un DTO de usuario.
+        /// </summary>
+        /// <param name="usuarioDTO">DTO que representa los datos del usuario que se desea registrar como monitor.</param>
+        /// <returns>Mensaje indicando el resultado de la operación.</returns>
         public String altaMonitor(UsuarioDTO usuarioDTO)
         {
             Usuario usuario = new Usuario();
@@ -34,11 +48,13 @@ namespace Negocio.Managment
             Monitor monitor = new Monitor();
             MonitorRepository dMonitores = new MonitorRepository();
 
-
+            // Comprobar si el email ya está registrado
             if (comprobarEmail(usuarios, usuarioDTO))
             {
+                // Comprobar si el DNI ya está registrado
                 if (comprobarDNI(usuarios, usuarioDTO))
                 {
+                    // Asignar los datos del DTO al nuevo objeto Usuario
                     usuario.Nombre = usuarioDTO.Nombre;
                     usuario.Apellidos = usuarioDTO.Apellidos;
                     usuario.Telefono = usuarioDTO.Telefono;
@@ -48,13 +64,14 @@ namespace Negocio.Managment
                     usuario.Email = usuarioDTO.Email;
                     usuario.Passwd = cifrar(usuarioDTO.Passwd);
 
-
+                    // Registrar el usuario en la base de datos
                     datos.altaUsuario(usuario);
 
+                    // Asignar el DNI del usuario al nuevo monitor
                     monitor.DNI = usuario.DNI;
 
-
-                    return dMonitores.AltaMonitor(monitor); ;
+                    // Registrar el monitor en la base de datos
+                    return dMonitores.AltaMonitor(monitor);
                 }
                 else
                 {
@@ -91,6 +108,11 @@ namespace Negocio.Managment
             return !emails.Contains(usuario.Email);
         }
 
+        /// <summary>
+        /// Cifra una contraseña utilizando el algoritmo SHA256.
+        /// </summary>
+        /// <param name="contrasena">Contraseña a cifrar.</param>
+        /// <returns>La contraseña cifrada en formato SHA256.</returns>
         public string cifrar(string contrasena)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -106,5 +128,4 @@ namespace Negocio.Managment
             }
         }
     }
-
 }

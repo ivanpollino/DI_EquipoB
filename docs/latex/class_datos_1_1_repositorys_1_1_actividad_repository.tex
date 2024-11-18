@@ -1,0 +1,120 @@
+\doxysection{Datos\+::Repositorys\+::Actividad\+Repository Class Reference}
+\hypertarget{class_datos_1_1_repositorys_1_1_actividad_repository}{}\label{class_datos_1_1_repositorys_1_1_actividad_repository}\index{Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_actividad_repository_a9a42a0430e4d4925e8dfa18837455378}{baja\+Actividad}} (Actividad actividad)
+\begin{DoxyCompactList}\small\item\em Elimina una actividad de la base de datos. \end{DoxyCompactList}\item 
+Actividad \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_actividad_repository_a948f2fadc7406dbbd3751e010de6d6d1}{sacar\+Actividad}} (Actividad actividad)
+\begin{DoxyCompactList}\small\item\em Recupera una actividad de la base de datos a partir de su nombre. \end{DoxyCompactList}\item 
+List$<$ Actividad $>$ \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_actividad_repository_ac2a40b1f5182a830295aee873bac5a5b}{listado\+Actividades}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene una lista de todas las actividades almacenadas en la base de datos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_actividad_repository_af2e364aab52b1c1e90c9b09753972554}{Obtener\+Nuevo\+Id\+Actividad}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el próximo ID disponible para una nueva actividad, basado en el último ID utilizado. \end{DoxyCompactList}\item 
+Monitor \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_actividad_repository_a231aadc68d00bf2f5d11e89ede9fc0a6}{Obtener\+Monitor\+Por\+Dni}} (string dni\+Monitor)
+\begin{DoxyCompactList}\small\item\em Recupera un monitor de la base de datos utilizando su DNI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_actividad_repository_a78018a9720e3bb1d9c1342c57db008e9}{Guardar\+Actividad}} (Actividad actividad)
+\begin{DoxyCompactList}\small\item\em Guarda una nueva actividad en la base de datos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_datos_1_1_repositorys_1_1_actividad_repository_a9a42a0430e4d4925e8dfa18837455378}\index{Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}!bajaActividad@{bajaActividad}}
+\index{bajaActividad@{bajaActividad}!Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{bajaActividad()}{bajaActividad()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_actividad_repository_a9a42a0430e4d4925e8dfa18837455378} 
+String Datos\+::\+Repositorys\+::\+Actividad\+Repository\+::baja\+Actividad (\begin{DoxyParamCaption}\item[{Actividad}]{actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina una actividad de la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actividad} & La actividad que se desea eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje de éxito indicando que la actividad ha sido eliminada correctamente.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_actividad_repository_a78018a9720e3bb1d9c1342c57db008e9}\index{Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}!GuardarActividad@{GuardarActividad}}
+\index{GuardarActividad@{GuardarActividad}!Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{GuardarActividad()}{GuardarActividad()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_actividad_repository_a78018a9720e3bb1d9c1342c57db008e9} 
+void Datos\+::\+Repositorys\+::\+Actividad\+Repository\+::\+Guardar\+Actividad (\begin{DoxyParamCaption}\item[{Actividad}]{actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Guarda una nueva actividad en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actividad} & La actividad que se desea guardar.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_datos_1_1_repositorys_1_1_actividad_repository_ac2a40b1f5182a830295aee873bac5a5b}\index{Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}!listadoActividades@{listadoActividades}}
+\index{listadoActividades@{listadoActividades}!Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{listadoActividades()}{listadoActividades()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_actividad_repository_ac2a40b1f5182a830295aee873bac5a5b} 
+List$<$ Actividad $>$ Datos\+::\+Repositorys\+::\+Actividad\+Repository\+::listado\+Actividades (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene una lista de todas las actividades almacenadas en la base de datos. 
+
+\begin{DoxyReturn}{Returns}
+Una lista con todas las actividades de la base de datos.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_actividad_repository_a231aadc68d00bf2f5d11e89ede9fc0a6}\index{Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}!ObtenerMonitorPorDni@{ObtenerMonitorPorDni}}
+\index{ObtenerMonitorPorDni@{ObtenerMonitorPorDni}!Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{ObtenerMonitorPorDni()}{ObtenerMonitorPorDni()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_actividad_repository_a231aadc68d00bf2f5d11e89ede9fc0a6} 
+Monitor Datos\+::\+Repositorys\+::\+Actividad\+Repository\+::\+Obtener\+Monitor\+Por\+Dni (\begin{DoxyParamCaption}\item[{string}]{dni\+Monitor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recupera un monitor de la base de datos utilizando su DNI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dni\+Monitor} & El DNI del monitor que se desea buscar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El monitor encontrado o null si no se encuentra ningún monitor con ese DNI.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_actividad_repository_af2e364aab52b1c1e90c9b09753972554}\index{Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}!ObtenerNuevoIdActividad@{ObtenerNuevoIdActividad}}
+\index{ObtenerNuevoIdActividad@{ObtenerNuevoIdActividad}!Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{ObtenerNuevoIdActividad()}{ObtenerNuevoIdActividad()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_actividad_repository_af2e364aab52b1c1e90c9b09753972554} 
+int Datos\+::\+Repositorys\+::\+Actividad\+Repository\+::\+Obtener\+Nuevo\+Id\+Actividad (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el próximo ID disponible para una nueva actividad, basado en el último ID utilizado. 
+
+\begin{DoxyReturn}{Returns}
+El siguiente ID disponible para una nueva actividad.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_actividad_repository_a948f2fadc7406dbbd3751e010de6d6d1}\index{Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}!sacarActividad@{sacarActividad}}
+\index{sacarActividad@{sacarActividad}!Datos::Repositorys::ActividadRepository@{Datos::Repositorys::ActividadRepository}}
+\doxysubsubsection{\texorpdfstring{sacarActividad()}{sacarActividad()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_actividad_repository_a948f2fadc7406dbbd3751e010de6d6d1} 
+Actividad Datos\+::\+Repositorys\+::\+Actividad\+Repository\+::sacar\+Actividad (\begin{DoxyParamCaption}\item[{Actividad}]{actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recupera una actividad de la base de datos a partir de su nombre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actividad} & La actividad que se desea buscar (por nombre).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La actividad encontrada en la base de datos, o un objeto vacío si no se encuentra ninguna coincidencia.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Datos/\+Repositorys/\mbox{\hyperlink{_actividad_repository_8cs}{Actividad\+Repository.\+cs}}\end{DoxyCompactItemize}
