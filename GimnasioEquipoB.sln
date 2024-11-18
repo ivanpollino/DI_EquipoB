@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLogin", "TestLogin\Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "Presentacion\Presentacion.csproj", "{6D58C23C-8178-450B-A1E7-21585EE2BE76}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador", "Instalador\Instalador.vdproj", "{D2366ADD-A309-431A-B8EF-BFD76BE99C39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,8 @@ Global
 		{6D58C23C-8178-450B-A1E7-21585EE2BE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D58C23C-8178-450B-A1E7-21585EE2BE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D58C23C-8178-450B-A1E7-21585EE2BE76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2366ADD-A309-431A-B8EF-BFD76BE99C39}.Debug|Any CPU.ActiveCfg = Debug
+		{D2366ADD-A309-431A-B8EF-BFD76BE99C39}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
