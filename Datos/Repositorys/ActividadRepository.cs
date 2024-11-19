@@ -20,9 +20,16 @@ namespace Datos.Repositorys
         {
             using (var contexto = new equipobEntities())
             {
-                contexto.Actividad.Remove(actividad);
-                contexto.SaveChanges();
-
+                var actividadExistente = contexto.Actividad.Find(actividad.Id_Actividad);
+                if (actividadExistente != null)
+                {
+                    contexto.Actividad.Remove(actividadExistente);
+                    contexto.SaveChanges();
+                }
+                else
+                {
+                    return "Actividad no encontrada";
+                }
             }
             return "Actividad borrada con exito";
         }
@@ -66,7 +73,7 @@ namespace Datos.Repositorys
                 var ultimoId = context.Actividad
                                       .OrderByDescending(a => a.Id_Actividad)
                                       .FirstOrDefault()?.Id_Actividad ?? 0; // Si no hay actividades devuelve 0
-                return ultimoId + 1; // Le suma 1
+                return ultimoId + 1;
             }
         }
         /// <summary>
@@ -85,33 +92,30 @@ namespace Datos.Repositorys
         /// Guarda una nueva actividad en la base de datos.
         /// </summary>
         /// <param name="actividad">La actividad que se desea guardar.</param>
-        public void GuardarActividad(Actividad actividad)
+        public string GuardarActividad(Actividad actividad)
         {
             using (var context = new equipobEntities())
             {
-                context.Actividad.Add(actividad);
-                context.SaveChanges();
+                try
+                {
+                    // Verificar si el ID de la actividad ya existe
+                    if (context.Actividad.Any(a => a.Id_Actividad == actividad.Id_Actividad))
+                    {
+                        return "Error: El ID de la actividad ya está registrado.";
+                    }
+
+                    // Si no hay conflicto, guardar la actividad
+                    context.Actividad.Add(actividad);
+                    context.SaveChanges();
+
+                    return "Actividad insertada con éxito.";
+                }
+                catch (Exception ex)
+                {
+                    // Manejo genérico de excepciones
+                    return $"Error al guardar la actividad: {ex.Message}";
+                }
             }
         }
-        /// <summary>
-        /// Guarda una relación entre una actividad y un monitor en la tabla intermedia Monitor_Actividad.
-        /// </summary>
-        /// <param name="idActividad">El ID de la actividad.</param>
-        /// <param name="dniMonitor">El DNI del monitor.</param>
-        /*
-        public void GuardarRelacionMonitorActividad(int idActividad, string dniMonitor)
-        {
-            using (var context = new equipobEntities())
-            {
-                // Por que no se crear la relación Monitor_Actividad?????
-                var relacion = new Monitor_Actividad
-                {
-                    Id_Actividad = idActividad,
-                    DNI = dniMonitor
-                };
-                context.Monitor_Actividad.Add(relacion);
-                context.SaveChanges();
-            }
-        }*/
     }
 }

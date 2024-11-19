@@ -26,27 +26,17 @@ namespace Presentacion
             LlenarComboBoxMonitores();
         }
         /// <summary>
-        /// Método que llena el ComboBox de monitores con los datos obtenidos de la base de datos.
-        /// Este método obtiene la lista de monitores mediante el servicio `MonitorManagment`, 
-        /// asigna los valores del ComboBox y maneja posibles errores en el proceso.
+        /// Obtiene la lista de monitores desde la base de datos y la asigna al ComboBox `cbMonitores`.
+        /// Este método obtiene los monitores utilizando el método <see cref="ObtenerMonitoresDesdeDB"/> y los carga en el ComboBox.
         /// </summary>
         private void LlenarComboBoxMonitores()
         {
             try
             {
-                var monitorManagment = new MonitorManagment();
-                var monitores = monitorManagment.ObtenerUsuariosMonitores();
-
-                if (monitores.Any())
-                {
-                    cbMonitores.DisplayMember = "Nombre"; // Nombre visible
-                    cbMonitores.ValueMember = "DNI"; // El valor es el DNI
-                    cbMonitores.DataSource = monitores; // Asigna la lista
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron monitores disponibles.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                var monitores = new MonitorManagment().ObtenerUsuariosMonitores();
+                cbMonitores.DisplayMember = "NombreCompleto";
+                cbMonitores.ValueMember = "DNI";  // Usar el DNI como valor
+                cbMonitores.DataSource = monitores;
             }
             catch (Exception ex)
             {
@@ -56,15 +46,12 @@ namespace Presentacion
 
         /// <summary>
         /// Habilita el botón de "Registrar Actividad" solo cuando ambos campos (nombre y descripción) están completos.
-        /// Además, verifica si se seleccionó un monitor en el ComboBox.
         /// </summary>
-        /// <param name="sender">El objeto que ha generado el evento (campo de texto o ComboBox)</param>
+        /// <param name="sender">El objeto que ha generado el evento (campo de texto)</param>
         /// <param name="e">Argumentos del evento</param>
         private void CamposModificados(object sender, EventArgs e)
         {
-            btRegistrarAct.Enabled = !string.IsNullOrWhiteSpace(tbxNombreAct.Text) &&
-                                     !string.IsNullOrWhiteSpace(tbxDescripcionAct.Text) &&
-                                     cbMonitores.SelectedIndex != -1;
+            btRegistrarAct.Enabled = !string.IsNullOrWhiteSpace(tbxNombreAct.Text) && !string.IsNullOrWhiteSpace(tbxDescripcionAct.Text);
         }
 
         /// <summary>
@@ -76,10 +63,9 @@ namespace Presentacion
         {
             string nombreActividad = tbxNombreAct.Text;
             string descripcionActividad = tbxDescripcionAct.Text;
-            string dniMonitor = cbMonitores.SelectedValue?.ToString(); // Obtener el DNI del monitor
+            string dniMonitor = cbMonitores.SelectedValue?.ToString();
 
-            // Validación de campos obligatorios
-            if (string.IsNullOrWhiteSpace(nombreActividad) || string.IsNullOrWhiteSpace(descripcionActividad) || string.IsNullOrEmpty(dniMonitor))
+            if (string.IsNullOrWhiteSpace(nombreActividad) || string.IsNullOrWhiteSpace(descripcionActividad) || cbMonitores.SelectedItem == null)
             {
                 MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -88,14 +74,24 @@ namespace Presentacion
             ActividadDTO nuevaActividad = new ActividadDTO
             {
                 Nombre = nombreActividad,
-                Descripcion = descripcionActividad
+                Descripcion = descripcionActividad,
+                DNI_Monitor = dniMonitor
             };
+
             ActividadManagment actividadManagment = new ActividadManagment();
             try
             {
-                actividadManagment.RegistrarActividad(nuevaActividad, dniMonitor);
-                MessageBox.Show($"La actividad '{nombreActividad}' ha sido registrada con éxito.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LimpiarFormulario();
+                String mensaje = actividadManagment.RegistrarActividad(nuevaActividad);
+                if(mensaje== "Error: El ID de la actividad ya está registrado.")
+                {
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarFormulario();
+                }
+                
             }
             catch (Exception ex)
             {
@@ -149,5 +145,9 @@ namespace Presentacion
             button.Region = new Region(path);
         }
 
+        private void copiarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

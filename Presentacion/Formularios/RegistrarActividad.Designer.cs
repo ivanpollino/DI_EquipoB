@@ -44,7 +44,7 @@ namespace Presentacion
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.panel1.Controls.Add(this.cbMonitores);
             this.panel1.Controls.Add(this.btLimpiarForm);
             this.panel1.Controls.Add(this.btRegistrarAct);

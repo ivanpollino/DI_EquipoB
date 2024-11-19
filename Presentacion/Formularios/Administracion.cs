@@ -38,7 +38,7 @@ namespace Presentacion
             else
             {
                 flowLayoutGestioMonitores.Height -= 10;
-                if (flowLayoutGestioMonitores.Height <= 56)
+                if (flowLayoutGestioMonitores.Height <= 58)
                 {
                     menuTransicion.Stop();
                     menuExpandMonitores = false;
@@ -123,13 +123,17 @@ namespace Presentacion
 
         private void cargarActividades(ListadoActividades formulario)
         {
+            String nombreMonitor;
             List<ActividadDTO> listaActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
 
             foreach (var actividad in listaActividades)
             {
                 ActividadPestaña aP = new ActividadPestaña();
 
+                aP.actividadDto = actividad;
                 aP.LBLDondeVaNombreActividad.Text = actividad.Nombre;
+                nombreMonitor = new Negocio.Managment.UsuarioManagment().sacarNombreApellidosDeUsuario(actividad.DNI_Monitor);
+                aP.LBLDonveVaNombreMonitor.Text = nombreMonitor;
 
                 formulario.contenedorActividades.Controls.Add(aP);
             }
@@ -158,5 +162,6 @@ namespace Presentacion
             registrarActividad.BringToFront();
             registrarActividad.Show();
         }
+
     }
 }

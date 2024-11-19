@@ -9,13 +9,6 @@ namespace Datos.Repositorys
 {
     public class MonitorRepository
     {
-        // <summary>
-        /// Recupera una lista de monitores registrados en la base de datos, 
-        /// devolviendo las entidades Usuario correspondientes a los monitores.
-        /// </summary>
-        /// <returns>
-        /// Una lista de objetos <see cref="Usuario"/> que representan a los monitores.
-        /// </returns>
         public List<Usuario> ObtenerMonitores()
         {
             using (var contexto = new equipobEntities())
@@ -23,7 +16,7 @@ namespace Datos.Repositorys
                 // Realizar el join entre la tabla Usuario y Monitor por el campo DNI
                 var monitores = (from u in contexto.Usuario
                                  join m in contexto.Monitor on u.DNI equals m.DNI
-                                 select u).ToList(); // Ejecutamos la consulta y obtenemos los resultados en una lista de Usuario
+                                 select u).ToList();
 
                 return monitores;
             }
@@ -33,16 +26,31 @@ namespace Datos.Repositorys
         /// </summary>
         /// <param name="usuario">Objeto <see cref="Usuario"/> que contiene la información del usuario a añadir.</param>
         /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
-        public String altaMonitor(Monitor monitor)
+        public Monitor ObtenerMonitorPorDni(string dni)
         {
             using (var contexto = new equipobEntities())
             {
-                contexto.Monitor.Add(monitor);
-                contexto.SaveChanges();
-
+                // Buscamos el monitor por su DNI
+                return contexto.Monitor.SingleOrDefault(m => m.DNI == dni);
             }
-            return "Monitor añadido con exito";
         }
 
+        public string AltaMonitor(Monitor monitor)
+        {
+            using (var context = new equipobEntities())
+            {
+                // Verificar si el monitor ya existe en la base de datos
+                var monitorExistente = context.Monitor.FirstOrDefault(m => m.DNI == monitor.DNI);
+                if (monitorExistente != null)
+                {
+                    return "El monitor ya existe.";
+                }
+
+                // Si no existe, insertar el nuevo monitor
+                context.Monitor.Add(monitor);
+                context.SaveChanges();
+                return "Monitor insertado correctamente.";
+            }
+        }
     }
 }

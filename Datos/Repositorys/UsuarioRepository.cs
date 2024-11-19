@@ -14,6 +14,22 @@ namespace Datos.Repositorys
     /// </summary>
     public class UsuarioRepository
     {
+
+        /// <summary>
+        /// Registra un nuevo usuario en la base de datos.
+        /// </summary>
+        /// <param name="usuario">Objeto <see cref="Usuario"/> que contiene la información del usuario a añadir.</param>
+        /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
+        public String altaUsuario(Usuario usuario)
+        {
+            using (var contexto = new equipobEntities())
+                {
+                    contexto.Usuario.Add(usuario);
+                    contexto.SaveChanges();
+                    
+                }
+            return "Usuario añadido con exito";
+        }
         /// <summary>
         /// Obtiene la lista de todos los usuarios registrados en la base de datos.
         /// </summary>
@@ -35,21 +51,41 @@ namespace Datos.Repositorys
                 return usuarios;
             }
         }
-        /// <summary>
-        /// Registra un nuevo usuario en la base de datos.
-        /// </summary>
-        /// <param name="usuario">Objeto <see cref="Usuario"/> que contiene la información del usuario a añadir.</param>
-        /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
-        public String altaUsuario(Usuario usuario)
+
+        public List<Administrador> obtenerAdministradores()
+        {
+            List<Administrador> usuarios = new List<Administrador>();
+            try
+            {
+                //Abrir la BD
+                using (var contexto = new equipobEntities())
+                {
+                    usuarios = contexto.Administrador.ToList();
+                }
+                return usuarios;
+            }
+            catch (Exception)
+            {
+                return usuarios;
+            }
+        }
+
+        public String sacarNombrePorDNI(String dni)
         {
             using (var contexto = new equipobEntities())
+            {
+                var usuario = contexto.Usuario
+                                      .FirstOrDefault(u => u.DNI == dni);
+
+                if (usuario != null)
                 {
-                    contexto.Usuario.Add(usuario);
-                    contexto.SaveChanges();
-                    
+                    return usuario.Nombre + " " + usuario.Apellidos;
                 }
-            return "Usuario añadido con exito";
+                else
+                {
+                    return "Usuario no encontrado";
+                }
+            }
         }
-        
     }
 }

@@ -19,15 +19,13 @@ namespace Negocio.Managment
         public String bajaActividad(ActividadDTO actividadDTO)
         {
             Actividad actividad = new Actividad();
-            ActividadRepository datos = new ActividadRepository();
+
+            actividad.Id_Actividad = actividadDTO.Id_Actividad;
             actividad.Nombre = actividadDTO.Nombre;
-            Actividad actividadBase = datos.sacarActividad(actividad);
+            actividad.Descripcion = actividadDTO.Descripcion;
+            actividad.DNI_Monitor = actividadDTO.DNI_Monitor;
 
-            actividad.Id_Actividad = actividadBase.Id_Actividad;
-            actividad.Nombre = actividadBase.Nombre;
-            actividad.Descripcion = actividadBase.Descripcion;
-
-            return datos.bajaActividad(actividad);
+            return new Datos.Repositorys.ActividadRepository().bajaActividad(actividad);
 
         }
         /// <summary>
@@ -44,6 +42,7 @@ namespace Negocio.Managment
                 aux.Id_Actividad = actividadNormal.Id_Actividad;
                 aux.Nombre = actividadNormal.Nombre;
                 aux.Descripcion = actividadNormal.Descripcion;
+                aux.DNI_Monitor = actividadNormal.DNI_Monitor;
 
                 listaDTO.Add(aux);
             }
@@ -55,31 +54,18 @@ namespace Negocio.Managment
         /// </summary>
         /// <param name="nuevaActividad">El DTO que representa la nueva actividad que se desea registrar.</param>
         /// <param name="dniMonitor">El DNI del monitor que se asociará con la actividad.</param>
-        public void RegistrarActividad(ActividadDTO nuevaActividad, string dniMonitor)
+        public String RegistrarActividad(ActividadDTO nuevaActividad)
         {
             ActividadRepository actividadRepository = new ActividadRepository();
-            int nuevoId = actividadRepository.ObtenerNuevoIdActividad();//Obtiene el nuevo id unico
-
+            int nuevoId = actividadRepository.ObtenerNuevoIdActividad();
             Actividad actividad = new Actividad
             {
                 Id_Actividad = nuevoId,
                 Nombre = nuevaActividad.Nombre,
-                Descripcion = nuevaActividad.Descripcion
+                Descripcion = nuevaActividad.Descripcion,
+                DNI_Monitor = nuevaActividad.DNI_Monitor
             };
-            Monitor monitor = actividadRepository.ObtenerMonitorPorDni(dniMonitor);
-
-            // Asociar el monitor con la actividad
-            if (monitor != null)
-            {
-                actividad.Monitor.Add(monitor);
-            }
-            else
-            {
-                throw new Exception("Monitor no encontrado");
-            }
-
-            actividadRepository.GuardarActividad(actividad);
-            //actividadRepository.GuardarRelacionMonitorActividad(nuevoId, dniMonitor);//Guardar en la tabla Monitor_Actividad
+            return actividadRepository.GuardarActividad(actividad);
         }
     }
 }
