@@ -52,37 +52,52 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Infrastructure\Actividad.cs">
-      <DependentUpon>equipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Administrador.cs">
-      <DependentUpon>equipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\equipobFinalFinal.Context.cs">
+    <Compile Include="Infrastructure\equipob.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>equipobFinalFinal.Context.tt</DependentUpon>
+      <DependentUpon>equipob.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\equipobFinalFinal.cs">
+    <Compile Include="Infrastructure\equipob.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>equipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\equipobFinalFinal.Designer.cs">
+    <Compile Include="Infrastructure\equipob.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>equipobFinalFinal.edmx</DependentUpon>
+      <DependentUpon>equipob.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\EquipobFinalFinal.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EquipobFinalFinal.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\EquipobFinalFinal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\EquipobFinalFinal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Monitor.cs">
-      <DependentUpon>equipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario.cs">
-      <DependentUpon>equipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Actividad.cs">
-      <DependentUpon>equipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Normal.cs">
-      <DependentUpon>equipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorys\ActividadRepository.cs" />
@@ -91,29 +106,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="Infrastructure\equipobFinalFinal.edmx">
+    <EntityDeploy Include="Infrastructure\equipob.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>equipobFinalFinal.Designer.cs</LastGenOutput>
+      <LastGenOutput>equipob.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Infrastructure\equipobFinalFinal.edmx.diagram">
-      <DependentUpon>equipobFinalFinal.edmx</DependentUpon>
+    <None Include="Infrastructure\equipob.edmx.diagram">
+      <DependentUpon>equipob.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Infrastructure\EquipobFinalFinal.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EquipobFinalFinal.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Infrastructure\EquipobFinalFinal.edmx.diagram">
+      <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Infrastructure\equipobFinalFinal.Context.tt">
+    <Content Include="Infrastructure\equipob.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>equipobFinalFinal.edmx</DependentUpon>
-      <LastGenOutput>equipobFinalFinal.Context.cs</LastGenOutput>
+      <DependentUpon>equipob.edmx</DependentUpon>
+      <LastGenOutput>equipob.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Infrastructure\equipobFinalFinal.tt">
+    <Content Include="Infrastructure\equipob.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>equipobFinalFinal.edmx</DependentUpon>
-      <LastGenOutput>equipobFinalFinal.cs</LastGenOutput>
+      <DependentUpon>equipob.edmx</DependentUpon>
+      <LastGenOutput>equipob.cs</LastGenOutput>
+    </Content>
+    <Content Include="Infrastructure\EquipobFinalFinal.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
+      <LastGenOutput>EquipobFinalFinal.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Infrastructure\EquipobFinalFinal.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
+      <LastGenOutput>EquipobFinalFinal.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

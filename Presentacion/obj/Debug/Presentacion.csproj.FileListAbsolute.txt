@@ -29,8 +29,6 @@ C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Presentacion.
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Presentacion.application
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Presentacion.pdb
-C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.dll
-C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Negocio.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Datos.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Negocio.pdb
@@ -56,6 +54,17 @@ C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe.manifest
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Presentacion.application
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistrarActividad.resources
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.TrustInfo.xml
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe.manifest
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.application
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.pdb
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe.config
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe.manifest
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Presentacion.application
@@ -70,7 +79,6 @@ C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\EntityFra
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Datos.pdb
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Datos.dll.config
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadPestaña.resources
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Administracion.resources
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Landing.resources
@@ -86,5 +94,3 @@ C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentac
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe.manifest
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.application
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.pdb
