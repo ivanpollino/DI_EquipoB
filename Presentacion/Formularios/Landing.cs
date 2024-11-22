@@ -1,4 +1,5 @@
 ﻿using Negocio.EntitiesDTO;
+using Presentacion.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -253,8 +254,8 @@ namespace Presentacion
         }
         private void btActividades_Click(object sender, EventArgs e)
         {
-            //Actividades actividades = new Actividades();
-            //actividades.ShowDialog();
+            Actividades actividades = new Actividades();
+            actividades.ShowDialog();
         }
     }
 }
