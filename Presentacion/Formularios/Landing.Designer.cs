@@ -43,6 +43,7 @@ namespace Presentacion
             this.btRegistro = new System.Windows.Forms.Button();
             this.lbInfoUsuario = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
+            this.btActividades = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelParaUsuarios.SuspendLayout();
             this.panelAdministrador.SuspendLayout();
@@ -53,6 +54,7 @@ namespace Presentacion
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btActividades);
             this.panel1.Controls.Add(this.panelParaUsuarios);
             this.panel1.Controls.Add(this.panelAdministrador);
             this.panel1.Controls.Add(this.lbTexto2);
@@ -217,6 +219,18 @@ namespace Presentacion
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
+            // btActividades
+            // 
+            this.btActividades.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btActividades.ForeColor = System.Drawing.Color.Black;
+            this.btActividades.Location = new System.Drawing.Point(346, 415);
+            this.btActividades.Name = "btActividades";
+            this.btActividades.Size = new System.Drawing.Size(164, 30);
+            this.btActividades.TabIndex = 10;
+            this.btActividades.Text = " ACTIVIDADES";
+            this.btActividades.UseVisualStyleBackColor = true;
+            this.btActividades.Click += new System.EventHandler(this.btActividades_Click);
+            // 
             // Landing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,5 +265,6 @@ namespace Presentacion
         private Button BTNCerrarSesionAdmin;
         private Button BTNCerrarSesionUsuario;
         private Panel panelParaUsuarios;
+        private Button btActividades;
     }
 }
