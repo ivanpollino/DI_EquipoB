@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="equipobModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="equipobFinalFinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Actividad">
           <Key>
             <PropertyRef Name="Id_Actividad" />
@@ -136,7 +136,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="equipobModelStoreContainer">
+        <EntityContainer Name="equipobFinalFinalModelStoreContainer">
           <EntitySet Name="Actividad" EntityType="Self.Actividad" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Administrador" EntityType="Self.Administrador" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Monitor" EntityType="Self.Monitor" Schema="dbo" store:Type="Tables" />
@@ -172,7 +172,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="equipobModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="equipobFinalFinalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Actividad">
           <Key>
             <PropertyRef Name="Id_Actividad" />
@@ -316,7 +316,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="equipobEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="equipobFinalFinalEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Actividad" EntityType="Self.Actividad" />
           <EntitySet Name="Administrador" EntityType="Self.Administrador" />
           <EntitySet Name="Monitor" EntityType="Self.Monitor" />
@@ -353,9 +353,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="equipobModelStoreContainer" CdmEntityContainer="equipobEntities">
+        <EntityContainerMapping StorageEntityContainer="equipobFinalFinalModelStoreContainer" CdmEntityContainer="equipobFinalFinalEntities">
           <EntitySetMapping Name="Actividad">
-            <EntityTypeMapping TypeName="equipobModel.Actividad">
+            <EntityTypeMapping TypeName="equipobFinalFinalModel.Actividad">
               <MappingFragment StoreEntitySet="Actividad">
                 <ScalarProperty Name="Id_Actividad" ColumnName="Id_Actividad" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -365,21 +365,21 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Administrador">
-            <EntityTypeMapping TypeName="equipobModel.Administrador">
+            <EntityTypeMapping TypeName="equipobFinalFinalModel.Administrador">
               <MappingFragment StoreEntitySet="Administrador">
                 <ScalarProperty Name="DNI" ColumnName="DNI" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Monitor">
-            <EntityTypeMapping TypeName="equipobModel.Monitor">
+            <EntityTypeMapping TypeName="equipobFinalFinalModel.Monitor">
               <MappingFragment StoreEntitySet="Monitor">
                 <ScalarProperty Name="DNI" ColumnName="DNI" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
-            <EntityTypeMapping TypeName="equipobModel.Usuario">
+            <EntityTypeMapping TypeName="equipobFinalFinalModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="DNI" ColumnName="DNI" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -393,7 +393,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario_Actividad">
-            <EntityTypeMapping TypeName="equipobModel.Usuario_Actividad">
+            <EntityTypeMapping TypeName="equipobFinalFinalModel.Usuario_Actividad">
               <MappingFragment StoreEntitySet="Usuario_Actividad">
                 <ScalarProperty Name="DNI" ColumnName="DNI" />
                 <ScalarProperty Name="Id_Actividad" ColumnName="Id_Actividad" />
@@ -402,7 +402,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario_Normal">
-            <EntityTypeMapping TypeName="equipobModel.Usuario_Normal">
+            <EntityTypeMapping TypeName="equipobFinalFinalModel.Usuario_Normal">
               <MappingFragment StoreEntitySet="Usuario_Normal">
                 <ScalarProperty Name="DNI" ColumnName="DNI" />
               </MappingFragment>

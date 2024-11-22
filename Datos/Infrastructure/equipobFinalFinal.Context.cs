@@ -13,10 +13,10 @@ namespace Datos.Infrastructure
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class equipobEntities : DbContext
+    public partial class equipobFinalFinalEntities : DbContext
     {
-        public equipobEntities()
-            : base("name=equipobEntities")
+        public equipobFinalFinalEntities()
+            : base("name=equipobFinalFinalEntities")
         {
         }
     
