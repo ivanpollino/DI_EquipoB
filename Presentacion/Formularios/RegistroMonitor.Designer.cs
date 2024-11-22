@@ -66,7 +66,7 @@
             this.LBLTitulo.Size = new System.Drawing.Size(328, 51);
             this.LBLTitulo.TabIndex = 48;
             this.LBLTitulo.Text = "Registro Monitor";
-            //this.LBLTitulo.Click += new System.EventHandler(this.LBLTitulo_Click);
+            this.LBLTitulo.Click += new System.EventHandler(this.LBLTitulo_Click);
             // 
             // TXTBRepetirContra
             // 
@@ -248,7 +248,7 @@
             this.BTNBorrarForm.TabIndex = 49;
             this.BTNBorrarForm.Text = "Limpiar Form";
             this.BTNBorrarForm.UseVisualStyleBackColor = true;
-            //this.BTNBorrarForm.Click += new System.EventHandler(this.BTNBorrarForm_Click_1);
+            this.BTNBorrarForm.Click += new System.EventHandler(this.BTNBorrarForm_Click_1);
             // 
             // BTNRegistrar
             // 
@@ -271,7 +271,7 @@
             this.LBLAvisoCorreo.Name = "LBLAvisoCorreo";
             this.LBLAvisoCorreo.Size = new System.Drawing.Size(0, 13);
             this.LBLAvisoCorreo.TabIndex = 51;
-            //this.LBLAvisoCorreo.Click += new System.EventHandler(this.LBLAvisoDNI_Click);
+            this.LBLAvisoCorreo.Click += new System.EventHandler(this.LBLAvisoDNI_Click);
             // 
             // LBLAvisoContrasena
             // 
@@ -361,7 +361,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistroMonitor";
             this.Text = "RegistroMonitor";
-            //this.Load += new System.EventHandler(this.RegistroMonitor_Load);
+            this.Load += new System.EventHandler(this.RegistroMonitor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

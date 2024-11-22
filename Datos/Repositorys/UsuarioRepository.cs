@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Datos.Repositorys
 {
@@ -11,6 +14,7 @@ namespace Datos.Repositorys
     /// </summary>
     public class UsuarioRepository
     {
+
         /// <summary>
         /// Registra un nuevo usuario en la base de datos.
         /// </summary>
@@ -19,14 +23,13 @@ namespace Datos.Repositorys
         public String altaUsuario(Usuario usuario)
         {
             using (var contexto = new equipobEntities())
-            {
-                // Añadir el usuario a la base de datos
-                contexto.Usuario.Add(usuario);
-                contexto.SaveChanges();
-            }
-            return "Usuario añadido con éxito";
+                {
+                    contexto.Usuario.Add(usuario);
+                    contexto.SaveChanges();
+                    
+                }
+            return "Usuario añadido con exito";
         }
-
         /// <summary>
         /// Obtiene la lista de todos los usuarios registrados en la base de datos.
         /// </summary>
@@ -36,7 +39,7 @@ namespace Datos.Repositorys
             List<Usuario> usuarios = new List<Usuario>();
             try
             {
-                // Abrir la conexión a la base de datos y obtener todos los usuarios
+                //Abrir la BD
                 using (var contexto = new equipobEntities())
                 {
                     usuarios = contexto.Usuario.ToList();
@@ -45,21 +48,16 @@ namespace Datos.Repositorys
             }
             catch (Exception)
             {
-                // Si ocurre un error, devolver la lista vacía
                 return usuarios;
             }
         }
 
-        /// <summary>
-        /// Obtiene la lista de todos los administradores registrados en la base de datos.
-        /// </summary>
-        /// <returns>Lista de objetos <see cref="Administrador"/> con la información de cada administrador.</returns>
         public List<Administrador> obtenerAdministradores()
         {
             List<Administrador> usuarios = new List<Administrador>();
             try
             {
-                // Abrir la conexión a la base de datos y obtener todos los administradores
+                //Abrir la BD
                 using (var contexto = new equipobEntities())
                 {
                     usuarios = contexto.Administrador.ToList();
@@ -68,24 +66,17 @@ namespace Datos.Repositorys
             }
             catch (Exception)
             {
-                // Si ocurre un error, devolver la lista vacía
                 return usuarios;
             }
         }
 
-        /// <summary>
-        /// Obtiene el nombre y apellidos de un usuario por su DNI.
-        /// </summary>
-        /// <param name="dni">DNI del usuario.</param>
-        /// <returns>Nombre completo del usuario o un mensaje si no se encuentra.</returns>
         public String sacarNombrePorDNI(String dni)
         {
             using (var contexto = new equipobEntities())
             {
-                // Buscar al usuario por su DNI
-                var usuario = contexto.Usuario.FirstOrDefault(u => u.DNI == dni);
+                var usuario = contexto.Usuario
+                                      .FirstOrDefault(u => u.DNI == dni);
 
-                // Si se encuentra, devolver el nombre completo, si no, un mensaje de error
                 if (usuario != null)
                 {
                     return usuario.Nombre + " " + usuario.Apellidos;

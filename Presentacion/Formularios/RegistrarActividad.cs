@@ -13,42 +13,33 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    /// <summary>
-    /// Formulario para registrar una nueva actividad en el sistema.
-    /// </summary>
     public partial class RegistrarActividad : Form
     {
-        /// <summary>
-        /// Inicializa una nueva instancia del formulario RegistrarActividad.
-        /// Configura los botones y la funcionalidad para registrar la actividad.
-        /// </summary>
         public RegistrarActividad()
         {
             InitializeComponent();
             ConfigurarBotones(btRegistrarAct);
             ConfigurarBotones(btLimpiarForm);
-            btRegistrarAct.Enabled = false; // El botón de registrar está deshabilitado inicialmente
-            tbxNombreAct.TextChanged += new EventHandler(CamposModificados); // Evento para habilitar el botón si ambos campos están completos
-            tbxDescripcionAct.TextChanged += new EventHandler(CamposModificados); // Evento para habilitar el botón si ambos campos están completos
-            LlenarComboBoxMonitores(); // Llenar el ComboBox con la lista de monitores
+            btRegistrarAct.Enabled = false;
+            tbxNombreAct.TextChanged += new EventHandler(CamposModificados); //Obligatorio
+            tbxDescripcionAct.TextChanged += new EventHandler(CamposModificados); //Obligatorio
+            LlenarComboBoxMonitores();
         }
-
         /// <summary>
         /// Obtiene la lista de monitores desde la base de datos y la asigna al ComboBox `cbMonitores`.
+        /// Este método obtiene los monitores utilizando el método <see cref="ObtenerMonitoresDesdeDB"/> y los carga en el ComboBox.
         /// </summary>
         private void LlenarComboBoxMonitores()
         {
             try
             {
-                // Obtiene los monitores desde la base de datos usando el método ObtenerUsuariosMonitores
                 var monitores = new MonitorManagment().ObtenerUsuariosMonitores();
-                cbMonitores.DisplayMember = "NombreCompleto"; // Muestra el nombre completo en el ComboBox
-                cbMonitores.ValueMember = "DNI"; // El valor asociado es el DNI del monitor
+                cbMonitores.DisplayMember = "NombreCompleto";
+                cbMonitores.ValueMember = "DNI";  // Usar el DNI como valor
                 cbMonitores.DataSource = monitores;
             }
             catch (Exception ex)
             {
-                // Si ocurre un error, se muestra un mensaje con el detalle del error
                 MessageBox.Show($"Error al cargar los monitores: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -60,7 +51,6 @@ namespace Presentacion
         /// <param name="e">Argumentos del evento</param>
         private void CamposModificados(object sender, EventArgs e)
         {
-            // Habilita el botón solo si ambos campos (nombre y descripción) están completos
             btRegistrarAct.Enabled = !string.IsNullOrWhiteSpace(tbxNombreAct.Text) && !string.IsNullOrWhiteSpace(tbxDescripcionAct.Text);
         }
 
@@ -71,20 +61,16 @@ namespace Presentacion
         /// <param name="e">Argumentos del evento</param>
         private void btRegistrarAct_Click(object sender, EventArgs e)
         {
-            // Se obtienen los valores de los campos del formulario
             string nombreActividad = tbxNombreAct.Text;
             string descripcionActividad = tbxDescripcionAct.Text;
             string dniMonitor = cbMonitores.SelectedValue?.ToString();
 
-            // Se verifica que todos los campos obligatorios estén completos
             if (string.IsNullOrWhiteSpace(nombreActividad) || string.IsNullOrWhiteSpace(descripcionActividad) || cbMonitores.SelectedItem == null)
             {
-                // Si algún campo está vacío, se muestra un mensaje de error
                 MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Se crea una nueva instancia de la actividad con los datos proporcionados
             ActividadDTO nuevaActividad = new ActividadDTO
             {
                 Nombre = nombreActividad,
@@ -92,19 +78,23 @@ namespace Presentacion
                 DNI_Monitor = dniMonitor
             };
 
-            // Se instancia el manejo de la actividad para registrar la nueva actividad
             ActividadManagment actividadManagment = new ActividadManagment();
             try
             {
-                // Se intenta registrar la actividad en el sistema
-                actividadManagment.RegistrarActividad(nuevaActividad);
-                // Si el registro es exitoso, se muestra un mensaje de éxito
-                MessageBox.Show($"La actividad '{nombreActividad}' ha sido registrada con éxito.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LimpiarFormulario(); // Se limpia el formulario después de registrar
+                String mensaje = actividadManagment.RegistrarActividad(nuevaActividad);
+                if(mensaje== "Error: El ID de la actividad ya está registrado.")
+                {
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpiarFormulario();
+                }
+                
             }
             catch (Exception ex)
             {
-                // Si ocurre un error durante el registro, se muestra un mensaje con el detalle del error
                 MessageBox.Show($"Error al registrar la actividad: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -117,8 +107,8 @@ namespace Presentacion
         {
             tbxNombreAct.Clear();
             tbxDescripcionAct.Clear();
-            cbMonitores.SelectedIndex = -1; // Restablece la selección del ComboBox
-            btRegistrarAct.Enabled = false; // Deshabilita el botón de registrar actividad
+            cbMonitores.SelectedIndex = -1;
+            btRegistrarAct.Enabled = false;
         }
 
         /// <summary>
@@ -129,7 +119,7 @@ namespace Presentacion
         /// <param name="e">Argumentos del evento</param>
         private void btLimpiarForm_Click(object sender, EventArgs e)
         {
-            LimpiarFormulario(); // Llama a la función para limpiar el formulario
+            LimpiarFormulario();
         }
 
         /// <summary>
@@ -144,8 +134,6 @@ namespace Presentacion
             button.FlatStyle = FlatStyle.Flat;
             button.Cursor = Cursors.Hand;
             button.FlatAppearance.BorderSize = 0;
-
-            // Configura los bordes redondeados del botón
             GraphicsPath path = new GraphicsPath();
             int radius = 35;
             path.AddArc(0, 0, radius, radius, 180, 90);
@@ -154,13 +142,12 @@ namespace Presentacion
             path.AddArc(0, button.Height - radius, radius, radius, 90, 90);
             path.CloseFigure();
 
-            // Aplica la región redondeada al botón
             button.Region = new Region(path);
         }
 
         private void copiarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Este método parece estar vacío o sin implementación
+
         }
     }
 }

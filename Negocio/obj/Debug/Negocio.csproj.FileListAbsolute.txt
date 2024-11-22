@@ -73,48 +73,12 @@ C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Negocio.pdb
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Datos.dll
-C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Datos.pdb
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\Datos.dll.config
-C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Negocio.pdb
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Datos.dll
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Datos.pdb
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Datos.dll.config
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Negocio.pdb
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Datos.dll
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Datos.pdb
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Datos.dll.config
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
-D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Negocio.pdb
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Datos.dll
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Datos.pdb
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\Datos.dll.config
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
-E:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml

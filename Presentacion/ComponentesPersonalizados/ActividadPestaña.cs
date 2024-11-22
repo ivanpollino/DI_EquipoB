@@ -11,57 +11,44 @@ using Negocio.EntitiesDTO;
 
 namespace Presentacion.ComponentesPersonalizados
 {
-    /// <summary>
-    /// Componente personalizado que representa una actividad en la interfaz gráfica.
-    /// Permite eliminar la actividad con confirmación.
-    /// </summary>
     public partial class ActividadPestaña : UserControl
     {
-        
         public ActividadDTO actividadDto;
-
-       
         public ActividadPestaña()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
-        /// <summary>
-        /// Evento que se dispara cuando se hace clic en el PictureBox (representando la actividad).
-        /// </summary>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+            // Solicitar confirmación al usuario
             var confirmResult = MessageBox.Show(
-                "¿Estás seguro de que quieres borrar esta actividad?", 
-                "Confirmación", 
-                MessageBoxButtons.YesNo, 
-                MessageBoxIcon.Question); 
+                "¿Estás seguro de que quieres borrar esta actividad?",
+                "Confirmación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
 
-            
+            // Si el usuario confirma la eliminación
             if (confirmResult == DialogResult.Yes)
             {
-               
+                // Llamar al método que elimina la actividad
+    
                 if (eliminarActividad() == "Actividad borrada con exito")
                 {
-                    
+                    // Mostrar mensaje de confirmación
                     MessageBox.Show("La actividad ha sido eliminada exitosamente.",
-                                    "Éxito", 
-                                    MessageBoxButtons.OK, 
-                                    MessageBoxIcon.Information); 
-                    
+                                    "Éxito",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                    // Eliminar el control personalizado del contenedor
                     this.Parent.Controls.Remove(this);
                 }
             }
         }
 
-        /// <summary>
-        /// Método que llama a la lógica de negocio para eliminar la actividad.
-        /// </summary>
-        /// <returns>Mensaje que indica el estado de la operación.</returns>
         public String eliminarActividad()
         {
-            
             return new Negocio.Managment.ActividadManagment().bajaActividad(actividadDto);
         }
     }

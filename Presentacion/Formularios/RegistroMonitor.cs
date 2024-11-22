@@ -13,14 +13,11 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    /// <summary>
-    /// Formulario para registrar un monitor en el sistema.
-    /// </summary>
     public partial class RegistroMonitor : Form
     {
         // Variables booleanas para validar cada campo del formulario
         private bool bNombre, bApellido, bDni, bEmail, bCcc, bContraseña, bRepecontraseña;
-
+        
         /// <summary>
         /// Determina si todos los campos requeridos están correctamente validados.
         /// </summary>
@@ -31,9 +28,7 @@ namespace Presentacion
         /// </summary>
         public bool registroCorrecto = false;
 
-        /// <summary>
-        /// Constructor de la clase que inicializa el formulario y configura los botones.
-        /// </summary>
+
         public RegistroMonitor()
         {
             InitializeComponent();
@@ -41,7 +36,6 @@ namespace Presentacion
             ConfigurarBotones(BTNBorrarForm);
             BTNRegistrar.Enabled = false;
 
-            // Se añaden eventos para la validación de los campos
             TXTBContrasena.TextChanged += new EventHandler(comprobarContraseña);
             TXTBEmail.TextChanged += new EventHandler(ValidarEmail);
             TXTBDNI.TextChanged += new EventHandler(ValidarDNI);
@@ -56,7 +50,6 @@ namespace Presentacion
         /// </summary>
         private void BTNBorrarForm_Click(object sender, EventArgs e)
         {
-            // Limpiar todos los campos de entrada
             TXTBNombre.Text = String.Empty;
             TXTBApellidos.Text = String.Empty;
             TXTBDNI.Text = String.Empty;
@@ -106,6 +99,7 @@ namespace Presentacion
             habilitarBotonRegistro();
         }
 
+
         /// <summary>
         /// Valida el formato del correo electrónico.
         /// </summary>
@@ -116,7 +110,7 @@ namespace Presentacion
             if (Regex.IsMatch(correo, patronCorreo))
             {
                 LBLAvisoCorreo.Text = "";
-                bEmail = true;
+                bEmail = true;            
             }
             else
             {
@@ -145,9 +139,6 @@ namespace Presentacion
             habilitarBotonRegistro();
         }
 
-        /// <summary>
-        /// Alterna la visibilidad de la contraseña en el campo de la contraseña.
-        /// </summary>
         private void BTNVerContraNormal_Click(object sender, EventArgs e)
         {
             if (TXTBContrasena.PasswordChar == '\0')
@@ -162,9 +153,6 @@ namespace Presentacion
             }
         }
 
-        /// <summary>
-        /// Alterna la visibilidad de la contraseña en el campo de repetir contraseña.
-        /// </summary>
         private void BTNVerContraRepe_Click(object sender, EventArgs e)
         {
             if (TXTBRepetirContra.PasswordChar == '\0')
@@ -179,8 +167,61 @@ namespace Presentacion
             }
         }
 
+        private void BTNBorrarForm_Click_1(object sender, EventArgs e)
+        {
+            TXTBNombre.Text = String.Empty;
+            TXTBApellidos.Text = String.Empty;
+            TXTBDNI.Text = String.Empty;
+            TXTBContrasena.Text = String.Empty;
+            TXTBEmail.Text = String.Empty;
+            TXTBTelefono.Text = String.Empty;
+            TXTBDireccion.Text = String.Empty;
+            TXTBRepetirContra.Text = String.Empty;
+        }
+
+        private void BTNRegistrar_Click(object sender, EventArgs e)
+        {
+            if (comprobacionFinal)
+            {
+                UsuarioDTO usuarioDTO = new UsuarioDTO
+                {
+                    Nombre = TXTBNombre.Text,
+                    Apellidos = TXTBApellidos.Text,
+                    Telefono = string.IsNullOrWhiteSpace(TXTBTelefono.Text) ? (int?)null : int.Parse(TXTBTelefono.Text),
+                    DNI = TXTBDNI.Text,
+                    Direccion = TXTBDireccion.Text,
+                    Cuenta_Corriente = null,
+                    Email = TXTBEmail.Text,
+                    Passwd = TXTBContrasena.Text
+                };
+
+                MonitorDTO monitorDTO = new MonitorDTO();
+                monitorDTO.DNI = usuarioDTO.DNI;
+
+                string mensaje = new Negocio.Managment.MonitorManagment().altaMonitor(usuarioDTO);
+                MessageBox.Show(mensaje);
+
+                if (mensaje != "Ya hay un monitor registrado con ese email" && mensaje != "Ya hay un monitor registrado con ese DNI")
+                {
+                    registroCorrecto = true;
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Falta algun campo obligatorio");
+            }
+        }
+
+        private void miControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
         /// <summary>
-        /// Valida que las contraseñas coincidan.
+        /// Verifica si la contraseña y su repetición coinciden.
         /// </summary>
         private void comprobarContraseñaRepetida(object sender, EventArgs e)
         {
@@ -233,37 +274,19 @@ namespace Presentacion
             comprobacionFinal = BTNRegistrar.Enabled;
         }
 
-        /// <summary>
-        /// Maneja el evento cuando se hace clic en el botón de registro.
-        /// Registra al monitor en el sistema si todos los campos son válidos.
-        /// </summary>
-        private void BTNRegistrar_Click(object sender, EventArgs e)
+        private void LBLTitulo_Click(object sender, EventArgs e)
         {
-            if (comprobacionFinal)
-            {
-                UsuarioDTO usuarioDTO = new UsuarioDTO
-                {
-                    Nombre = TXTBNombre.Text,
-                    Apellidos = TXTBApellidos.Text,
-                    Telefono = string.IsNullOrWhiteSpace(TXTBTelefono.Text) ? (int?)null : int.Parse(TXTBTelefono.Text),
-                    DNI = TXTBDNI.Text,
-                    Direccion = TXTBDireccion.Text,
-                    Cuenta_Corriente = null,
-                    Email = TXTBEmail.Text,
-                    Passwd = TXTBContrasena.Text
-                };
 
-                MonitorDTO monitorDTO = new MonitorDTO();
-                monitorDTO.DNI = usuarioDTO.DNI;
+        }
 
-                string mensaje = new Negocio.Managment.MonitorManagment().altaMonitor(usuarioDTO);
-                MessageBox.Show(mensaje);
-                if (mensaje.Equals("Monitor registrado con éxito"))
-                {
-                    registroCorrecto = true;
-                    this.Close();
-                }
-            }
+        private void RegistroMonitor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LBLAvisoDNI_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

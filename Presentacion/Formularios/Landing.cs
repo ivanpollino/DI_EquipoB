@@ -30,37 +30,36 @@ namespace Presentacion
         public Landing()
         {
             InitializeComponent();
-            this.Resize += new System.EventHandler(this.Landing_Resize); // Se asocia el evento de cambio de tamaño
-            cargarHeader(); // Método para cargar la cabecera según el estado del usuario
-            ConfigurarBotones(btLogin); // Personaliza el botón de Login
-            ConfigurarBotones(btRegistro); // Personaliza el botón de Registro
+            this.Resize += new System.EventHandler(this.Landing_Resize);
+            cargarHeader();
+            ConfigurarBotones(btLogin);
+            ConfigurarBotones(btRegistro);
         }
 
-        /// <summary>
-        /// Método ejecutado al cargar el formulario (sin implementación adicional).
-        /// </summary>
         private void Landing_Load(object sender, EventArgs e)
         {
-            // No se requiere implementación adicional aquí.
+            // Método ejecutado al cargar el formulario (sin implementación adicional).
         }
 
         /// <summary>
         /// Muestra u oculta los elementos de la cabecera en función del estado de autenticación del usuario.
         /// </summary>
         private void cargarHeader()
-        {
-            panelAdministrador.Visible = false; // Oculta el panel de administrador si no está logeado
-            panelParaUsuarios.Visible = false; // Oculta el panel para usuarios no logeados
-            lbInfoUsuario.Visible = false; // Oculta la información del usuario si no está logeado
-            lbLinkLogin.Visible = false; // Oculta el enlace de login si el usuario está logeado
+        {   
+            panelAdministrador.Visible = false;
+            panelParaUsuarios.Visible = false;
+            lbInfoUsuario.Visible = false;
+            lbLinkLogin.Visible = false;
             if (logeado)
             {
-                lbInfoUsuario.Visible = true; // Muestra la información del usuario si está logeado
+                // Si el usuario está logeado, muestra la información del usuario.
+                lbInfoUsuario.Visible = true;
                 lbInfoUsuario.Text = $"Usuario: " + usuario.Nombre + " " + usuario.Apellidos;
             }
             else
             {
-                lbLinkLogin.Visible = true; // Muestra el enlace para iniciar sesión si no está logeado
+                // Si el usuario no está logeado, muestra el enlace para iniciar sesión.
+                lbLinkLogin.Visible = true;
             }
         }
 
@@ -70,11 +69,11 @@ namespace Presentacion
         /// </summary>
         private void btRegistro_Click(object sender, EventArgs e)
         {
-            Registro registroForm = new Registro(); // Crea una nueva instancia del formulario de registro
-            registroForm.ShowDialog(); // Muestra el formulario de registro de manera modal
-            if (registroForm.registroCorrecto) // Si el registro es exitoso
+            Registro registroForm = new Registro();
+            registroForm.ShowDialog();
+            if (registroForm.registroCorrecto)
             {
-                btLogin_Click(sender, e); // Llama al método de login
+                btLogin_Click(sender, e);
             }
         }
 
@@ -84,49 +83,44 @@ namespace Presentacion
         /// </summary>
         private void btLogin_Click(object sender, EventArgs e)
         {
-            Login loginForm = new Login(); // Crea una nueva instancia del formulario de login
-            loginForm.ShowDialog(); // Muestra el formulario de login de manera modal
-            if (loginForm.UsuarioAutenticado != null) // Si el usuario se autentica correctamente
+            Login loginForm = new Login();
+            loginForm.ShowDialog();
+            if (loginForm.UsuarioAutenticado != null)
             {
-                usuario = loginForm.UsuarioAutenticado; // Asigna el usuario autenticado
-                logeado = true; // Cambia el estado de autenticación
-                cargarHeader(); // Actualiza la cabecera con la información del usuario
-                Landing_Resize(sender, e); // Redimensiona la interfaz si es necesario
-                habilitarBotones(); // Habilita los botones correspondientes
-                comprobarAdministrador(); // Verifica si el usuario es administrador
+                usuario = loginForm.UsuarioAutenticado;
+                logeado = true;
+                cargarHeader();
+                Landing_Resize(sender, e);
+                habilitarBotones();
+                comprobarAdministrador();
             }
             else
             {
-                logeado = false; // Si el usuario no se autentica, mantiene el estado de no autenticado
+                logeado = false;
             }
         }
 
-        /// <summary>
-        /// Habilita y oculta los botones de inicio de sesión y registro si el usuario está logeado.
-        /// </summary>
         private void habilitarBotones()
         {
             if (usuario != null)
             {
-                btLogin.Visible = false; // Oculta el botón de login
-                btRegistro.Visible = false; // Oculta el botón de registro
+
+                btLogin.Visible = false;
+                btRegistro.Visible = false;
             }
         }
 
-        /// <summary>
-        /// Verifica si el usuario es administrador mediante la gestión de usuarios.
-        /// </summary>
         private void comprobarAdministrador()
         {
             UsuarioDTO usuarioAuxiliar = new UsuarioDTO();
-            usuarioAuxiliar = new Negocio.Managment.UsuarioManagment().comprobarAdministrador(usuario.DNI); // Consulta si el usuario es administrador
+            usuarioAuxiliar = new Negocio.Managment.UsuarioManagment().comprobarAdministrador(usuario.DNI);
             if (usuarioAuxiliar.DNI == null)
             {
-                administrador = false; // Si no es administrador, cambia el estado a false
+                administrador = false;
             }
             else
             {
-                administrador = true; // Si es administrador, cambia el estado a true
+                administrador = true;
             }
         }
 
@@ -135,41 +129,39 @@ namespace Presentacion
         /// </summary>
         private void lbLinkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            btLogin_Click(sender, e); // Llama al evento de login
+            btLogin_Click(sender, e);
         }
 
-        /// <summary>
-        /// Muestra u oculta el panel correspondiente según el rol de usuario.
-        /// </summary>
         private void lbInfoUsuario_Click(object sender, EventArgs e)
         {
             if (administrador)
             {
-                panelAdministrador.Visible = !panelAdministrador.Visible; // Alterna la visibilidad del panel de administrador
+                panelAdministrador.Visible = !panelAdministrador.Visible;
             }
             else
             {
-                panelParaUsuarios.Visible = !panelParaUsuarios.Visible; // Alterna la visibilidad del panel de usuario
+                panelParaUsuarios.Visible = !panelParaUsuarios.Visible;
             }
         }
+
 
         /// <summary>
         /// Dibuja un contorno en el texto del label `lbTexto2` para estilizarlo con un borde personalizado.
         /// </summary>
         private void lbTexto2_Paint(object sender, PaintEventArgs e)
         {
-            string texto = "ES POSIBLE"; // Texto a mostrar
+            string texto = "ES POSIBLE";
             Font fuente = lbTexto2.Font;
-            Color colorBorde = Color.DarkCyan; // Color del borde
-            int grosorBorde = 3; // Grosor del borde
+            Color colorBorde = Color.DarkCyan;
+            int grosorBorde = 3;
 
             GraphicsPath rutaTexto = new GraphicsPath();
             rutaTexto.AddString(texto, fuente.FontFamily, (int)fuente.Style, e.Graphics.DpiY * fuente.Size / 72,
                                 lbTexto2.ClientRectangle.Location, StringFormat.GenericDefault);
-            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias; // Suaviza el borde
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             using (Pen pen = new Pen(colorBorde, grosorBorde) { LineJoin = LineJoin.Round })
             {
-                e.Graphics.DrawPath(pen, rutaTexto); // Dibuja el borde alrededor del texto
+                e.Graphics.DrawPath(pen, rutaTexto);
             }
         }
 
@@ -188,14 +180,14 @@ namespace Presentacion
 
             // Crear un GraphicsPath para bordes redondeados
             GraphicsPath path = new GraphicsPath();
-            int radius = 35; // Radio de los bordes redondeados
+            int radius = 35;
             path.AddArc(0, 0, radius, radius, 180, 90);
             path.AddArc(button.Width - radius, 0, radius, radius, 270, 90);
             path.AddArc(button.Width - radius, button.Height - radius, radius, radius, 0, 90);
             path.AddArc(0, button.Height - radius, radius, radius, 90, 90);
             path.CloseFigure();
 
-            button.Region = new Region(path); // Asigna la región de la forma del botón
+            button.Region = new Region(path);
         }
 
         /// <summary>
@@ -203,7 +195,7 @@ namespace Presentacion
         /// </summary>
         private void Landing_Resize(object sender, EventArgs e)
         {
-            CenterElements(); // Reorganiza los elementos en la ventana
+            CenterElements();
         }
 
         /// <summary>
@@ -215,11 +207,40 @@ namespace Presentacion
             int panelHeight = panel1.ClientSize.Height;
 
             int labelUsuarioBottom = lbInfoUsuario.Bottom;
-            panelAdministrador.Location = new Point((panelWidth - panelAdministrador.Width) / 2, labelUsuarioBottom + 10);
+            panelAdministrador.Location = new Point((panelWidth - panelAdministrador.Width) / 2 ,labelUsuarioBottom +10);
             panelParaUsuarios.Location = new Point((panelWidth - panelParaUsuarios.Width) / 2, labelUsuarioBottom + 10);
 
-            lbInfoUsuario.Left = (panelWidth - lbInfoUsuario.Width) / 2;
-            lbLinkLogin.Left = (panelWidth - lbLinkLogin.Width) / 2;
+            lbInfoUsuario.Left = (panel1.ClientSize.Width - lbInfoUsuario.Width) / 2;
+            lbLinkLogin.Left = (panel1.ClientSize.Width - lbLinkLogin.Width) / 2;
+            lbTexto1.Location = new Point((panelWidth - lbTexto1.Width) / 2, (panelHeight - lbTexto1.Height) / 2 - 100);
+            lbTexto2.Location = new Point((panelWidth - lbTexto2.Width) / 2, lbTexto1.Location.Y + lbTexto1.Height + 10);
+            btLogin.Location = new Point((panelWidth - btLogin.Width) / 2, lbTexto2.Location.Y + lbTexto2.Height + 30);
+            btRegistro.Location = new Point((panelWidth - btRegistro.Width) / 2, btLogin.Location.Y + btLogin.Height + 10);
+        }
+
+        private void BTNOpcionesAdministrador_Click(object sender, EventArgs e)
+        {
+            Administracion administracion = new Administracion();
+            administracion.ShowDialog();
+        }
+
+        private void BTNCerrarSesionAdmin_Click(object sender, EventArgs e)
+        {
+            cerrarSesion();
+        }
+
+        private void cerrarSesion()
+        {
+            usuario = null;
+            logeado = false;
+            cargarHeader();
+            btLogin.Visible = true;
+            btRegistro.Visible = true;
+        }
+
+        private void BTNCerrarSesionUsuario_Click(object sender, EventArgs e)
+        {
+            cerrarSesion();
         }
     }
 }

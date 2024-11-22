@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Negocio.EntitiesDTO
 {
@@ -77,10 +81,6 @@ namespace Negocio.EntitiesDTO
         public UsuarioDTO()
         {
         }
-
-        /// <summary>
-        /// Propiedad calculada que devuelve el nombre completo del usuario.
-        /// </summary>
         public string NombreCompleto => $"{Nombre} {Apellidos}";
     }
 }

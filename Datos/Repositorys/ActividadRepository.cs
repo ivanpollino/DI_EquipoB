@@ -92,12 +92,29 @@ namespace Datos.Repositorys
         /// Guarda una nueva actividad en la base de datos.
         /// </summary>
         /// <param name="actividad">La actividad que se desea guardar.</param>
-        public void GuardarActividad(Actividad actividad)
+        public string GuardarActividad(Actividad actividad)
         {
             using (var context = new equipobEntities())
             {
-                context.Actividad.Add(actividad);
-                context.SaveChanges();
+                try
+                {
+                    // Verificar si el ID de la actividad ya existe
+                    if (context.Actividad.Any(a => a.Id_Actividad == actividad.Id_Actividad))
+                    {
+                        return "Error: El ID de la actividad ya está registrado.";
+                    }
+
+                    // Si no hay conflicto, guardar la actividad
+                    context.Actividad.Add(actividad);
+                    context.SaveChanges();
+
+                    return "Actividad insertada con éxito.";
+                }
+                catch (Exception ex)
+                {
+                    // Manejo genérico de excepciones
+                    return $"Error al guardar la actividad: {ex.Message}";
+                }
             }
         }
     }

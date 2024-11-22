@@ -52,10 +52,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Infrastructure\Actividad.cs">
-      <DependentUpon>equipoBPortatilIvan.tt</DependentUpon>
+      <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Administrador.cs">
-      <DependentUpon>equipoBPortatilIvan.tt</DependentUpon>
+      <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\equipob.Context.cs">
       <AutoGen>True</AutoGen>
@@ -72,50 +72,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>equipob.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\equipoBFinal.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>equipoBFinal.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\equipoBFinal.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>equipoBFinal.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\equipoBFinal.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>equipoBFinal.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\equipoBPortatilIvan.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>equipoBPortatilIvan.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\equipoBPortatilIvan.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>equipoBPortatilIvan.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\equipoBPortatilIvan.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>equipoBPortatilIvan.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Infrastructure\Monitor.cs">
-      <DependentUpon>equipoBPortatilIvan.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\sysdiagrams.cs">
-      <DependentUpon>equipoBFinal.tt</DependentUpon>
+      <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario.cs">
-      <DependentUpon>equipoBPortatilIvan.tt</DependentUpon>
+      <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Actividad.cs">
-      <DependentUpon>equipoBPortatilIvan.tt</DependentUpon>
+      <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Normal.cs">
-      <DependentUpon>equipoBPortatilIvan.tt</DependentUpon>
+      <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorys\ActividadRepository.cs" />
@@ -131,26 +98,11 @@
     <None Include="Infrastructure\equipob.edmx.diagram">
       <DependentUpon>equipob.edmx</DependentUpon>
     </None>
-    <EntityDeploy Include="Infrastructure\equipoBFinal.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>equipoBFinal.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Infrastructure\equipoBFinal.edmx.diagram">
-      <DependentUpon>equipoBFinal.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="Infrastructure\equipoBPortatilIvan.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>equipoBPortatilIvan.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Infrastructure\equipoBPortatilIvan.edmx.diagram">
-      <DependentUpon>equipoBPortatilIvan.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Infrastructure\equipob.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -161,26 +113,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>equipob.edmx</DependentUpon>
       <LastGenOutput>equipob.cs</LastGenOutput>
-    </Content>
-    <Content Include="Infrastructure\equipoBFinal.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>equipoBFinal.edmx</DependentUpon>
-      <LastGenOutput>equipoBFinal.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Infrastructure\equipoBFinal.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>equipoBFinal.edmx</DependentUpon>
-      <LastGenOutput>equipoBFinal.cs</LastGenOutput>
-    </Content>
-    <Content Include="Infrastructure\equipoBPortatilIvan.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>equipoBPortatilIvan.edmx</DependentUpon>
-      <LastGenOutput>equipoBPortatilIvan.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Infrastructure\equipoBPortatilIvan.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>equipoBPortatilIvan.edmx</DependentUpon>
-      <LastGenOutput>equipoBPortatilIvan.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
