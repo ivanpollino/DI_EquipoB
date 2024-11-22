@@ -43,6 +43,7 @@ namespace Presentacion
             this.btRegistro = new System.Windows.Forms.Button();
             this.lbInfoUsuario = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
+            this.BTNVerActividades = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelParaUsuarios.SuspendLayout();
             this.panelAdministrador.SuspendLayout();
@@ -53,6 +54,7 @@ namespace Presentacion
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.BTNVerActividades);
             this.panel1.Controls.Add(this.panelParaUsuarios);
             this.panel1.Controls.Add(this.panelAdministrador);
             this.panel1.Controls.Add(this.lbTexto2);
@@ -217,6 +219,18 @@ namespace Presentacion
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
+            // BTNVerActividades
+            // 
+            this.BTNVerActividades.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BTNVerActividades.ForeColor = System.Drawing.Color.Black;
+            this.BTNVerActividades.Location = new System.Drawing.Point(346, 361);
+            this.BTNVerActividades.Name = "BTNVerActividades";
+            this.BTNVerActividades.Size = new System.Drawing.Size(164, 30);
+            this.BTNVerActividades.TabIndex = 8;
+            this.BTNVerActividades.Text = "ACTIVIDADES";
+            this.BTNVerActividades.UseVisualStyleBackColor = true;
+            this.BTNVerActividades.Visible = false;
+            // 
             // Landing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,5 +265,6 @@ namespace Presentacion
         private Button BTNCerrarSesionAdmin;
         private Button BTNCerrarSesionUsuario;
         private Panel panelParaUsuarios;
+        private Button BTNVerActividades;
     }
 }

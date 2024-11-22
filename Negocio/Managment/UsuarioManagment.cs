@@ -159,5 +159,19 @@ namespace Negocio.Managment
             return new Datos.Repositorys.UsuarioRepository().sacarNombrePorDNI(dni);
         }
 
+        public UsuarioDTO comporobarUsuarioNormal(String dni)
+        {
+            UsuarioDTO usuario = new UsuarioDTO();
+            List<Usuario_Normal> usuariosNormales = new UsuarioRepository().obtenerUsuariosNormal();
+            foreach (Usuario_Normal usuario_Normal in usuariosNormales)
+            {
+                if (dni == usuario_Normal.DNI)
+                {
+                    usuario.DNI = usuario_Normal.DNI;
+                }
+            }
+            return usuario;
+
+        }
     }
 }

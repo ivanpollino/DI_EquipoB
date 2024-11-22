@@ -22,9 +22,12 @@ namespace Datos.Repositorys
         /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
         public String altaUsuario(Usuario usuario)
         {
+            Usuario_Normal usuarioNormal = new Usuario_Normal();
+            usuarioNormal.DNI = usuario.DNI;
             using (var contexto = new equipobEntities())
                 {
                     contexto.Usuario.Add(usuario);
+                    contexto.Usuario_Normal.Add(usuarioNormal);
                     contexto.SaveChanges();
                     
                 }
@@ -61,6 +64,24 @@ namespace Datos.Repositorys
                 using (var contexto = new equipobEntities())
                 {
                     usuarios = contexto.Administrador.ToList();
+                }
+                return usuarios;
+            }
+            catch (Exception)
+            {
+                return usuarios;
+            }
+        }
+
+        public List<Usuario_Normal> obtenerUsuariosNormal()
+        {
+
+            List<Usuario_Normal> usuarios = new List<Usuario_Normal>();
+            try
+            {
+                using (var contexto = new equipobEntities())
+                {
+                    usuarios = contexto.Usuario_Normal.ToList();
                 }
                 return usuarios;
             }

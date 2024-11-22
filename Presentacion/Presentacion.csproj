@@ -137,6 +137,12 @@
     <Compile Include="Formularios\RegistroMonitor.Designer.cs">
       <DependentUpon>RegistroMonitor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\VerInformacionActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\VerInformacionActividad.Designer.cs">
+      <DependentUpon>VerInformacionActividad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ComponentesPersonalizados\ActividadPestaña.resx">

@@ -34,6 +34,7 @@ namespace Presentacion
             cargarHeader();
             ConfigurarBotones(btLogin);
             ConfigurarBotones(btRegistro);
+            ConfigurarBotones(BTNVerActividades);
         }
 
         private void Landing_Load(object sender, EventArgs e)
@@ -93,11 +94,27 @@ namespace Presentacion
                 Landing_Resize(sender, e);
                 habilitarBotones();
                 comprobarAdministrador();
+                comprobarUsuario();
             }
             else
             {
                 logeado = false;
             }
+        }
+
+        private void comprobarUsuario()
+        {
+            UsuarioDTO usuarioNormalAuxiliar = new UsuarioDTO();
+            usuarioNormalAuxiliar = new Negocio.Managment.UsuarioManagment().comporobarUsuarioNormal(usuario.DNI);
+            if (usuarioNormalAuxiliar.DNI == null)
+            {
+                BTNVerActividades.Visible = false;
+            }
+            else
+            {
+                BTNVerActividades.Visible= true;
+            }
+
         }
 
         private void habilitarBotones()
@@ -107,6 +124,7 @@ namespace Presentacion
 
                 btLogin.Visible = false;
                 btRegistro.Visible = false;
+               
             }
         }
 
@@ -236,6 +254,7 @@ namespace Presentacion
             cargarHeader();
             btLogin.Visible = true;
             btRegistro.Visible = true;
+            BTNVerActividades.Visible = false;
         }
 
         private void BTNCerrarSesionUsuario_Click(object sender, EventArgs e)
