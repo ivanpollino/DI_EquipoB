@@ -29,8 +29,6 @@ C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Presentacion.
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Presentacion.application
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Presentacion.pdb
-C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.dll
-C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Negocio.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Datos.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\Negocio.pdb
@@ -62,3 +60,5 @@ C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Present
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.TrustInfo.xml
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe.manifest
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.application
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.dll
