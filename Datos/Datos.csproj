@@ -52,10 +52,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Infrastructure\Actividad.cs">
-      <DependentUpon>equipob.tt</DependentUpon>
+      <DependentUpon>equipobIvan.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Administrador.cs">
-      <DependentUpon>equipob.tt</DependentUpon>
+      <DependentUpon>equipobIvan.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\equipob.Context.cs">
       <AutoGen>True</AutoGen>
@@ -72,17 +72,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>equipob.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\equipobIvan.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>equipobIvan.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\equipobIvan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>equipobIvan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\equipobIvan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>equipobIvan.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Infrastructure\Monitor.cs">
-      <DependentUpon>equipob.tt</DependentUpon>
+      <DependentUpon>equipobIvan.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario.cs">
-      <DependentUpon>equipob.tt</DependentUpon>
+      <DependentUpon>equipobIvan.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Actividad.cs">
-      <DependentUpon>equipob.tt</DependentUpon>
+      <DependentUpon>equipobIvan.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Normal.cs">
-      <DependentUpon>equipob.tt</DependentUpon>
+      <DependentUpon>equipobIvan.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorys\ActividadRepository.cs" />
@@ -99,6 +114,13 @@
     <None Include="Infrastructure\equipob.edmx.diagram">
       <DependentUpon>equipob.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Infrastructure\equipobIvan.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>equipobIvan.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Infrastructure\equipobIvan.edmx.diagram">
+      <DependentUpon>equipobIvan.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +136,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>equipob.edmx</DependentUpon>
       <LastGenOutput>equipob.cs</LastGenOutput>
+    </Content>
+    <Content Include="Infrastructure\equipobIvan.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>equipobIvan.edmx</DependentUpon>
+      <LastGenOutput>equipobIvan.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Infrastructure\equipobIvan.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>equipobIvan.edmx</DependentUpon>
+      <LastGenOutput>equipobIvan.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

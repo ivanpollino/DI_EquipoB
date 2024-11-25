@@ -101,6 +101,12 @@
     <Compile Include="ComponentesPersonalizados\ActividadUsuario.Designer.cs">
       <DependentUpon>ActividadUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentesPersonalizados\TextArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentesPersonalizados\TextArea.Designer.cs">
+      <DependentUpon>TextArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ActividadesDisponibles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentesPersonalizados\ActividadUsuario.resx">
       <DependentUpon>ActividadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentesPersonalizados\TextArea.resx">
+      <DependentUpon>TextArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ActividadesDisponibles.resx">
       <DependentUpon>ActividadesDisponibles.cs</DependentUpon>

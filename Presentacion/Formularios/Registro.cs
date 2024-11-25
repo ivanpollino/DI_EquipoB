@@ -201,6 +201,11 @@ namespace Presentacion
 
         }
 
+        private void textArea1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         /// <summary>
         /// Activa el botón de registro si todos los campos requeridos son válidos.
         /// </summary>
