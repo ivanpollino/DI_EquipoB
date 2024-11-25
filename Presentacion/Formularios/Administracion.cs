@@ -162,6 +162,5 @@ namespace Presentacion
             registrarActividad.BringToFront();
             registrarActividad.Show();
         }
-
     }
 }
