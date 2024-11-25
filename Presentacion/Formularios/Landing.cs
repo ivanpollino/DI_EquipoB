@@ -1,4 +1,5 @@
 ﻿using Negocio.EntitiesDTO;
+using Presentacion.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,7 @@ namespace Presentacion
             cargarHeader();
             ConfigurarBotones(btLogin);
             ConfigurarBotones(btRegistro);
+            ConfigurarBotones(btActividades);
         }
 
         private void Landing_Load(object sender, EventArgs e)
@@ -45,11 +47,12 @@ namespace Presentacion
         /// Muestra u oculta los elementos de la cabecera en función del estado de autenticación del usuario.
         /// </summary>
         private void cargarHeader()
-        {   
+        {
             panelAdministrador.Visible = false;
             panelParaUsuarios.Visible = false;
             lbInfoUsuario.Visible = false;
             lbLinkLogin.Visible = false;
+            btActividades.Visible = false;
             if (logeado)
             {
                 // Si el usuario está logeado, muestra la información del usuario.
@@ -104,10 +107,16 @@ namespace Presentacion
         {
             if (usuario != null)
             {
-
                 btLogin.Visible = false;
                 btRegistro.Visible = false;
+
+                // Muestra los botones de actividades solo si el usuario no es un administrador
+                if (!administrador)
+                {
+                    btActividades.Visible = true;
+                }
             }
+
         }
 
         private void comprobarAdministrador()
@@ -207,7 +216,7 @@ namespace Presentacion
             int panelHeight = panel1.ClientSize.Height;
 
             int labelUsuarioBottom = lbInfoUsuario.Bottom;
-            panelAdministrador.Location = new Point((panelWidth - panelAdministrador.Width) / 2 ,labelUsuarioBottom +10);
+            panelAdministrador.Location = new Point((panelWidth - panelAdministrador.Width) / 2, labelUsuarioBottom + 10);
             panelParaUsuarios.Location = new Point((panelWidth - panelParaUsuarios.Width) / 2, labelUsuarioBottom + 10);
 
             lbInfoUsuario.Left = (panel1.ClientSize.Width - lbInfoUsuario.Width) / 2;
@@ -216,7 +225,8 @@ namespace Presentacion
             lbTexto2.Location = new Point((panelWidth - lbTexto2.Width) / 2, lbTexto1.Location.Y + lbTexto1.Height + 10);
             btLogin.Location = new Point((panelWidth - btLogin.Width) / 2, lbTexto2.Location.Y + lbTexto2.Height + 30);
             btRegistro.Location = new Point((panelWidth - btRegistro.Width) / 2, btLogin.Location.Y + btLogin.Height + 10);
-        }
+            btActividades.Location = new Point((panelWidth - btActividades.Width) / 2, lbTexto2.Location.Y + lbTexto2.Height + 30);
+         }
 
         private void BTNOpcionesAdministrador_Click(object sender, EventArgs e)
         {
@@ -241,6 +251,11 @@ namespace Presentacion
         private void BTNCerrarSesionUsuario_Click(object sender, EventArgs e)
         {
             cerrarSesion();
+        }
+        private void btActividades_Click(object sender, EventArgs e)
+        {
+            Actividades actividades = new Actividades();
+            actividades.ShowDialog();
         }
     }
 }

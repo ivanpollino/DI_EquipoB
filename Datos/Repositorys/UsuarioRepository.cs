@@ -22,7 +22,7 @@ namespace Datos.Repositorys
         /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
         public String altaUsuario(Usuario usuario)
         {
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobFinalFinalEntities())
                 {
                     contexto.Usuario.Add(usuario);
                     contexto.SaveChanges();
@@ -40,7 +40,7 @@ namespace Datos.Repositorys
             try
             {
                 //Abrir la BD
-                using (var contexto = new equipobEntities())
+                using (var contexto = new equipobFinalFinalEntities())
                 {
                     usuarios = contexto.Usuario.ToList();
                 }
@@ -58,7 +58,7 @@ namespace Datos.Repositorys
             try
             {
                 //Abrir la BD
-                using (var contexto = new equipobEntities())
+                using (var contexto = new equipobFinalFinalEntities())
                 {
                     usuarios = contexto.Administrador.ToList();
                 }
@@ -72,7 +72,7 @@ namespace Datos.Repositorys
 
         public String sacarNombrePorDNI(String dni)
         {
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobFinalFinalEntities())
             {
                 var usuario = contexto.Usuario
                                       .FirstOrDefault(u => u.DNI == dni);

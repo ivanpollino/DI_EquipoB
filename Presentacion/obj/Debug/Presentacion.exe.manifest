@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YRvpGKEBcUgApOwETNknWG47Q6DFO+vC4yWLfjZXVRQ=</dsig:DigestValue>
+        <dsig:DigestValue>3QGkouDFEZ7RA7qL2WyGkQjx3t7E7vY6tmFlynzm9D4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,19 +86,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>r52xzdcTBbc3V7vfybOcHBqntIFUclz9koQdTo1pjH4=</dsig:DigestValue>
+        <dsig:DigestValue>XjbppiUNkDSdDE+0LvFSaJbuinX6vgXo/Ygw9L4msRo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="2694104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="2691544">
       <assemblyIdentity name="Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CPpDnFhac5uverRZc1A4Qp7O1ahJALwYStbDHqxer0U=</dsig:DigestValue>
+        <dsig:DigestValue>rSwKafvSCq6+m+TmHyOTQmYEOr88kzFPHBboe03UGG4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,13 +111,13 @@
       <dsig:DigestValue>qM5j3uLEnosyVA/hq3Q6gvDuLZRiMSvx5+llMV53EQE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Presentacion.exe.config" size="689">
+  <file name="Presentacion.exe.config" size="1147">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>yZ3iXudnK/+wehJIA2UBpZvV+T5LOQFcSAvglz62/lg=</dsig:DigestValue>
+      <dsig:DigestValue>z8/4EuvJujOtlylnj0w+vAngUsJ9P+xCbl3D4FyrUv8=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
