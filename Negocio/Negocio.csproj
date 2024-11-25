@@ -44,6 +44,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="EntitiesDTO\ActividadDTO.cs" />
     <Compile Include="EntitiesDTO\MonitorDTO.cs" />
+    <Compile Include="EntitiesDTO\UsuarioActividadDTO.cs" />
     <Compile Include="EntitiesDTO\UsuarioDTO.cs" />
     <Compile Include="Managment\ActividadManagment.cs" />
     <Compile Include="Managment\MonitorManagment.cs" />

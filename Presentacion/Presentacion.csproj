@@ -95,6 +95,12 @@
     <Compile Include="ComponentesPersonalizados\ActividadPestaña.Designer.cs">
       <DependentUpon>ActividadPestaña.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentesPersonalizados\ActividadUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentesPersonalizados\ActividadUsuario.Designer.cs">
+      <DependentUpon>ActividadUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Administracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <EmbeddedResource Include="ComponentesPersonalizados\ActividadPestaña.resx">
       <DependentUpon>ActividadPestaña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ComponentesPersonalizados\ActividadUsuario.resx">
+      <DependentUpon>ActividadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RegistroMonitor.resx">
       <DependentUpon>RegistroMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\VerInformacionActividad.resx">
+      <DependentUpon>VerInformacionActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

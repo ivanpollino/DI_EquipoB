@@ -18,5 +18,11 @@ namespace Presentacion.ComponentesPersonalizados
         {
             InitializeComponent();
         }
+
+        private void panelContenedorInfo_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Gilipollas");
+        }
+
     }
 }
