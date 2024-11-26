@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Negocio.EntitiesDTO;
+using Presentacion.ComponentesPersonalizados;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,26 +16,23 @@ namespace Presentacion.Formularios
 {
     public partial class Actividades : Form
     {
-        private FormularioTodasActividades formTodasActividades;//Cambiar por nombre del formulario
-        private FormularioTusActividades formTusActividades;//Cambiar por nombre del formulario
+        //private FormularioTodasActividades formTodasActividades;//Cambiar por nombre del formulario
+        private ActividadesApuntado formTusActividades;//Cambiar por nombre del formulario
 
         public Actividades()
         {
             InitializeComponent();
-            formTodasActividades = new FormularioTodasActividades();
-            formTusActividades = new FormularioTusActividades();
 
-            formTodasActividades.TopLevel = false;
-            formTodasActividades.FormBorderStyle = FormBorderStyle.None;
-            formTodasActividades.Dock = DockStyle.Fill;
+            formTusActividades = new ActividadesApuntado();
 
             formTusActividades.TopLevel = false;
             formTusActividades.FormBorderStyle = FormBorderStyle.None;
             formTusActividades.Dock = DockStyle.Fill;
+            panelFormularios.Controls.Add(formTusActividades);
 
-            
-            panelFormularios.Controls.Add(formTodasActividades); // Muestra todas las actividades por defecto
-            formTodasActividades.Show();
+
+            //panelFormularios.Controls.Add(formTodasActividades); // Muestra todas las actividades por defecto
+            //formTodasActividades.Show();
         }
 
         private void lbActividades_Paint(object sender, PaintEventArgs e)
@@ -58,16 +57,37 @@ namespace Presentacion.Formularios
         {
             if (chbTusActividades.Checked)
             {
-                panelFormularios.Controls.Clear();
-                panelFormularios.Controls.Add(formTusActividades);
-                formTusActividades.Show();
+                cargarActividadesDisponibles(formTusActividades);
             }
-            else
+            /*else
             {
                 panelFormularios.Controls.Clear();
                 panelFormularios.Controls.Add(formTodasActividades);
                 formTodasActividades.Show();
+            }*/
+        }
+
+        private void cargarActividadesDisponibles(Form fomrulario)
+        {
+            String nombreMonitor;
+            List<ActividadDTO> listaActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
+
+            foreach (var actividad in listaActividades)
+            {
+                ActividadPestaña aP = new ActividadPestaña();
+
+                aP.actividadDto = actividad;
+                aP.LBLDondeVaNombreActividad.Text = actividad.Nombre;
+                nombreMonitor = new Negocio.Managment.UsuarioManagment().sacarNombreApellidosDeUsuario(actividad.DNI_Monitor);
+                aP.LBLDonveVaNombreMonitor.Text = nombreMonitor;
+
+                //formulario.contenedorActividades.Controls.Add(aP);
             }
+        }
+
+        private void panelFormularios_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

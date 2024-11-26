@@ -82,3 +82,15 @@ C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Datos\obj\Debug\Datos.csproj.CoreCom
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Datos\obj\Debug\Datos.csproj.Up2Date
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Datos\obj\Debug\Datos.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Datos\obj\Debug\Datos.pdb
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\bin\Debug\Datos.dll.config
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\bin\Debug\Datos.dll
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\bin\Debug\Datos.pdb
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\bin\Debug\EntityFramework.dll
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\bin\Debug\EntityFramework.SqlServer.dll
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\bin\Debug\EntityFramework.xml
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\bin\Debug\EntityFramework.SqlServer.xml
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\obj\Debug\Datos.csproj.Up2Date
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\obj\Debug\Datos.dll
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\obj\Debug\Datos.pdb

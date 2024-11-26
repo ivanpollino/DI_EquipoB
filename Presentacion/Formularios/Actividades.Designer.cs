@@ -53,6 +53,7 @@ namespace Presentacion.Formularios
             this.panelFormularios.Name = "panelFormularios";
             this.panelFormularios.Size = new System.Drawing.Size(1183, 442);
             this.panelFormularios.TabIndex = 2;
+            this.panelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormularios_Paint);
             // 
             // chbTusActividades
             // 
@@ -71,8 +72,8 @@ namespace Presentacion.Formularios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1184, 611);
-            this.Controls.Add(this.chbTusActividades);
             this.Controls.Add(this.panelFormularios);
+            this.Controls.Add(this.chbTusActividades);
             this.Controls.Add(this.lbActividades);
             this.MaximumSize = new System.Drawing.Size(1200, 650);
             this.MinimumSize = new System.Drawing.Size(1200, 650);

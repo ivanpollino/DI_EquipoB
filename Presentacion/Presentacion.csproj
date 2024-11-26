@@ -95,11 +95,29 @@
     <Compile Include="ComponentesPersonalizados\ActividadPestaña.Designer.cs">
       <DependentUpon>ActividadPestaña.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentesPersonalizados\ActividadUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentesPersonalizados\ActividadUsuario.Designer.cs">
+      <DependentUpon>ActividadUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentesPersonalizados\TextArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentesPersonalizados\TextArea.Designer.cs">
+      <DependentUpon>TextArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Actividades.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Actividades.Designer.cs">
       <DependentUpon>Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ActividadesApuntado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ActividadesApuntado.Designer.cs">
+      <DependentUpon>ActividadesApuntado.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Administracion.cs">
       <SubType>Form</SubType>
@@ -148,8 +166,17 @@
     <EmbeddedResource Include="ComponentesPersonalizados\ActividadPestaña.resx">
       <DependentUpon>ActividadPestaña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ComponentesPersonalizados\ActividadUsuario.resx">
+      <DependentUpon>ActividadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentesPersonalizados\TextArea.resx">
+      <DependentUpon>TextArea.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Actividades.resx">
       <DependentUpon>Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ActividadesApuntado.resx">
+      <DependentUpon>ActividadesApuntado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>

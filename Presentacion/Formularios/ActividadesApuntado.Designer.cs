@@ -1,6 +1,6 @@
 ﻿namespace Presentacion.Formularios
 {
-    partial class ActividadesDisponibles
+    partial class ActividadesApuntado
     {
         /// <summary>
         /// Required designer variable.
