@@ -52,10 +52,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Infrastructure\Actividad.cs">
-      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>equipobIvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Administrador.cs">
-      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>equipobIvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\equipob.Context.cs">
       <AutoGen>True</AutoGen>
@@ -87,21 +87,37 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\equipobIvanClase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>equipobIvanClase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\equipobIvanClase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>equipobIvanClase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\equipobIvanClase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>equipobIvanClase.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Infrastructure\Monitor.cs">
-      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>equipobIvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario.cs">
-      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>equipobIvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Actividad.cs">
-      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>equipobIvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Normal.cs">
-      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>equipobIvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorys\ActividadRepository.cs" />
     <Compile Include="Repositorys\MonitorRepository.cs" />
+    <Compile Include="Repositorys\UsuarioActividadRepository.cs" />
     <Compile Include="Repositorys\UsuarioRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +135,13 @@
     </EntityDeploy>
     <None Include="Infrastructure\EquipobFinalFinal.edmx.diagram">
       <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Infrastructure\equipobIvanClase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>equipobIvanClase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Infrastructure\equipobIvanClase.edmx.diagram">
+      <DependentUpon>equipobIvanClase.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -145,6 +168,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
       <LastGenOutput>EquipobFinalFinal.cs</LastGenOutput>
+    </Content>
+    <Content Include="Infrastructure\equipobIvanClase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>equipobIvanClase.edmx</DependentUpon>
+      <LastGenOutput>equipobIvanClase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Infrastructure\equipobIvanClase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>equipobIvanClase.edmx</DependentUpon>
+      <LastGenOutput>equipobIvanClase.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

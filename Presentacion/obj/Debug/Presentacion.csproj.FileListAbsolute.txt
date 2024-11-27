@@ -128,3 +128,6 @@ H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.TrustI
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe.manifest
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.application
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadUsuario.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.TextArea.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.ActividadesApuntado.resources

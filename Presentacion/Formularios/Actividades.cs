@@ -29,10 +29,13 @@ namespace Presentacion.Formularios
             formTusActividades.FormBorderStyle = FormBorderStyle.None;
             formTusActividades.Dock = DockStyle.Fill;
             panelFormularios.Controls.Add(formTusActividades);
+            panelFormularios.Tag = formTusActividades;
+            cargarActividadesDisponibles(formTusActividades);
+            formTusActividades.Visible = true;
+            formTusActividades.BringToFront();
+            formTusActividades.Show();
 
 
-            //panelFormularios.Controls.Add(formTodasActividades); // Muestra todas las actividades por defecto
-            //formTodasActividades.Show();
         }
 
         private void lbActividades_Paint(object sender, PaintEventArgs e)
@@ -55,33 +58,73 @@ namespace Presentacion.Formularios
         // Con el CheckBox se muestras las ctividades inscritas
         private void chbTusActividades_CheckedChanged(object sender, EventArgs e)
         {
+            formTusActividades.contenedorActividades.Controls.Clear();
             if (chbTusActividades.Checked)
+            {
+                cargarActividadesApuntado(formTusActividades);
+            }
+            else
             {
                 cargarActividadesDisponibles(formTusActividades);
             }
-            /*else
-            {
-                panelFormularios.Controls.Clear();
-                panelFormularios.Controls.Add(formTodasActividades);
-                formTodasActividades.Show();
-            }*/
         }
 
-        private void cargarActividadesDisponibles(Form fomrulario)
+        private void cargarActividadesApuntado(ActividadesApuntado fomrulario)
         {
             String nombreMonitor;
-            List<ActividadDTO> listaActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
+            List<ActividadDTO> listaTodasActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
+            List<UsuarioActiviadDTO> actividadesApuntado = new Negocio.Managment.UsuarioActividadManagment().ObtenerActividadesApuntado();
 
-            foreach (var actividad in listaActividades)
+            foreach (var actividad in listaTodasActividades)
             {
-                ActividadPestaña aP = new ActividadPestaña();
+                foreach (var usuarioActividad in actividadesApuntado)
+                {
+                    if (actividad.Id_Actividad == usuarioActividad.Id_Actividad)
+                    {
+                        ActividadUsuario au = new ActividadUsuario();
+                        au.actividadDto = actividad;
+                        au.LBLDondeVaNombreActividad.Text = actividad.Nombre;
+                        nombreMonitor = new Negocio.Managment.UsuarioManagment().sacarNombreApellidosDeUsuario(actividad.DNI_Monitor);
+                        au.LBLDonveVaNombreMonitor.Text = nombreMonitor;
+                        formTusActividades.Controls.Add(au);
+                    }
+                } 
+            }
+        }
 
-                aP.actividadDto = actividad;
-                aP.LBLDondeVaNombreActividad.Text = actividad.Nombre;
+        private void cargarActividadesDisponibles(ActividadesApuntado fomrulario)
+        {
+            String nombreMonitor;
+            List<ActividadDTO> listaTodasActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
+            List<UsuarioActiviadDTO> actividadesApuntado = new Negocio.Managment.UsuarioActividadManagment().ObtenerActividadesApuntado();
+            List<ActividadDTO> actividadesDisponibles = new List<ActividadDTO>();
+
+            if (actividadesApuntado.Count == 0)
+            {
+                actividadesDisponibles.AddRange(listaTodasActividades);
+            }
+            else
+            {
+                foreach (var actividad in listaTodasActividades)
+                {
+                    foreach (var usuarioActividad in actividadesApuntado)
+                    {
+                        if (actividad.Id_Actividad != usuarioActividad.Id_Actividad)
+                        {
+                            actividadesDisponibles.Add(actividad);
+                        }
+                    }
+                }
+            }
+
+            foreach (var actividad in actividadesDisponibles)
+            {
+                ActividadUsuario au = new ActividadUsuario();
+                au.actividadDto = actividad;
+                au.LBLDondeVaNombreActividad.Text = actividad.Nombre;
                 nombreMonitor = new Negocio.Managment.UsuarioManagment().sacarNombreApellidosDeUsuario(actividad.DNI_Monitor);
-                aP.LBLDonveVaNombreMonitor.Text = nombreMonitor;
-
-                //formulario.contenedorActividades.Controls.Add(aP);
+                au.LBLDonveVaNombreMonitor.Text = nombreMonitor;
+                formTusActividades.contenedorActividades.Controls.Add(au);
             }
         }
 
