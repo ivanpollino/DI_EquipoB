@@ -4,20 +4,24 @@ using System.Windows.Forms;
 
 namespace Presentacion.ComponentesPersonalizados
 {
+    /// <summary>
+    /// Control de usuario que representa un área de texto redimensionable.
+    /// </summary>
     public partial class TextArea : UserControl
     {
         private const int ResizeHandleSize = 10; // Tamaño del área de arrastre en las esquinas
         private bool isResizing = false;
         private Point lastMousePosition;
+        private TextBox txtArea;
 
         public TextArea()
         {
             InitializeComponent();
             InitializeTextBox();
         }
-
-        private TextBox txtArea;
-
+        /// <summary>
+        /// Inicializa el TextBox dentro del control, configurando sus propiedades.
+        /// </summary>
         private void InitializeTextBox()
         {
             // Crear el TextBox
@@ -40,14 +44,17 @@ namespace Presentacion.ComponentesPersonalizados
             this.MouseUp += TextArea_MouseUp;
         }
 
-        // Propiedad para obtener o establecer el texto del TextBox
+        /// <summary>
+        /// Propiedad para obtener o establecer el texto del TextBox.
+        /// </summary>
         public string Text
         {
             get { return txtArea.Text; }
             set { txtArea.Text = value; }
         }
-
-        // Propiedad para obtener o establecer el número de filas (líneas de texto)
+        /// <summary>
+        /// Propiedad para obtener o establecer el número de filas (líneas de texto) del TextBox.
+        /// </summary>
         public int Rows
         {
             get
@@ -62,7 +69,10 @@ namespace Presentacion.ComponentesPersonalizados
             }
         }
 
-        // Hacer que el control sea redimensionable
+        /// <summary>
+        /// Evento que hace el control redimensionable, se dispara cuando el mouse se presiona sobre el control. 
+        /// Detecta si el usuario está intentando redimensionar el control.
+        /// </summary>
         private void TextArea_MouseDown(object sender, MouseEventArgs e)
         {
             // Verificar si el mouse está en el área de la esquina para redimensionar
@@ -73,7 +83,10 @@ namespace Presentacion.ComponentesPersonalizados
                 this.Cursor = Cursors.SizeNWSE; // Cambia el cursor para indicar redimensionamiento
             }
         }
-
+        /// <summary>
+        /// Evento que se realiza cuando el mouse se mueve sobre el control. 
+        /// Cambia el cursor si está sobre el área de redimensionamiento o redimensiona el control.
+        /// </summary>
         private void TextArea_MouseMove(object sender, MouseEventArgs e)
         {
             // Cambiar el cursor si estamos sobre la esquina de redimensionado
@@ -85,7 +98,6 @@ namespace Presentacion.ComponentesPersonalizados
             {
                 this.Cursor = Cursors.Default;
             }
-
             // Redimensionar el control cuando se esté arrastrando
             if (isResizing)
             {
@@ -98,7 +110,10 @@ namespace Presentacion.ComponentesPersonalizados
                 lastMousePosition = e.Location;
             }
         }
-
+        /// <summary>
+        /// Evento que se realiza cuando el mouse se suelta. 
+        /// Finaliza el redimensionamiento y restablece el cursor.
+        /// </summary>
         private void TextArea_MouseUp(object sender, MouseEventArgs e)
         {
             isResizing = false;

@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace Presentacion.ComponentesPersonalizados
 {
+    /// <summary>
+    /// Componente que muestra una actividad y su monitor asociado.
+    /// </summary>
     public partial class ActividadUsuario : UserControl
     {
         public ActividadDTO actividadDto;
