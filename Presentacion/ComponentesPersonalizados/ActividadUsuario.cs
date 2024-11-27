@@ -1,4 +1,5 @@
 ﻿using Negocio.EntitiesDTO;
+using Presentacion.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,16 @@ namespace Presentacion.ComponentesPersonalizados
 
         private void panelContenedorInfo_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Gilipollas");
+            Form formularioPadre = this.FindForm();
+
+            VerInformacionActividad verInformacion = new VerInformacionActividad(formularioPadre)
+            {
+                actividadAux = actividadDto,
+                nombreMonitor = LBLDonveVaNombreMonitor.Text
+            };
+
+            verInformacion.ShowDialog();
+
         }
 
     }

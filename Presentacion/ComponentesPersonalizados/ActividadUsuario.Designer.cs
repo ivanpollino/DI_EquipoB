@@ -86,9 +86,9 @@
             this.panelContenedorInfo.Controls.Add(this.LBLDondeVaNombreActividad);
             this.panelContenedorInfo.Controls.Add(this.LBLIndicadorNombreMonitor);
             this.panelContenedorInfo.Controls.Add(this.LBLDonveVaNombreMonitor);
-            this.panelContenedorInfo.Location = new System.Drawing.Point(3, 6);
+            this.panelContenedorInfo.Location = new System.Drawing.Point(3, 3);
             this.panelContenedorInfo.Name = "panelContenedorInfo";
-            this.panelContenedorInfo.Size = new System.Drawing.Size(147, 144);
+            this.panelContenedorInfo.Size = new System.Drawing.Size(150, 150);
             this.panelContenedorInfo.TabIndex = 6;
             this.panelContenedorInfo.Click += new System.EventHandler(this.panelContenedorInfo_Click);
             // 

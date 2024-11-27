@@ -34,7 +34,7 @@
             this.BTNApuntarseActividad = new System.Windows.Forms.Button();
             this.LBLDondeVaNombreActividad = new System.Windows.Forms.Label();
             this.LBLDondeVaElNombreMonitor = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LBLDondeVaLaDescripcion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LBLNombreActvidad
@@ -72,6 +72,7 @@
             this.BTNApuntarseActividad.TabIndex = 3;
             this.BTNApuntarseActividad.Text = "Apuntarse";
             this.BTNApuntarseActividad.UseVisualStyleBackColor = true;
+            this.BTNApuntarseActividad.Click += new System.EventHandler(this.BTNApuntarseActividad_Click);
             // 
             // LBLDondeVaNombreActividad
             // 
@@ -91,21 +92,21 @@
             this.LBLDondeVaElNombreMonitor.TabIndex = 5;
             this.LBLDondeVaElNombreMonitor.Text = "label1";
             // 
-            // label1
+            // LBLDondeVaLaDescripcion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
+            this.LBLDondeVaLaDescripcion.AutoSize = true;
+            this.LBLDondeVaLaDescripcion.Location = new System.Drawing.Point(123, 147);
+            this.LBLDondeVaLaDescripcion.Name = "LBLDondeVaLaDescripcion";
+            this.LBLDondeVaLaDescripcion.Size = new System.Drawing.Size(35, 13);
+            this.LBLDondeVaLaDescripcion.TabIndex = 6;
+            this.LBLDondeVaLaDescripcion.Text = "label1";
             // 
             // VerInformacionActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 384);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LBLDondeVaLaDescripcion);
             this.Controls.Add(this.LBLDondeVaElNombreMonitor);
             this.Controls.Add(this.LBLDondeVaNombreActividad);
             this.Controls.Add(this.BTNApuntarseActividad);
@@ -127,6 +128,6 @@
         private System.Windows.Forms.Button BTNApuntarseActividad;
         private System.Windows.Forms.Label LBLDondeVaNombreActividad;
         private System.Windows.Forms.Label LBLDondeVaElNombreMonitor;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBLDondeVaLaDescripcion;
     }
 }
