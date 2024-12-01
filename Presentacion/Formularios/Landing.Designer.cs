@@ -32,6 +32,7 @@ namespace Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Landing));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BTNVerActividades = new System.Windows.Forms.Button();
             this.panelParaUsuarios = new System.Windows.Forms.Panel();
             this.BTNCerrarSesionUsuario = new System.Windows.Forms.Button();
             this.panelAdministrador = new System.Windows.Forms.Panel();
@@ -43,7 +44,6 @@ namespace Presentacion
             this.btRegistro = new System.Windows.Forms.Button();
             this.lbInfoUsuario = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
-            this.BTNVerActividades = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelParaUsuarios.SuspendLayout();
             this.panelAdministrador.SuspendLayout();
@@ -68,6 +68,19 @@ namespace Presentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1232, 641);
             this.panel1.TabIndex = 4;
+            // 
+            // BTNVerActividades
+            // 
+            this.BTNVerActividades.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BTNVerActividades.ForeColor = System.Drawing.Color.Black;
+            this.BTNVerActividades.Location = new System.Drawing.Point(346, 361);
+            this.BTNVerActividades.Name = "BTNVerActividades";
+            this.BTNVerActividades.Size = new System.Drawing.Size(164, 30);
+            this.BTNVerActividades.TabIndex = 8;
+            this.BTNVerActividades.Text = "ACTIVIDADES";
+            this.BTNVerActividades.UseVisualStyleBackColor = true;
+            this.BTNVerActividades.Visible = false;
+            this.BTNVerActividades.Click += new System.EventHandler(this.BTNVerActividades_Click);
             // 
             // panelParaUsuarios
             // 
@@ -218,18 +231,6 @@ namespace Presentacion
             this.btLogin.Text = "LOGIN";
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
-            // 
-            // BTNVerActividades
-            // 
-            this.BTNVerActividades.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.BTNVerActividades.ForeColor = System.Drawing.Color.Black;
-            this.BTNVerActividades.Location = new System.Drawing.Point(346, 361);
-            this.BTNVerActividades.Name = "BTNVerActividades";
-            this.BTNVerActividades.Size = new System.Drawing.Size(164, 30);
-            this.BTNVerActividades.TabIndex = 8;
-            this.BTNVerActividades.Text = "ACTIVIDADES";
-            this.BTNVerActividades.UseVisualStyleBackColor = true;
-            this.BTNVerActividades.Visible = false;
             // 
             // Landing
             // 

@@ -25,5 +25,19 @@ namespace Datos.Repositorys
                 return false;
             }
         }
+
+        public List<Usuario_Actividad> listadoActividadesUsuario(string DNI)
+        {
+            List<Usuario_Actividad> actividades;
+
+            using (var contexto = new equipobEntities())
+            {
+                actividades = contexto.Usuario_Actividad
+                                       .Where(usuarioActividad => usuarioActividad.DNI == DNI)
+                                       .ToList();
+            }
+
+            return actividades;
+        }
     }
 }

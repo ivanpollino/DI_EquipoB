@@ -101,6 +101,24 @@
     <Compile Include="ComponentesPersonalizados\ActividadUsuario.Designer.cs">
       <DependentUpon>ActividadUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentesPersonalizados\BotonSwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentesPersonalizados\BotonSwitch.Designer.cs">
+      <DependentUpon>BotonSwitch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Actividades.Designer.cs">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ActividadesApuntado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ActividadesApuntado.Designer.cs">
+      <DependentUpon>ActividadesApuntado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Administracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +174,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentesPersonalizados\ActividadUsuario.resx">
       <DependentUpon>ActividadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentesPersonalizados\BotonSwitch.resx">
+      <DependentUpon>BotonSwitch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Actividades.resx">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ActividadesApuntado.resx">
+      <DependentUpon>ActividadesApuntado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>

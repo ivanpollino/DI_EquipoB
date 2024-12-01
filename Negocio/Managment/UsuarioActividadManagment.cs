@@ -26,5 +26,22 @@ namespace Negocio.Managment
 
         }
 
+        public List<UsuarioActividadDTO> ObtenerActividadesApuntado(String DNI)
+        {
+            List<Usuario_Actividad> usuario_actividades = new UsuarioActividadRepository().listadoActividadesUsuario(DNI);
+            List<UsuarioActividadDTO> listaDTO = new List<UsuarioActividadDTO>();
+            foreach (Usuario_Actividad usuario_Actividad in usuario_actividades)
+            {
+                UsuarioActividadDTO aux = new UsuarioActividadDTO();
+                aux.Id_Actividad = usuario_Actividad.Id_Actividad;
+                aux.DNI = usuario_Actividad.DNI;
+                aux.Valoracion = usuario_Actividad.Valoracion;
+
+                listaDTO.Add(aux);
+            }
+            return listaDTO;
+        }
+
+
     }
 }

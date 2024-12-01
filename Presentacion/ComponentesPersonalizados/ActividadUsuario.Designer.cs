@@ -41,7 +41,7 @@
             this.LBLIndicadorNombreActividad.AutoSize = true;
             this.LBLIndicadorNombreActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLIndicadorNombreActividad.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLIndicadorNombreActividad.Location = new System.Drawing.Point(16, 17);
+            this.LBLIndicadorNombreActividad.Location = new System.Drawing.Point(16, 16);
             this.LBLIndicadorNombreActividad.Name = "LBLIndicadorNombreActividad";
             this.LBLIndicadorNombreActividad.Size = new System.Drawing.Size(110, 13);
             this.LBLIndicadorNombreActividad.TabIndex = 2;
@@ -86,7 +86,8 @@
             this.panelContenedorInfo.Controls.Add(this.LBLDondeVaNombreActividad);
             this.panelContenedorInfo.Controls.Add(this.LBLIndicadorNombreMonitor);
             this.panelContenedorInfo.Controls.Add(this.LBLDonveVaNombreMonitor);
-            this.panelContenedorInfo.Location = new System.Drawing.Point(3, 3);
+            this.panelContenedorInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedorInfo.Location = new System.Drawing.Point(0, 0);
             this.panelContenedorInfo.Name = "panelContenedorInfo";
             this.panelContenedorInfo.Size = new System.Drawing.Size(150, 150);
             this.panelContenedorInfo.TabIndex = 6;
@@ -99,6 +100,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.Controls.Add(this.panelContenedorInfo);
             this.Name = "ActividadUsuario";
+            this.Load += new System.EventHandler(this.ActividadUsuario_Load);
             this.panelContenedorInfo.ResumeLayout(false);
             this.panelContenedorInfo.PerformLayout();
             this.ResumeLayout(false);

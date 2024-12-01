@@ -1,4 +1,5 @@
 ﻿using Negocio.EntitiesDTO;
+using Presentacion.Formularios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -233,6 +234,7 @@ namespace Presentacion
             lbTexto1.Location = new Point((panelWidth - lbTexto1.Width) / 2, (panelHeight - lbTexto1.Height) / 2 - 100);
             lbTexto2.Location = new Point((panelWidth - lbTexto2.Width) / 2, lbTexto1.Location.Y + lbTexto1.Height + 10);
             btLogin.Location = new Point((panelWidth - btLogin.Width) / 2, lbTexto2.Location.Y + lbTexto2.Height + 30);
+            BTNVerActividades.Location = new Point((panelWidth - btLogin.Width) / 2, lbTexto2.Location.Y + lbTexto2.Height + 50);
             btRegistro.Location = new Point((panelWidth - btRegistro.Width) / 2, btLogin.Location.Y + btLogin.Height + 10);
         }
 
@@ -260,6 +262,12 @@ namespace Presentacion
         private void BTNCerrarSesionUsuario_Click(object sender, EventArgs e)
         {
             cerrarSesion();
+        }
+
+        private void BTNVerActividades_Click(object sender, EventArgs e)
+        {
+            Actividades actividadesForm = new Actividades(usuario);
+            actividadesForm.ShowDialog();
         }
     }
 }

@@ -17,5 +17,10 @@ namespace Negocio.EntitiesDTO
             this.Id_Actividad = id_actividad;
             Valoracion = null;
         }
+
+        public UsuarioActividadDTO() { 
+        
+        
+        }
     }
 }
