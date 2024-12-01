@@ -12,6 +12,10 @@ using System.Windows.Forms;
 
 namespace Presentacion.Formularios
 {
+    /// <summary>
+    /// Representa el formulario que muestra las actividades a las que el usuario está apuntado.
+    /// Esta clase gestiona la visualización y carga de actividades en función del estado del usuario.
+    /// </summary>
     public partial class ActividadesApuntado : Form
     {
 
@@ -22,6 +26,10 @@ namespace Presentacion.Formularios
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Obtiene el formulario padre que contiene el formulario actual.
+        /// Busca en la jerarquía de contenedores hasta encontrar un formulario principal.
+        /// </summary>
         public void ObtenerFormularioPadre()
         {
             Control contenedor = this.Parent;
@@ -40,6 +48,11 @@ namespace Presentacion.Formularios
             }
         }
 
+        /// <summary>
+        /// Carga las actividades desde el formulario padre y las muestra en el formulario actual.
+        /// Verifica que el formulario padre sea de tipo <c>Actividades</c>.
+        /// </summary>
+        /// <param name="formPadre">Formulario padre que se pasa para cargar las actividades.</param>
         public void cargarActividades(Form formPadre)
         {
             if (formPadre is Actividades formularioActividades)
@@ -52,9 +65,13 @@ namespace Presentacion.Formularios
             }
         }
 
+        /// <summary>
+        /// Muestra una barra de carga mientras se cargan las actividades.
+        /// La barra de carga se muestra en un formulario independiente y se actualiza hasta completarse.
+        /// </summary>
+        /// <param name="callback">La acción que se ejecutará una vez se complete el proceso de carga.</param>
         private void MostrarBarraDeCarga(Action callback)
         {
-            // Crear un nuevo formulario para la barra de carga
             Form barraDeCargaForm = new Form
             {
                 Size = new Size(300, 100),
@@ -74,25 +91,25 @@ namespace Presentacion.Formularios
 
             Timer timer = new Timer
             {
-                Interval = 50 // Cada 50ms incrementa el progreso
+                Interval = 10
             };
 
             int progreso = 0;
             timer.Tick += (s, e) =>
             {
-                progreso += 1; // Incrementa el progreso
+                progreso += 1;
                 progressBar.Value = progreso;
 
-                if (progreso >= progressBar.Maximum) // Cuando llega al máximo
+                if (progreso >= progressBar.Maximum)
                 {
                     timer.Stop();
-                    barraDeCargaForm.Close(); // Cierra la barra de carga
-                    callback.Invoke(); // Ejecuta el método después de la carga
+                    barraDeCargaForm.Close();
+                    callback.Invoke();
                 }
             };
 
-            barraDeCargaForm.Load += (s, e) => timer.Start(); // Inicia el temporizador al cargar el formulario
-            barraDeCargaForm.ShowDialog(); // Muestra la barra de carga
+            barraDeCargaForm.Load += (s, e) => timer.Start();
+            barraDeCargaForm.ShowDialog(); 
         }
 
     }

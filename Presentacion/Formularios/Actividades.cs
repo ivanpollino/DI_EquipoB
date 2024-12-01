@@ -14,12 +14,21 @@ using System.Windows.Forms;
 
 namespace Presentacion.Formularios
 {
+    /// <summary>
+    /// Representa el formulario principal que gestiona y muestra las actividades
+    /// en las que un usuario puede participar. Permite visualizar tanto las actividades
+    /// disponibles como aquellas en las que el usuario está apuntado.
+    /// </summary>
     public partial class Actividades : Form
     {
-        //private FormularioTodasActividades formTodasActividades;//Cambiar por nombre del formulario
-        private ActividadesApuntado formTusActividades;//Cambiar por nombre del formulario
+        private ActividadesApuntado formTusActividades;
         private UsuarioDTO usuario;
 
+        /// <summary>
+        /// Constructor de la clase <c>Actividades</c>.
+        /// Inicializa el formulario y carga las actividades disponibles.
+        /// </summary>
+        /// <param name="usuario">El objeto <c>UsuarioDTO</c> que representa al usuario actual.</param>
         public Actividades(UsuarioDTO usuario)
         {
             this.usuario = usuario;
@@ -57,6 +66,10 @@ namespace Presentacion.Formularios
             }
         }
 
+        /// <summary>
+        /// Carga las actividades en las que el usuario está apuntado y las muestra en el formulario.
+        /// </summary>
+        /// <param name="formulario">El formulario <c>ActividadesApuntado</c> en el que se cargarán las actividades.</param>
         private void cargarActividadesApuntado(ActividadesApuntado fomrulario)
         {
             formTusActividades.contenedorActividades.Controls.Clear();
@@ -81,6 +94,11 @@ namespace Presentacion.Formularios
             formTusActividades.sePuedeApuntar = false;
         }
 
+        /// <summary>
+        /// Carga las actividades disponibles a las que el usuario puede apuntarse
+        /// y las muestra en el formulario.
+        /// </summary>
+        /// <param name="formulario">El formulario <c>ActividadesApuntado</c> en el que se cargarán las actividades disponibles.</param>
         public void cargarActividadesDisponibles(ActividadesApuntado fomrulario)
         {
             formTusActividades.contenedorActividades.Controls.Clear();
@@ -126,6 +144,11 @@ namespace Presentacion.Formularios
             formTusActividades.sePuedeApuntar = true;
         }
 
+        /// <summary>
+        /// Carga y muestra las actividades basadas en el estado del botón de alternancia (Switch).
+        /// Si el botón está activado, muestra las actividades disponibles; de lo contrario,
+        /// muestra las actividades en las que el usuario está apuntado.
+        /// </summary>
         public void cargarActividades()
         {
             formTusActividades.contenedorActividades.Controls.Clear();

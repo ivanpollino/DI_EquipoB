@@ -12,6 +12,10 @@ using System.Windows.Forms;
 
 namespace Presentacion.ComponentesPersonalizados
 {
+    /// <summary>
+    /// Representa un control de usuario personalizado que muestra la información de una actividad
+    /// y permite ver más detalles de la actividad al hacer clic en el panel de información.
+    /// </summary>
     public partial class ActividadUsuario : UserControl
     {
         public ActividadDTO actividadDto;
@@ -28,6 +32,12 @@ namespace Presentacion.ComponentesPersonalizados
             }
         }
 
+        /// <summary>
+        /// Evento que se dispara cuando se hace clic en el panel de información de la actividad.
+        /// Abre un formulario para mostrar la información detallada de la actividad.
+        /// </summary>
+        /// <param name="sender">El objeto que dispara el evento.</param>
+        /// <param name="e">Los argumentos del evento <c>EventArgs</c>.</param>
         private void panelContenedorInfo_Click(object sender, EventArgs e)
         {
             ActividadesApuntado formularioPadre = (ActividadesApuntado)FindForm();
@@ -39,7 +49,10 @@ namespace Presentacion.ComponentesPersonalizados
 
         }
 
-
+        /// <summary>
+        /// Centra los elementos dentro del contenedor de información en el control.
+        /// Ajusta las posiciones de las etiquetas para que estén distribuidas de manera equilibrada.
+        /// </summary>
         private void CenterElements()
         {
             int panelWidth = panelContenedorInfo.ClientSize.Width;
