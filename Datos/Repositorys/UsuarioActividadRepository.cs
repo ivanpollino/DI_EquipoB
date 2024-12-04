@@ -51,5 +51,23 @@ namespace Datos.Repositorys
 
             return actividades;
         }
+
+        public bool EliminarActividadUsuario(Usuario_Actividad usuarioActividad)
+        {
+            try
+            {
+                using (var context = new equipobEntities())
+                {
+                    context.Usuario_Actividad.Attach(usuarioActividad);
+                    context.Usuario_Actividad.Remove(usuarioActividad);
+                    context.SaveChanges();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

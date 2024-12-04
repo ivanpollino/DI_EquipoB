@@ -55,6 +55,19 @@ namespace Negocio.Managment
             return listaDTO;
         }
 
+        public bool EliminarActividadUsuario(UsuarioActividadDTO usuarioActividad)
+        {
+            UsuarioActividadRepository actividadRepository = new UsuarioActividadRepository();
+            Usuario_Actividad actividad = new Usuario_Actividad
+            {
+                DNI = usuarioActividad.DNI,
+                Id_Actividad = usuarioActividad.Id_Actividad,
+                Valoracion = usuarioActividad.Valoracion
+            };
+
+            return actividadRepository.EliminarActividadUsuario(actividad);
+        }
+
 
     }
 }

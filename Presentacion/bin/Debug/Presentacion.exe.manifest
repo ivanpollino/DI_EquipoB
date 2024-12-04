@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VMntc5bU70aZlbXg1eRPVm49dDRklhe6yThLtCNzuEg=</dsig:DigestValue>
+        <dsig:DigestValue>WNnCs7dMU1HMAl15xMPend8WFrXQMrbnLv5rsimGa1I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,19 +86,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>H1s816jznAgs1BDGvsf97NqCxxoK+7rE+VSjKrdWh1Y=</dsig:DigestValue>
+        <dsig:DigestValue>+n+/XAH6Ax3RK4WKl1ivebTuB5b6o2NtykrXCn6jJdQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="2704856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="2706392">
       <assemblyIdentity name="Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>C9fHARzzMEmZCAa15/Rk2/eh3vkGEvMbs+ALnFBUzMc=</dsig:DigestValue>
+        <dsig:DigestValue>VnKjyzQ38Bh+ISMgSXbTY0QoCDJ3YWSPYy3tTxG1tdo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -48,10 +48,13 @@ namespace Presentacion.Formularios
 
 
         }
-
         private void lbActividades_Paint(object sender, PaintEventArgs e)
         {
-            string texto = "ACTIVIDADES";
+
+            // Asegúrate de que el texto no esté vacío
+            string texto = lbActividades.Text;
+            if (string.IsNullOrEmpty(texto)) return;
+
             Font fuente = lbActividades.Font;
             Color colorBorde = Color.DarkCyan;
             int grosorBorde = 3;
@@ -66,12 +69,29 @@ namespace Presentacion.Formularios
             }
         }
 
+        private void CenterLabel(Label label)
+        {
+            // Obtenemos el tamaño del contenedor donde está el Label
+            int containerWidth = label.Parent.ClientSize.Width;
+            int containerHeight = label.Parent.ClientSize.Height;
+
+            // Calculamos la nueva posición centrada
+            int x = (containerWidth - label.Width) / 2;
+            int y = (containerHeight - label.Height) / 2;
+
+            // Asignamos la nueva posición
+            label.Location = new Point(x, y);
+        }
+
         /// <summary>
         /// Carga las actividades en las que el usuario está apuntado y las muestra en el formulario.
         /// </summary>
         /// <param name="formulario">El formulario <c>ActividadesApuntado</c> en el que se cargarán las actividades.</param>
-        private void cargarActividadesApuntado(ActividadesApuntado fomrulario)
+        public void cargarActividadesApuntado(ActividadesApuntado fomrulario)
         {
+            lbActividades.Text = "MIS ACTIVIDADES";
+            lbActividades.Invalidate();
+            CenterLabel(lbActividades);
             formTusActividades.contenedorActividades.Controls.Clear();
             String nombreMonitor;
             List<ActividadDTO> listaTodasActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
@@ -101,6 +121,9 @@ namespace Presentacion.Formularios
         /// <param name="formulario">El formulario <c>ActividadesApuntado</c> en el que se cargarán las actividades disponibles.</param>
         public void cargarActividadesDisponibles(ActividadesApuntado fomrulario)
         {
+            lbActividades.Text = "ACTIVIDADES DISPONIBLES";
+            lbActividades.Invalidate();
+            CenterLabel(lbActividades);
             formTusActividades.contenedorActividades.Controls.Clear();
             String nombreMonitor;
             List<ActividadDTO> listaTodasActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();

@@ -44,7 +44,7 @@ namespace Presentacion.Formularios
             this.lbActividades.Size = new System.Drawing.Size(401, 72);
             this.lbActividades.TabIndex = 0;
             this.lbActividades.Text = "ACTIVIDADES";
-            this.lbActividades.Paint += new System.Windows.Forms.PaintEventHandler(this.lbActividades_Paint);
+            this.lbActividades.Paint += lbActividades_Paint;
             // 
             // panelFormularios
             // 
@@ -68,8 +68,8 @@ namespace Presentacion.Formularios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1184, 611);
-            this.Controls.Add(this.botonSwitch1);
             this.Controls.Add(this.panelFormularios);
+            this.Controls.Add(this.botonSwitch1);
             this.Controls.Add(this.lbActividades);
             this.MaximumSize = new System.Drawing.Size(1200, 650);
             this.MinimumSize = new System.Drawing.Size(1200, 650);

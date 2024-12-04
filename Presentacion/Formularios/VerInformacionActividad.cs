@@ -27,6 +27,7 @@ namespace Presentacion.Formularios
         {
             InitializeComponent();
             ConfigurarBotones(BTNApuntarseActividad);
+            ConfigurarBotones(BTNDarseDeBajaActividad);
             this.usuario = usuario;
             this.actividadAux = actividadAux;
             this.nombreMonitor = nombreMonitor;
@@ -40,10 +41,12 @@ namespace Presentacion.Formularios
             if (_formPadre.sePuedeApuntar)
             {
                 BTNApuntarseActividad.Visible = true;
+                BTNDarseDeBajaActividad.Visible = false;
             }
             else
             {
                 BTNApuntarseActividad.Visible = false;
+                BTNDarseDeBajaActividad.Visible = true;
             }
         }
 
@@ -122,6 +125,33 @@ namespace Presentacion.Formularios
 
             // Posicionamos el botón con más separación
             BTNApuntarseActividad.Location = new Point((panelWidth - BTNApuntarseActividad.Width) / 2, LBLDondeVaElNombreMonitor.Bottom + buttonSpacing);
+        }
+
+        private void BTNDarseDeBajaActividad_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que quieres desapuntarte de esta actividad?",
+                                         "Confirmar Desapuntarse",
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                
+                UsuarioActividadDTO usuarioActividad = new UsuarioActividadDTO(usuario.DNI, actividadAux.Id_Actividad);
+                bool insercion = new Negocio.Managment.UsuarioActividadManagment().EliminarActividadUsuario(usuarioActividad);
+
+                if (insercion)
+                {
+                    MessageBox.Show("¡Te has desapuntado de la actividad con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _formPadre.ObtenerFormularioPadre();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrió un error al intentar desapuntarte de la actividad. Por favor, inténtalo de nuevo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
         }
     }
 }

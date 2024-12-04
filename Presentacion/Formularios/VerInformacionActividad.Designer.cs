@@ -39,12 +39,14 @@ namespace Presentacion.Formularios
             this.LBLNombreMonitor = new System.Windows.Forms.Label();
             this.LBLDondeVaElNombreMonitor = new System.Windows.Forms.Label();
             this.BTNApuntarseActividad = new System.Windows.Forms.Button();
+            this.BTNDarseDeBajaActividad = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.panelContenedor.Controls.Add(this.BTNDarseDeBajaActividad);
             this.panelContenedor.Controls.Add(this.LBLNombreActvidad);
             this.panelContenedor.Controls.Add(this.LBLDondeVaNombreActividad);
             this.panelContenedor.Controls.Add(this.LBLDescripcionActividad);
@@ -133,6 +135,16 @@ namespace Presentacion.Formularios
             this.BTNApuntarseActividad.Text = "Apuntarse";
             this.BTNApuntarseActividad.Click += new System.EventHandler(this.BTNApuntarseActividad_Click);
             // 
+            // BTNDarseDeBajaActividad
+            // 
+            this.BTNDarseDeBajaActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTNDarseDeBajaActividad.Location = new System.Drawing.Point(88, 323);
+            this.BTNDarseDeBajaActividad.Name = "BTNDarseDeBajaActividad";
+            this.BTNDarseDeBajaActividad.Size = new System.Drawing.Size(143, 50);
+            this.BTNDarseDeBajaActividad.TabIndex = 7;
+            this.BTNDarseDeBajaActividad.Text = "Desapuntarte";
+            this.BTNDarseDeBajaActividad.Click += new System.EventHandler(this.BTNDarseDeBajaActividad_Click);
+            // 
             // VerInformacionActividad
             // 
             this.ClientSize = new System.Drawing.Size(315, 423);
@@ -159,5 +171,6 @@ namespace Presentacion.Formularios
         private System.Windows.Forms.Label LBLNombreMonitor;
         private System.Windows.Forms.Label LBLDondeVaElNombreMonitor;
         private System.Windows.Forms.Button BTNApuntarseActividad;
+        private Button BTNDarseDeBajaActividad;
     }
 }
