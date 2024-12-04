@@ -31,7 +31,7 @@ namespace Presentacion.Formularios
         {
             this.lbActividades = new System.Windows.Forms.Label();
             this.panelFormularios = new System.Windows.Forms.Panel();
-            this.chbTusActividades = new System.Windows.Forms.CheckBox();
+            this.botonSwitch1 = new Presentacion.ComponentesPersonalizados.BotonSwitch();
             this.SuspendLayout();
             // 
             // lbActividades
@@ -53,18 +53,14 @@ namespace Presentacion.Formularios
             this.panelFormularios.Name = "panelFormularios";
             this.panelFormularios.Size = new System.Drawing.Size(1183, 442);
             this.panelFormularios.TabIndex = 2;
-            this.panelFormularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panelFormularios_Paint);
             // 
-            // chbTusActividades
+            // botonSwitch1
             // 
-            this.chbTusActividades.AutoSize = true;
-            this.chbTusActividades.Location = new System.Drawing.Point(660, 103);
-            this.chbTusActividades.Name = "chbTusActividades";
-            this.chbTusActividades.Size = new System.Drawing.Size(117, 17);
-            this.chbTusActividades.TabIndex = 3;
-            this.chbTusActividades.Text = "Ver tus Actividades";
-            this.chbTusActividades.UseVisualStyleBackColor = true;
-            this.chbTusActividades.CheckedChanged += new System.EventHandler(this.chbTusActividades_CheckedChanged);
+            this.botonSwitch1.formPadre = null;
+            this.botonSwitch1.Location = new System.Drawing.Point(437, 97);
+            this.botonSwitch1.Name = "botonSwitch1";
+            this.botonSwitch1.Size = new System.Drawing.Size(280, 72);
+            this.botonSwitch1.TabIndex = 4;
             // 
             // Actividades
             // 
@@ -72,13 +68,13 @@ namespace Presentacion.Formularios
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1184, 611);
+            this.Controls.Add(this.botonSwitch1);
             this.Controls.Add(this.panelFormularios);
-            this.Controls.Add(this.chbTusActividades);
             this.Controls.Add(this.lbActividades);
             this.MaximumSize = new System.Drawing.Size(1200, 650);
             this.MinimumSize = new System.Drawing.Size(1200, 650);
             this.Name = "Actividades";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Actividades";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -89,6 +85,6 @@ namespace Presentacion.Formularios
 
         private System.Windows.Forms.Label lbActividades;
         private System.Windows.Forms.Panel panelFormularios;
-        private System.Windows.Forms.CheckBox chbTusActividades;
+        private ComponentesPersonalizados.BotonSwitch botonSwitch1;
     }
 }

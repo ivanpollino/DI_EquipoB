@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.contenedorActividades = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // contenedorActividades
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(801, 452);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.contenedorActividades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.contenedorActividades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedorActividades.Location = new System.Drawing.Point(0, 0);
+            this.contenedorActividades.Name = "contenedorActividades";
+            this.contenedorActividades.Size = new System.Drawing.Size(1183, 442);
+            this.contenedorActividades.TabIndex = 0;
             // 
-            // ActividadesDisponibles
+            // ActividadesApuntado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1183, 442);
+            this.Controls.Add(this.contenedorActividades);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ActividadesDisponibles";
+            this.Name = "ActividadesApuntado";
             this.Text = "ActividadesDisponibles";
             this.ResumeLayout(false);
 
@@ -54,6 +55,6 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public System.Windows.Forms.FlowLayoutPanel contenedorActividades;
     }
 }
