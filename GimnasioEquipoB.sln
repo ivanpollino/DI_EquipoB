@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "Presentacio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasUnitarias", "PruebasUnitarias\PruebasUnitarias.csproj", "{85CA7379-B99C-42F2-8B2A-E75EC6327F77}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador", "Instalador\Instalador.vdproj", "{B07D10AD-98ED-42C5-834F-41441C558006}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador", "Instalador\Instalador.vdproj", "{4918EBDD-C6A3-46EF-9649-D8633FCFF28C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,8 @@ Global
 		{85CA7379-B99C-42F2-8B2A-E75EC6327F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85CA7379-B99C-42F2-8B2A-E75EC6327F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85CA7379-B99C-42F2-8B2A-E75EC6327F77}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B07D10AD-98ED-42C5-834F-41441C558006}.Debug|Any CPU.ActiveCfg = Debug
-		{B07D10AD-98ED-42C5-834F-41441C558006}.Debug|Any CPU.Build.0 = Debug
-		{B07D10AD-98ED-42C5-834F-41441C558006}.Release|Any CPU.ActiveCfg = Release
-		{B07D10AD-98ED-42C5-834F-41441C558006}.Release|Any CPU.Build.0 = Release
+		{4918EBDD-C6A3-46EF-9649-D8633FCFF28C}.Debug|Any CPU.ActiveCfg = Debug
+		{4918EBDD-C6A3-46EF-9649-D8633FCFF28C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

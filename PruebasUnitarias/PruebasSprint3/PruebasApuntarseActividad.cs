@@ -14,7 +14,7 @@ namespace PruebasUnitarias.PruebasSprint3
         [TestMethod]
         public void comprobarApuntarseActividadCorrecto()
         {
-            UsuarioActividadDTO usuarioActividadDTO = new UsuarioActividadDTO("98939393C",2);
+            UsuarioActividadDTO usuarioActividadDTO = new UsuarioActividadDTO("28079239C", 2);
             bool resultado = new Negocio.Managment.UsuarioActividadManagment().RegistrarUsuarioActividad(usuarioActividadDTO);
             Assert.IsTrue(resultado);
         }
@@ -22,7 +22,7 @@ namespace PruebasUnitarias.PruebasSprint3
         [TestMethod]
         public void comprobarApuntarseActividadIncorrecto()
         {
-            UsuarioActividadDTO usuarioActividadDTO = new UsuarioActividadDTO("98939393C", 2);
+            UsuarioActividadDTO usuarioActividadDTO = new UsuarioActividadDTO("28079239C", 2);
             bool resultado = new Negocio.Managment.UsuarioActividadManagment().RegistrarUsuarioActividad(usuarioActividadDTO);
             Assert.IsFalse(resultado);
         }
@@ -30,7 +30,7 @@ namespace PruebasUnitarias.PruebasSprint3
         [TestMethod]
         public void comprobarApuntarseActividadIncorrectoActividadNoExiste()
         {
-            UsuarioActividadDTO usuarioActividadDTO = new UsuarioActividadDTO("98939393C", 100);
+            UsuarioActividadDTO usuarioActividadDTO = new UsuarioActividadDTO("28079239C", 100);
             bool resultado = new Negocio.Managment.UsuarioActividadManagment().RegistrarUsuarioActividad(usuarioActividadDTO);
             Assert.IsFalse(resultado);
         }
