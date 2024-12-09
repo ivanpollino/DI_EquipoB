@@ -33,7 +33,6 @@
             this.LBLIndicadorNombreMonitor = new System.Windows.Forms.Label();
             this.LBLDonveVaNombreMonitor = new System.Windows.Forms.Label();
             this.panelContenedorInfo = new System.Windows.Forms.Panel();
-            this.lbValoracion = new System.Windows.Forms.Label();
             this.panelContenedorInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +83,6 @@
             // 
             // panelContenedorInfo
             // 
-            this.panelContenedorInfo.Controls.Add(this.lbValoracion);
             this.panelContenedorInfo.Controls.Add(this.LBLIndicadorNombreActividad);
             this.panelContenedorInfo.Controls.Add(this.LBLDondeVaNombreActividad);
             this.panelContenedorInfo.Controls.Add(this.LBLIndicadorNombreMonitor);
@@ -95,17 +93,6 @@
             this.panelContenedorInfo.Size = new System.Drawing.Size(150, 150);
             this.panelContenedorInfo.TabIndex = 6;
             this.panelContenedorInfo.Click += new System.EventHandler(this.panelContenedorInfo_Click);
-            // 
-            // lbValoracion
-            // 
-            this.lbValoracion.AutoSize = true;
-            this.lbValoracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbValoracion.ForeColor = System.Drawing.Color.DarkCyan;
-            this.lbValoracion.Location = new System.Drawing.Point(33, 98);
-            this.lbValoracion.Name = "lbValoracion";
-            this.lbValoracion.Size = new System.Drawing.Size(67, 13);
-            this.lbValoracion.TabIndex = 6;
-            this.lbValoracion.Text = "Valoración";
             // 
             // ActividadUsuario
             // 
@@ -128,6 +115,5 @@
         public System.Windows.Forms.Label LBLIndicadorNombreMonitor;
         public System.Windows.Forms.Label LBLDonveVaNombreMonitor;
         private System.Windows.Forms.Panel panelContenedorInfo;
-        public System.Windows.Forms.Label lbValoracion;
     }
 }

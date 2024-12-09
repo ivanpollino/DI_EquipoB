@@ -44,7 +44,6 @@ namespace Presentacion
             this.btRegistro = new System.Windows.Forms.Button();
             this.lbInfoUsuario = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
-            this.estrellasValoracion1 = new Presentacion.ComponentesPersonalizados.EstrellasValoracion();
             this.panel1.SuspendLayout();
             this.panelParaUsuarios.SuspendLayout();
             this.panelAdministrador.SuspendLayout();
@@ -55,7 +54,6 @@ namespace Presentacion
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.estrellasValoracion1);
             this.panel1.Controls.Add(this.BTNVerActividades);
             this.panel1.Controls.Add(this.panelParaUsuarios);
             this.panel1.Controls.Add(this.panelAdministrador);
@@ -234,14 +232,6 @@ namespace Presentacion
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
-            // estrellasValoracion1
-            // 
-            this.estrellasValoracion1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.estrellasValoracion1.Location = new System.Drawing.Point(206, 226);
-            this.estrellasValoracion1.Name = "estrellasValoracion1";
-            this.estrellasValoracion1.Size = new System.Drawing.Size(212, 89);
-            this.estrellasValoracion1.TabIndex = 9;
-            // 
             // Landing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,6 +267,5 @@ namespace Presentacion
         private Button BTNCerrarSesionUsuario;
         private Panel panelParaUsuarios;
         private Button BTNVerActividades;
-        private ComponentesPersonalizados.EstrellasValoracion estrellasValoracion1;
     }
 }
