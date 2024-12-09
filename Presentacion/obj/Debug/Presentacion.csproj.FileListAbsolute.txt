@@ -109,3 +109,4 @@ C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentac
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe.manifest
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.application
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.EstrellasValoracion.resources

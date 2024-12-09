@@ -184,6 +184,9 @@
     <EmbeddedResource Include="ComponentesPersonalizados\BotonSwitch.resx">
       <DependentUpon>BotonSwitch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ComponentesPersonalizados\EstrellasValoracion.resx">
+      <DependentUpon>EstrellasValoracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Actividades.resx">
       <DependentUpon>Actividades.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +292,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logofinal.ico" />
+    <None Include="Resources\estrella_vacia.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
