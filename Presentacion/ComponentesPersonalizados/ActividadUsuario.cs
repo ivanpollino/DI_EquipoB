@@ -77,5 +77,10 @@ namespace Presentacion.ComponentesPersonalizados
         {
             CenterElements();
         }
+
+        private void LBLIndicadorNombreActividad_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
