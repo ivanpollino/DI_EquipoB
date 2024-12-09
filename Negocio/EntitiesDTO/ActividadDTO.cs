@@ -14,6 +14,8 @@ namespace Negocio.EntitiesDTO
         public string Descripcion { get; set; }
         public string DNI_Monitor { get; set; }
 
+        public byte MediaValoracion { get; set; }
+
         public ActividadDTO()
         {
         }
@@ -24,6 +26,7 @@ namespace Negocio.EntitiesDTO
             Nombre = nombre;
             Descripcion = descripcion;
             DNI_Monitor = dniMonitor;
+            MediaValoracion = 1;
         }
 
     }

@@ -24,6 +24,7 @@ namespace Negocio.Managment
             actividad.Nombre = actividadDTO.Nombre;
             actividad.Descripcion = actividadDTO.Descripcion;
             actividad.DNI_Monitor = actividadDTO.DNI_Monitor;
+            actividad.Media_Valoracion = actividadDTO.MediaValoracion;
 
             return new Datos.Repositorys.ActividadRepository().bajaActividad(actividad);
 
@@ -43,6 +44,7 @@ namespace Negocio.Managment
                 aux.Nombre = actividadNormal.Nombre;
                 aux.Descripcion = actividadNormal.Descripcion;
                 aux.DNI_Monitor = actividadNormal.DNI_Monitor;
+                aux.MediaValoracion = (byte)actividadNormal.Media_Valoracion;
 
                 listaDTO.Add(aux);
             }
@@ -63,7 +65,8 @@ namespace Negocio.Managment
                 Id_Actividad = nuevoId,
                 Nombre = nuevaActividad.Nombre,
                 Descripcion = nuevaActividad.Descripcion,
-                DNI_Monitor = nuevaActividad.DNI_Monitor
+                DNI_Monitor = nuevaActividad.DNI_Monitor,
+                Media_Valoracion = nuevaActividad.MediaValoracion
             };
             return actividadRepository.GuardarActividad(actividad);
         }

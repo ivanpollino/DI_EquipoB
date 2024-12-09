@@ -10,6 +10,7 @@
     <Property Name="DNI_Monitor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Usuario_Actividad" Relationship="Self.FK_Actividad_Usuario" FromRole="Actividad" ToRole="Usuario_Actividad" />
     <NavigationProperty Name="Monitor" Relationship="Self.FK_Monitor_Actividad" FromRole="Actividad" ToRole="Monitor" />
+    <Property Name="Media_Valoracion" Type="Byte" />
   </EntityType>
   <EntityType Name="Administrador">
     <Key>

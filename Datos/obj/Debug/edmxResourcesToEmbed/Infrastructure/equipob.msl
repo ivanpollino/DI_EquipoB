@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Actividad">
       <EntityTypeMapping TypeName="equipobModel.Actividad">
         <MappingFragment StoreEntitySet="Actividad">
+          <ScalarProperty Name="Media_Valoracion" ColumnName="Media_Valoracion" />
           <ScalarProperty Name="Id_Actividad" ColumnName="Id_Actividad" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />

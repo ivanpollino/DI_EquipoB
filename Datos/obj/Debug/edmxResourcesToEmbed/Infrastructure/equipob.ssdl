@@ -8,6 +8,7 @@
     <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="Descripcion" Type="varchar(max)" />
     <Property Name="DNI_Monitor" Type="varchar" MaxLength="10" />
+    <Property Name="Media_Valoracion" Type="tinyint" />
   </EntityType>
   <EntityType Name="Administrador">
     <Key>

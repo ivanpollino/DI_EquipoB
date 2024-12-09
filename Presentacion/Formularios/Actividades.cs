@@ -48,40 +48,46 @@ namespace Presentacion.Formularios
 
 
         }
-        private void lbActividades_Paint(object sender, PaintEventArgs e)
+        private void lblMisActividades_Paint(object sender, PaintEventArgs e)
         {
-
-            // Asegúrate de que el texto no esté vacío
-            string texto = lbActividades.Text;
+            string texto = "MIS ACTIVIDADES";
             if (string.IsNullOrEmpty(texto)) return;
 
-            Font fuente = lbActividades.Font;
+            Font fuente = lblMisActividades.Font;
             Color colorBorde = Color.DarkCyan;
             int grosorBorde = 3;
 
             GraphicsPath rutaTexto = new GraphicsPath();
             rutaTexto.AddString(texto, fuente.FontFamily, (int)fuente.Style, e.Graphics.DpiY * fuente.Size / 72,
-                                lbActividades.ClientRectangle.Location, StringFormat.GenericDefault);
+                                new Point(0, 0), StringFormat.GenericDefault);
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             using (Pen pen = new Pen(colorBorde, grosorBorde) { LineJoin = LineJoin.Round })
             {
                 e.Graphics.DrawPath(pen, rutaTexto);
             }
+            e.Graphics.FillPath(new SolidBrush(lblMisActividades.ForeColor), rutaTexto);
         }
 
-        private void CenterLabel(Label label)
+        private void lbActividadesDisponibles_Paint(object sender, PaintEventArgs e)
         {
-            // Obtenemos el tamaño del contenedor donde está el Label
-            int containerWidth = label.Parent.ClientSize.Width;
-            int containerHeight = label.Parent.ClientSize.Height;
+            string texto = "ACTIVIDADES DISPONIBLES";
+            if (string.IsNullOrEmpty(texto)) return;
 
-            // Calculamos la nueva posición centrada
-            int x = (containerWidth - label.Width) / 2;
-            int y = (containerHeight - label.Height) / 2;
+            Font fuente = lbActividadesDisponibles.Font;
+            Color colorBorde = Color.DarkCyan;
+            int grosorBorde = 3;
 
-            // Asignamos la nueva posición
-            label.Location = new Point(x, y);
+            GraphicsPath rutaTexto = new GraphicsPath();
+            rutaTexto.AddString(texto, fuente.FontFamily, (int)fuente.Style, e.Graphics.DpiY * fuente.Size / 72,
+                                new Point(0, 0), StringFormat.GenericDefault);
+            e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+            using (Pen pen = new Pen(colorBorde, grosorBorde) { LineJoin = LineJoin.Round })
+            {
+                e.Graphics.DrawPath(pen, rutaTexto);
+            }
+            e.Graphics.FillPath(new SolidBrush(lbActividadesDisponibles.ForeColor), rutaTexto);
         }
+
 
         /// <summary>
         /// Carga las actividades en las que el usuario está apuntado y las muestra en el formulario.
@@ -89,9 +95,8 @@ namespace Presentacion.Formularios
         /// <param name="formulario">El formulario <c>ActividadesApuntado</c> en el que se cargarán las actividades.</param>
         public void cargarActividadesApuntado(ActividadesApuntado fomrulario)
         {
-            lbActividades.Text = "MIS ACTIVIDADES";
-            lbActividades.Invalidate();
-            CenterLabel(lbActividades);
+            lblMisActividades.Visible = true;
+            lbActividadesDisponibles.Visible = false;
             formTusActividades.contenedorActividades.Controls.Clear();
             String nombreMonitor;
             List<ActividadDTO> listaTodasActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
@@ -121,9 +126,8 @@ namespace Presentacion.Formularios
         /// <param name="formulario">El formulario <c>ActividadesApuntado</c> en el que se cargarán las actividades disponibles.</param>
         public void cargarActividadesDisponibles(ActividadesApuntado fomrulario)
         {
-            lbActividades.Text = "ACTIVIDADES DISPONIBLES";
-            lbActividades.Invalidate();
-            CenterLabel(lbActividades);
+            lblMisActividades.Visible = false;
+            lbActividadesDisponibles.Visible = true;
             formTusActividades.contenedorActividades.Controls.Clear();
             String nombreMonitor;
             List<ActividadDTO> listaTodasActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
