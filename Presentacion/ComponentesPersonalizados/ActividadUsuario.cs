@@ -20,7 +20,6 @@ namespace Presentacion.ComponentesPersonalizados
     {
         public ActividadDTO actividadDto;
         public UsuarioDTO usuario;
-
         public ActividadUsuario(ActividadDTO actividad, UsuarioDTO usuario)
         {
             InitializeComponent();
@@ -43,7 +42,7 @@ namespace Presentacion.ComponentesPersonalizados
             ActividadesApuntado formularioPadre = (ActividadesApuntado)FindForm();
 
 
-            VerInformacionActividad verInformacion = new VerInformacionActividad(formularioPadre, actividadDto, LBLDonveVaNombreMonitor.Text,usuario);
+            VerInformacionActividad verInformacion = new VerInformacionActividad(formularioPadre, actividadDto, LBLDonveVaNombreMonitor.Text, usuario);
 
             verInformacion.ShowDialog();
 
@@ -58,7 +57,7 @@ namespace Presentacion.ComponentesPersonalizados
             int panelWidth = panelContenedorInfo.ClientSize.Width;
             int panelHeight = panelContenedorInfo.ClientSize.Height;
 
-            int spacing = 15;
+            int spacing = 10;
 
             int totalHeight = LBLIndicadorNombreActividad.Height + LBLDondeVaNombreActividad.Height +
                               LBLIndicadorNombreMonitor.Height + LBLDonveVaNombreMonitor.Height +
@@ -71,6 +70,7 @@ namespace Presentacion.ComponentesPersonalizados
 
             LBLIndicadorNombreMonitor.Location = new Point((panelWidth - LBLIndicadorNombreMonitor.Width) / 2, LBLDondeVaNombreActividad.Bottom + spacing);
             LBLDonveVaNombreMonitor.Location = new Point((panelWidth - LBLDonveVaNombreMonitor.Width) / 2, LBLIndicadorNombreMonitor.Bottom + spacing);
+            estrellasValoracion1.Location = new Point((panelWidth - estrellasValoracion1.Width) / 2, LBLDonveVaNombreMonitor.Bottom + spacing);
         }
 
         private void ActividadUsuario_Load(object sender, EventArgs e)
@@ -79,6 +79,11 @@ namespace Presentacion.ComponentesPersonalizados
         }
 
         private void LBLIndicadorNombreActividad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void estrellasValoracion1_Load(object sender, EventArgs e)
         {
 
         }

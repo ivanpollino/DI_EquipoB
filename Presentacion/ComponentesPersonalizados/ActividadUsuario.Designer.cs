@@ -33,6 +33,7 @@
             this.LBLIndicadorNombreMonitor = new System.Windows.Forms.Label();
             this.LBLDonveVaNombreMonitor = new System.Windows.Forms.Label();
             this.panelContenedorInfo = new System.Windows.Forms.Panel();
+            this.estrellasValoracion1 = new Presentacion.ComponentesPersonalizados.EstrellasValoracion();
             this.panelContenedorInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,12 +88,21 @@
             this.panelContenedorInfo.Controls.Add(this.LBLDondeVaNombreActividad);
             this.panelContenedorInfo.Controls.Add(this.LBLIndicadorNombreMonitor);
             this.panelContenedorInfo.Controls.Add(this.LBLDonveVaNombreMonitor);
+            this.panelContenedorInfo.Controls.Add(this.estrellasValoracion1);
             this.panelContenedorInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorInfo.Location = new System.Drawing.Point(0, 0);
             this.panelContenedorInfo.Name = "panelContenedorInfo";
             this.panelContenedorInfo.Size = new System.Drawing.Size(150, 150);
             this.panelContenedorInfo.TabIndex = 6;
             this.panelContenedorInfo.Click += new System.EventHandler(this.panelContenedorInfo_Click);
+            // 
+            // estrellasValoracion1
+            // 
+            this.estrellasValoracion1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.estrellasValoracion1.Location = new System.Drawing.Point(3, 95);
+            this.estrellasValoracion1.Name = "estrellasValoracion1";
+            this.estrellasValoracion1.Size = new System.Drawing.Size(126, 39);
+            this.estrellasValoracion1.TabIndex = 6;
             // 
             // ActividadUsuario
             // 
@@ -115,5 +125,6 @@
         public System.Windows.Forms.Label LBLIndicadorNombreMonitor;
         public System.Windows.Forms.Label LBLDonveVaNombreMonitor;
         private System.Windows.Forms.Panel panelContenedorInfo;
+        private EstrellasValoracion estrellasValoracion1;
     }
 }
