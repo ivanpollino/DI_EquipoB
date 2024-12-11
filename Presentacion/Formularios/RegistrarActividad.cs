@@ -75,7 +75,9 @@ namespace Presentacion
             {
                 Nombre = nombreActividad,
                 Descripcion = descripcionActividad,
-                DNI_Monitor = dniMonitor
+                DNI_Monitor = dniMonitor,
+                MediaValoracion = 1
+                
             };
 
             ActividadManagment actividadManagment = new ActividadManagment();
