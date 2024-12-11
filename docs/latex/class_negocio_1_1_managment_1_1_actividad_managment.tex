@@ -1,0 +1,67 @@
+\doxysection{Negocio.\+Managment.\+Actividad\+Managment Class Reference}
+\hypertarget{class_negocio_1_1_managment_1_1_actividad_managment}{}\label{class_negocio_1_1_managment_1_1_actividad_managment}\index{Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{class_negocio_1_1_managment_1_1_actividad_managment_a70429f98e4593a7891714b9468a76440}{baja\+Actividad}} (\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} actividad\+DTO)
+\begin{DoxyCompactList}\small\item\em Elimina una actividad de la base de datos utilizando su DTO. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} $>$ \mbox{\hyperlink{class_negocio_1_1_managment_1_1_actividad_managment_aed1b24ad8923f92ad4b28222ed8f31be}{Obtener\+Actividades}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene todas las actividades desde la base de datos y las convierte en una lista de DTOs. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_negocio_1_1_managment_1_1_actividad_managment_a3d98352e8a6396d0e23ad9e58e6900bd}{Registrar\+Actividad}} (\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} nueva\+Actividad)
+\begin{DoxyCompactList}\small\item\em Registra una nueva actividad en la base de datos. Asocia un monitor con la actividad usando su DNI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_negocio_1_1_managment_1_1_actividad_managment_a70429f98e4593a7891714b9468a76440}\index{Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}!bajaActividad@{bajaActividad}}
+\index{bajaActividad@{bajaActividad}!Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}}
+\doxysubsubsection{\texorpdfstring{bajaActividad()}{bajaActividad()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_actividad_managment_a70429f98e4593a7891714b9468a76440} 
+String Negocio.\+Managment.\+Actividad\+Managment.\+baja\+Actividad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}}}]{actividad\+DTO}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina una actividad de la base de datos utilizando su DTO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actividad\+DTO} & El DTO que representa la actividad a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje de éxito indicando que la actividad fue eliminada.
+\end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_actividad_managment_aed1b24ad8923f92ad4b28222ed8f31be}\index{Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}!ObtenerActividades@{ObtenerActividades}}
+\index{ObtenerActividades@{ObtenerActividades}!Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}}
+\doxysubsubsection{\texorpdfstring{ObtenerActividades()}{ObtenerActividades()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_actividad_managment_aed1b24ad8923f92ad4b28222ed8f31be} 
+List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} $>$ Negocio.\+Managment.\+Actividad\+Managment.\+Obtener\+Actividades (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene todas las actividades desde la base de datos y las convierte en una lista de DTOs. 
+
+\begin{DoxyReturn}{Returns}
+Una lista de DTOs que representa todas las actividades.
+\end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_actividad_managment_a3d98352e8a6396d0e23ad9e58e6900bd}\index{Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}!RegistrarActividad@{RegistrarActividad}}
+\index{RegistrarActividad@{RegistrarActividad}!Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}}
+\doxysubsubsection{\texorpdfstring{RegistrarActividad()}{RegistrarActividad()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_actividad_managment_a3d98352e8a6396d0e23ad9e58e6900bd} 
+String Negocio.\+Managment.\+Actividad\+Managment.\+Registrar\+Actividad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}}}]{nueva\+Actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registra una nueva actividad en la base de datos. Asocia un monitor con la actividad usando su DNI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nueva\+Actividad} & El DTO que representa la nueva actividad que se desea registrar.\\
+\hline
+{\em dni\+Monitor} & El DNI del monitor que se asociará con la actividad.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Negocio/\+Managment/\mbox{\hyperlink{_actividad_managment_8cs}{Actividad\+Managment.\+cs}}\end{DoxyCompactItemize}

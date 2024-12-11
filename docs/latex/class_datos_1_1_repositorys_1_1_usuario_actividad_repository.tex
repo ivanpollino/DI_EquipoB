@@ -1,0 +1,61 @@
+\doxysection{Datos.\+Repositorys.\+Usuario\+Actividad\+Repository Class Reference}
+\hypertarget{class_datos_1_1_repositorys_1_1_usuario_actividad_repository}{}\label{class_datos_1_1_repositorys_1_1_usuario_actividad_repository}\index{Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}}
+
+
+Repositorio para gestionar las actividades asociadas a los usuarios en la base de datos.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a432dff79dbaeb22984001c4542260225}{Guardar\+Actividad}} (\mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario___actividad}{Usuario\+\_\+\+Actividad}} actividad)
+\begin{DoxyCompactList}\small\item\em Guarda una nueva actividad asociada a un usuario en la base de datos. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario___actividad}{Usuario\+\_\+\+Actividad}} $>$ \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_abb7363d2a9bf2aa21cf289baa6be7f3d}{listado\+Actividades\+Usuario}} (string DNI)
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de actividades asociadas a un usuario mediante su DNI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Repositorio para gestionar las actividades asociadas a los usuarios en la base de datos. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a432dff79dbaeb22984001c4542260225}\index{Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}!GuardarActividad@{GuardarActividad}}
+\index{GuardarActividad@{GuardarActividad}!Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}}
+\doxysubsubsection{\texorpdfstring{GuardarActividad()}{GuardarActividad()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a432dff79dbaeb22984001c4542260225} 
+bool Datos.\+Repositorys.\+Usuario\+Actividad\+Repository.\+Guardar\+Actividad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario___actividad}{Usuario\+\_\+\+Actividad}}}]{actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Guarda una nueva actividad asociada a un usuario en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em actividad} & Un objeto {\ttfamily Usuario\+\_\+\+Actividad} que representa la actividad del usuario.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve {\ttfamily true} si la actividad fue guardada correctamente, de lo contrario {\ttfamily false}.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_abb7363d2a9bf2aa21cf289baa6be7f3d}\index{Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}!listadoActividadesUsuario@{listadoActividadesUsuario}}
+\index{listadoActividadesUsuario@{listadoActividadesUsuario}!Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}}
+\doxysubsubsection{\texorpdfstring{listadoActividadesUsuario()}{listadoActividadesUsuario()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_abb7363d2a9bf2aa21cf289baa6be7f3d} 
+List$<$ \mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario___actividad}{Usuario\+\_\+\+Actividad}} $>$ Datos.\+Repositorys.\+Usuario\+Actividad\+Repository.\+listado\+Actividades\+Usuario (\begin{DoxyParamCaption}\item[{string}]{DNI}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la lista de actividades asociadas a un usuario mediante su DNI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em DNI} & El DNI del usuario para obtener las actividades asociadas.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una lista de objetos {\ttfamily Usuario\+\_\+\+Actividad} que representa las actividades del usuario.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Datos/\+Repositorys/\mbox{\hyperlink{_usuario_actividad_repository_8cs}{Usuario\+Actividad\+Repository.\+cs}}\end{DoxyCompactItemize}

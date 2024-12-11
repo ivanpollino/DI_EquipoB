@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             this.LBLTitulo = new System.Windows.Forms.Label();
-            this.TXTBRepetirContra = new System.Windows.Forms.TextBox();
-            this.LBLConfirmarContrasena = new System.Windows.Forms.Label();
             this.LBLNombre = new System.Windows.Forms.Label();
             this.TXTBNombre = new System.Windows.Forms.TextBox();
             this.LBLApellidos = new System.Windows.Forms.Label();
-            this.TXTBContrasena = new System.Windows.Forms.TextBox();
             this.TXTBApellidos = new System.Windows.Forms.TextBox();
-            this.LBLContrasena = new System.Windows.Forms.Label();
             this.LBLTelefono = new System.Windows.Forms.Label();
             this.TXTBEmail = new System.Windows.Forms.TextBox();
             this.TXTBTelefono = new System.Windows.Forms.TextBox();
@@ -46,13 +42,17 @@
             this.LBLDireccion = new System.Windows.Forms.Label();
             this.TXTBDireccion = new System.Windows.Forms.TextBox();
             this.BTNBorrarForm = new System.Windows.Forms.Button();
-            this.BTNRegistrar = new System.Windows.Forms.Button();
             this.LBLAvisoCorreo = new System.Windows.Forms.Label();
             this.LBLAvisoContrasena = new System.Windows.Forms.Label();
             this.LBLAvisoContraRepetida = new System.Windows.Forms.Label();
             this.LBLAvisoDNI = new System.Windows.Forms.Label();
+            this.BTNRegistrar = new System.Windows.Forms.Button();
             this.BTNVerContraRepe = new System.Windows.Forms.Button();
+            this.LBLConfirmarContrasena = new System.Windows.Forms.Label();
+            this.TXTBRepetirContra = new System.Windows.Forms.TextBox();
+            this.LBLContrasena = new System.Windows.Forms.Label();
             this.BTNVerContraNormal = new System.Windows.Forms.Button();
+            this.TXTBContrasena = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LBLTitulo
@@ -67,27 +67,6 @@
             this.LBLTitulo.TabIndex = 48;
             this.LBLTitulo.Text = "Registro Monitor";
             this.LBLTitulo.Click += new System.EventHandler(this.LBLTitulo_Click);
-            // 
-            // TXTBRepetirContra
-            // 
-            this.TXTBRepetirContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBRepetirContra.Location = new System.Drawing.Point(222, 286);
-            this.TXTBRepetirContra.Name = "TXTBRepetirContra";
-            this.TXTBRepetirContra.PasswordChar = '*';
-            this.TXTBRepetirContra.Size = new System.Drawing.Size(197, 20);
-            this.TXTBRepetirContra.TabIndex = 44;
-            // 
-            // LBLConfirmarContrasena
-            // 
-            this.LBLConfirmarContrasena.AutoSize = true;
-            this.LBLConfirmarContrasena.BackColor = System.Drawing.Color.Transparent;
-            this.LBLConfirmarContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLConfirmarContrasena.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLConfirmarContrasena.Location = new System.Drawing.Point(219, 262);
-            this.LBLConfirmarContrasena.Name = "LBLConfirmarContrasena";
-            this.LBLConfirmarContrasena.Size = new System.Drawing.Size(133, 17);
-            this.LBLConfirmarContrasena.TabIndex = 45;
-            this.LBLConfirmarContrasena.Text = "Repite la contraseña";
             // 
             // LBLNombre
             // 
@@ -122,16 +101,6 @@
             this.LBLApellidos.TabIndex = 30;
             this.LBLApellidos.Text = "Apellidos";
             // 
-            // TXTBContrasena
-            // 
-            this.TXTBContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TXTBContrasena.Location = new System.Drawing.Point(222, 229);
-            this.TXTBContrasena.MaxLength = 30;
-            this.TXTBContrasena.Name = "TXTBContrasena";
-            this.TXTBContrasena.PasswordChar = '*';
-            this.TXTBContrasena.Size = new System.Drawing.Size(197, 20);
-            this.TXTBContrasena.TabIndex = 43;
-            // 
             // TXTBApellidos
             // 
             this.TXTBApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,18 +109,6 @@
             this.TXTBApellidos.Name = "TXTBApellidos";
             this.TXTBApellidos.Size = new System.Drawing.Size(111, 20);
             this.TXTBApellidos.TabIndex = 31;
-            // 
-            // LBLContrasena
-            // 
-            this.LBLContrasena.AutoSize = true;
-            this.LBLContrasena.BackColor = System.Drawing.Color.Transparent;
-            this.LBLContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLContrasena.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLContrasena.Location = new System.Drawing.Point(221, 209);
-            this.LBLContrasena.Name = "LBLContrasena";
-            this.LBLContrasena.Size = new System.Drawing.Size(77, 17);
-            this.LBLContrasena.TabIndex = 42;
-            this.LBLContrasena.Text = "Contraseña";
             // 
             // LBLTelefono
             // 
@@ -250,17 +207,6 @@
             this.BTNBorrarForm.UseVisualStyleBackColor = true;
             this.BTNBorrarForm.Click += new System.EventHandler(this.BTNBorrarForm_Click_1);
             // 
-            // BTNRegistrar
-            // 
-            this.BTNRegistrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNRegistrar.Location = new System.Drawing.Point(352, 341);
-            this.BTNRegistrar.Name = "BTNRegistrar";
-            this.BTNRegistrar.Size = new System.Drawing.Size(114, 33);
-            this.BTNRegistrar.TabIndex = 50;
-            this.BTNRegistrar.Text = "Registrarse";
-            this.BTNRegistrar.UseVisualStyleBackColor = true;
-            this.BTNRegistrar.Click += new System.EventHandler(this.BTNRegistrar_Click);
-            // 
             // LBLAvisoCorreo
             // 
             this.LBLAvisoCorreo.AutoSize = true;
@@ -306,6 +252,17 @@
             this.LBLAvisoDNI.Size = new System.Drawing.Size(0, 13);
             this.LBLAvisoDNI.TabIndex = 54;
             // 
+            // BTNRegistrar
+            // 
+            this.BTNRegistrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNRegistrar.Location = new System.Drawing.Point(352, 341);
+            this.BTNRegistrar.Name = "BTNRegistrar";
+            this.BTNRegistrar.Size = new System.Drawing.Size(114, 33);
+            this.BTNRegistrar.TabIndex = 50;
+            this.BTNRegistrar.Text = "Registrarse";
+            this.BTNRegistrar.UseVisualStyleBackColor = true;
+            this.BTNRegistrar.Click += new System.EventHandler(this.BTNRegistrar_Click);
+            // 
             // BTNVerContraRepe
             // 
             this.BTNVerContraRepe.Image = global::Presentacion.Properties.Resources.contraVisible;
@@ -315,6 +272,39 @@
             this.BTNVerContraRepe.TabIndex = 47;
             this.BTNVerContraRepe.UseVisualStyleBackColor = true;
             this.BTNVerContraRepe.Click += new System.EventHandler(this.BTNVerContraRepe_Click);
+            // 
+            // LBLConfirmarContrasena
+            // 
+            this.LBLConfirmarContrasena.AutoSize = true;
+            this.LBLConfirmarContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.LBLConfirmarContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLConfirmarContrasena.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLConfirmarContrasena.Location = new System.Drawing.Point(219, 262);
+            this.LBLConfirmarContrasena.Name = "LBLConfirmarContrasena";
+            this.LBLConfirmarContrasena.Size = new System.Drawing.Size(133, 17);
+            this.LBLConfirmarContrasena.TabIndex = 45;
+            this.LBLConfirmarContrasena.Text = "Repite la contraseña";
+            // 
+            // TXTBRepetirContra
+            // 
+            this.TXTBRepetirContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXTBRepetirContra.Location = new System.Drawing.Point(222, 286);
+            this.TXTBRepetirContra.Name = "TXTBRepetirContra";
+            this.TXTBRepetirContra.PasswordChar = '*';
+            this.TXTBRepetirContra.Size = new System.Drawing.Size(197, 20);
+            this.TXTBRepetirContra.TabIndex = 44;
+            // 
+            // LBLContrasena
+            // 
+            this.LBLContrasena.AutoSize = true;
+            this.LBLContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.LBLContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLContrasena.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLContrasena.Location = new System.Drawing.Point(221, 209);
+            this.LBLContrasena.Name = "LBLContrasena";
+            this.LBLContrasena.Size = new System.Drawing.Size(77, 17);
+            this.LBLContrasena.TabIndex = 42;
+            this.LBLContrasena.Text = "Contraseña";
             // 
             // BTNVerContraNormal
             // 
@@ -326,6 +316,16 @@
             this.BTNVerContraNormal.TabIndex = 46;
             this.BTNVerContraNormal.UseVisualStyleBackColor = true;
             this.BTNVerContraNormal.Click += new System.EventHandler(this.BTNVerContraNormal_Click);
+            // 
+            // TXTBContrasena
+            // 
+            this.TXTBContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXTBContrasena.Location = new System.Drawing.Point(222, 229);
+            this.TXTBContrasena.MaxLength = 30;
+            this.TXTBContrasena.Name = "TXTBContrasena";
+            this.TXTBContrasena.PasswordChar = '*';
+            this.TXTBContrasena.Size = new System.Drawing.Size(197, 20);
+            this.TXTBContrasena.TabIndex = 43;
             // 
             // RegistroMonitor
             // 
@@ -370,16 +370,10 @@
         #endregion
 
         private System.Windows.Forms.Label LBLTitulo;
-        private System.Windows.Forms.Button BTNVerContraRepe;
-        private System.Windows.Forms.Button BTNVerContraNormal;
-        private System.Windows.Forms.TextBox TXTBRepetirContra;
-        private System.Windows.Forms.Label LBLConfirmarContrasena;
         private System.Windows.Forms.Label LBLNombre;
         private System.Windows.Forms.TextBox TXTBNombre;
         private System.Windows.Forms.Label LBLApellidos;
-        private System.Windows.Forms.TextBox TXTBContrasena;
         private System.Windows.Forms.TextBox TXTBApellidos;
-        private System.Windows.Forms.Label LBLContrasena;
         private System.Windows.Forms.Label LBLTelefono;
         private System.Windows.Forms.TextBox TXTBEmail;
         private System.Windows.Forms.TextBox TXTBTelefono;
@@ -389,10 +383,16 @@
         private System.Windows.Forms.Label LBLDireccion;
         private System.Windows.Forms.TextBox TXTBDireccion;
         private System.Windows.Forms.Button BTNBorrarForm;
-        private System.Windows.Forms.Button BTNRegistrar;
         private System.Windows.Forms.Label LBLAvisoCorreo;
         private System.Windows.Forms.Label LBLAvisoContrasena;
         private System.Windows.Forms.Label LBLAvisoContraRepetida;
         private System.Windows.Forms.Label LBLAvisoDNI;
+        private System.Windows.Forms.Button BTNRegistrar;
+        private System.Windows.Forms.Button BTNVerContraRepe;
+        private System.Windows.Forms.Label LBLConfirmarContrasena;
+        private System.Windows.Forms.TextBox TXTBRepetirContra;
+        private System.Windows.Forms.Label LBLContrasena;
+        private System.Windows.Forms.Button BTNVerContraNormal;
+        private System.Windows.Forms.TextBox TXTBContrasena;
     }
 }

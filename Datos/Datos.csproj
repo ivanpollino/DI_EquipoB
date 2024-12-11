@@ -52,10 +52,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Infrastructure\Actividad.cs">
-      <DependentUpon>equipobIvanClase.tt</DependentUpon>
+      <DependentUpon>IvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Administrador.cs">
-      <DependentUpon>equipobIvanClase.tt</DependentUpon>
+      <DependentUpon>IvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\equipob.Context.cs">
       <AutoGen>True</AutoGen>
@@ -72,47 +72,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>equipob.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\EquipobFinalFinal.Context.cs">
+    <Compile Include="Infrastructure\IvanClase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EquipobFinalFinal.Context.tt</DependentUpon>
+      <DependentUpon>IvanClase.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\EquipobFinalFinal.cs">
+    <Compile Include="Infrastructure\IvanClase.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EquipobFinalFinal.tt</DependentUpon>
+      <DependentUpon>IvanClase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\EquipobFinalFinal.Designer.cs">
+    <Compile Include="Infrastructure\IvanClase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\equipobIvanClase.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>equipobIvanClase.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\equipobIvanClase.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>equipobIvanClase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\equipobIvanClase.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>equipobIvanClase.edmx</DependentUpon>
+      <DependentUpon>IvanClase.edmx</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Monitor.cs">
-      <DependentUpon>equipobIvanClase.tt</DependentUpon>
+      <DependentUpon>IvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario.cs">
-      <DependentUpon>equipobIvanClase.tt</DependentUpon>
+      <DependentUpon>IvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Actividad.cs">
-      <DependentUpon>equipobIvanClase.tt</DependentUpon>
+      <DependentUpon>IvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Normal.cs">
-      <DependentUpon>equipobIvanClase.tt</DependentUpon>
+      <DependentUpon>IvanClase.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorys\ActividadRepository.cs" />
@@ -129,19 +114,12 @@
     <None Include="Infrastructure\equipob.edmx.diagram">
       <DependentUpon>equipob.edmx</DependentUpon>
     </None>
-    <EntityDeploy Include="Infrastructure\EquipobFinalFinal.edmx">
+    <EntityDeploy Include="Infrastructure\IvanClase.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EquipobFinalFinal.Designer.cs</LastGenOutput>
+      <LastGenOutput>IvanClase.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Infrastructure\EquipobFinalFinal.edmx.diagram">
-      <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
-    </None>
-    <EntityDeploy Include="Infrastructure\equipobIvanClase.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>equipobIvanClase.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Infrastructure\equipobIvanClase.edmx.diagram">
-      <DependentUpon>equipobIvanClase.edmx</DependentUpon>
+    <None Include="Infrastructure\IvanClase.edmx.diagram">
+      <DependentUpon>IvanClase.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -159,25 +137,15 @@
       <DependentUpon>equipob.edmx</DependentUpon>
       <LastGenOutput>equipob.cs</LastGenOutput>
     </Content>
-    <Content Include="Infrastructure\EquipobFinalFinal.Context.tt">
+    <Content Include="Infrastructure\IvanClase.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
-      <LastGenOutput>EquipobFinalFinal.Context.cs</LastGenOutput>
+      <DependentUpon>IvanClase.edmx</DependentUpon>
+      <LastGenOutput>IvanClase.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Infrastructure\EquipobFinalFinal.tt">
+    <Content Include="Infrastructure\IvanClase.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EquipobFinalFinal.edmx</DependentUpon>
-      <LastGenOutput>EquipobFinalFinal.cs</LastGenOutput>
-    </Content>
-    <Content Include="Infrastructure\equipobIvanClase.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>equipobIvanClase.edmx</DependentUpon>
-      <LastGenOutput>equipobIvanClase.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Infrastructure\equipobIvanClase.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>equipobIvanClase.edmx</DependentUpon>
-      <LastGenOutput>equipobIvanClase.cs</LastGenOutput>
+      <DependentUpon>IvanClase.edmx</DependentUpon>
+      <LastGenOutput>IvanClase.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

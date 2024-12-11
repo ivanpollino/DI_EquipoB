@@ -1,0 +1,159 @@
+\doxysection{Negocio.\+Managment.\+Usuario\+Managment Class Reference}
+\hypertarget{class_negocio_1_1_managment_1_1_usuario_managment}{}\label{class_negocio_1_1_managment_1_1_usuario_managment}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
+
+
+Clase que gestiona la lógica de negocio para la entidad Usuario, incluyendo operaciones de alta, verificación de login y cifrado de contraseñas.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_aa12ec2041025444cb9d32eab56482cea}{alta\+Usuario}} (\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} usuario\+DTO)
+\begin{DoxyCompactList}\small\item\em Registra un nuevo usuario en la base de datos, comprobando la existencia previa de email y DNI. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_ae4621779bf7e2884b57a638052ed2918}{cifrar}} (string contrasena)
+\begin{DoxyCompactList}\small\item\em Cifra una contraseña usando el algoritmo SHA-\/256. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_a572aba789be5ac4bf7b3d1ba33932e29}{comprobar\+Login}} (String email, String pass)
+\begin{DoxyCompactList}\small\item\em Verifica las credenciales de login del usuario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_a15471690498406e39fc1e72802f68bfa}{comprobar\+Administrador}} (String dni)
+\item 
+String \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_a952b8997cc1be8c1b2ee2854497ac363}{sacar\+Nombre\+Apellidos\+De\+Usuario}} (String dni)
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre y apellidos de un usuario a partir de su DNI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_a1ebe99fa5b2ec90ab1b723ec3ade4a50}{comporobar\+Usuario\+Normal}} (String dni)
+\begin{DoxyCompactList}\small\item\em Comprueba si un usuario es de tipo normal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_a1295445ea0611d7d8b22a35110016b28}{mensaje}}
+\begin{DoxyCompactList}\small\item\em Mensaje de estado para operaciones realizadas en la clase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que gestiona la lógica de negocio para la entidad Usuario, incluyendo operaciones de alta, verificación de login y cifrado de contraseñas. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_aa12ec2041025444cb9d32eab56482cea}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!altaUsuario@{altaUsuario}}
+\index{altaUsuario@{altaUsuario}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
+\doxysubsubsection{\texorpdfstring{altaUsuario()}{altaUsuario()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_aa12ec2041025444cb9d32eab56482cea} 
+String Negocio.\+Managment.\+Usuario\+Managment.\+alta\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}}}]{usuario\+DTO}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registra un nuevo usuario en la base de datos, comprobando la existencia previa de email y DNI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usuario\+DTO} & DTO del usuario a registrar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mensaje indicando el estado de la operación.
+\end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_ae4621779bf7e2884b57a638052ed2918}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!cifrar@{cifrar}}
+\index{cifrar@{cifrar}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
+\doxysubsubsection{\texorpdfstring{cifrar()}{cifrar()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_ae4621779bf7e2884b57a638052ed2918} 
+string Negocio.\+Managment.\+Usuario\+Managment.\+cifrar (\begin{DoxyParamCaption}\item[{string}]{contrasena}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cifra una contraseña usando el algoritmo SHA-\/256. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contrasena} & Contraseña en texto plano a cifrar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Contraseña cifrada en formato hexadecimal.
+\end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_a1ebe99fa5b2ec90ab1b723ec3ade4a50}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!comporobarUsuarioNormal@{comporobarUsuarioNormal}}
+\index{comporobarUsuarioNormal@{comporobarUsuarioNormal}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
+\doxysubsubsection{\texorpdfstring{comporobarUsuarioNormal()}{comporobarUsuarioNormal()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_a1ebe99fa5b2ec90ab1b723ec3ade4a50} 
+\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} Negocio.\+Managment.\+Usuario\+Managment.\+comporobar\+Usuario\+Normal (\begin{DoxyParamCaption}\item[{String}]{dni}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Comprueba si un usuario es de tipo normal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dni} & DNI del usuario a verificar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un objeto {\ttfamily Usuario\+DTO} si el usuario es normal; de lo contrario, un objeto vacío.
+\end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_a15471690498406e39fc1e72802f68bfa}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!comprobarAdministrador@{comprobarAdministrador}}
+\index{comprobarAdministrador@{comprobarAdministrador}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
+\doxysubsubsection{\texorpdfstring{comprobarAdministrador()}{comprobarAdministrador()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_a15471690498406e39fc1e72802f68bfa} 
+\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} Negocio.\+Managment.\+Usuario\+Managment.\+comprobar\+Administrador (\begin{DoxyParamCaption}\item[{String}]{dni}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Verifica si un usuario es administrador.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dni} & DNI del usuario a verificar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un objeto {\ttfamily Usuario\+DTO} si el usuario es administrador; de lo contrario, un objeto vacío.
+\end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_a572aba789be5ac4bf7b3d1ba33932e29}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!comprobarLogin@{comprobarLogin}}
+\index{comprobarLogin@{comprobarLogin}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
+\doxysubsubsection{\texorpdfstring{comprobarLogin()}{comprobarLogin()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_a572aba789be5ac4bf7b3d1ba33932e29} 
+\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} Negocio.\+Managment.\+Usuario\+Managment.\+comprobar\+Login (\begin{DoxyParamCaption}\item[{String}]{email}{, }\item[{String}]{pass}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica las credenciales de login del usuario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Email del usuario.\\
+\hline
+{\em pass} & Contraseña en texto plano del usuario.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un objeto Usuario\+DTO si las credenciales son correctas; null en caso contrario.
+\end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_a952b8997cc1be8c1b2ee2854497ac363}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!sacarNombreApellidosDeUsuario@{sacarNombreApellidosDeUsuario}}
+\index{sacarNombreApellidosDeUsuario@{sacarNombreApellidosDeUsuario}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
+\doxysubsubsection{\texorpdfstring{sacarNombreApellidosDeUsuario()}{sacarNombreApellidosDeUsuario()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_a952b8997cc1be8c1b2ee2854497ac363} 
+String Negocio.\+Managment.\+Usuario\+Managment.\+sacar\+Nombre\+Apellidos\+De\+Usuario (\begin{DoxyParamCaption}\item[{String}]{dni}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el nombre y apellidos de un usuario a partir de su DNI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dni} & DNI del usuario.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una cadena con el nombre y apellidos del usuario.
+\end{DoxyReturn}
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_a1295445ea0611d7d8b22a35110016b28}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!mensaje@{mensaje}}
+\index{mensaje@{mensaje}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
+\doxysubsubsection{\texorpdfstring{mensaje}{mensaje}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_a1295445ea0611d7d8b22a35110016b28} 
+string Negocio.\+Managment.\+Usuario\+Managment.\+mensaje}
+
+
+
+Mensaje de estado para operaciones realizadas en la clase. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Negocio/\+Managment/\mbox{\hyperlink{_usuario_managment_8cs}{Usuario\+Managment.\+cs}}\end{DoxyCompactItemize}

@@ -26,6 +26,16 @@
     <NavigationProperty Name="Actividad" Relationship="Self.FK_Monitor_Actividad" FromRole="Monitor" ToRole="Actividad" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Monitor" FromRole="Monitor" ToRole="Usuario" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="Usuario">
     <Key>
       <PropertyRef Name="DNI" />
@@ -147,6 +157,7 @@
     <EntitySet Name="Actividad" EntityType="Self.Actividad" />
     <EntitySet Name="Administrador" EntityType="Self.Administrador" />
     <EntitySet Name="Monitor" EntityType="Self.Monitor" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <EntitySet Name="Usuario_Actividad" EntityType="Self.Usuario_Actividad" />
     <EntitySet Name="Usuario_Normal" EntityType="Self.Usuario_Normal" />

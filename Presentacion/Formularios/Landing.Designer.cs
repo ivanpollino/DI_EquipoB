@@ -32,7 +32,9 @@ namespace Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Landing));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BTNVerActividades = new System.Windows.Forms.Button();
             this.panelParaUsuarios = new System.Windows.Forms.Panel();
+            this.btnEditarPerfil = new System.Windows.Forms.Button();
             this.BTNCerrarSesionUsuario = new System.Windows.Forms.Button();
             this.panelAdministrador = new System.Windows.Forms.Panel();
             this.BTNCerrarSesionAdmin = new System.Windows.Forms.Button();
@@ -43,7 +45,6 @@ namespace Presentacion
             this.btRegistro = new System.Windows.Forms.Button();
             this.lbInfoUsuario = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
-            this.btActividades = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelParaUsuarios.SuspendLayout();
             this.panelAdministrador.SuspendLayout();
@@ -54,7 +55,7 @@ namespace Presentacion
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.btActividades);
+            this.panel1.Controls.Add(this.BTNVerActividades);
             this.panel1.Controls.Add(this.panelParaUsuarios);
             this.panel1.Controls.Add(this.panelAdministrador);
             this.panel1.Controls.Add(this.lbTexto2);
@@ -69,13 +70,44 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(1232, 641);
             this.panel1.TabIndex = 4;
             // 
+            // BTNVerActividades
+            // 
+            this.BTNVerActividades.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BTNVerActividades.ForeColor = System.Drawing.Color.Black;
+            this.BTNVerActividades.Location = new System.Drawing.Point(346, 361);
+            this.BTNVerActividades.Name = "BTNVerActividades";
+            this.BTNVerActividades.Size = new System.Drawing.Size(164, 30);
+            this.BTNVerActividades.TabIndex = 8;
+            this.BTNVerActividades.Text = "ACTIVIDADES";
+            this.BTNVerActividades.UseVisualStyleBackColor = true;
+            this.BTNVerActividades.Visible = false;
+            this.BTNVerActividades.Click += new System.EventHandler(this.BTNVerActividades_Click);
+            // 
             // panelParaUsuarios
             // 
+            this.panelParaUsuarios.Controls.Add(this.btnEditarPerfil);
             this.panelParaUsuarios.Controls.Add(this.BTNCerrarSesionUsuario);
             this.panelParaUsuarios.Location = new System.Drawing.Point(780, 379);
             this.panelParaUsuarios.Name = "panelParaUsuarios";
-            this.panelParaUsuarios.Size = new System.Drawing.Size(208, 66);
+            this.panelParaUsuarios.Size = new System.Drawing.Size(208, 132);
             this.panelParaUsuarios.TabIndex = 7;
+            // 
+            // btnEditarPerfil
+            // 
+            this.btnEditarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.btnEditarPerfil.FlatAppearance.BorderSize = 0;
+            this.btnEditarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarPerfil.ForeColor = System.Drawing.Color.Cyan;
+            this.btnEditarPerfil.Image = global::Presentacion.Properties.Resources.user_solid_48;
+            this.btnEditarPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarPerfil.Location = new System.Drawing.Point(0, 0);
+            this.btnEditarPerfil.Name = "btnEditarPerfil";
+            this.btnEditarPerfil.Size = new System.Drawing.Size(208, 66);
+            this.btnEditarPerfil.TabIndex = 9;
+            this.btnEditarPerfil.Text = "Editar Perfil";
+            this.btnEditarPerfil.UseVisualStyleBackColor = false;
+            this.btnEditarPerfil.Click += new System.EventHandler(this.btnEditarPerfil_Click);
             // 
             // BTNCerrarSesionUsuario
             // 
@@ -86,7 +118,7 @@ namespace Presentacion
             this.BTNCerrarSesionUsuario.ForeColor = System.Drawing.Color.Cyan;
             this.BTNCerrarSesionUsuario.Image = global::Presentacion.Properties.Resources.logOut;
             this.BTNCerrarSesionUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNCerrarSesionUsuario.Location = new System.Drawing.Point(0, 0);
+            this.BTNCerrarSesionUsuario.Location = new System.Drawing.Point(0, 66);
             this.BTNCerrarSesionUsuario.Name = "BTNCerrarSesionUsuario";
             this.BTNCerrarSesionUsuario.Size = new System.Drawing.Size(208, 66);
             this.BTNCerrarSesionUsuario.TabIndex = 8;
@@ -219,18 +251,6 @@ namespace Presentacion
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
-            // btActividades
-            // 
-            this.btActividades.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btActividades.ForeColor = System.Drawing.Color.Black;
-            this.btActividades.Location = new System.Drawing.Point(346, 415);
-            this.btActividades.Name = "btActividades";
-            this.btActividades.Size = new System.Drawing.Size(164, 30);
-            this.btActividades.TabIndex = 10;
-            this.btActividades.Text = " ACTIVIDADES";
-            this.btActividades.UseVisualStyleBackColor = true;
-            this.btActividades.Click += new System.EventHandler(this.btActividades_Click);
-            // 
             // Landing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +285,7 @@ namespace Presentacion
         private Button BTNCerrarSesionAdmin;
         private Button BTNCerrarSesionUsuario;
         private Panel panelParaUsuarios;
-        private Button btActividades;
+        private Button BTNVerActividades;
+        private Button btnEditarPerfil;
     }
 }

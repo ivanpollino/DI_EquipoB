@@ -1,0 +1,61 @@
+\doxysection{Negocio.\+Managment.\+Usuario\+Actividad\+Managment Class Reference}
+\hypertarget{class_negocio_1_1_managment_1_1_usuario_actividad_managment}{}\label{class_negocio_1_1_managment_1_1_usuario_actividad_managment}\index{Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}}
+
+
+Clase encargada de gestionar las actividades de los usuarios, como registrar nuevas actividades y obtener las actividades en las que un usuario está apuntado.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a74db2b21882d84476fc3269ac2dd4455}{Registrar\+Usuario\+Actividad}} (\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}} nueva\+Actividad)
+\begin{DoxyCompactList}\small\item\em Registra una nueva actividad para un usuario en la base de datos. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}} $>$ \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_actividad_managment_af9c3782176129a5d18d9315f5cbb9734}{Obtener\+Actividades\+Apuntado}} (string DNI)
+\begin{DoxyCompactList}\small\item\em Obtiene las actividades en las que un usuario está apuntado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase encargada de gestionar las actividades de los usuarios, como registrar nuevas actividades y obtener las actividades en las que un usuario está apuntado. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_actividad_managment_af9c3782176129a5d18d9315f5cbb9734}\index{Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}!ObtenerActividadesApuntado@{ObtenerActividadesApuntado}}
+\index{ObtenerActividadesApuntado@{ObtenerActividadesApuntado}!Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}}
+\doxysubsubsection{\texorpdfstring{ObtenerActividadesApuntado()}{ObtenerActividadesApuntado()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_actividad_managment_af9c3782176129a5d18d9315f5cbb9734} 
+List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}} $>$ Negocio.\+Managment.\+Usuario\+Actividad\+Managment.\+Obtener\+Actividades\+Apuntado (\begin{DoxyParamCaption}\item[{string}]{DNI}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene las actividades en las que un usuario está apuntado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em DNI} & El DNI del usuario para el cual se desean obtener las actividades apuntadas.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una lista de objetos {\ttfamily Usuario\+Actividad\+DTO} con la información de las actividades en las que el usuario está apuntado.
+\end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a74db2b21882d84476fc3269ac2dd4455}\index{Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}!RegistrarUsuarioActividad@{RegistrarUsuarioActividad}}
+\index{RegistrarUsuarioActividad@{RegistrarUsuarioActividad}!Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}}
+\doxysubsubsection{\texorpdfstring{RegistrarUsuarioActividad()}{RegistrarUsuarioActividad()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a74db2b21882d84476fc3269ac2dd4455} 
+bool Negocio.\+Managment.\+Usuario\+Actividad\+Managment.\+Registrar\+Usuario\+Actividad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}}}]{nueva\+Actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registra una nueva actividad para un usuario en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nueva\+Actividad} & Un objeto {\ttfamily Usuario\+Actividad\+DTO} que contiene la información de la actividad y el usuario.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve {\ttfamily true} si la actividad fue registrada correctamente, de lo contrario {\ttfamily false}.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Negocio/\+Managment/\mbox{\hyperlink{_usuario_actividad_managment_8cs}{Usuario\+Actividad\+Managment.\+cs}}\end{DoxyCompactItemize}

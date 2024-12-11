@@ -22,9 +22,12 @@ namespace Datos.Repositorys
         /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
         public String altaUsuario(Usuario usuario)
         {
+            Usuario_Normal usuarioNormal = new Usuario_Normal();
+            usuarioNormal.DNI = usuario.DNI;
             using (var contexto = new equipobIvanClase())
                 {
                     contexto.Usuario.Add(usuario);
+                    contexto.Usuario_Normal.Add(usuarioNormal);
                     contexto.SaveChanges();
                     
                 }
@@ -70,6 +73,24 @@ namespace Datos.Repositorys
             }
         }
 
+        public List<Usuario_Normal> obtenerUsuariosNormal()
+        {
+
+            List<Usuario_Normal> usuarios = new List<Usuario_Normal>();
+            try
+            {
+                using (var contexto = new equipobIvanClase())
+                {
+                    usuarios = contexto.Usuario_Normal.ToList();
+                }
+                return usuarios;
+            }
+            catch (Exception)
+            {
+                return usuarios;
+            }
+        }
+
         public String sacarNombrePorDNI(String dni)
         {
             using (var contexto = new equipobIvanClase())
@@ -87,5 +108,30 @@ namespace Datos.Repositorys
                 }
             }
         }
+
+        public String modificarUsuario(String dni, Usuario nuevosDatos)
+        {
+            using (var contexto = new equipobIvanClase())
+            {
+                var usuarioExistente = contexto.Usuario.FirstOrDefault(u => u.DNI == dni);
+
+                if (usuarioExistente == null)
+                {
+                    return "Usuario no encontrado";
+                }
+
+                usuarioExistente.Nombre = nuevosDatos.Nombre;
+                usuarioExistente.Apellidos = nuevosDatos.Apellidos;
+                usuarioExistente.Email = nuevosDatos.Email;
+                usuarioExistente.Telefono = nuevosDatos.Telefono;
+                usuarioExistente.Cuenta_Corriente = nuevosDatos.Cuenta_Corriente;
+                usuarioExistente.Direccion = nuevosDatos.Direccion;
+                
+                contexto.SaveChanges();
+            }
+
+            return "Usuario modificado con éxito";
+        }
+
     }
 }

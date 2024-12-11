@@ -1,0 +1,97 @@
+\doxysection{Presentacion.\+Formularios.\+Actividades Class Reference}
+\hypertarget{class_presentacion_1_1_formularios_1_1_actividades}{}\label{class_presentacion_1_1_formularios_1_1_actividades}\index{Presentacion.Formularios.Actividades@{Presentacion.Formularios.Actividades}}
+
+
+Representa el formulario principal que gestiona y muestra las actividades en las que un usuario puede participar. Permite visualizar tanto las actividades disponibles como aquellas en las que el usuario está apuntado.  
+
+
+Inheritance diagram for Presentacion.\+Formularios.\+Actividades\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_presentacion_1_1_formularios_1_1_actividades}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_actividades_a3bf5bb8ffad570ba4c035e53f13308a9}{Actividades}} (\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} usuario)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase {\ttfamily \doxylink{class_presentacion_1_1_formularios_1_1_actividades}{Actividades}}. Inicializa el formulario y carga las actividades disponibles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_actividades_a9b61b4ce5494410da1f788dd7c23cabc}{cargar\+Actividades\+Disponibles}} (\mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_actividades_apuntado}{Actividades\+Apuntado}} formulario)
+\begin{DoxyCompactList}\small\item\em Carga las actividades disponibles a las que el usuario puede apuntarse y las muestra en el formulario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_actividades_a5e0584f08f150d6aae5910f04fd1045f}{cargar\+Actividades}} ()
+\begin{DoxyCompactList}\small\item\em Carga y muestra las actividades basadas en el estado del botón de alternancia (Switch). Si el botón está activado, muestra las actividades disponibles; de lo contrario, muestra las actividades en las que el usuario está apuntado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_actividades_a2d92214187b7f94ae219b9e881fe38e7}{Dispose}} (bool disposing)
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa el formulario principal que gestiona y muestra las actividades en las que un usuario puede participar. Permite visualizar tanto las actividades disponibles como aquellas en las que el usuario está apuntado. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_presentacion_1_1_formularios_1_1_actividades_a3bf5bb8ffad570ba4c035e53f13308a9}\index{Presentacion.Formularios.Actividades@{Presentacion.Formularios.Actividades}!Actividades@{Actividades}}
+\index{Actividades@{Actividades}!Presentacion.Formularios.Actividades@{Presentacion.Formularios.Actividades}}
+\doxysubsubsection{\texorpdfstring{Actividades()}{Actividades()}}
+{\footnotesize\ttfamily \label{class_presentacion_1_1_formularios_1_1_actividades_a3bf5bb8ffad570ba4c035e53f13308a9} 
+Presentacion.\+Formularios.\+Actividades.\+Actividades (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}}}]{usuario}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase {\ttfamily \doxylink{class_presentacion_1_1_formularios_1_1_actividades}{Actividades}}. Inicializa el formulario y carga las actividades disponibles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usuario} & El objeto {\ttfamily Usuario\+DTO} que representa al usuario actual.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_presentacion_1_1_formularios_1_1_actividades_a5e0584f08f150d6aae5910f04fd1045f}\index{Presentacion.Formularios.Actividades@{Presentacion.Formularios.Actividades}!cargarActividades@{cargarActividades}}
+\index{cargarActividades@{cargarActividades}!Presentacion.Formularios.Actividades@{Presentacion.Formularios.Actividades}}
+\doxysubsubsection{\texorpdfstring{cargarActividades()}{cargarActividades()}}
+{\footnotesize\ttfamily \label{class_presentacion_1_1_formularios_1_1_actividades_a5e0584f08f150d6aae5910f04fd1045f} 
+void Presentacion.\+Formularios.\+Actividades.\+cargar\+Actividades (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Carga y muestra las actividades basadas en el estado del botón de alternancia (Switch). Si el botón está activado, muestra las actividades disponibles; de lo contrario, muestra las actividades en las que el usuario está apuntado. 
+
+\Hypertarget{class_presentacion_1_1_formularios_1_1_actividades_a9b61b4ce5494410da1f788dd7c23cabc}\index{Presentacion.Formularios.Actividades@{Presentacion.Formularios.Actividades}!cargarActividadesDisponibles@{cargarActividadesDisponibles}}
+\index{cargarActividadesDisponibles@{cargarActividadesDisponibles}!Presentacion.Formularios.Actividades@{Presentacion.Formularios.Actividades}}
+\doxysubsubsection{\texorpdfstring{cargarActividadesDisponibles()}{cargarActividadesDisponibles()}}
+{\footnotesize\ttfamily \label{class_presentacion_1_1_formularios_1_1_actividades_a9b61b4ce5494410da1f788dd7c23cabc} 
+void Presentacion.\+Formularios.\+Actividades.\+cargar\+Actividades\+Disponibles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_actividades_apuntado}{Actividades\+Apuntado}}}]{formulario}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Carga las actividades disponibles a las que el usuario puede apuntarse y las muestra en el formulario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em formulario} & El formulario {\ttfamily \doxylink{class_presentacion_1_1_formularios_1_1_actividades_apuntado}{Actividades\+Apuntado}} en el que se cargarán las actividades disponibles.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_presentacion_1_1_formularios_1_1_actividades_a2d92214187b7f94ae219b9e881fe38e7}\index{Presentacion.Formularios.Actividades@{Presentacion.Formularios.Actividades}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Presentacion.Formularios.Actividades@{Presentacion.Formularios.Actividades}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \label{class_presentacion_1_1_formularios_1_1_actividades_a2d92214187b7f94ae219b9e881fe38e7} 
+override void Presentacion.\+Formularios.\+Actividades.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Presentacion/\+Formularios/\mbox{\hyperlink{_actividades_8cs}{Actividades.\+cs}}\item 
+Presentacion/\+Formularios/\mbox{\hyperlink{_actividades_8_designer_8cs}{Actividades.\+Designer.\+cs}}\end{DoxyCompactItemize}

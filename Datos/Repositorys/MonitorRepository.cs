@@ -28,7 +28,7 @@ namespace Datos.Repositorys
         /// <returns>Mensaje de confirmación de que el usuario fue añadido con éxito.</returns>
         public Monitor ObtenerMonitorPorDni(string dni)
         {
-            using (var contexto = new equipobIvanClase())
+            using (var contexto = new equipobEntities())
             {
                 // Buscamos el monitor por su DNI
                 return contexto.Monitor.SingleOrDefault(m => m.DNI == dni);

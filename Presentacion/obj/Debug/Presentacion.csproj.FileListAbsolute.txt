@@ -62,54 +62,16 @@ C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Present
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.application
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.pdb
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe.config
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe.manifest
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Presentacion.application
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Presentacion.pdb
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.dll
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Negocio.dll
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Datos.dll
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Negocio.pdb
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.xml
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Datos.pdb
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\bin\Debug\Datos.dll.config
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadPestaña.resources
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Administracion.resources
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Landing.resources
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ListadoActividades.resources
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Login.resources
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistrarActividad.resources
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Registro.resources
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistroMonitor.resources
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.TrustInfo.xml
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe.manifest
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.application
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.Actividades.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadPestaña.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.Actividades.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Administracion.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Landing.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ListadoActividades.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Login.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistrarActividad.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Registro.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistroMonitor.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadUsuario.resources
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.VerInformacionActividad.resources
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.Actividades.resources
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.ActividadesApuntado.resources
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.BotonSwitch.resources
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadUsuario.resources
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.BotonSwitch.resources
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.Actividades.resources
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.ActividadesApuntado.resources
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.VerInformacionActividad.resources
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe.config
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Presentacion.exe.manifest
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Presentacion.application
@@ -124,10 +86,27 @@ H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.xml
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\EntityFramework.SqlServer.xml
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Datos.pdb
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\bin\Debug\Datos.dll.config
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadPestaña.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadUsuario.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.BotonSwitch.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.Actividades.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.ActividadesApuntado.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Administracion.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Landing.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ListadoActividades.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Login.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistrarActividad.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Registro.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.RegistroMonitor.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.VerInformacionActividad.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.TrustInfo.xml
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe.manifest
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.application
 H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.ActividadUsuario.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.TextArea.resources
-H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.ActividadesApuntado.resources
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.pdb
+H:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.EditarPerfil.resources
