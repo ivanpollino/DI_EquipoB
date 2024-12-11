@@ -1,4 +1,5 @@
 ﻿using Negocio.EntitiesDTO;
+using Negocio.Managment;
 using Presentacion.Formularios;
 using System;
 using System.Collections.Generic;
@@ -29,8 +30,11 @@ namespace Presentacion.ComponentesPersonalizados
             {
                 MessageBox.Show("Esta vacio");
             }
-        }
+            //estrellasValoracion1.Visible = false;
+            estrellasValoracion1.Configurar(actividadDto, usuario);
+            estrellasValoracion1.Visible = true;
 
+        }
         /// <summary>
         /// Evento que se dispara cuando se hace clic en el panel de información de la actividad.
         /// Abre un formulario para mostrar la información detallada de la actividad.
@@ -40,7 +44,6 @@ namespace Presentacion.ComponentesPersonalizados
         private void panelContenedorInfo_Click(object sender, EventArgs e)
         {
             ActividadesApuntado formularioPadre = (ActividadesApuntado)FindForm();
-
 
             VerInformacionActividad verInformacion = new VerInformacionActividad(formularioPadre, actividadDto, LBLDonveVaNombreMonitor.Text, usuario);
 
@@ -79,11 +82,6 @@ namespace Presentacion.ComponentesPersonalizados
         }
 
         private void LBLIndicadorNombreActividad_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void estrellasValoracion1_Load(object sender, EventArgs e)
         {
 
         }

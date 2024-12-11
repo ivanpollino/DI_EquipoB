@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Negocio.EntitiesDTO;
+using Negocio.Managment;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,91 @@ namespace Presentacion.ComponentesPersonalizados
 {
     public partial class EstrellasValoracion : UserControl
     {
-        private int p;
+        private byte p; // Puntuación seleccionada
+        private ActividadDTO actividad;
+        private UsuarioDTO usuario;
 
         public EstrellasValoracion()
         {
             InitializeComponent();
             EstablecerEstrellasVacias();
         }
-        private void CambiarEstrellas(int puntuacionSeleccionada)
+
+        /// <summary>
+        /// Inicializa el componente con los datos de la actividad y el usuario.
+        /// </summary>
+        /// <param name="actividad">DTO de la actividad.</param>
+        /// <param name="usuario">DTO del usuario.</param>
+        public void Configurar(ActividadDTO actividad, UsuarioDTO usuario)
+        {
+            this.actividad = actividad ?? throw new ArgumentNullException(nameof(actividad));
+            this.usuario = usuario ?? throw new ArgumentNullException(nameof(usuario));
+
+            CargarValoracion();
+        }
+
+        /// <summary>
+        /// Carga la valoración del usuario para la actividad desde la base de datos.
+        /// </summary>
+        private void CargarValoracion()
+        {
+            if (actividad == null || usuario == null)
+                MessageBox.Show("El componente no está configurado correctamente.");
+
+            UsuarioActividadManagment managment = new UsuarioActividadManagment();
+            byte valoracionGuardada = managment.ObtenerValoracion(actividad.Id_Actividad, usuario.DNI);
+
+            if (valoracionGuardada > 0)
+            {
+                P = valoracionGuardada; 
+            }
+        }
+
+        /// <summary>
+        /// Actualiza la valoración en la base de datos y refleja el cambio visual.
+        /// </summary>
+        /// <param name="nuevaValoracion">Nueva puntuación seleccionada.</param>
+        private void ActualizarValoracion(byte nuevaValoracion)
+        {
+            UsuarioActividadManagment managment = new UsuarioActividadManagment();
+            bool actualizado = managment.ActualizarValoracion(actividad.Id_Actividad, usuario.DNI, nuevaValoracion);
+        }
+        /// <summary>
+        /// Actualiza la valoración en la base de datos y refleja el cambio visual.
+        /// </summary>
+        /// <param name="nuevaValoracion">Nueva puntuación seleccionada.</param>
+        private void GuardarValoracion(byte nuevaValoracion)
+        {
+            UsuarioActividadManagment managment = new UsuarioActividadManagment();
+            bool actualizado = managment.ActualizarValoracion(actividad.Id_Actividad, usuario.DNI, nuevaValoracion);
+
+            if (actualizado)
+            {
+                MessageBox.Show($"Valoración actualizada a {nuevaValoracion} estrellas.");
+            }
+            else
+            {
+                MessageBox.Show("No se pudo actualizar la valoración. Inténtelo de nuevo.");
+            }
+        }
+        /// <summary>
+        /// Cambia la puntuación seleccionada y actualiza en la base de datos.
+        /// </summary>
+        public byte P
+        {
+            get { return p; }
+            private set
+            {
+                p = value; 
+                CambiarEstrellas(p); 
+                ActualizarValoracion(p); 
+            }
+        }
+        /// <summary>
+        /// Cambia la visualización de las estrellas según la puntuación seleccionada.
+        /// </summary>
+        /// <param name="puntuacionSeleccionada">La valoración seleccionada (1-5).</param>
+        private void CambiarEstrellas(byte puntuacionSeleccionada)
         {
             estrellaLlena1.Visible = puntuacionSeleccionada >= 1;
             estrellaLlena2.Visible = puntuacionSeleccionada >= 2;
@@ -52,80 +131,75 @@ namespace Presentacion.ComponentesPersonalizados
         {
             p = 1;
             CambiarEstrellas(p);
-            MostrarMensajeCorrecto();
-            //ActualizarValoracion(p);
+            GuardarValoracion(p);
         }
 
         private void estrellaEmpty2_Click(object sender, EventArgs e)
         {
             p = 2;
             CambiarEstrellas(p);
-            MostrarMensajeCorrecto();
-            //ActualizarValoracion(p);
+            GuardarValoracion(p);
         }
 
         private void estrellaEmpty3_Click(object sender, EventArgs e)
         {
             p = 3;
             CambiarEstrellas(p);
-            MostrarMensajeCorrecto();
-            //ActualizarValoracion(p);
+            GuardarValoracion(p);
+
         }
 
         private void estrellaEmpty4_Click(object sender, EventArgs e)
         {
             p = 4;
             CambiarEstrellas(p);
-            MostrarMensajeCorrecto();
-            //ActualizarValoracion(p);
+            GuardarValoracion(p);
         }
 
         private void estrellaEmpty5_Click(object sender, EventArgs e)
         {
             p = 5;
             CambiarEstrellas(p);
-            MostrarMensajeCorrecto();
-            //ActualizarValoracion(p);
+            GuardarValoracion(p);
         }
 
         private void estrellaLlena1_Click(object sender, EventArgs e)
         {
             p = 1;
             CambiarEstrellas(p);
-            MostrarMensajeCorrecto();
-            //ActualizarValoracion(p);
+            GuardarValoracion(p);
+
         }
 
         private void estrellaLlena2_Click(object sender, EventArgs e)
         {
             p = 2;
             CambiarEstrellas(p);
-            MostrarMensajeCorrecto();
-            //ActualizarValoracion(p);
+            GuardarValoracion(p);
+
         }
 
         private void estrellaLlena3_Click(object sender, EventArgs e)
         {
             p = 3;
             CambiarEstrellas(p);
-            MostrarMensajeCorrecto();
-            //ActualizarValoracion(p);
+            GuardarValoracion(p);
+
         }
 
         private void estrellaLlena4_Click(object sender, EventArgs e)
         {
             p = 4;
             CambiarEstrellas(p);
-            MostrarMensajeCorrecto();
-            //ActualizarValoracion(p);
+            GuardarValoracion(p);
+
         }
 
         private void estrellaLlena5_Click(object sender, EventArgs e)
         {
             p = 5;
             CambiarEstrellas(p);
-            MostrarMensajeCorrecto();
-            //ActualizarValoracion(p);
+            GuardarValoracion(p);
         }
 
         private void estrellaEmpty1_MouseHover(object sender, EventArgs e)
@@ -176,14 +250,6 @@ namespace Presentacion.ComponentesPersonalizados
         private void estrellaLlena5_MouseHover(object sender, EventArgs e)
         {
             CambiarEstrellas(5);
-        }
-        private void MostrarMensajeCorrecto()
-        {
-            MessageBox.Show($"Se ha valorado correctamente la actividad con una puntuación de {p} estrellas.");
-        }
-        private void MostrarMensajeIncorrecto()
-        {
-            MessageBox.Show($"No se ha valorado correctamente la actividad. Vuelva a intentarlo");
         }
 
         private void panelEstrellas_MouseLeave(object sender, EventArgs e)
