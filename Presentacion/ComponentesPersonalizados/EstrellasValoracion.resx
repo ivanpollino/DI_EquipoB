@@ -117,59 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logOut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="estrellaLlena3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADhSURBVDhPndE/
+        roFBFAXwz/NnA/5twSa8Sk1lEbQWQUJJ9xKJQmILKlqVaOwDpeQ415xJ+Nx4Pif5FXPn3slkJnkboH73
+        dYAJjbXKGKBCZ7pQTdUMAUYEGar6YYAynR4OsFtUtesEKFGD2jSgNcXhyGq2Zz3WW4rDY7pSeuA/NsMH
+        BvK0UDGLFRXjLeyQuTY+saRCGI4BcjRTwzt/9KOpVMLre0OPyup2Avymmj1NdTsB+qlmT0/dTp7f4EBd
+        atFONTNVtxNgS0eywZyqIeGgPW1UcQJ0KK/Va8J3d7RikuQGhTWAhqfg32MAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="imagenFondoRegistro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagenFondoRegistro.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="estrellaLlena2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADhSURBVDhPndE/
+        roFBFAXwz/NnA/5twSa8Sk1lEbQWQUJJ9xKJQmILKlqVaOwDpeQ415xJ+Nx4Pif5FXPn3slkJnkboH73
+        dYAJjbXKGKBCZ7pQTdUMAUYEGar6YYAynR4OsFtUtesEKFGD2jSgNcXhyGq2Zz3WW4rDY7pSeuA/NsMH
+        BvK0UDGLFRXjLeyQuTY+saRCGI4BcjRTwzt/9KOpVMLre0OPyup2Avymmj1NdTsB+qlmT0/dTp7f4EBd
+        atFONTNVtxNgS0eywZyqIeGgPW1UcQJ0KK/Va8J3d7RikuQGhTWAhqfg32MAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="estrellaLlena1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADhSURBVDhPndE/
+        roFBFAXwz/NnA/5twSa8Sk1lEbQWQUJJ9xKJQmILKlqVaOwDpeQ415xJ+Nx4Pif5FXPn3slkJnkboH73
+        dYAJjbXKGKBCZ7pQTdUMAUYEGar6YYAynR4OsFtUtesEKFGD2jSgNcXhyGq2Zz3WW4rDY7pSeuA/NsMH
+        BvK0UDGLFRXjLeyQuTY+saRCGI4BcjRTwzt/9KOpVMLre0OPyup2Avymmj1NdTsB+qlmT0/dTp7f4EBd
+        atFONTNVtxNgS0eywZyqIeGgPW1UcQJ0KK/Va8J3d7RikuQGhTWAhqfg32MAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="user-solid-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-solid-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Services" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Services.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Registro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Registro.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="img_gym" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\img_gym.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imagenFondoRegistro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagenFondoRegistro1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Monitor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Monitor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imagenFondoLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagenFondoLogin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="listado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\listado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="contraVisible" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\contraVisible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Añadir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Añadir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Actividades" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Actividades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="contraNoVisible" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\contraNoVisible.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="estrella_vacia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\estrella_vacia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="es_llena" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\es_llena.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="es_empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\es_empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="estrellaEmpty1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEJSURBVDhPnZJB
+        SkJhGEUFB4qgSQ1qEAUtIIkGYdQ6ghZQFDVtUK3BUY0qooKauwfXdTvX/zZ5T608cPDd+30/PvFvLETa
+        m7o00svUpZCGeIGXeJT2H0iv2MYWPqf9I9IBXiU5X+NhUgWph/t4gvf4gG/YzoZ3/CbuPPOOd32m5+EE
+        7/AY13NkPt4puz4zcdHHd9zMyu9IG/iBaz/FCn7iTikWIG3hF66mCVIX/Sbbaep4Vna6aSqU33aaVMcz
+        78xFOsfdpDrSAM+SZiCNsJXk7Ns4THL2pRolzcD/c/n0Nz2hr7H18yCzsjMTaYyPeIOdtO476Twbp60g
+        NfEW+2nqlDvjC9QsRaPxDYV41Z7C2A1AAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>

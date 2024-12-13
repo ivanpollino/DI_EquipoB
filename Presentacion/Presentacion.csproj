@@ -107,6 +107,12 @@
     <Compile Include="ComponentesPersonalizados\BotonSwitch.Designer.cs">
       <DependentUpon>BotonSwitch.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentesPersonalizados\EstrellasValoracion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentesPersonalizados\EstrellasValoracion.Designer.cs">
+      <DependentUpon>EstrellasValoracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Actividades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentesPersonalizados\BotonSwitch.resx">
       <DependentUpon>BotonSwitch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentesPersonalizados\EstrellasValoracion.resx">
+      <DependentUpon>EstrellasValoracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Actividades.resx">
       <DependentUpon>Actividades.cs</DependentUpon>
@@ -292,6 +301,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logofinal.ico" />
+    <Content Include="Resources\estrella_vacia.png" />
+    <Content Include="Resources\es_empty.png" />
+    <Content Include="Resources\es_llena.png" />
     <Content Include="Resources\user-solid-48.png" />
   </ItemGroup>
   <ItemGroup>

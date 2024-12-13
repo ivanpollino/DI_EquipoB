@@ -55,6 +55,7 @@ namespace Presentacion.Formularios
             LBLDondeVaNombreActividad.Text = actividadAux.Nombre;
             LBLDondeVaElNombreMonitor.Text = nombreMonitor;
             LBLDondeVaLaDescripcion.Text = actividadAux.Descripcion;
+            LBLDondeVaLaMediaValoración.Text = actividadAux.MediaValoracion.ToString();
         }
 
         private void BTNApuntarseActividad_Click(object sender, EventArgs e)

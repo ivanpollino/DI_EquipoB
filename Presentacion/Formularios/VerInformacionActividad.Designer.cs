@@ -32,6 +32,7 @@ namespace Presentacion.Formularios
         private void InitializeComponent()
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.BTNDarseDeBajaActividad = new System.Windows.Forms.Button();
             this.LBLNombreActvidad = new System.Windows.Forms.Label();
             this.LBLDondeVaNombreActividad = new System.Windows.Forms.Label();
             this.LBLDescripcionActividad = new System.Windows.Forms.Label();
@@ -39,13 +40,16 @@ namespace Presentacion.Formularios
             this.LBLNombreMonitor = new System.Windows.Forms.Label();
             this.LBLDondeVaElNombreMonitor = new System.Windows.Forms.Label();
             this.BTNApuntarseActividad = new System.Windows.Forms.Button();
-            this.BTNDarseDeBajaActividad = new System.Windows.Forms.Button();
+            this.LBLMediaValoracion = new System.Windows.Forms.Label();
+            this.LBLDondeVaLaMediaValoración = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.panelContenedor.Controls.Add(this.LBLDondeVaLaMediaValoración);
+            this.panelContenedor.Controls.Add(this.LBLMediaValoracion);
             this.panelContenedor.Controls.Add(this.BTNDarseDeBajaActividad);
             this.panelContenedor.Controls.Add(this.LBLNombreActvidad);
             this.panelContenedor.Controls.Add(this.LBLDondeVaNombreActividad);
@@ -60,12 +64,22 @@ namespace Presentacion.Formularios
             this.panelContenedor.Size = new System.Drawing.Size(315, 423);
             this.panelContenedor.TabIndex = 0;
             // 
+            // BTNDarseDeBajaActividad
+            // 
+            this.BTNDarseDeBajaActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BTNDarseDeBajaActividad.Location = new System.Drawing.Point(88, 361);
+            this.BTNDarseDeBajaActividad.Name = "BTNDarseDeBajaActividad";
+            this.BTNDarseDeBajaActividad.Size = new System.Drawing.Size(143, 50);
+            this.BTNDarseDeBajaActividad.TabIndex = 7;
+            this.BTNDarseDeBajaActividad.Text = "Desapuntarte";
+            this.BTNDarseDeBajaActividad.Click += new System.EventHandler(this.BTNDarseDeBajaActividad_Click);
+            // 
             // LBLNombreActvidad
             // 
             this.LBLNombreActvidad.AutoSize = true;
             this.LBLNombreActvidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLNombreActvidad.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLNombreActvidad.Location = new System.Drawing.Point(84, 46);
+            this.LBLNombreActvidad.Location = new System.Drawing.Point(84, 25);
             this.LBLNombreActvidad.Name = "LBLNombreActvidad";
             this.LBLNombreActvidad.Size = new System.Drawing.Size(147, 20);
             this.LBLNombreActvidad.TabIndex = 0;
@@ -76,7 +90,7 @@ namespace Presentacion.Formularios
             this.LBLDondeVaNombreActividad.AutoSize = true;
             this.LBLDondeVaNombreActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLDondeVaNombreActividad.ForeColor = System.Drawing.Color.White;
-            this.LBLDondeVaNombreActividad.Location = new System.Drawing.Point(144, 80);
+            this.LBLDondeVaNombreActividad.Location = new System.Drawing.Point(130, 57);
             this.LBLDondeVaNombreActividad.Name = "LBLDondeVaNombreActividad";
             this.LBLDondeVaNombreActividad.Size = new System.Drawing.Size(52, 18);
             this.LBLDondeVaNombreActividad.TabIndex = 1;
@@ -87,7 +101,7 @@ namespace Presentacion.Formularios
             this.LBLDescripcionActividad.AutoSize = true;
             this.LBLDescripcionActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLDescripcionActividad.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLDescripcionActividad.Location = new System.Drawing.Point(110, 117);
+            this.LBLDescripcionActividad.Location = new System.Drawing.Point(65, 86);
             this.LBLDescripcionActividad.Name = "LBLDescripcionActividad";
             this.LBLDescripcionActividad.Size = new System.Drawing.Size(179, 20);
             this.LBLDescripcionActividad.TabIndex = 2;
@@ -98,7 +112,7 @@ namespace Presentacion.Formularios
             this.LBLDondeVaLaDescripcion.AutoSize = true;
             this.LBLDondeVaLaDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLDondeVaLaDescripcion.ForeColor = System.Drawing.Color.White;
-            this.LBLDondeVaLaDescripcion.Location = new System.Drawing.Point(144, 157);
+            this.LBLDondeVaLaDescripcion.Location = new System.Drawing.Point(130, 125);
             this.LBLDondeVaLaDescripcion.Name = "LBLDondeVaLaDescripcion";
             this.LBLDondeVaLaDescripcion.Size = new System.Drawing.Size(52, 18);
             this.LBLDondeVaLaDescripcion.TabIndex = 3;
@@ -109,7 +123,7 @@ namespace Presentacion.Formularios
             this.LBLNombreMonitor.AutoSize = true;
             this.LBLNombreMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLNombreMonitor.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLNombreMonitor.Location = new System.Drawing.Point(120, 191);
+            this.LBLNombreMonitor.Location = new System.Drawing.Point(84, 161);
             this.LBLNombreMonitor.Name = "LBLNombreMonitor";
             this.LBLNombreMonitor.Size = new System.Drawing.Size(136, 20);
             this.LBLNombreMonitor.TabIndex = 4;
@@ -120,7 +134,7 @@ namespace Presentacion.Formularios
             this.LBLDondeVaElNombreMonitor.AutoSize = true;
             this.LBLDondeVaElNombreMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLDondeVaElNombreMonitor.ForeColor = System.Drawing.Color.White;
-            this.LBLDondeVaElNombreMonitor.Location = new System.Drawing.Point(144, 226);
+            this.LBLDondeVaElNombreMonitor.Location = new System.Drawing.Point(130, 198);
             this.LBLDondeVaElNombreMonitor.Name = "LBLDondeVaElNombreMonitor";
             this.LBLDondeVaElNombreMonitor.Size = new System.Drawing.Size(52, 18);
             this.LBLDondeVaElNombreMonitor.TabIndex = 5;
@@ -128,22 +142,34 @@ namespace Presentacion.Formularios
             // 
             // BTNApuntarseActividad
             // 
-            this.BTNApuntarseActividad.Location = new System.Drawing.Point(88, 267);
+            this.BTNApuntarseActividad.Location = new System.Drawing.Point(88, 305);
             this.BTNApuntarseActividad.Name = "BTNApuntarseActividad";
             this.BTNApuntarseActividad.Size = new System.Drawing.Size(143, 50);
             this.BTNApuntarseActividad.TabIndex = 6;
             this.BTNApuntarseActividad.Text = "Apuntarse";
             this.BTNApuntarseActividad.Click += new System.EventHandler(this.BTNApuntarseActividad_Click);
             // 
-            // BTNDarseDeBajaActividad
+            // LBLMediaValoracion
             // 
-            this.BTNDarseDeBajaActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTNDarseDeBajaActividad.Location = new System.Drawing.Point(88, 323);
-            this.BTNDarseDeBajaActividad.Name = "BTNDarseDeBajaActividad";
-            this.BTNDarseDeBajaActividad.Size = new System.Drawing.Size(143, 50);
-            this.BTNDarseDeBajaActividad.TabIndex = 7;
-            this.BTNDarseDeBajaActividad.Text = "Desapuntarte";
-            this.BTNDarseDeBajaActividad.Click += new System.EventHandler(this.BTNDarseDeBajaActividad_Click);
+            this.LBLMediaValoracion.AutoSize = true;
+            this.LBLMediaValoracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLMediaValoracion.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLMediaValoracion.Location = new System.Drawing.Point(108, 229);
+            this.LBLMediaValoracion.Name = "LBLMediaValoracion";
+            this.LBLMediaValoracion.Size = new System.Drawing.Size(94, 20);
+            this.LBLMediaValoracion.TabIndex = 8;
+            this.LBLMediaValoracion.Text = "Valoración";
+            // 
+            // LBLDondeVaLaMediaValoración
+            // 
+            this.LBLDondeVaLaMediaValoración.AutoSize = true;
+            this.LBLDondeVaLaMediaValoración.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDondeVaLaMediaValoración.ForeColor = System.Drawing.Color.White;
+            this.LBLDondeVaLaMediaValoración.Location = new System.Drawing.Point(130, 261);
+            this.LBLDondeVaLaMediaValoración.Name = "LBLDondeVaLaMediaValoración";
+            this.LBLDondeVaLaMediaValoración.Size = new System.Drawing.Size(52, 18);
+            this.LBLDondeVaLaMediaValoración.TabIndex = 9;
+            this.LBLDondeVaLaMediaValoración.Text = "label1";
             // 
             // VerInformacionActividad
             // 
@@ -172,5 +198,7 @@ namespace Presentacion.Formularios
         private System.Windows.Forms.Label LBLDondeVaElNombreMonitor;
         private System.Windows.Forms.Button BTNApuntarseActividad;
         private Button BTNDarseDeBajaActividad;
+        private Label LBLMediaValoracion;
+        private Label LBLDondeVaLaMediaValoración;
     }
 }
