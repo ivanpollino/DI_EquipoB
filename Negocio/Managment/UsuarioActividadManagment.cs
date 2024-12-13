@@ -69,5 +69,12 @@ namespace Negocio.Managment
         }
 
 
+
+        public void ActualizarMediaValoracion(int idActividad)
+        {
+            UsuarioActividadRepository actividadRepository = new UsuarioActividadRepository();
+            actividadRepository.ActualizarMediaValoracion(idActividad);
+        }
+
     }
 }

@@ -108,5 +108,29 @@ namespace Datos.Repositorys
                 }
             }
         }
+
+        public String modificarUsuario(String dni, Usuario nuevosDatos)
+        {
+            using (var contexto = new equipobEntities())
+            {
+                var usuarioExistente = contexto.Usuario.FirstOrDefault(u => u.DNI == dni);
+
+                if (usuarioExistente == null)
+                {
+                    return "Usuario no encontrado";
+                }
+
+                usuarioExistente.Nombre = nuevosDatos.Nombre;
+                usuarioExistente.Apellidos = nuevosDatos.Apellidos;
+                usuarioExistente.Email = nuevosDatos.Email;
+                usuarioExistente.Telefono = nuevosDatos.Telefono;
+                usuarioExistente.Cuenta_Corriente = nuevosDatos.Cuenta_Corriente;
+                usuarioExistente.Direccion = nuevosDatos.Direccion;
+
+                contexto.SaveChanges();
+            }
+
+            return "Usuario modificado con éxito";
+        }
     }
 }

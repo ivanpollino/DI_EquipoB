@@ -173,5 +173,34 @@ namespace Negocio.Managment
             return usuario;
 
         }
+
+        /// <summary>
+        /// Modifica los datos de un usuario existente en la base de datos.
+        /// </summary>
+        /// <param name="dni">DNI del usuario a modificar.</param>
+        /// <param name="nuevosDatosDTO">DTO con los nuevos datos del usuario.</param>
+        /// <returns>Mensaje indicando el estado de la operación.</returns>
+        public String modificarUsuario(String dni, UsuarioDTO usuarioDTO)
+        {
+            Usuario usuario = new Usuario();
+            UsuarioRepository datos = new UsuarioRepository();
+            List<Usuario> usuarios = datos.ObtenerUsuarios();
+            if (!comprobarDNI(usuarios, usuarioDTO))
+            {
+                usuario.DNI = usuarioDTO.DNI;
+                usuario.Nombre = usuarioDTO.Nombre;
+                usuario.Apellidos = usuarioDTO.Apellidos;
+                usuario.Telefono = usuarioDTO.Telefono;
+                usuario.Direccion = usuarioDTO.Direccion;
+                usuario.Cuenta_Corriente = usuarioDTO.Cuenta_Corriente;
+                usuario.Email = usuarioDTO.Email;
+
+                return datos.modificarUsuario(dni, usuario);
+            }
+            else
+            {
+                return "No existe el usuario";
+            }
+        }
     }
 }

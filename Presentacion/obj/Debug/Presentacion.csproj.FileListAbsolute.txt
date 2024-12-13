@@ -72,3 +72,4 @@ C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Present
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.Actividades.resources
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.ActividadesApuntado.resources
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.VerInformacionActividad.resources
+C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.EditarPerfil.resources

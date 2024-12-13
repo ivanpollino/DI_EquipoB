@@ -1,6 +1,7 @@
 ﻿using Datos.Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,6 +68,28 @@ namespace Datos.Repositorys
             catch
             {
                 return false;
+            }
+        }
+
+        public void ActualizarMediaValoracion(int idActividad)
+        {
+            using (var context = new equipobEntities()) 
+            {
+                var mediaValoracion = context.Usuario_Actividad
+                    .Where(v => v.Id_Actividad == idActividad)
+                    .Average(v => v.Valoracion);
+
+                var actividad = context.Actividad.FirstOrDefault(a => a.Id_Actividad == idActividad);
+
+                if (actividad != null)
+                {
+                    actividad.Media_Valoracion = (decimal?)mediaValoracion;
+                    context.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception($"No se encontró la actividad con el ID {idActividad}.");
+                }
             }
         }
     }
