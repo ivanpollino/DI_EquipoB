@@ -30,11 +30,67 @@ namespace Presentacion.ComponentesPersonalizados
             {
                 MessageBox.Show("Esta vacio");
             }
-            //estrellasValoracion1.Visible = false;
-            estrellasValoracion1.Configurar(actividadDto, usuario);
-            estrellasValoracion1.Visible = true;
-
+            estrellas();
         }
+        /// <summary>
+        /// Verifica si el usuario está apuntado a una actividad y muestra u oculta las estrellas de valoración
+        /// en función de si está apuntado o no. Si el usuario está apuntado, muestra las estrellas de valoración 
+        /// y las ajusta a la configuración correspondiente. Si no está apuntado, oculta las estrellas.
+        /// </summary>
+        private void estrellas()
+        {
+            UsuarioActividadManagment usuarioActividadManagment = new UsuarioActividadManagment();
+            List<UsuarioActividadDTO> actividadesApuntadas = usuarioActividadManagment.ObtenerActividadesApuntado(usuario.DNI);
+
+            bool estaApuntado = actividadesApuntadas.Any(a => a.Id_Actividad == actividadDto.Id_Actividad);
+            if (estaApuntado)
+            {
+                CenterElementsConEstrella();
+                byte valoracion = usuarioActividadManagment.ObtenerValoracion(actividadDto.Id_Actividad, usuario.DNI);
+
+                estrellasValoracion1.Configurar(actividadDto, usuario);
+                estrellasValoracion1.Visible = true;
+
+            }
+            else
+            {
+                CenterElements();
+                estrellasValoracion1.Visible = false;// Si el usuario no está apuntado ocultar las estrellas
+            }
+        }
+        /// <summary>
+        /// Centra los elementos dentro del contenedor de información en el control, añadiendo el control personalizado de estrellas.
+        /// Ajusta las posiciones de las etiquetas para que estén distribuidas de manera equilibrada.
+        /// </summary>
+        private void CenterElementsConEstrella()
+        {
+            int panelWidth = panelContenedorInfo.ClientSize.Width;
+            int panelHeight = panelContenedorInfo.ClientSize.Height;
+
+            int spacing = 10; 
+
+            int totalHeight = LBLIndicadorNombreActividad.Height + LBLDondeVaNombreActividad.Height +
+                              LBLIndicadorNombreMonitor.Height + LBLDonveVaNombreMonitor.Height +
+                              estrellasValoracion1.Height + (5 * spacing); 
+
+            int currentY = (panelHeight - totalHeight) / 2;
+
+            LBLIndicadorNombreActividad.Location = new Point((panelWidth - LBLIndicadorNombreActividad.Width) / 2, currentY);
+            currentY += LBLIndicadorNombreActividad.Height + spacing;
+
+            LBLDondeVaNombreActividad.Location = new Point((panelWidth - LBLDondeVaNombreActividad.Width) / 2, currentY);
+            currentY += LBLDondeVaNombreActividad.Height + spacing;
+
+            LBLIndicadorNombreMonitor.Location = new Point((panelWidth - LBLIndicadorNombreMonitor.Width) / 2, currentY);
+            currentY += LBLIndicadorNombreMonitor.Height + spacing;
+
+            LBLDonveVaNombreMonitor.Location = new Point((panelWidth - LBLDonveVaNombreMonitor.Width) / 2, currentY);
+            currentY += LBLDonveVaNombreMonitor.Height + spacing;
+
+            int estrellasOffset = -5; 
+            estrellasValoracion1.Location = new Point((panelWidth - estrellasValoracion1.Width) / 2, currentY + estrellasOffset);
+        }
+
         /// <summary>
         /// Evento que se dispara cuando se hace clic en el panel de información de la actividad.
         /// Abre un formulario para mostrar la información detallada de la actividad.
@@ -60,7 +116,7 @@ namespace Presentacion.ComponentesPersonalizados
             int panelWidth = panelContenedorInfo.ClientSize.Width;
             int panelHeight = panelContenedorInfo.ClientSize.Height;
 
-            int spacing = 10;
+            int spacing = 15;
 
             int totalHeight = LBLIndicadorNombreActividad.Height + LBLDondeVaNombreActividad.Height +
                               LBLIndicadorNombreMonitor.Height + LBLDonveVaNombreMonitor.Height +
@@ -73,12 +129,11 @@ namespace Presentacion.ComponentesPersonalizados
 
             LBLIndicadorNombreMonitor.Location = new Point((panelWidth - LBLIndicadorNombreMonitor.Width) / 2, LBLDondeVaNombreActividad.Bottom + spacing);
             LBLDonveVaNombreMonitor.Location = new Point((panelWidth - LBLDonveVaNombreMonitor.Width) / 2, LBLIndicadorNombreMonitor.Bottom + spacing);
-            estrellasValoracion1.Location = new Point((panelWidth - estrellasValoracion1.Width) / 2, LBLDonveVaNombreMonitor.Bottom + spacing);
         }
 
         private void ActividadUsuario_Load(object sender, EventArgs e)
         {
-            CenterElements();
+            
         }
 
         private void LBLIndicadorNombreActividad_Click(object sender, EventArgs e)

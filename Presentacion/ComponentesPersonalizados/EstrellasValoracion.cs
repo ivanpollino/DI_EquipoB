@@ -64,23 +64,35 @@ namespace Presentacion.ComponentesPersonalizados
             bool actualizado = managment.ActualizarValoracion(actividad.Id_Actividad, usuario.DNI, nuevaValoracion);
         }
         /// <summary>
-        /// Actualiza la valoración en la base de datos y refleja el cambio visual.
+        /// Actualiza la valoración en la base de datos y refleja el cambio visual, 
+        /// pero solo si no se ha dado una valoración previamente.
         /// </summary>
         /// <param name="nuevaValoracion">Nueva puntuación seleccionada.</param>
         private void GuardarValoracion(byte nuevaValoracion)
         {
             UsuarioActividadManagment managment = new UsuarioActividadManagment();
-            bool actualizado = managment.ActualizarValoracion(actividad.Id_Actividad, usuario.DNI, nuevaValoracion);
+            byte valoracionExistente = managment.ObtenerValoracion(actividad.Id_Actividad, usuario.DNI);
 
-            if (actualizado)
+            if (valoracionExistente == 0)
             {
-                MessageBox.Show($"Valoración actualizada a {nuevaValoracion} estrellas.");
+                bool actualizado = managment.ActualizarValoracion(actividad.Id_Actividad, usuario.DNI, nuevaValoracion);
+
+                if (actualizado)
+                {
+                    MessageBox.Show($"Valoración guardada: {nuevaValoracion} estrellas.");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar la valoración. Inténtelo de nuevo.");
+                }
             }
             else
             {
-                MessageBox.Show("No se pudo actualizar la valoración. Inténtelo de nuevo.");
+                MessageBox.Show("Ya has valorado esta actividad anteriormente.");
+                CargarValoracion();
             }
         }
+
         /// <summary>
         /// Cambia la puntuación seleccionada y actualiza en la base de datos.
         /// </summary>
@@ -127,7 +139,7 @@ namespace Presentacion.ComponentesPersonalizados
             estrellaLlena5.Visible = false;
         }
     
-    private void estrellaEmpty1_Click(object sender, EventArgs e)
+        private void estrellaEmpty1_Click(object sender, EventArgs e)
         {
             p = 1;
             CambiarEstrellas(p);

@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="2722776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="2723800">
       <assemblyIdentity name="Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>g7WZV2Q/P3TLe35raOa9aU2Bv3woBfq1UgTssMgH4ZI=</dsig:DigestValue>
+        <dsig:DigestValue>VRsmk6eo3loIBIQKG3ULhSOc08gprJ0oXoXnn87HadI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
