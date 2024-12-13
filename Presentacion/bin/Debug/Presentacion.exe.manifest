@@ -86,19 +86,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uTCNA3Jc9iaPxFqhGN74t+CB1PivwP5q3qYgodY6g48=</dsig:DigestValue>
+        <dsig:DigestValue>DC7uDxsAYfVh326p45tSHqJ3RVpzDCla6evRUz6IcbA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="2723800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="2717656">
       <assemblyIdentity name="Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VRsmk6eo3loIBIQKG3ULhSOc08gprJ0oXoXnn87HadI=</dsig:DigestValue>
+        <dsig:DigestValue>Jq7vROWRVtKMo2FF2rFzRo6TWIZ7EPqKffV54fn82y0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,13 +111,13 @@
       <dsig:DigestValue>qM5j3uLEnosyVA/hq3Q6gvDuLZRiMSvx5+llMV53EQE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Presentacion.exe.config" size="1147">
+  <file name="Presentacion.exe.config" size="1156">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>iHUldUZpFT0VZtlhdgoZRGnINeDkt8uDpWG0YGFTj30=</dsig:DigestValue>
+      <dsig:DigestValue>xgiqyFbTQ/9N4AVCrUFzVGjfxBTXdWkapb2KMXp453g=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
