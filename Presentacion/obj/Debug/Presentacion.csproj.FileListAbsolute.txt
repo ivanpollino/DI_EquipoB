@@ -74,3 +74,5 @@ C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Present
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.VerInformacionActividad.resources
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.EditarPerfil.resources
 C:\Users\Vespertino\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.EstrellasValoracion.resources
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.ComponentesPersonalizados.EstrellasValoracion.resources
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.EditarPerfil.resources

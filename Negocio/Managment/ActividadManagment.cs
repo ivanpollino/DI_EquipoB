@@ -70,5 +70,20 @@ namespace Negocio.Managment
             };
             return actividadRepository.GuardarActividad(actividad);
         }
+
+        public ActividadDTO ObtenerActividadPorId(int idActividad)
+        {
+                Actividad actividadNormal = new Datos.Repositorys.ActividadRepository().ObtenerActividadPorId(idActividad);
+                ActividadDTO aux = new ActividadDTO
+                {
+                    Id_Actividad = actividadNormal.Id_Actividad,
+                    Nombre = actividadNormal.Nombre,
+                    Descripcion = actividadNormal.Descripcion,
+                    DNI_Monitor = actividadNormal.DNI_Monitor,
+                    MediaValoracion = (double)actividadNormal.Media_Valoracion
+                };
+
+                return aux;
+        }
     }
 }

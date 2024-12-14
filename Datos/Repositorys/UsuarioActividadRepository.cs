@@ -81,14 +81,15 @@ namespace Datos.Repositorys
 
                 var actividad = context.Actividad.FirstOrDefault(a => a.Id_Actividad == idActividad);
 
-                if (actividad != null)
+                if (actividad != null && mediaValoracion!=null)
                 {
                     actividad.Media_Valoracion = (decimal?)mediaValoracion;
                     context.SaveChanges();
                 }
                 else
                 {
-                    throw new Exception($"No se encontró la actividad con el ID {idActividad}.");
+                    actividad.Media_Valoracion = 1; 
+                    context.SaveChanges();
                 }
             }
         }

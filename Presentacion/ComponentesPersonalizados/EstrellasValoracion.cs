@@ -80,7 +80,14 @@ namespace Presentacion.ComponentesPersonalizados
                 if (actualizado)
                 {
                     MessageBox.Show($"Valoración guardada: {nuevaValoracion} estrellas.");
-                    managment.ActualizarValoracion(actividad.Id_Actividad, usuario.DNI, nuevaValoracion);
+                    managment.ActualizarMediaValoracion(actividad.Id_Actividad);
+                    var controlPadre = BuscarControlPadre<ActividadUsuario>();
+                    if (controlPadre != null)
+                    {
+                        controlPadre.actividadDto = new ActividadManagment().ObtenerActividadPorId(actividad.Id_Actividad);
+                    }
+                    
+
                 }
                 else
                 {
@@ -92,6 +99,21 @@ namespace Presentacion.ComponentesPersonalizados
                 MessageBox.Show("Ya has valorado esta actividad anteriormente.");
                 CargarValoracion();
             }
+        }
+
+        private T BuscarControlPadre<T>() where T : Control
+        {
+            Control parent = this.Parent;
+
+            while (parent != null)
+            {
+                if (parent is T)
+                    return (T)parent;
+
+                parent = parent.Parent; // Subir un nivel en la jerarquía
+            }
+
+            return null; // No se encontró el control
         }
 
         /// <summary>

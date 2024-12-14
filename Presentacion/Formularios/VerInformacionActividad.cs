@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Negocio.EntitiesDTO;
+using Negocio.Managment;
 
 namespace Presentacion.Formularios
 {
@@ -107,8 +108,8 @@ namespace Presentacion.Formularios
             int panelHeight = panelContenedor.ClientSize.Height;
 
             // Espaciado ajustado para mayor separación entre elementos
-            int spacing = 30;  // Espaciado vertical entre cada elemento
-            int buttonSpacing = 40; // Espaciado extra antes del botón
+            int spacing = 15;  // Espaciado vertical entre cada elemento
+            int buttonSpacing = 25; // Espaciado extra antes del botón
 
             // Calculamos el espacio inicial centrado en el panel
             int totalHeight = (6 * LBLNombreActvidad.Height) + (5 * spacing) + BTNApuntarseActividad.Height + buttonSpacing;
@@ -124,8 +125,8 @@ namespace Presentacion.Formularios
             LBLNombreMonitor.Location = new Point((panelWidth - LBLNombreMonitor.Width) / 2, LBLDondeVaLaDescripcion.Bottom + spacing);
             LBLDondeVaElNombreMonitor.Location = new Point((panelWidth - LBLDondeVaElNombreMonitor.Width) / 2, LBLNombreMonitor.Bottom + spacing);
 
-            // Posicionamos el botón con más separación
-            BTNApuntarseActividad.Location = new Point((panelWidth - BTNApuntarseActividad.Width) / 2, LBLDondeVaElNombreMonitor.Bottom + buttonSpacing);
+            LBLMediaValoracion.Location = new Point((panelWidth - LBLMediaValoracion.Width) / 2, LBLDondeVaElNombreMonitor.Bottom + spacing);
+            LBLDondeVaLaMediaValoración.Location = new Point((panelWidth - LBLDondeVaLaMediaValoración.Width) / 2, LBLMediaValoracion.Bottom + spacing);
         }
 
         private void BTNDarseDeBajaActividad_Click(object sender, EventArgs e)
@@ -145,6 +146,7 @@ namespace Presentacion.Formularios
                 {
                     MessageBox.Show("¡Te has desapuntado de la actividad con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _formPadre.ObtenerFormularioPadre();
+                    new UsuarioActividadManagment().ActualizarMediaValoracion(actividadAux.Id_Actividad);
                     this.Close();
                 }
                 else

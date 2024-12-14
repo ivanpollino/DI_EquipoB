@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Datos.dll" size="39424">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Datos.dll" size="39936">
       <assemblyIdentity name="Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>dCAXG2WP/OWKpTEY04kggCoxEOuB13y6fy9Sq8Xe8CA=</dsig:DigestValue>
+        <dsig:DigestValue>SFrR83MeUIBcc7CWfKOUddjPOlp4GNpEyOS5JBBybdQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Negocio.dll" size="14848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Negocio.dll" size="15360">
       <assemblyIdentity name="Negocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>T0TDtMcS5fRewvifRuEwC3DkAQUWBEuvQsCpsJssuAA=</dsig:DigestValue>
+        <dsig:DigestValue>Njq3w8rg7ox+7OiaQhaRH63Oz2P5fGuErDv4/wO8Q34=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HQMv6wm2wvb3efrwKwr/AZwpPIMmvGFuDCQ4J7w8kX0=</dsig:DigestValue>
+        <dsig:DigestValue>9Y47jy0De0gyjqVpjsjro7Irrl36ReMnKGh7yzfpLl0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,13 +111,13 @@
       <dsig:DigestValue>qM5j3uLEnosyVA/hq3Q6gvDuLZRiMSvx5+llMV53EQE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Presentacion.exe.config" size="697">
+  <file name="Presentacion.exe.config" size="694">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>H2IOKG/5v8rOBfAYNlYL+WiHPx0haUQyYPkoKXx6o+Y=</dsig:DigestValue>
+      <dsig:DigestValue>1hlcYyHGGghnXwNv8gWShDxEsZ+0UPzOc4sg/g+x3tE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\es_empty.png" size="423">

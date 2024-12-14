@@ -32,6 +32,8 @@ namespace Presentacion.Formularios
         private void InitializeComponent()
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.LBLDondeVaLaMediaValoración = new System.Windows.Forms.Label();
+            this.LBLMediaValoracion = new System.Windows.Forms.Label();
             this.BTNDarseDeBajaActividad = new System.Windows.Forms.Button();
             this.LBLNombreActvidad = new System.Windows.Forms.Label();
             this.LBLDondeVaNombreActividad = new System.Windows.Forms.Label();
@@ -40,8 +42,6 @@ namespace Presentacion.Formularios
             this.LBLNombreMonitor = new System.Windows.Forms.Label();
             this.LBLDondeVaElNombreMonitor = new System.Windows.Forms.Label();
             this.BTNApuntarseActividad = new System.Windows.Forms.Button();
-            this.LBLMediaValoracion = new System.Windows.Forms.Label();
-            this.LBLDondeVaLaMediaValoración = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,10 +64,32 @@ namespace Presentacion.Formularios
             this.panelContenedor.Size = new System.Drawing.Size(315, 423);
             this.panelContenedor.TabIndex = 0;
             // 
+            // LBLDondeVaLaMediaValoración
+            // 
+            this.LBLDondeVaLaMediaValoración.AutoSize = true;
+            this.LBLDondeVaLaMediaValoración.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDondeVaLaMediaValoración.ForeColor = System.Drawing.Color.White;
+            this.LBLDondeVaLaMediaValoración.Location = new System.Drawing.Point(130, 261);
+            this.LBLDondeVaLaMediaValoración.Name = "LBLDondeVaLaMediaValoración";
+            this.LBLDondeVaLaMediaValoración.Size = new System.Drawing.Size(52, 18);
+            this.LBLDondeVaLaMediaValoración.TabIndex = 9;
+            this.LBLDondeVaLaMediaValoración.Text = "label1";
+            // 
+            // LBLMediaValoracion
+            // 
+            this.LBLMediaValoracion.AutoSize = true;
+            this.LBLMediaValoracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLMediaValoracion.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLMediaValoracion.Location = new System.Drawing.Point(108, 229);
+            this.LBLMediaValoracion.Name = "LBLMediaValoracion";
+            this.LBLMediaValoracion.Size = new System.Drawing.Size(94, 20);
+            this.LBLMediaValoracion.TabIndex = 8;
+            this.LBLMediaValoracion.Text = "Valoración";
+            // 
             // BTNDarseDeBajaActividad
             // 
             this.BTNDarseDeBajaActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BTNDarseDeBajaActividad.Location = new System.Drawing.Point(88, 361);
+            this.BTNDarseDeBajaActividad.Location = new System.Drawing.Point(86, 349);
             this.BTNDarseDeBajaActividad.Name = "BTNDarseDeBajaActividad";
             this.BTNDarseDeBajaActividad.Size = new System.Drawing.Size(143, 50);
             this.BTNDarseDeBajaActividad.TabIndex = 7;
@@ -142,34 +164,12 @@ namespace Presentacion.Formularios
             // 
             // BTNApuntarseActividad
             // 
-            this.BTNApuntarseActividad.Location = new System.Drawing.Point(88, 305);
+            this.BTNApuntarseActividad.Location = new System.Drawing.Point(86, 349);
             this.BTNApuntarseActividad.Name = "BTNApuntarseActividad";
             this.BTNApuntarseActividad.Size = new System.Drawing.Size(143, 50);
             this.BTNApuntarseActividad.TabIndex = 6;
             this.BTNApuntarseActividad.Text = "Apuntarse";
             this.BTNApuntarseActividad.Click += new System.EventHandler(this.BTNApuntarseActividad_Click);
-            // 
-            // LBLMediaValoracion
-            // 
-            this.LBLMediaValoracion.AutoSize = true;
-            this.LBLMediaValoracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLMediaValoracion.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLMediaValoracion.Location = new System.Drawing.Point(108, 229);
-            this.LBLMediaValoracion.Name = "LBLMediaValoracion";
-            this.LBLMediaValoracion.Size = new System.Drawing.Size(94, 20);
-            this.LBLMediaValoracion.TabIndex = 8;
-            this.LBLMediaValoracion.Text = "Valoración";
-            // 
-            // LBLDondeVaLaMediaValoración
-            // 
-            this.LBLDondeVaLaMediaValoración.AutoSize = true;
-            this.LBLDondeVaLaMediaValoración.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLDondeVaLaMediaValoración.ForeColor = System.Drawing.Color.White;
-            this.LBLDondeVaLaMediaValoración.Location = new System.Drawing.Point(130, 261);
-            this.LBLDondeVaLaMediaValoración.Name = "LBLDondeVaLaMediaValoración";
-            this.LBLDondeVaLaMediaValoración.Size = new System.Drawing.Size(52, 18);
-            this.LBLDondeVaLaMediaValoración.TabIndex = 9;
-            this.LBLDondeVaLaMediaValoración.Text = "label1";
             // 
             // VerInformacionActividad
             // 

@@ -117,5 +117,13 @@ namespace Datos.Repositorys
                 }
             }
         }
+
+        public Actividad ObtenerActividadPorId(int idActividad)
+        {
+            using (var context = new equipobEntities())
+            {
+                return context.Actividad.FirstOrDefault(a => a.Id_Actividad == idActividad);
+            }
+        }
     }
 }
