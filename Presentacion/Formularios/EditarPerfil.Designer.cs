@@ -250,7 +250,7 @@
             // 
             this.TXTBEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TXTBEmail.Location = new System.Drawing.Point(152, 121);
-            this.TXTBEmail.MaxLength = 9;
+            this.TXTBEmail.MaxLength = 60;
             this.TXTBEmail.Name = "TXTBEmail";
             this.TXTBEmail.Size = new System.Drawing.Size(111, 20);
             this.TXTBEmail.TabIndex = 35;

@@ -9,23 +9,32 @@ using System.Threading.Tasks;
 namespace PruebasUnitarias.PruebasSprint2
 {
     [TestClass]
-    public class TestsRegistroActividad
+    public class TestsRegistroMonitor
     {
         [TestMethod]
-        public void comprobarRegistroActividadCorrecto()
+        public void comprobarRegistroMonitorCorrecto()
         {
-            ActividadDTO actividad = new ActividadDTO(10, "Prueba", "Prueba", "18079231C");
-            string mensaje = new Negocio.Managment.ActividadManagment().RegistrarActividad(actividad);
-            Assert.AreEqual(mensaje, "Actividad insertada con éxito.");
+            UsuarioDTO monitor = new UsuarioDTO("18079231C", "Test", "Monitor", 0, "", "", "testMonitor@gmail.com", "Root2/root");
+            string mensaje = new Negocio.Managment.MonitorManagment().altaMonitor(monitor);
+            Assert.AreEqual(mensaje, "Monitor insertado correctamente.");
             System.Threading.Thread.Sleep(5000);
         }
 
         [TestMethod]
-        public void comprobarRegistroActividadIncorrectoIdRepetido()
+        public void comprobarRegistroIncorrectoMonitorEmailRepetido()
         {
-            ActividadDTO actividad = new ActividadDTO(10, "Prueba", "Prueba", "18079231C");
-            string mensaje = new Negocio.Managment.ActividadManagment().RegistrarActividad(actividad);
-            Assert.AreEqual(mensaje, "Error al guardar la actividad: An error occurred while updating the entries. See the inner exception for details.");
+            UsuarioDTO monitor = new UsuarioDTO("18079231B", "Test", "Monitor", 0, "", "", "testMonitor@gmail.com", "Root2/root");
+            string mensaje = new Negocio.Managment.MonitorManagment().altaMonitor(monitor);
+            Assert.AreEqual(mensaje, "Ya hay un monitor registrado con ese email");
         }
+
+        [TestMethod]
+        public void comprobarRegistroIncorrectoMonitorDNIRepetido()
+        {
+            UsuarioDTO monitor = new UsuarioDTO("18079231C", "Test", "Monitor", 0, "", "", "testMonitor2@gmail.com", "Root2/root");
+            string mensaje = new Negocio.Managment.MonitorManagment().altaMonitor(monitor);
+            Assert.AreEqual(mensaje, "Ya hay un monitor registrado con ese DNI");
+        }
+
     }
 }

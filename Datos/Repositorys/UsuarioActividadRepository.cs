@@ -59,17 +59,26 @@ namespace Datos.Repositorys
             {
                 using (var context = new equipobEntities())
                 {
-                    context.Usuario_Actividad.Attach(usuarioActividad);
-                    context.Usuario_Actividad.Remove(usuarioActividad);
+                    var entidad = context.Usuario_Actividad.FirstOrDefault(
+                        ua => ua.DNI == usuarioActividad.DNI &&
+                              ua.Id_Actividad == usuarioActividad.Id_Actividad);
+
+                    if (entidad == null)
+                    {
+                        return false;
+                    }
+
+                    context.Usuario_Actividad.Remove(entidad);
                     context.SaveChanges();
                 }
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
                 return false;
             }
         }
+
 
         public void ActualizarMediaValoracion(int idActividad)
         {
