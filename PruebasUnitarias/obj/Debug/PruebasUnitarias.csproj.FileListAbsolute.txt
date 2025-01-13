@@ -88,6 +88,6 @@ C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\PruebasUnitarias\bin\Debug\Micro
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\PruebasUnitarias\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\PruebasUnitarias\obj\Debug\PruebasUnitarias.csproj.AssemblyReference.cache
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\PruebasUnitarias\obj\Debug\PruebasUnitarias.csproj.CoreCompileInputs.cache
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\PruebasUnitarias\obj\Debug\PruebasUnitarias.csproj.CopyComplete
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\PruebasUnitarias\obj\Debug\PruebasU.A9D5A5C4.Up2Date
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\PruebasUnitarias\obj\Debug\PruebasUnitarias.dll
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\PruebasUnitarias\obj\Debug\PruebasUnitarias.pdb

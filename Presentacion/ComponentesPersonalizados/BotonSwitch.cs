@@ -24,7 +24,7 @@ namespace Presentacion.ComponentesPersonalizados
         public BotonSwitch()
         {
             InitializeComponent();
-            LBLVerMisActividades.ForeColor = Color.Gray;
+
             // Inicializar el Timer
             animacionTimer = new Timer();
             animacionTimer.Interval = 10;
@@ -70,8 +70,6 @@ namespace Presentacion.ComponentesPersonalizados
                 {
                     panelQueSeMueve.Left = posicionFinalX;
                     estado = true;
-                    LBLVerMisActividades.ForeColor = Color.White;
-                    label1.ForeColor = Color.Gray;
                     animacionTimer.Stop();
                 }
             }
@@ -84,8 +82,6 @@ namespace Presentacion.ComponentesPersonalizados
                 {
                     panelQueSeMueve.Left = posicionInicialX;
                     estado = false;
-                    LBLVerMisActividades.ForeColor = Color.Gray;
-                    label1.ForeColor = Color.White;
                     animacionTimer.Stop();
                 }
             }

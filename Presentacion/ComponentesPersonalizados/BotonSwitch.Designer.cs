@@ -30,45 +30,19 @@ namespace Presentacion.ComponentesPersonalizados
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.LBLVerMisActividades = new System.Windows.Forms.Label();
             this.panelQueSeMueve = new System.Windows.Forms.Panel();
             this.PanelActividadesDisponibles = new System.Windows.Forms.Panel();
+            this.LBLVerMisActividades = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelActividadesDisponibles.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(28, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.MaximumSize = new System.Drawing.Size(160, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 34);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ver actividades\n   disponibles";
-            // 
-            // LBLVerMisActividades
-            // 
-            this.LBLVerMisActividades.AutoSize = true;
-            this.LBLVerMisActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLVerMisActividades.ForeColor = System.Drawing.Color.White;
-            this.LBLVerMisActividades.Location = new System.Drawing.Point(204, 34);
-            this.LBLVerMisActividades.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LBLVerMisActividades.Name = "LBLVerMisActividades";
-            this.LBLVerMisActividades.Size = new System.Drawing.Size(149, 17);
-            this.LBLVerMisActividades.TabIndex = 0;
-            this.LBLVerMisActividades.Text = "Ver mis actividades";
             // 
             // panelQueSeMueve
             // 
             this.panelQueSeMueve.BackColor = System.Drawing.Color.DarkCyan;
-            this.panelQueSeMueve.Location = new System.Drawing.Point(1, 77);
-            this.panelQueSeMueve.Margin = new System.Windows.Forms.Padding(4);
+            this.panelQueSeMueve.Location = new System.Drawing.Point(0, 0);
             this.panelQueSeMueve.Name = "panelQueSeMueve";
-            this.panelQueSeMueve.Size = new System.Drawing.Size(187, 12);
+            this.panelQueSeMueve.Size = new System.Drawing.Size(140, 72);
             this.panelQueSeMueve.TabIndex = 1;
             // 
             // PanelActividadesDisponibles
@@ -78,19 +52,40 @@ namespace Presentacion.ComponentesPersonalizados
             this.PanelActividadesDisponibles.Controls.Add(this.LBLVerMisActividades);
             this.PanelActividadesDisponibles.Controls.Add(this.label1);
             this.PanelActividadesDisponibles.Location = new System.Drawing.Point(0, 0);
-            this.PanelActividadesDisponibles.Margin = new System.Windows.Forms.Padding(4);
             this.PanelActividadesDisponibles.Name = "PanelActividadesDisponibles";
-            this.PanelActividadesDisponibles.Size = new System.Drawing.Size(373, 89);
+            this.PanelActividadesDisponibles.Size = new System.Drawing.Size(280, 72);
             this.PanelActividadesDisponibles.TabIndex = 0;
+            // 
+            // LBLVerMisActividades
+            // 
+            this.LBLVerMisActividades.AutoSize = true;
+            this.LBLVerMisActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLVerMisActividades.ForeColor = System.Drawing.Color.White;
+            this.LBLVerMisActividades.Location = new System.Drawing.Point(153, 28);
+            this.LBLVerMisActividades.Name = "LBLVerMisActividades";
+            this.LBLVerMisActividades.Size = new System.Drawing.Size(117, 13);
+            this.LBLVerMisActividades.TabIndex = 0;
+            this.LBLVerMisActividades.Text = "Ver mis actividades";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(21, 21);
+            this.label1.MaximumSize = new System.Drawing.Size(120, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 26);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Ver actividades\n   disponibles";
             // 
             // BotonSwitch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PanelActividadesDisponibles);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BotonSwitch";
-            this.Size = new System.Drawing.Size(373, 89);
+            this.Size = new System.Drawing.Size(280, 72);
             this.PanelActividadesDisponibles.ResumeLayout(false);
             this.PanelActividadesDisponibles.PerformLayout();
             this.ResumeLayout(false);
@@ -98,10 +93,9 @@ namespace Presentacion.ComponentesPersonalizados
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel PanelActividadesDisponibles;
         private System.Windows.Forms.Label LBLVerMisActividades;
         private System.Windows.Forms.Panel panelQueSeMueve;
-        private System.Windows.Forms.Panel PanelActividadesDisponibles;
+        private System.Windows.Forms.Label label1;
     }
 }

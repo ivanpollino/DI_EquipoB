@@ -36,7 +36,6 @@ namespace Presentacion
             ConfigurarBotones(btLogin);
             ConfigurarBotones(btRegistro);
             ConfigurarBotones(BTNVerActividades);
-            BTNVerActividades.Font = new Font("Segoe UI", 20, FontStyle.Bold);
         }
 
         private void Landing_Load(object sender, EventArgs e)

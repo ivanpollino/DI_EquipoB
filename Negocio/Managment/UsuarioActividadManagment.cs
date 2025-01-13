@@ -54,44 +54,7 @@ namespace Negocio.Managment
             }
             return listaDTO;
         }
-        // <summary>
-        /// Obtiene la valoración de un usuario para una actividad.
-        /// </summary>
-        /// <param name="idActividad">ID de la actividad.</param>
-        /// <param name="dniUsuario">DNI del usuario.</param>
-        /// <returns>Valoración del usuario para la actividad (0 si no existe).</returns>
-        public byte ObtenerValoracion(int idActividad, string dniUsuario)
-        {
-            try
-            {
-                var usuarioActividadRepository = new UsuarioActividadRepository();
-                return usuarioActividadRepository.ObtenerValoracion(idActividad, dniUsuario);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al obtener la valoración", ex);
-            }
-        }
 
-        /// <summary>
-        /// Actualiza la valoración de un usuario para una actividad específica.
-        /// </summary>
-        /// <param name="idActividad">ID de la actividad.</param>
-        /// <param name="dniUsuario">DNI del usuario.</param>
-        /// <param name="nuevaValoracion">Nueva valoración a establecer.</param>
-        /// <returns><c>true</c> si la valoración fue actualizada correctamente, de lo contrario <c>false</c>.</returns>
-        public bool ActualizarValoracion(int idActividad, string dniUsuario, byte nuevaValoracion)
-        {
-            try
-            {
-                var usuarioActividadRepository = new UsuarioActividadRepository();
-                return usuarioActividadRepository.GuardarOActualizarValoracion(idActividad, dniUsuario, nuevaValoracion);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al actualizar la valoración", ex);
-            }
-        }
+
     }
 }
-

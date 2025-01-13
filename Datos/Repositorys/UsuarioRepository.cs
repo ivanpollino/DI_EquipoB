@@ -24,7 +24,7 @@ namespace Datos.Repositorys
         {
             Usuario_Normal usuarioNormal = new Usuario_Normal();
             usuarioNormal.DNI = usuario.DNI;
-            using (var contexto = new equipobFinalFinalEntities())
+            using (var contexto = new equipobEntities())
                 {
                     contexto.Usuario.Add(usuario);
                     contexto.Usuario_Normal.Add(usuarioNormal);
@@ -43,7 +43,7 @@ namespace Datos.Repositorys
             try
             {
                 //Abrir la BD
-                using (var contexto = new equipobFinalFinalEntities())
+                using (var contexto = new equipobEntities())
                 {
                     usuarios = contexto.Usuario.ToList();
                 }
@@ -61,7 +61,7 @@ namespace Datos.Repositorys
             try
             {
                 //Abrir la BD
-                using (var contexto = new equipobFinalFinalEntities())
+                using (var contexto = new equipobEntities())
                 {
                     usuarios = contexto.Administrador.ToList();
                 }
@@ -79,7 +79,7 @@ namespace Datos.Repositorys
             List<Usuario_Normal> usuarios = new List<Usuario_Normal>();
             try
             {
-                using (var contexto = new equipobFinalFinalEntities())
+                using (var contexto = new equipobEntities())
                 {
                     usuarios = contexto.Usuario_Normal.ToList();
                 }
@@ -93,7 +93,7 @@ namespace Datos.Repositorys
 
         public String sacarNombrePorDNI(String dni)
         {
-            using (var contexto = new equipobFinalFinalEntities())
+            using (var contexto = new equipobEntities())
             {
                 var usuario = contexto.Usuario
                                       .FirstOrDefault(u => u.DNI == dni);

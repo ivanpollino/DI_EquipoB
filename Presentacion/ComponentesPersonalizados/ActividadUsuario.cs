@@ -1,5 +1,4 @@
 ﻿using Negocio.EntitiesDTO;
-using Negocio.Managment;
 using Presentacion.Formularios;
 using System;
 using System.Collections.Generic;
@@ -21,6 +20,7 @@ namespace Presentacion.ComponentesPersonalizados
     {
         public ActividadDTO actividadDto;
         public UsuarioDTO usuario;
+
         public ActividadUsuario(ActividadDTO actividad, UsuarioDTO usuario)
         {
             InitializeComponent();
@@ -29,30 +29,6 @@ namespace Presentacion.ComponentesPersonalizados
             if (actividadDto == null)
             {
                 MessageBox.Show("Esta vacio");
-            }
-            estrellas();
-        }
-        /// <summary>
-        /// Verifica si el usuario está apuntado a una actividad y muestra u oculta las estrellas de valoración
-        /// en función de si está apuntado o no. Si el usuario está apuntado, muestra las estrellas de valoración 
-        /// y las ajusta a la configuración correspondiente. Si no está apuntado, oculta las estrellas.
-        /// </summary>
-        private void estrellas()
-        {
-            UsuarioActividadManagment usuarioActividadManagment = new UsuarioActividadManagment();
-            List<UsuarioActividadDTO> actividadesApuntadas = usuarioActividadManagment.ObtenerActividadesApuntado(usuario.DNI);
-
-            bool estaApuntado = actividadesApuntadas.Any(a => a.Id_Actividad == actividadDto.Id_Actividad);
-            if (estaApuntado)
-            {
-                byte valoracion = usuarioActividadManagment.ObtenerValoracion(actividadDto.Id_Actividad, usuario.DNI);
-                estrellasValoracion1.Configurar(actividadDto, usuario);
-                estrellasValoracion1.Visible = true;
-
-            }
-            else
-            {
-                estrellasValoracion1.Visible = false;// Si el usuario no está apuntado ocultar las estrellas
             }
         }
 
@@ -66,7 +42,8 @@ namespace Presentacion.ComponentesPersonalizados
         {
             ActividadesApuntado formularioPadre = (ActividadesApuntado)FindForm();
 
-            VerInformacionActividad verInformacion = new VerInformacionActividad(formularioPadre, actividadDto, LBLDonveVaNombreMonitor.Text, usuario);
+
+            VerInformacionActividad verInformacion = new VerInformacionActividad(formularioPadre, actividadDto, LBLDonveVaNombreMonitor.Text,usuario);
 
             verInformacion.ShowDialog();
 
@@ -83,15 +60,9 @@ namespace Presentacion.ComponentesPersonalizados
 
             int spacing = 15;
 
-            bool hayEstrellas = estrellasValoracion1.Visible;
             int totalHeight = LBLIndicadorNombreActividad.Height + LBLDondeVaNombreActividad.Height +
                               LBLIndicadorNombreMonitor.Height + LBLDonveVaNombreMonitor.Height +
-                              (3 * spacing); // Altura sin las estrellas
-
-            if (hayEstrellas)
-            {
-                totalHeight += estrellasValoracion1.Height + 5; // Añadir la altura de las estrellas
-            }
+                              (3 * spacing);
 
             int currentY = (panelHeight - totalHeight) / 2;
 
@@ -100,22 +71,11 @@ namespace Presentacion.ComponentesPersonalizados
 
             LBLIndicadorNombreMonitor.Location = new Point((panelWidth - LBLIndicadorNombreMonitor.Width) / 2, LBLDondeVaNombreActividad.Bottom + spacing);
             LBLDonveVaNombreMonitor.Location = new Point((panelWidth - LBLDonveVaNombreMonitor.Width) / 2, LBLIndicadorNombreMonitor.Bottom + spacing);
-
-            if (hayEstrellas)
-            {
-                int estrellasOffset = -5; 
-                estrellasValoracion1.Location = new Point((panelWidth - estrellasValoracion1.Width) / 2, LBLDonveVaNombreMonitor.Bottom + spacing + estrellasOffset);
-            }
         }
 
         private void ActividadUsuario_Load(object sender, EventArgs e)
         {
             CenterElements();
-        }
-
-        private void LBLIndicadorNombreActividad_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
