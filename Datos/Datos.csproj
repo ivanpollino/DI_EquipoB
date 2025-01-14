@@ -72,6 +72,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>equipob.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Facturas.cs">
+      <DependentUpon>equipob.tt</DependentUpon>
+    </Compile>
     <Compile Include="Infrastructure\Monitor.cs">
       <DependentUpon>equipob.tt</DependentUpon>
     </Compile>
@@ -104,7 +107,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Infrastructure\equipob.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

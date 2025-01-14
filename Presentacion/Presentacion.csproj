@@ -301,9 +301,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logofinal.ico" />
+    <None Include="Resources\estadisticas.png" />
     <Content Include="Resources\estrella_vacia.png" />
     <Content Include="Resources\es_empty.png" />
     <Content Include="Resources\es_llena.png" />
+    <None Include="Resources\top5.png" />
     <Content Include="Resources\user-solid-48.png" />
   </ItemGroup>
   <ItemGroup>

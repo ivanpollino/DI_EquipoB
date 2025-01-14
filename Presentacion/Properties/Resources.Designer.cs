@@ -133,6 +133,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap estadisticas {
+            get {
+                object obj = ResourceManager.GetObject("estadisticas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap estrella_vacia {
             get {
                 object obj = ResourceManager.GetObject("estrella_vacia", resourceCulture);
@@ -226,6 +236,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap Services {
             get {
                 object obj = ResourceManager.GetObject("Services", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap top5 {
+            get {
+                object obj = ResourceManager.GetObject("top5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -23,6 +23,7 @@ namespace Presentacion
         bool menuExpandMonitores = false;
         bool menuExpandActividades = false;
         bool menuExpanAdministracion = false;
+        bool menuExpanEstadisticas = false;
 
         private void menuTransicion_Tick(object sender, EventArgs e)
         {
@@ -38,7 +39,7 @@ namespace Presentacion
             else
             {
                 flowLayoutGestioMonitores.Height -= 10;
-                if (flowLayoutGestioMonitores.Height <= 58)
+                if (flowLayoutGestioMonitores.Height <= 60)
                 {
                     menuTransicion.Stop();
                     menuExpandMonitores = false;
@@ -56,6 +57,12 @@ namespace Presentacion
         {
             menuTransacionActividades.Start();
         }
+
+        private void BTNEstadisticas_Click(object sender, EventArgs e)
+        {
+            menuTransicionEstadisticas.Start();
+        }
+
 
         private void menuTransacionActividades_Tick(object sender, EventArgs e)
         {
@@ -84,12 +91,34 @@ namespace Presentacion
             menuTransicionAdministracion.Start();
         }
 
+        private void menuTransicionEstadisticas_Tick(object sender, EventArgs e)
+        {
+            if (menuExpanEstadisticas == false)
+            {
+                flowLayoutEstadisticas.Height += 10;
+                if (flowLayoutEstadisticas.Height >= 169)
+                {
+                    menuTransicionEstadisticas.Stop();
+                    menuExpanEstadisticas = true;
+                }
+            }
+            else
+            {
+                flowLayoutEstadisticas.Height -= 10;
+                if (flowLayoutEstadisticas.Height <= 59)
+                {
+                    menuTransicionEstadisticas.Stop();
+                    menuExpanEstadisticas = false;
+                }
+            }
+        }
+
         private void menuTransicionAdministracion_Tick(object sender, EventArgs e)
         {
             if (menuExpanAdministracion == false)
             {
                 flowLayoutMenuAdministracion.Height += 10;
-                if (flowLayoutMenuAdministracion.Height >= 350)
+                if (flowLayoutMenuAdministracion.Height >= 600)
                 {
                     menuTransicionAdministracion.Stop();
                     menuExpanAdministracion = true;
@@ -163,5 +192,11 @@ namespace Presentacion
             registrarActividad.Show();
         }
 
+        private void panelFormularios_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+       
     }
 }

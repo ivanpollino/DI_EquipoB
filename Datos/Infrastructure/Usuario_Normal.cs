@@ -17,11 +17,14 @@ namespace Datos.Infrastructure
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Usuario_Normal()
         {
+            this.Facturas = new HashSet<Facturas>();
             this.Usuario_Actividad = new HashSet<Usuario_Actividad>();
         }
     
         public string DNI { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Facturas> Facturas { get; set; }
         public virtual Usuario Usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuario_Actividad> Usuario_Actividad { get; set; }
