@@ -11,13 +11,54 @@ Repositorio para gestionar las actividades asociadas a los usuarios en la base d
 bool \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a432dff79dbaeb22984001c4542260225}{Guardar\+Actividad}} (\mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario___actividad}{Usuario\+\_\+\+Actividad}} actividad)
 \begin{DoxyCompactList}\small\item\em Guarda una nueva actividad asociada a un usuario en la base de datos. \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario___actividad}{Usuario\+\_\+\+Actividad}} $>$ \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_abb7363d2a9bf2aa21cf289baa6be7f3d}{listado\+Actividades\+Usuario}} (string DNI)
-\begin{DoxyCompactList}\small\item\em Obtiene la lista de actividades asociadas a un usuario mediante su DNI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de actividades asociadas a un usuario mediante su DNI. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_ac6e55f6c60214961716c158d5109a622}{Eliminar\+Actividad\+Usuario}} (\mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario___actividad}{Usuario\+\_\+\+Actividad}} usuario\+Actividad)
+\begin{DoxyCompactList}\small\item\em Elimina una actividad asociada a un usuario en la base de datos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a49ecad54f1656364cf43b3cc4ab62afd}{Actualizar\+Media\+Valoracion}} (int id\+Actividad)
+\begin{DoxyCompactList}\small\item\em Actualiza la media de valoración de una actividad en función de las valoraciones asociadas a los usuarios. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a68d8808f837402544602e403d6b2f69b}{Guardar\+OActualizar\+Valoracion}} (int id\+Actividad, string dni\+Usuario, byte valoracion)
+\begin{DoxyCompactList}\small\item\em Guarda o actualiza la valoración de una actividad asociada a un usuario en la base de datos. \end{DoxyCompactList}\item 
+byte \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_af8cf1821e793d609d504d5ba0c4dd970}{Obtener\+Valoracion}} (int id\+Actividad, string dni\+Usuario)
+\begin{DoxyCompactList}\small\item\em Obtiene la valoración de un usuario para una actividad específica. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Repositorio para gestionar las actividades asociadas a los usuarios en la base de datos. 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a49ecad54f1656364cf43b3cc4ab62afd}\index{Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}!ActualizarMediaValoracion@{ActualizarMediaValoracion}}
+\index{ActualizarMediaValoracion@{ActualizarMediaValoracion}!Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}}
+\doxysubsubsection{\texorpdfstring{ActualizarMediaValoracion()}{ActualizarMediaValoracion()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a49ecad54f1656364cf43b3cc4ab62afd} 
+void Datos.\+Repositorys.\+Usuario\+Actividad\+Repository.\+Actualizar\+Media\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{id\+Actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza la media de valoración de una actividad en función de las valoraciones asociadas a los usuarios. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Actividad} & El ID de la actividad cuya media se actualizará.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_ac6e55f6c60214961716c158d5109a622}\index{Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}!EliminarActividadUsuario@{EliminarActividadUsuario}}
+\index{EliminarActividadUsuario@{EliminarActividadUsuario}!Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}}
+\doxysubsubsection{\texorpdfstring{EliminarActividadUsuario()}{EliminarActividadUsuario()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_ac6e55f6c60214961716c158d5109a622} 
+bool Datos.\+Repositorys.\+Usuario\+Actividad\+Repository.\+Eliminar\+Actividad\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario___actividad}{Usuario\+\_\+\+Actividad}}}]{usuario\+Actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina una actividad asociada a un usuario en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usuario\+Actividad} & Un objeto {\ttfamily Usuario\+\_\+\+Actividad} que representa la actividad a eliminar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve {\ttfamily true} si la actividad fue eliminada correctamente, de lo contrario {\ttfamily false}.
+\end{DoxyReturn}
 \Hypertarget{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a432dff79dbaeb22984001c4542260225}\index{Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}!GuardarActividad@{GuardarActividad}}
 \index{GuardarActividad@{GuardarActividad}!Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}}
 \doxysubsubsection{\texorpdfstring{GuardarActividad()}{GuardarActividad()}}
@@ -36,6 +77,28 @@ Guarda una nueva actividad asociada a un usuario en la base de datos.
 \begin{DoxyReturn}{Returns}
 Devuelve {\ttfamily true} si la actividad fue guardada correctamente, de lo contrario {\ttfamily false}.
 \end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a68d8808f837402544602e403d6b2f69b}\index{Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}!GuardarOActualizarValoracion@{GuardarOActualizarValoracion}}
+\index{GuardarOActualizarValoracion@{GuardarOActualizarValoracion}!Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}}
+\doxysubsubsection{\texorpdfstring{GuardarOActualizarValoracion()}{GuardarOActualizarValoracion()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_a68d8808f837402544602e403d6b2f69b} 
+bool Datos.\+Repositorys.\+Usuario\+Actividad\+Repository.\+Guardar\+OActualizar\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{id\+Actividad}{, }\item[{string}]{dni\+Usuario}{, }\item[{byte}]{valoracion}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Guarda o actualiza la valoración de una actividad asociada a un usuario en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Actividad} & ID de la actividad.\\
+\hline
+{\em dni\+Usuario} & DNI del usuario.\\
+\hline
+{\em valoracion} & La valoración que el usuario asigna a la actividad.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve {\ttfamily true} si la valoración fue guardada correctamente, de lo contrario {\ttfamily false}.
+\end{DoxyReturn}
 \Hypertarget{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_abb7363d2a9bf2aa21cf289baa6be7f3d}\index{Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}!listadoActividadesUsuario@{listadoActividadesUsuario}}
 \index{listadoActividadesUsuario@{listadoActividadesUsuario}!Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}}
 \doxysubsubsection{\texorpdfstring{listadoActividadesUsuario()}{listadoActividadesUsuario()}}
@@ -53,6 +116,26 @@ Obtiene la lista de actividades asociadas a un usuario mediante su DNI.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Una lista de objetos {\ttfamily Usuario\+\_\+\+Actividad} que representa las actividades del usuario.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_af8cf1821e793d609d504d5ba0c4dd970}\index{Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}!ObtenerValoracion@{ObtenerValoracion}}
+\index{ObtenerValoracion@{ObtenerValoracion}!Datos.Repositorys.UsuarioActividadRepository@{Datos.Repositorys.UsuarioActividadRepository}}
+\doxysubsubsection{\texorpdfstring{ObtenerValoracion()}{ObtenerValoracion()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_actividad_repository_af8cf1821e793d609d504d5ba0c4dd970} 
+byte Datos.\+Repositorys.\+Usuario\+Actividad\+Repository.\+Obtener\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{id\+Actividad}{, }\item[{string}]{dni\+Usuario}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene la valoración de un usuario para una actividad específica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Actividad} & ID de la actividad.\\
+\hline
+{\em dni\+Usuario} & DNI del usuario.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve la valoración del usuario para la actividad, o 0 si no tiene valoración.
 \end{DoxyReturn}
 
 

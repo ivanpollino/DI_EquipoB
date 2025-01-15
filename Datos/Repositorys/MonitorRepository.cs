@@ -11,7 +11,7 @@ namespace Datos.Repositorys
     {
         public List<Usuario> ObtenerMonitores()
         {
-            using (var contexto = new equipobIvanClase())
+            using (var contexto = new equipobEntities())
             {
                 // Realizar el join entre la tabla Usuario y Monitor por el campo DNI
                 var monitores = (from u in contexto.Usuario
@@ -37,7 +37,7 @@ namespace Datos.Repositorys
 
         public string AltaMonitor(Monitor monitor)
         {
-            using (var context = new equipobIvanClase())
+            using (var context = new equipobEntities())
             {
                 // Verificar si el monitor ya existe en la base de datos
                 var monitorExistente = context.Monitor.FirstOrDefault(m => m.DNI == monitor.DNI);

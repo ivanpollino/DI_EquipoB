@@ -10,19 +10,61 @@ Clase encargada de gestionar las actividades de los usuarios, como registrar nue
 \item 
 bool \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a74db2b21882d84476fc3269ac2dd4455}{Registrar\+Usuario\+Actividad}} (\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}} nueva\+Actividad)
 \begin{DoxyCompactList}\small\item\em Registra una nueva actividad para un usuario en la base de datos. \end{DoxyCompactList}\item 
-List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}} $>$ \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_actividad_managment_af9c3782176129a5d18d9315f5cbb9734}{Obtener\+Actividades\+Apuntado}} (string DNI)
-\begin{DoxyCompactList}\small\item\em Obtiene las actividades en las que un usuario está apuntado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}} $>$ \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a29a1a52010081d08e915c2d1027e2293}{Obtener\+Actividades\+Apuntado}} (String DNI)
+\begin{DoxyCompactList}\small\item\em Obtiene las actividades en las que un usuario está apuntado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_actividad_managment_abc3ff5deba488edcb7e57ea818016f35}{Eliminar\+Actividad\+Usuario}} (\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}} usuario\+Actividad)
+\item 
+void \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_actividad_managment_aff33129d21082c1466ac0d909fece9c0}{Actualizar\+Media\+Valoracion}} (int id\+Actividad)
+\item 
+byte \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a11c4329168e2422ba32bb072befc98ac}{Obtener\+Valoracion}} (int id\+Actividad, string dni\+Usuario)
+\item 
+bool \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a24350fe5c9fa39a8fe9d3e06d297590b}{Actualizar\+Valoracion}} (int id\+Actividad, string dni\+Usuario, byte nueva\+Valoracion)
+\begin{DoxyCompactList}\small\item\em Actualiza la valoración de un usuario para una actividad específica. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Clase encargada de gestionar las actividades de los usuarios, como registrar nuevas actividades y obtener las actividades en las que un usuario está apuntado. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_negocio_1_1_managment_1_1_usuario_actividad_managment_af9c3782176129a5d18d9315f5cbb9734}\index{Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}!ObtenerActividadesApuntado@{ObtenerActividadesApuntado}}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_actividad_managment_aff33129d21082c1466ac0d909fece9c0}\index{Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}!ActualizarMediaValoracion@{ActualizarMediaValoracion}}
+\index{ActualizarMediaValoracion@{ActualizarMediaValoracion}!Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}}
+\doxysubsubsection{\texorpdfstring{ActualizarMediaValoracion()}{ActualizarMediaValoracion()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_actividad_managment_aff33129d21082c1466ac0d909fece9c0} 
+void Negocio.\+Managment.\+Usuario\+Actividad\+Managment.\+Actualizar\+Media\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{id\+Actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a24350fe5c9fa39a8fe9d3e06d297590b}\index{Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}!ActualizarValoracion@{ActualizarValoracion}}
+\index{ActualizarValoracion@{ActualizarValoracion}!Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}}
+\doxysubsubsection{\texorpdfstring{ActualizarValoracion()}{ActualizarValoracion()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a24350fe5c9fa39a8fe9d3e06d297590b} 
+bool Negocio.\+Managment.\+Usuario\+Actividad\+Managment.\+Actualizar\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{id\+Actividad}{, }\item[{string}]{dni\+Usuario}{, }\item[{byte}]{nueva\+Valoracion}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Actualiza la valoración de un usuario para una actividad específica. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Actividad} & ID de la actividad.\\
+\hline
+{\em dni\+Usuario} & DNI del usuario.\\
+\hline
+{\em nueva\+Valoracion} & Nueva valoración a establecer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si la valoración fue actualizada correctamente, de lo contrario {\ttfamily false}.
+\end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_actividad_managment_abc3ff5deba488edcb7e57ea818016f35}\index{Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}!EliminarActividadUsuario@{EliminarActividadUsuario}}
+\index{EliminarActividadUsuario@{EliminarActividadUsuario}!Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}}
+\doxysubsubsection{\texorpdfstring{EliminarActividadUsuario()}{EliminarActividadUsuario()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_actividad_managment_abc3ff5deba488edcb7e57ea818016f35} 
+bool Negocio.\+Managment.\+Usuario\+Actividad\+Managment.\+Eliminar\+Actividad\+Usuario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}}}]{usuario\+Actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a29a1a52010081d08e915c2d1027e2293}\index{Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}!ObtenerActividadesApuntado@{ObtenerActividadesApuntado}}
 \index{ObtenerActividadesApuntado@{ObtenerActividadesApuntado}!Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}}
 \doxysubsubsection{\texorpdfstring{ObtenerActividadesApuntado()}{ObtenerActividadesApuntado()}}
-{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_actividad_managment_af9c3782176129a5d18d9315f5cbb9734} 
-List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}} $>$ Negocio.\+Managment.\+Usuario\+Actividad\+Managment.\+Obtener\+Actividades\+Apuntado (\begin{DoxyParamCaption}\item[{string}]{DNI}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a29a1a52010081d08e915c2d1027e2293} 
+List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_actividad_d_t_o}{Usuario\+Actividad\+DTO}} $>$ Negocio.\+Managment.\+Usuario\+Actividad\+Managment.\+Obtener\+Actividades\+Apuntado (\begin{DoxyParamCaption}\item[{String}]{DNI}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -34,7 +76,25 @@ Obtiene las actividades en las que un usuario está apuntado.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Una lista de objetos {\ttfamily Usuario\+Actividad\+DTO} con la información de las actividades en las que el usuario está apuntado.
+Una lista de objetos {\ttfamily Usuario\+Actividad\+DTO} con la información de las actividades en las que el usuario está apuntado.\texorpdfstring{$<$}{<}/returns 
+\end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a11c4329168e2422ba32bb072befc98ac}\index{Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}!ObtenerValoracion@{ObtenerValoracion}}
+\index{ObtenerValoracion@{ObtenerValoracion}!Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}}
+\doxysubsubsection{\texorpdfstring{ObtenerValoracion()}{ObtenerValoracion()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a11c4329168e2422ba32bb072befc98ac} 
+byte Negocio.\+Managment.\+Usuario\+Actividad\+Managment.\+Obtener\+Valoracion (\begin{DoxyParamCaption}\item[{int}]{id\+Actividad}{, }\item[{string}]{dni\+Usuario}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Obtiene la valoración de un usuario para una actividad.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Actividad} & ID de la actividad.\\
+\hline
+{\em dni\+Usuario} & DNI del usuario.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valoración del usuario para la actividad (0 si no existe).
 \end{DoxyReturn}
 \Hypertarget{class_negocio_1_1_managment_1_1_usuario_actividad_managment_a74db2b21882d84476fc3269ac2dd4455}\index{Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}!RegistrarUsuarioActividad@{RegistrarUsuarioActividad}}
 \index{RegistrarUsuarioActividad@{RegistrarUsuarioActividad}!Negocio.Managment.UsuarioActividadManagment@{Negocio.Managment.UsuarioActividadManagment}}

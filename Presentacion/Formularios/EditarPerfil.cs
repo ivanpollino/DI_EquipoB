@@ -14,11 +14,30 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Presentacion.Formularios
 {
+    /// <summary>
+    /// Formulario para editar el perfil de un usuario logueado.
+    /// </summary>
     public partial class EditarPerfil : Form
     {
+        /// <summary>
+        /// Usuario logueado cuya información será editada.
+        /// </summary>
         private UsuarioDTO usuarioLogeado;
-        private bool bEmail, bNombre, bCcc, bApellido;
+
+        /// <summary>
+        /// Indicadores de validación para los distintos campos del formulario.
+        /// </summary>
+        private bool bEmail, bNombre, bCcc, bApellido, bDireccion;
+
+        /// <summary>
+        /// Indica si al menos un campo del formulario ha sido modificado correctamente.
+        /// </summary>
         private bool comprobacionFinal = true;
+
+        /// <summary>
+        /// Constructor que inicializa el formulario con el usuario logueado.
+        /// </summary>
+        /// <param name="usuario">Usuario logueado.</param>
         public EditarPerfil(UsuarioDTO usuario)
         {
             InitializeComponent();
@@ -28,13 +47,28 @@ namespace Presentacion.Formularios
             ConfigurarBotones(BTNModificar);
             ConfigurarBotones(BTNRestablecer);
 
-            // Eventos de validación de campos
+            // Asignación de eventos de validación para cada campo.
             TXTBEmail.TextChanged += new EventHandler(ValidarEmail);
             TXTBNombre.TextChanged += new EventHandler(ComprobarNombre);
             TXTBCCC.TextChanged += new EventHandler(ValidarCuentaCorriente);
+            TXTBDireccion.TextChanged += new EventHandler(ComprobarDireccion);
             TXTBApellidos.TextChanged += new EventHandler(ComprobarApellidos);
         }
 
+        /// <summary>
+        /// Valida la dirección ingresada en el formulario.
+        /// </summary>
+        private void ComprobarDireccion(object sender, EventArgs e)
+        {
+            String direccion = TXTBDireccion.Text;
+            bDireccion = !string.IsNullOrWhiteSpace(direccion) && TXTBDireccion.Text != usuarioLogeado.Direccion;
+            habilitarBotonRegistro();
+        }
+
+        /// <summary>
+        /// Configura la apariencia de los botones del formulario, agregando bordes redondeados.
+        /// </summary>
+        /// <param name="button">Botón a configurar.</param>
         private void ConfigurarBotones(Button button)
         {
             button.Font = BTNModificar.Font;
@@ -56,6 +90,9 @@ namespace Presentacion.Formularios
             button.Region = new Region(path);
         }
 
+        /// <summary>
+        /// Valida los apellidos ingresados en el formulario.
+        /// </summary>
         private void ComprobarApellidos(object sender, EventArgs e)
         {
             String apellidos = TXTBApellidos.Text;
@@ -63,6 +100,9 @@ namespace Presentacion.Formularios
             habilitarBotonRegistro();
         }
 
+        /// <summary>
+        /// Valida el número de cuenta corriente ingresado en el formulario.
+        /// </summary>
         private void ValidarCuentaCorriente(object sender, EventArgs e)
         {
             var regex = new Regex(@"^ES\d{20}$");
@@ -82,14 +122,19 @@ namespace Presentacion.Formularios
             habilitarBotonRegistro();
         }
 
+        /// <summary>
+        /// Valida el nombre ingresado en el formulario.
+        /// </summary>
         private void ComprobarNombre(object sender, EventArgs e)
         {
             String nombre = TXTBNombre.Text;
-
             bNombre = !string.IsNullOrWhiteSpace(nombre) && TXTBNombre.Text != usuarioLogeado.Nombre;
             habilitarBotonRegistro();
         }
 
+        /// <summary>
+        /// Valida el correo electrónico ingresado en el formulario.
+        /// </summary>
         private void ValidarEmail(object sender, EventArgs e)
         {
             String correo = TXTBEmail.Text;
@@ -110,17 +155,26 @@ namespace Presentacion.Formularios
             habilitarBotonRegistro();
         }
 
+        /// <summary>
+        /// Habilita el botón de modificación si al menos un campo es válido.
+        /// </summary>
         private void habilitarBotonRegistro()
         {
-            BTNModificar.Enabled = bApellido || bNombre || bEmail || bCcc;
+            BTNModificar.Enabled = bApellido || bNombre || bEmail || bCcc || bDireccion;
             comprobacionFinal = BTNModificar.Enabled;
         }
 
+        /// <summary>
+        /// Restaura los datos originales del usuario logueado.
+        /// </summary>
         private void BTNRestablecer_Click(object sender, EventArgs e)
         {
             cargarDatos();
         }
 
+        /// <summary>
+        /// Modifica los datos del usuario logueado y actualiza el formulario.
+        /// </summary>
         private void BTNModificar_Click(object sender, EventArgs e)
         {
             UsuarioDTO usuarioTemporal = new UsuarioDTO();
@@ -138,12 +192,10 @@ namespace Presentacion.Formularios
 
             DNI = usuarioTemporal.DNI;
 
-            
             mensaje = new Negocio.Managment.UsuarioManagment().modificarUsuario(DNI, usuarioTemporal);
             MessageBox.Show(mensaje);
 
-            
-            if (mensaje == "Usuario modificado con éxito") 
+            if (mensaje == "Usuario modificado con éxito")
             {
                 usuarioLogeado.Nombre = usuarioTemporal.Nombre;
                 usuarioLogeado.Apellidos = usuarioTemporal.Apellidos;
@@ -156,8 +208,10 @@ namespace Presentacion.Formularios
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
-        
 
+        /// <summary>
+        /// Carga los datos del usuario logueado en los campos del formulario.
+        /// </summary>
         private void cargarDatos()
         {
             TXTBNombre.Text = usuarioLogeado.Nombre;
@@ -168,15 +222,19 @@ namespace Presentacion.Formularios
             TXTBCCC.Text = usuarioLogeado.Cuenta_Corriente.ToString();
         }
 
+        /// <summary>
+        /// Centra el panel del formulario en el contenedor principal.
+        /// </summary>
         private void CentrarPanel()
         {
-            
             int x = (this.ClientSize.Width - panelFormulario.Width) / 2;
             int y = (this.ClientSize.Height - panelFormulario.Height) / 2;
-
             panelFormulario.Location = new Point(x, y);
         }
 
+        /// <summary>
+        /// Se ejecuta al cargar el formulario y centra el panel.
+        /// </summary>
         private void EditarPerfil_Load(object sender, EventArgs e)
         {
             CentrarPanel();

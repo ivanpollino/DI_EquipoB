@@ -194,7 +194,7 @@ namespace Negocio.Managment
                 usuario.Direccion = usuarioDTO.Direccion;
                 usuario.Cuenta_Corriente = usuarioDTO.Cuenta_Corriente;
                 usuario.Email = usuarioDTO.Email;
-                
+
                 return datos.modificarUsuario(dni, usuario);
             }
             else

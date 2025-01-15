@@ -8,6 +8,7 @@
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="DNI_Monitor" ColumnName="DNI_Monitor" />
+          <ScalarProperty Name="Media_Valoracion" ColumnName="Media_Valoracion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

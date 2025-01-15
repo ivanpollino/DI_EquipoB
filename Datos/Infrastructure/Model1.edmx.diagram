@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5b2a746717d24503b0ca52ef547e4163" Name="Diagram1">
+        <EntityTypeShape EntityType="equipobFinal2IvanModel.Actividad" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2IvanModel.Administrador" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2IvanModel.Facturas" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2IvanModel.Monitor" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2IvanModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2IvanModel.Usuario" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2IvanModel.Usuario_Actividad" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2IvanModel.Usuario_Normal" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="equipobFinal2IvanModel.FK_Actividad_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2IvanModel.FK_Monitor_Actividad" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2IvanModel.FK_Usuario_Administrador" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2IvanModel.FK_Facturas_UsuarioNormal" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2IvanModel.FK_Usuario_Monitor" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2IvanModel.FK_Usuario_Normal" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2IvanModel.FK_Usuario_Actividad" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

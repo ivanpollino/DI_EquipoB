@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Negocio.EntitiesDTO;
 using System;
 using System.Collections.Generic;
@@ -9,32 +10,23 @@ using System.Threading.Tasks;
 namespace PruebasUnitarias.PruebasSprint2
 {
     [TestClass]
-    public class TestsRegistroMonitor
+    public class TestsRegistroActividad
     {
         [TestMethod]
-        public void comprobarRegistroMonitorCorrecto()
+        public void comprobarRegistroActividadCorrecto()
         {
-            UsuarioDTO monitor = new UsuarioDTO("18079231C", "Test", "Monitor", 0, "", "", "testMonitor@gmail.com", "Root2/root");
-            string mensaje = new Negocio.Managment.MonitorManagment().altaMonitor(monitor);
-            Assert.AreEqual(mensaje, "Monitor insertado correctamente.");
+            ActividadDTO actividad = new ActividadDTO(10, "Prueba", "Prueba", "18079231C");
+            string mensaje = new Negocio.Managment.ActividadManagment().RegistrarActividad(actividad);
+            Assert.AreEqual(mensaje, "Actividad insertada con éxito.");
             System.Threading.Thread.Sleep(5000);
         }
 
         [TestMethod]
-        public void comprobarRegistroIncorrectoMonitorEmailRepetido()
+        public void comprobarRegistroActividadIncorrectoIdRepetido()
         {
-            UsuarioDTO monitor = new UsuarioDTO("18079231B", "Test", "Monitor", 0, "", "", "testMonitor@gmail.com", "Root2/root");
-            string mensaje = new Negocio.Managment.MonitorManagment().altaMonitor(monitor);
-            Assert.AreEqual(mensaje, "Ya hay un monitor registrado con ese email");
+            ActividadDTO actividad = new ActividadDTO(10, "Prueba", "Prueba", "18079231C");
+            string mensaje = new Negocio.Managment.ActividadManagment().RegistrarActividad(actividad);
+            Assert.AreEqual(mensaje, "Error al guardar la actividad: An error occurred while updating the entries. See the inner exception for details.");
         }
-
-        [TestMethod]
-        public void comprobarRegistroIncorrectoMonitorDNIRepetido()
-        {
-            UsuarioDTO monitor = new UsuarioDTO("18079231C", "Test", "Monitor", 0, "", "", "testMonitor2@gmail.com", "Root2/root");
-            string mensaje = new Negocio.Managment.MonitorManagment().altaMonitor(monitor);
-            Assert.AreEqual(mensaje, "Ya hay un monitor registrado con ese DNI");
-        }
-
     }
 }

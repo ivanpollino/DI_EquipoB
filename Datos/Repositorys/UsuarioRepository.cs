@@ -14,7 +14,6 @@ namespace Datos.Repositorys
     /// </summary>
     public class UsuarioRepository
     {
-
         /// <summary>
         /// Registra un nuevo usuario en la base de datos.
         /// </summary>
@@ -24,15 +23,15 @@ namespace Datos.Repositorys
         {
             Usuario_Normal usuarioNormal = new Usuario_Normal();
             usuarioNormal.DNI = usuario.DNI;
-            using (var contexto = new equipobIvanClase())
-                {
-                    contexto.Usuario.Add(usuario);
-                    contexto.Usuario_Normal.Add(usuarioNormal);
-                    contexto.SaveChanges();
-                    
-                }
+            using (var contexto = new equipobEntities())
+            {
+                contexto.Usuario.Add(usuario);
+                contexto.Usuario_Normal.Add(usuarioNormal);
+                contexto.SaveChanges();
+            }
             return "Usuario añadido con exito";
         }
+
         /// <summary>
         /// Obtiene la lista de todos los usuarios registrados en la base de datos.
         /// </summary>
@@ -42,8 +41,7 @@ namespace Datos.Repositorys
             List<Usuario> usuarios = new List<Usuario>();
             try
             {
-                //Abrir la BD
-                using (var contexto = new equipobIvanClase())
+                using (var contexto = new equipobEntities())
                 {
                     usuarios = contexto.Usuario.ToList();
                 }
@@ -55,13 +53,16 @@ namespace Datos.Repositorys
             }
         }
 
+        /// <summary>
+        /// Obtiene la lista de todos los administradores registrados en la base de datos.
+        /// </summary>
+        /// <returns>Lista de objetos <see cref="Administrador"/> con la información de cada administrador.</returns>
         public List<Administrador> obtenerAdministradores()
         {
             List<Administrador> usuarios = new List<Administrador>();
             try
             {
-                //Abrir la BD
-                using (var contexto = new equipobIvanClase())
+                using (var contexto = new equipobEntities())
                 {
                     usuarios = contexto.Administrador.ToList();
                 }
@@ -73,13 +74,16 @@ namespace Datos.Repositorys
             }
         }
 
+        /// <summary>
+        /// Obtiene la lista de todos los usuarios normales registrados en la base de datos.
+        /// </summary>
+        /// <returns>Lista de objetos <see cref="Usuario_Normal"/> con la información de cada usuario normal.</returns>
         public List<Usuario_Normal> obtenerUsuariosNormal()
         {
-
             List<Usuario_Normal> usuarios = new List<Usuario_Normal>();
             try
             {
-                using (var contexto = new equipobIvanClase())
+                using (var contexto = new equipobEntities())
                 {
                     usuarios = contexto.Usuario_Normal.ToList();
                 }
@@ -91,9 +95,14 @@ namespace Datos.Repositorys
             }
         }
 
+        /// <summary>
+        /// Obtiene el nombre completo de un usuario a partir de su DNI.
+        /// </summary>
+        /// <param name="dni">DNI del usuario.</param>
+        /// <returns>El nombre completo del usuario o un mensaje indicando que no fue encontrado.</returns>
         public String sacarNombrePorDNI(String dni)
         {
-            using (var contexto = new equipobIvanClase())
+            using (var contexto = new equipobEntities())
             {
                 var usuario = contexto.Usuario
                                       .FirstOrDefault(u => u.DNI == dni);
@@ -109,9 +118,15 @@ namespace Datos.Repositorys
             }
         }
 
+        /// <summary>
+        /// Modifica la información de un usuario existente en la base de datos.
+        /// </summary>
+        /// <param name="dni">DNI del usuario a modificar.</param>
+        /// <param name="nuevosDatos">Objeto <see cref="Usuario"/> con los nuevos datos del usuario.</param>
+        /// <returns>Mensaje indicando si la modificación fue exitosa o si el usuario no fue encontrado.</returns>
         public String modificarUsuario(String dni, Usuario nuevosDatos)
         {
-            using (var contexto = new equipobIvanClase())
+            using (var contexto = new equipobEntities())
             {
                 var usuarioExistente = contexto.Usuario.FirstOrDefault(u => u.DNI == dni);
 
@@ -126,12 +141,11 @@ namespace Datos.Repositorys
                 usuarioExistente.Telefono = nuevosDatos.Telefono;
                 usuarioExistente.Cuenta_Corriente = nuevosDatos.Cuenta_Corriente;
                 usuarioExistente.Direccion = nuevosDatos.Direccion;
-                
+
                 contexto.SaveChanges();
             }
 
             return "Usuario modificado con éxito";
         }
-
     }
 }

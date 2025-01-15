@@ -33,16 +33,15 @@ namespace Presentacion
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.LBLAvisoContrasena = new System.Windows.Forms.Label();
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.lblAvisoCuenta = new System.Windows.Forms.Label();
             this.panelIzquierdo = new System.Windows.Forms.Panel();
-            this.LBLTitulo = new System.Windows.Forms.Label();
             this.LBLAvisoDNI = new System.Windows.Forms.Label();
+            this.lblAvisoCuenta = new System.Windows.Forms.Label();
             this.LBLAvisoCorreo = new System.Windows.Forms.Label();
             this.BTNVerContraRepe = new System.Windows.Forms.Button();
             this.BTNVerContraNormal = new System.Windows.Forms.Button();
             this.LBLAvisoContraRepetida = new System.Windows.Forms.Label();
+            this.LBLAvisoContrasena = new System.Windows.Forms.Label();
             this.TXTBRepetirContra = new System.Windows.Forms.TextBox();
             this.LBLConfirmarContrasena = new System.Windows.Forms.Label();
             this.LBLNombre = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@ namespace Presentacion
             this.LBLCCC = new System.Windows.Forms.Label();
             this.LBLDireccion = new System.Windows.Forms.Label();
             this.TXTBDireccion = new System.Windows.Forms.TextBox();
+            this.LBLTitulo = new System.Windows.Forms.Label();
             this.panelIzquierdo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,34 +70,9 @@ namespace Presentacion
             // 
             this.toolTip1.ToolTipTitle = "Como tener una contraseña valida";
             // 
-            // LBLAvisoContrasena
-            // 
-            this.LBLAvisoContrasena.AutoSize = true;
-            this.LBLAvisoContrasena.BackColor = System.Drawing.Color.Transparent;
-            this.LBLAvisoContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLAvisoContrasena.ForeColor = System.Drawing.Color.Red;
-            this.LBLAvisoContrasena.Location = new System.Drawing.Point(75, 314);
-            this.LBLAvisoContrasena.Name = "LBLAvisoContrasena";
-            this.LBLAvisoContrasena.Size = new System.Drawing.Size(0, 13);
-            this.LBLAvisoContrasena.TabIndex = 21;
-            this.toolTip1.SetToolTip(this.LBLAvisoContrasena, "La contraseña debe tener:\n- Más de 8 caracteres\n- Letras mayúsculas y minúsculas\n" +
-        "- Al menos un número\n- Al menos un carácter especial (% & $ / *)");
-            // 
             // toolTip2
             // 
             this.toolTip2.ToolTipTitle = "Como tener un formato de CCC valido";
-            // 
-            // lblAvisoCuenta
-            // 
-            this.lblAvisoCuenta.AutoSize = true;
-            this.lblAvisoCuenta.BackColor = System.Drawing.Color.Transparent;
-            this.lblAvisoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvisoCuenta.ForeColor = System.Drawing.Color.Red;
-            this.lblAvisoCuenta.Location = new System.Drawing.Point(208, 217);
-            this.lblAvisoCuenta.Name = "lblAvisoCuenta";
-            this.lblAvisoCuenta.Size = new System.Drawing.Size(0, 13);
-            this.lblAvisoCuenta.TabIndex = 25;
-            this.toolTip2.SetToolTip(this.lblAvisoCuenta, "La CCC debe tener:\n- Empezar por ES\n- Y tener 20 digitos numericos\n");
             // 
             // panelIzquierdo
             // 
@@ -137,18 +112,6 @@ namespace Presentacion
             this.panelIzquierdo.TabIndex = 20;
             this.panelIzquierdo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelIzquierdo_Paint);
             // 
-            // LBLTitulo
-            // 
-            this.LBLTitulo.AutoSize = true;
-            this.LBLTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.LBLTitulo.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
-            this.LBLTitulo.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLTitulo.Location = new System.Drawing.Point(71, 13);
-            this.LBLTitulo.Name = "LBLTitulo";
-            this.LBLTitulo.Size = new System.Drawing.Size(172, 51);
-            this.LBLTitulo.TabIndex = 27;
-            this.LBLTitulo.Text = "Registro";
-            // 
             // LBLAvisoDNI
             // 
             this.LBLAvisoDNI.AutoSize = true;
@@ -159,6 +122,18 @@ namespace Presentacion
             this.LBLAvisoDNI.Name = "LBLAvisoDNI";
             this.LBLAvisoDNI.Size = new System.Drawing.Size(0, 13);
             this.LBLAvisoDNI.TabIndex = 26;
+            // 
+            // lblAvisoCuenta
+            // 
+            this.lblAvisoCuenta.AutoSize = true;
+            this.lblAvisoCuenta.BackColor = System.Drawing.Color.Transparent;
+            this.lblAvisoCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvisoCuenta.ForeColor = System.Drawing.Color.Red;
+            this.lblAvisoCuenta.Location = new System.Drawing.Point(208, 217);
+            this.lblAvisoCuenta.Name = "lblAvisoCuenta";
+            this.lblAvisoCuenta.Size = new System.Drawing.Size(0, 13);
+            this.lblAvisoCuenta.TabIndex = 25;
+            this.toolTip2.SetToolTip(this.lblAvisoCuenta, "La CCC debe tener:\n- Empezar por ES\n- Y tener 20 digitos numericos\n");
             // 
             // LBLAvisoCorreo
             // 
@@ -202,6 +177,19 @@ namespace Presentacion
             this.LBLAvisoContraRepetida.Name = "LBLAvisoContraRepetida";
             this.LBLAvisoContraRepetida.Size = new System.Drawing.Size(0, 13);
             this.LBLAvisoContraRepetida.TabIndex = 18;
+            // 
+            // LBLAvisoContrasena
+            // 
+            this.LBLAvisoContrasena.AutoSize = true;
+            this.LBLAvisoContrasena.BackColor = System.Drawing.Color.Transparent;
+            this.LBLAvisoContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLAvisoContrasena.ForeColor = System.Drawing.Color.Red;
+            this.LBLAvisoContrasena.Location = new System.Drawing.Point(75, 314);
+            this.LBLAvisoContrasena.Name = "LBLAvisoContrasena";
+            this.LBLAvisoContrasena.Size = new System.Drawing.Size(0, 13);
+            this.LBLAvisoContrasena.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.LBLAvisoContrasena, "La contraseña debe tener:\n- Más de 8 caracteres\n- Letras mayúsculas y minúsculas\n" +
+        "- Al menos un número\n- Al menos un carácter especial (% & $ / *)");
             // 
             // TXTBRepetirContra
             // 
@@ -417,6 +405,18 @@ namespace Presentacion
             this.TXTBDireccion.Name = "TXTBDireccion";
             this.TXTBDireccion.Size = new System.Drawing.Size(111, 20);
             this.TXTBDireccion.TabIndex = 10;
+            // 
+            // LBLTitulo
+            // 
+            this.LBLTitulo.AutoSize = true;
+            this.LBLTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.LBLTitulo.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
+            this.LBLTitulo.ForeColor = System.Drawing.Color.DarkCyan;
+            this.LBLTitulo.Location = new System.Drawing.Point(71, 13);
+            this.LBLTitulo.Name = "LBLTitulo";
+            this.LBLTitulo.Size = new System.Drawing.Size(172, 51);
+            this.LBLTitulo.TabIndex = 27;
+            this.LBLTitulo.Text = "Registro";
             // 
             // Registro
             // 

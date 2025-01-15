@@ -17,7 +17,9 @@ List$<$ \mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_administrador}{Admin
 List$<$ \mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario___normal}{Usuario\+\_\+\+Normal}} $>$ \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_repository_a1195f827f95dfcd31e897d4c8e11d954}{obtener\+Usuarios\+Normal}} ()
 \begin{DoxyCompactList}\small\item\em Obtiene la lista de todos los usuarios normales registrados en la base de datos. \end{DoxyCompactList}\item 
 String \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_repository_a13f000312563b5b60ef71b522c7a79f7}{sacar\+Nombre\+Por\+DNI}} (String dni)
-\begin{DoxyCompactList}\small\item\em Obtiene el nombre y apellidos de un usuario a partir de su DNI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Obtiene el nombre completo de un usuario a partir de su DNI. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_datos_1_1_repositorys_1_1_usuario_repository_ac4e23637ad2334ef483f9fcf442a8912}{modificar\+Usuario}} (String dni, \mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario}{Usuario}} nuevos\+Datos)
+\begin{DoxyCompactList}\small\item\em Modifica la información de un usuario existente en la base de datos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -41,6 +43,26 @@ Registra un nuevo usuario en la base de datos.
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Mensaje de confirmación de que el usuario fue añadido con éxito.
+\end{DoxyReturn}
+\Hypertarget{class_datos_1_1_repositorys_1_1_usuario_repository_ac4e23637ad2334ef483f9fcf442a8912}\index{Datos.Repositorys.UsuarioRepository@{Datos.Repositorys.UsuarioRepository}!modificarUsuario@{modificarUsuario}}
+\index{modificarUsuario@{modificarUsuario}!Datos.Repositorys.UsuarioRepository@{Datos.Repositorys.UsuarioRepository}}
+\doxysubsubsection{\texorpdfstring{modificarUsuario()}{modificarUsuario()}}
+{\footnotesize\ttfamily \label{class_datos_1_1_repositorys_1_1_usuario_repository_ac4e23637ad2334ef483f9fcf442a8912} 
+String Datos.\+Repositorys.\+Usuario\+Repository.\+modificar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{dni}{, }\item[{\mbox{\hyperlink{class_datos_1_1_infrastructure_1_1_usuario}{Usuario}}}]{nuevos\+Datos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifica la información de un usuario existente en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dni} & DNI del usuario a modificar.\\
+\hline
+{\em nuevos\+Datos} & Objeto Usuario con los nuevos datos del usuario.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mensaje indicando si la modificación fue exitosa o si el usuario no fue encontrado.
 \end{DoxyReturn}
 \Hypertarget{class_datos_1_1_repositorys_1_1_usuario_repository_a74cd05420c71aeb48daf34dea98a3282}\index{Datos.Repositorys.UsuarioRepository@{Datos.Repositorys.UsuarioRepository}!obtenerAdministradores@{obtenerAdministradores}}
 \index{obtenerAdministradores@{obtenerAdministradores}!Datos.Repositorys.UsuarioRepository@{Datos.Repositorys.UsuarioRepository}}
@@ -89,15 +111,15 @@ String Datos.\+Repositorys.\+Usuario\+Repository.\+sacar\+Nombre\+Por\+DNI (\beg
 
 
 
-Obtiene el nombre y apellidos de un usuario a partir de su DNI. 
+Obtiene el nombre completo de un usuario a partir de su DNI. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em dni} & DNI del usuario a buscar.\\
+{\em dni} & DNI del usuario.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Nombre y apellidos del usuario si se encuentra, de lo contrario un mensaje de error.
+El nombre completo del usuario o un mensaje indicando que no fue encontrado.
 \end{DoxyReturn}
 
 

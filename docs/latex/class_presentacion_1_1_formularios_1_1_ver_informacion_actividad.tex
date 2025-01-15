@@ -1,5 +1,10 @@
 \doxysection{Presentacion.\+Formularios.\+Ver\+Informacion\+Actividad Class Reference}
 \hypertarget{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad}{}\label{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad}\index{Presentacion.Formularios.VerInformacionActividad@{Presentacion.Formularios.VerInformacionActividad}}
+
+
+Formulario que muestra la información detallada de una actividad y permite al usuario apuntarse o darse de baja.  
+
+
 Inheritance diagram for Presentacion.\+Formularios.\+Ver\+Informacion\+Actividad\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,22 +15,25 @@ Inheritance diagram for Presentacion.\+Formularios.\+Ver\+Informacion\+Actividad
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_abc41c0df56504747743690a30096132c}{Ver\+Informacion\+Actividad}} (\mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_actividades_apuntado}{Actividades\+Apuntado}} form\+Padre, \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_abafdce69f8e2b9fd4889b21267f747d2}{actividad\+Aux}}, String \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_a6326f22a575d7a1f9b819dacff84470a}{nombre\+Monitor}}, \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_ac7432cc1282c40d223312063a875a3da}{usuario}})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor que inicializa el formulario con los datos proporcionados. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_abafdce69f8e2b9fd4889b21267f747d2}{actividad\+Aux}}
-\item 
+\begin{DoxyCompactList}\small\item\em Objeto que representa la actividad a mostrar. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_a6326f22a575d7a1f9b819dacff84470a}{nombre\+Monitor}}
-\item 
+\begin{DoxyCompactList}\small\item\em Nombre del monitor asignado a la actividad. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_ac7432cc1282c40d223312063a875a3da}{usuario}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Usuario actualmente logueado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 override void \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_aa8f51ae4c003d082727a2c9f69e7ef49}{Dispose}} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Formulario que muestra la información detallada de una actividad y permite al usuario apuntarse o darse de baja. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_abc41c0df56504747743690a30096132c}\index{Presentacion.Formularios.VerInformacionActividad@{Presentacion.Formularios.VerInformacionActividad}!VerInformacionActividad@{VerInformacionActividad}}
@@ -34,6 +42,21 @@ override void \mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_ver_inform
 {\footnotesize\ttfamily \label{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_abc41c0df56504747743690a30096132c} 
 Presentacion.\+Formularios.\+Ver\+Informacion\+Actividad.\+Ver\+Informacion\+Actividad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_presentacion_1_1_formularios_1_1_actividades_apuntado}{Actividades\+Apuntado}}}]{form\+Padre}{, }\item[{\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}}}]{actividad\+Aux}{, }\item[{String}]{nombre\+Monitor}{, }\item[{\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}}}]{usuario}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Constructor que inicializa el formulario con los datos proporcionados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form\+Padre} & Formulario padre.\\
+\hline
+{\em actividad\+Aux} & Objeto Actividad\+DTO con la información de la actividad.\\
+\hline
+{\em nombre\+Monitor} & Nombre del monitor asignado a la actividad.\\
+\hline
+{\em usuario} & Usuario actualmente logueado.\\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -61,17 +84,29 @@ Clean up any resources being used.
 {\footnotesize\ttfamily \label{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_abafdce69f8e2b9fd4889b21267f747d2} 
 \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} Presentacion.\+Formularios.\+Ver\+Informacion\+Actividad.\+actividad\+Aux}
 
+
+
+Objeto que representa la actividad a mostrar. 
+
 \Hypertarget{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_a6326f22a575d7a1f9b819dacff84470a}\index{Presentacion.Formularios.VerInformacionActividad@{Presentacion.Formularios.VerInformacionActividad}!nombreMonitor@{nombreMonitor}}
 \index{nombreMonitor@{nombreMonitor}!Presentacion.Formularios.VerInformacionActividad@{Presentacion.Formularios.VerInformacionActividad}}
 \doxysubsubsection{\texorpdfstring{nombreMonitor}{nombreMonitor}}
 {\footnotesize\ttfamily \label{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_a6326f22a575d7a1f9b819dacff84470a} 
 string Presentacion.\+Formularios.\+Ver\+Informacion\+Actividad.\+nombre\+Monitor}
 
+
+
+Nombre del monitor asignado a la actividad. 
+
 \Hypertarget{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_ac7432cc1282c40d223312063a875a3da}\index{Presentacion.Formularios.VerInformacionActividad@{Presentacion.Formularios.VerInformacionActividad}!usuario@{usuario}}
 \index{usuario@{usuario}!Presentacion.Formularios.VerInformacionActividad@{Presentacion.Formularios.VerInformacionActividad}}
 \doxysubsubsection{\texorpdfstring{usuario}{usuario}}
 {\footnotesize\ttfamily \label{class_presentacion_1_1_formularios_1_1_ver_informacion_actividad_ac7432cc1282c40d223312063a875a3da} 
 \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} Presentacion.\+Formularios.\+Ver\+Informacion\+Actividad.\+usuario}
+
+
+
+Usuario actualmente logueado. 
 
 
 

@@ -107,6 +107,12 @@
     <Compile Include="ComponentesPersonalizados\BotonSwitch.Designer.cs">
       <DependentUpon>BotonSwitch.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentesPersonalizados\EstrellasValoracion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentesPersonalizados\EstrellasValoracion.Designer.cs">
+      <DependentUpon>EstrellasValoracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Actividades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     </Compile>
     <Compile Include="Formularios\EditarPerfil.Designer.cs">
       <DependentUpon>EditarPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Facturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas.Designer.cs">
+      <DependentUpon>Facturas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Landing.cs">
       <SubType>Form</SubType>
@@ -184,6 +196,9 @@
     <EmbeddedResource Include="ComponentesPersonalizados\BotonSwitch.resx">
       <DependentUpon>BotonSwitch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ComponentesPersonalizados\EstrellasValoracion.resx">
+      <DependentUpon>EstrellasValoracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Actividades.resx">
       <DependentUpon>Actividades.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EditarPerfil.resx">
       <DependentUpon>EditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas.resx">
+      <DependentUpon>Facturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Landing.resx">
       <DependentUpon>Landing.cs</DependentUpon>
@@ -292,7 +310,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logofinal.ico" />
-    <None Include="Resources\user-solid-48.png" />
+    <Content Include="Resources\estrella_vacia.png" />
+    <Content Include="Resources\es_empty.png" />
+    <Content Include="Resources\es_llena.png" />
+    <None Include="Resources\euro-regular-48.png" />
+    <Content Include="Resources\user-solid-48.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

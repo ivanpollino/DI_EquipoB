@@ -45,6 +45,7 @@ namespace Presentacion
             this.btRegistro = new System.Windows.Forms.Button();
             this.lbInfoUsuario = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
+            this.BTNMisFacturas = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelParaUsuarios.SuspendLayout();
             this.panelAdministrador.SuspendLayout();
@@ -72,9 +73,9 @@ namespace Presentacion
             // 
             // BTNVerActividades
             // 
-            this.BTNVerActividades.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BTNVerActividades.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNVerActividades.ForeColor = System.Drawing.Color.Black;
-            this.BTNVerActividades.Location = new System.Drawing.Point(346, 361);
+            this.BTNVerActividades.Location = new System.Drawing.Point(346, 359);
             this.BTNVerActividades.Name = "BTNVerActividades";
             this.BTNVerActividades.Size = new System.Drawing.Size(164, 30);
             this.BTNVerActividades.TabIndex = 8;
@@ -87,7 +88,7 @@ namespace Presentacion
             // 
             this.panelParaUsuarios.Controls.Add(this.btnEditarPerfil);
             this.panelParaUsuarios.Controls.Add(this.BTNCerrarSesionUsuario);
-            this.panelParaUsuarios.Location = new System.Drawing.Point(780, 379);
+            this.panelParaUsuarios.Location = new System.Drawing.Point(780, 486);
             this.panelParaUsuarios.Name = "panelParaUsuarios";
             this.panelParaUsuarios.Size = new System.Drawing.Size(208, 132);
             this.panelParaUsuarios.TabIndex = 7;
@@ -129,11 +130,12 @@ namespace Presentacion
             // panelAdministrador
             // 
             this.panelAdministrador.BackColor = System.Drawing.Color.Black;
+            this.panelAdministrador.Controls.Add(this.BTNMisFacturas);
             this.panelAdministrador.Controls.Add(this.BTNCerrarSesionAdmin);
             this.panelAdministrador.Controls.Add(this.BTNOpcionesAdministrador);
             this.panelAdministrador.Location = new System.Drawing.Point(780, 174);
             this.panelAdministrador.Name = "panelAdministrador";
-            this.panelAdministrador.Size = new System.Drawing.Size(208, 132);
+            this.panelAdministrador.Size = new System.Drawing.Size(208, 196);
             this.panelAdministrador.TabIndex = 6;
             // 
             // BTNCerrarSesionAdmin
@@ -145,7 +147,7 @@ namespace Presentacion
             this.BTNCerrarSesionAdmin.ForeColor = System.Drawing.Color.Cyan;
             this.BTNCerrarSesionAdmin.Image = global::Presentacion.Properties.Resources.logOut;
             this.BTNCerrarSesionAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNCerrarSesionAdmin.Location = new System.Drawing.Point(0, 64);
+            this.BTNCerrarSesionAdmin.Location = new System.Drawing.Point(0, 128);
             this.BTNCerrarSesionAdmin.Name = "BTNCerrarSesionAdmin";
             this.BTNCerrarSesionAdmin.Size = new System.Drawing.Size(208, 68);
             this.BTNCerrarSesionAdmin.TabIndex = 1;
@@ -251,6 +253,22 @@ namespace Presentacion
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
+            // BTNMisFacturas
+            // 
+            this.BTNMisFacturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.BTNMisFacturas.FlatAppearance.BorderSize = 0;
+            this.BTNMisFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNMisFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNMisFacturas.ForeColor = System.Drawing.Color.Cyan;
+            this.BTNMisFacturas.Image = global::Presentacion.Properties.Resources.euro_regular_48;
+            this.BTNMisFacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTNMisFacturas.Location = new System.Drawing.Point(0, 66);
+            this.BTNMisFacturas.Name = "BTNMisFacturas";
+            this.BTNMisFacturas.Size = new System.Drawing.Size(208, 68);
+            this.BTNMisFacturas.TabIndex = 2;
+            this.BTNMisFacturas.Text = "Mis Facturas";
+            this.BTNMisFacturas.UseVisualStyleBackColor = false;
+            // 
             // Landing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,5 +305,6 @@ namespace Presentacion
         private Panel panelParaUsuarios;
         private Button BTNVerActividades;
         private Button btnEditarPerfil;
+        private Button BTNMisFacturas;
     }
 }

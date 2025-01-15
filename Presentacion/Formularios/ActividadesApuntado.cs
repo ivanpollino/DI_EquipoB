@@ -40,7 +40,15 @@ namespace Presentacion.Formularios
 
             if (contenedor is Form formPadre)
             {
-                cargarActividades(formPadre);
+                if (sePuedeApuntar)
+                {
+                    cargarActividades(formPadre);
+                }
+                else
+                {
+                    cargarActividadesApuntado(formPadre);
+                }
+               
             }
             else
             {
@@ -58,6 +66,18 @@ namespace Presentacion.Formularios
             if (formPadre is Actividades formularioActividades)
             {
                 MostrarBarraDeCarga(() => formularioActividades.cargarActividadesDisponibles(this));
+            }
+            else
+            {
+                MessageBox.Show("El formulario padre no es del tipo esperado.");
+            }
+        }
+
+        public void cargarActividadesApuntado(Form formPadre)
+        {
+            if (formPadre is Actividades formularioActividades)
+            {
+                MostrarBarraDeCarga(() => formularioActividades.cargarActividadesApuntado(this));
             }
             else
             {

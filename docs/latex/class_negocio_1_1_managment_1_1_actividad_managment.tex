@@ -8,7 +8,9 @@ String \mbox{\hyperlink{class_negocio_1_1_managment_1_1_actividad_managment_a704
 List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} $>$ \mbox{\hyperlink{class_negocio_1_1_managment_1_1_actividad_managment_aed1b24ad8923f92ad4b28222ed8f31be}{Obtener\+Actividades}} ()
 \begin{DoxyCompactList}\small\item\em Obtiene todas las actividades desde la base de datos y las convierte en una lista de DTOs. \end{DoxyCompactList}\item 
 String \mbox{\hyperlink{class_negocio_1_1_managment_1_1_actividad_managment_a3d98352e8a6396d0e23ad9e58e6900bd}{Registrar\+Actividad}} (\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} nueva\+Actividad)
-\begin{DoxyCompactList}\small\item\em Registra una nueva actividad en la base de datos. Asocia un monitor con la actividad usando su DNI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Registra una nueva actividad en la base de datos. Asocia un monitor con la actividad usando su DNI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} \mbox{\hyperlink{class_negocio_1_1_managment_1_1_actividad_managment_ac2ce242dbf44766e05aed7c8ea2bc341}{Obtener\+Actividad\+Por\+Id}} (int id\+Actividad)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Member Function Documentation}
@@ -43,6 +45,12 @@ Obtiene todas las actividades desde la base de datos y las convierte en una list
 \begin{DoxyReturn}{Returns}
 Una lista de DTOs que representa todas las actividades.
 \end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_actividad_managment_ac2ce242dbf44766e05aed7c8ea2bc341}\index{Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}!ObtenerActividadPorId@{ObtenerActividadPorId}}
+\index{ObtenerActividadPorId@{ObtenerActividadPorId}!Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}}
+\doxysubsubsection{\texorpdfstring{ObtenerActividadPorId()}{ObtenerActividadPorId()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_actividad_managment_ac2ce242dbf44766e05aed7c8ea2bc341} 
+\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_actividad_d_t_o}{Actividad\+DTO}} Negocio.\+Managment.\+Actividad\+Managment.\+Obtener\+Actividad\+Por\+Id (\begin{DoxyParamCaption}\item[{int}]{id\+Actividad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \Hypertarget{class_negocio_1_1_managment_1_1_actividad_managment_a3d98352e8a6396d0e23ad9e58e6900bd}\index{Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}!RegistrarActividad@{RegistrarActividad}}
 \index{RegistrarActividad@{RegistrarActividad}!Negocio.Managment.ActividadManagment@{Negocio.Managment.ActividadManagment}}
 \doxysubsubsection{\texorpdfstring{RegistrarActividad()}{RegistrarActividad()}}

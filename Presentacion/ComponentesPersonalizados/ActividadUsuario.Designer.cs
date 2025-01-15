@@ -33,6 +33,7 @@
             this.LBLIndicadorNombreMonitor = new System.Windows.Forms.Label();
             this.LBLDonveVaNombreMonitor = new System.Windows.Forms.Label();
             this.panelContenedorInfo = new System.Windows.Forms.Panel();
+            this.estrellasValoracion1 = new Presentacion.ComponentesPersonalizados.EstrellasValoracion();
             this.panelContenedorInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,18 +42,19 @@
             this.LBLIndicadorNombreActividad.AutoSize = true;
             this.LBLIndicadorNombreActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLIndicadorNombreActividad.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLIndicadorNombreActividad.Location = new System.Drawing.Point(16, 16);
+            this.LBLIndicadorNombreActividad.Location = new System.Drawing.Point(16, 11);
             this.LBLIndicadorNombreActividad.Name = "LBLIndicadorNombreActividad";
             this.LBLIndicadorNombreActividad.Size = new System.Drawing.Size(110, 13);
             this.LBLIndicadorNombreActividad.TabIndex = 2;
             this.LBLIndicadorNombreActividad.Text = "Nombre actividad:";
+            this.LBLIndicadorNombreActividad.Click += new System.EventHandler(this.LBLIndicadorNombreActividad_Click);
             // 
             // LBLDondeVaNombreActividad
             // 
             this.LBLDondeVaNombreActividad.AutoSize = true;
             this.LBLDondeVaNombreActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLDondeVaNombreActividad.ForeColor = System.Drawing.Color.White;
-            this.LBLDondeVaNombreActividad.Location = new System.Drawing.Point(45, 40);
+            this.LBLDondeVaNombreActividad.Location = new System.Drawing.Point(45, 33);
             this.LBLDondeVaNombreActividad.Name = "LBLDondeVaNombreActividad";
             this.LBLDondeVaNombreActividad.Size = new System.Drawing.Size(41, 13);
             this.LBLDondeVaNombreActividad.TabIndex = 3;
@@ -63,7 +65,7 @@
             this.LBLIndicadorNombreMonitor.AutoSize = true;
             this.LBLIndicadorNombreMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLIndicadorNombreMonitor.ForeColor = System.Drawing.Color.DarkCyan;
-            this.LBLIndicadorNombreMonitor.Location = new System.Drawing.Point(16, 71);
+            this.LBLIndicadorNombreMonitor.Location = new System.Drawing.Point(16, 56);
             this.LBLIndicadorNombreMonitor.Name = "LBLIndicadorNombreMonitor";
             this.LBLIndicadorNombreMonitor.Size = new System.Drawing.Size(108, 13);
             this.LBLIndicadorNombreMonitor.TabIndex = 4;
@@ -74,7 +76,7 @@
             this.LBLDonveVaNombreMonitor.AutoSize = true;
             this.LBLDonveVaNombreMonitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLDonveVaNombreMonitor.ForeColor = System.Drawing.Color.White;
-            this.LBLDonveVaNombreMonitor.Location = new System.Drawing.Point(45, 94);
+            this.LBLDonveVaNombreMonitor.Location = new System.Drawing.Point(45, 79);
             this.LBLDonveVaNombreMonitor.Name = "LBLDonveVaNombreMonitor";
             this.LBLDonveVaNombreMonitor.Size = new System.Drawing.Size(41, 13);
             this.LBLDonveVaNombreMonitor.TabIndex = 5;
@@ -86,12 +88,21 @@
             this.panelContenedorInfo.Controls.Add(this.LBLDondeVaNombreActividad);
             this.panelContenedorInfo.Controls.Add(this.LBLIndicadorNombreMonitor);
             this.panelContenedorInfo.Controls.Add(this.LBLDonveVaNombreMonitor);
+            this.panelContenedorInfo.Controls.Add(this.estrellasValoracion1);
             this.panelContenedorInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorInfo.Location = new System.Drawing.Point(0, 0);
             this.panelContenedorInfo.Name = "panelContenedorInfo";
             this.panelContenedorInfo.Size = new System.Drawing.Size(150, 150);
             this.panelContenedorInfo.TabIndex = 6;
             this.panelContenedorInfo.Click += new System.EventHandler(this.panelContenedorInfo_Click);
+            // 
+            // estrellasValoracion1
+            // 
+            this.estrellasValoracion1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.estrellasValoracion1.Location = new System.Drawing.Point(3, 95);
+            this.estrellasValoracion1.Name = "estrellasValoracion1";
+            this.estrellasValoracion1.Size = new System.Drawing.Size(126, 39);
+            this.estrellasValoracion1.TabIndex = 6;
             // 
             // ActividadUsuario
             // 
@@ -114,5 +125,6 @@
         public System.Windows.Forms.Label LBLIndicadorNombreMonitor;
         public System.Windows.Forms.Label LBLDonveVaNombreMonitor;
         private System.Windows.Forms.Panel panelContenedorInfo;
+        private EstrellasValoracion estrellasValoracion1;
     }
 }

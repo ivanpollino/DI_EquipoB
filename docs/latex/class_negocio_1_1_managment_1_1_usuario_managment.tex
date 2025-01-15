@@ -17,9 +17,11 @@ string \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_ae4621
 \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_a15471690498406e39fc1e72802f68bfa}{comprobar\+Administrador}} (String dni)
 \item 
 String \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_a952b8997cc1be8c1b2ee2854497ac363}{sacar\+Nombre\+Apellidos\+De\+Usuario}} (String dni)
-\begin{DoxyCompactList}\small\item\em Obtiene el nombre y apellidos de un usuario a partir de su DNI. \end{DoxyCompactList}\item 
+\item 
 \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_a1ebe99fa5b2ec90ab1b723ec3ade4a50}{comporobar\+Usuario\+Normal}} (String dni)
-\begin{DoxyCompactList}\small\item\em Comprueba si un usuario es de tipo normal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\item 
+String \mbox{\hyperlink{class_negocio_1_1_managment_1_1_usuario_managment_a43cace70160544dc6391da1c9f39677e}{modificar\+Usuario}} (String dni, \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} usuario\+DTO)
+\begin{DoxyCompactList}\small\item\em Modifica los datos de un usuario existente en la base de datos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
@@ -73,34 +75,12 @@ Contraseña cifrada en formato hexadecimal.
 {\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_a1ebe99fa5b2ec90ab1b723ec3ade4a50} 
 \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} Negocio.\+Managment.\+Usuario\+Managment.\+comporobar\+Usuario\+Normal (\begin{DoxyParamCaption}\item[{String}]{dni}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-
-
-Comprueba si un usuario es de tipo normal. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em dni} & DNI del usuario a verificar.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Un objeto {\ttfamily Usuario\+DTO} si el usuario es normal; de lo contrario, un objeto vacío.
-\end{DoxyReturn}
 \Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_a15471690498406e39fc1e72802f68bfa}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!comprobarAdministrador@{comprobarAdministrador}}
 \index{comprobarAdministrador@{comprobarAdministrador}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
 \doxysubsubsection{\texorpdfstring{comprobarAdministrador()}{comprobarAdministrador()}}
 {\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_a15471690498406e39fc1e72802f68bfa} 
 \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} Negocio.\+Managment.\+Usuario\+Managment.\+comprobar\+Administrador (\begin{DoxyParamCaption}\item[{String}]{dni}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Verifica si un usuario es administrador.
-
-
-\begin{DoxyParams}{Parameters}
-{\em dni} & DNI del usuario a verificar.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Un objeto {\ttfamily Usuario\+DTO} si el usuario es administrador; de lo contrario, un objeto vacío.
-\end{DoxyReturn}
 \Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_a572aba789be5ac4bf7b3d1ba33932e29}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!comprobarLogin@{comprobarLogin}}
 \index{comprobarLogin@{comprobarLogin}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
 \doxysubsubsection{\texorpdfstring{comprobarLogin()}{comprobarLogin()}}
@@ -121,24 +101,32 @@ Verifica las credenciales de login del usuario.
 \begin{DoxyReturn}{Returns}
 Un objeto Usuario\+DTO si las credenciales son correctas; null en caso contrario.
 \end{DoxyReturn}
+\Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_a43cace70160544dc6391da1c9f39677e}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!modificarUsuario@{modificarUsuario}}
+\index{modificarUsuario@{modificarUsuario}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
+\doxysubsubsection{\texorpdfstring{modificarUsuario()}{modificarUsuario()}}
+{\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_a43cace70160544dc6391da1c9f39677e} 
+String Negocio.\+Managment.\+Usuario\+Managment.\+modificar\+Usuario (\begin{DoxyParamCaption}\item[{String}]{dni}{, }\item[{\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}}}]{usuario\+DTO}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Modifica los datos de un usuario existente en la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dni} & DNI del usuario a modificar.\\
+\hline
+{\em nuevos\+Datos\+DTO} & DTO con los nuevos datos del usuario.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mensaje indicando el estado de la operación.
+\end{DoxyReturn}
 \Hypertarget{class_negocio_1_1_managment_1_1_usuario_managment_a952b8997cc1be8c1b2ee2854497ac363}\index{Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}!sacarNombreApellidosDeUsuario@{sacarNombreApellidosDeUsuario}}
 \index{sacarNombreApellidosDeUsuario@{sacarNombreApellidosDeUsuario}!Negocio.Managment.UsuarioManagment@{Negocio.Managment.UsuarioManagment}}
 \doxysubsubsection{\texorpdfstring{sacarNombreApellidosDeUsuario()}{sacarNombreApellidosDeUsuario()}}
 {\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_usuario_managment_a952b8997cc1be8c1b2ee2854497ac363} 
 String Negocio.\+Managment.\+Usuario\+Managment.\+sacar\+Nombre\+Apellidos\+De\+Usuario (\begin{DoxyParamCaption}\item[{String}]{dni}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-
-
-Obtiene el nombre y apellidos de un usuario a partir de su DNI. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em dni} & DNI del usuario.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Una cadena con el nombre y apellidos del usuario.
-\end{DoxyReturn}
 
 
 \doxysubsection{Field Documentation}

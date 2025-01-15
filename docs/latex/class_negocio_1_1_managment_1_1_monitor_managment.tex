@@ -1,23 +1,15 @@
 \doxysection{Negocio.\+Managment.\+Monitor\+Managment Class Reference}
 \hypertarget{class_negocio_1_1_managment_1_1_monitor_managment}{}\label{class_negocio_1_1_managment_1_1_monitor_managment}\index{Negocio.Managment.MonitorManagment@{Negocio.Managment.MonitorManagment}}
-
-
-Clase que gestiona las operaciones relacionadas con los monitores en el sistema.  
-
-
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} $>$ \mbox{\hyperlink{class_negocio_1_1_managment_1_1_monitor_managment_aa7dd690d7746455edca91c1c7cd27ae0}{Obtener\+Usuarios\+Monitores}} ()
-\begin{DoxyCompactList}\small\item\em Obtiene la lista de usuarios que son monitores en el sistema. \end{DoxyCompactList}\item 
+\item 
 String \mbox{\hyperlink{class_negocio_1_1_managment_1_1_monitor_managment_a72d945bf1e2a564c4ea5148badb3cfb9}{alta\+Monitor}} (\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} usuario\+DTO)
-\begin{DoxyCompactList}\small\item\em Da de alta un nuevo monitor en el sistema. \end{DoxyCompactList}\item 
+\item 
 string \mbox{\hyperlink{class_negocio_1_1_managment_1_1_monitor_managment_a732fa9fc13b88d0958036141c36ee4cd}{cifrar}} (string contrasena)
-\begin{DoxyCompactList}\small\item\em Cifra una contraseña utilizando el algoritmo SHA256. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 
-
-\doxysubsection{Detailed Description}
-Clase que gestiona las operaciones relacionadas con los monitores en el sistema. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_negocio_1_1_managment_1_1_monitor_managment_a72d945bf1e2a564c4ea5148badb3cfb9}\index{Negocio.Managment.MonitorManagment@{Negocio.Managment.MonitorManagment}!altaMonitor@{altaMonitor}}
@@ -26,49 +18,18 @@ Clase que gestiona las operaciones relacionadas con los monitores en el sistema.
 {\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_monitor_managment_a72d945bf1e2a564c4ea5148badb3cfb9} 
 String Negocio.\+Managment.\+Monitor\+Managment.\+alta\+Monitor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}}}]{usuario\+DTO}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-
-
-Da de alta un nuevo monitor en el sistema. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em usuario\+DTO} & DTO que contiene la información del monitor a registrar.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Mensaje de confirmación o error sobre el registro del monitor.
-\end{DoxyReturn}
 \Hypertarget{class_negocio_1_1_managment_1_1_monitor_managment_a732fa9fc13b88d0958036141c36ee4cd}\index{Negocio.Managment.MonitorManagment@{Negocio.Managment.MonitorManagment}!cifrar@{cifrar}}
 \index{cifrar@{cifrar}!Negocio.Managment.MonitorManagment@{Negocio.Managment.MonitorManagment}}
 \doxysubsubsection{\texorpdfstring{cifrar()}{cifrar()}}
 {\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_monitor_managment_a732fa9fc13b88d0958036141c36ee4cd} 
 string Negocio.\+Managment.\+Monitor\+Managment.\+cifrar (\begin{DoxyParamCaption}\item[{string}]{contrasena}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-
-
-Cifra una contraseña utilizando el algoritmo SHA256. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em contrasena} & La contraseña en texto plano a cifrar.\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-La contraseña cifrada en formato hexadecimal.
-\end{DoxyReturn}
 \Hypertarget{class_negocio_1_1_managment_1_1_monitor_managment_aa7dd690d7746455edca91c1c7cd27ae0}\index{Negocio.Managment.MonitorManagment@{Negocio.Managment.MonitorManagment}!ObtenerUsuariosMonitores@{ObtenerUsuariosMonitores}}
 \index{ObtenerUsuariosMonitores@{ObtenerUsuariosMonitores}!Negocio.Managment.MonitorManagment@{Negocio.Managment.MonitorManagment}}
 \doxysubsubsection{\texorpdfstring{ObtenerUsuariosMonitores()}{ObtenerUsuariosMonitores()}}
 {\footnotesize\ttfamily \label{class_negocio_1_1_managment_1_1_monitor_managment_aa7dd690d7746455edca91c1c7cd27ae0} 
 List$<$ \mbox{\hyperlink{class_negocio_1_1_entities_d_t_o_1_1_usuario_d_t_o}{Usuario\+DTO}} $>$ Negocio.\+Managment.\+Monitor\+Managment.\+Obtener\+Usuarios\+Monitores (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-
-
-Obtiene la lista de usuarios que son monitores en el sistema. 
-
-\begin{DoxyReturn}{Returns}
-Lista de objetos Usuario\+DTO que representan a los monitores.
-\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

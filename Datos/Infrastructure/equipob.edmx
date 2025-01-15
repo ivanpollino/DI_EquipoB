@@ -13,6 +13,7 @@
           <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Descripcion" Type="varchar(max)" />
           <Property Name="DNI_Monitor" Type="varchar" MaxLength="10" />
+          <Property Name="Media_Valoracion" Type="decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="Administrador">
           <Key>
@@ -181,6 +182,7 @@
           <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="DNI_Monitor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Media_Valoracion" Type="Decimal" Precision="10" Scale="2" />
           <NavigationProperty Name="Usuario_Actividad" Relationship="Self.FK_Actividad_Usuario" FromRole="Actividad" ToRole="Usuario_Actividad" />
           <NavigationProperty Name="Monitor" Relationship="Self.FK_Monitor_Actividad" FromRole="Actividad" ToRole="Monitor" />
         </EntityType>
@@ -361,6 +363,7 @@
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
                 <ScalarProperty Name="DNI_Monitor" ColumnName="DNI_Monitor" />
+                <ScalarProperty Name="Media_Valoracion" ColumnName="Media_Valoracion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
