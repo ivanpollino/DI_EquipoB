@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="equipobFINAL1ModelStoreContainer" CdmEntityContainer="equipobFINAL1Entities">
+    <EntitySetMapping Name="Actividad">
+      <EntityTypeMapping TypeName="equipobFINAL1Model.Actividad">
+        <MappingFragment StoreEntitySet="Actividad">
+          <ScalarProperty Name="Id_Actividad" ColumnName="Id_Actividad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Media_Valoracion" ColumnName="Media_Valoracion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="DNI_Monitor" ColumnName="DNI_Monitor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Administrador">
+      <EntityTypeMapping TypeName="equipobFINAL1Model.Administrador">
+        <MappingFragment StoreEntitySet="Administrador">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facturas">
+      <EntityTypeMapping TypeName="equipobFINAL1Model.Facturas">
+        <MappingFragment StoreEntitySet="Facturas">
+          <ScalarProperty Name="Numero_Factura" ColumnName="Numero_Factura" />
+          <ScalarProperty Name="Fecha_Emision" ColumnName="Fecha_Emision" />
+          <ScalarProperty Name="Descripcion_Servicios" ColumnName="Descripcion_Servicios" />
+          <ScalarProperty Name="Cantidad_Servicios" ColumnName="Cantidad_Servicios" />
+          <ScalarProperty Name="Precio_Unitario" ColumnName="Precio_Unitario" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="Impuestos" ColumnName="Impuestos" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Monitor">
+      <EntityTypeMapping TypeName="equipobFINAL1Model.Monitor">
+        <MappingFragment StoreEntitySet="Monitor">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="equipobFINAL1Model.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Cuenta_Corriente" ColumnName="Cuenta_Corriente" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Passwd" ColumnName="Passwd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario_Actividad">
+      <EntityTypeMapping TypeName="equipobFINAL1Model.Usuario_Actividad">
+        <MappingFragment StoreEntitySet="Usuario_Actividad">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Id_Actividad" ColumnName="Id_Actividad" />
+          <ScalarProperty Name="Valoracion" ColumnName="Valoracion" />
+          <ScalarProperty Name="Fecha_Valoracion" ColumnName="Fecha_Valoracion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario_Normal">
+      <EntityTypeMapping TypeName="equipobFINAL1Model.Usuario_Normal">
+        <MappingFragment StoreEntitySet="Usuario_Normal">
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

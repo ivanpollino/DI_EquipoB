@@ -14,6 +14,10 @@ namespace Negocio.EntitiesDTO
         public string Descripcion { get; set; }
         public string DNI_Monitor { get; set; }
 
+        public double MediaValoracion { get; set; }
+
+        public Nullable<System.DateTime> Fecha { get; set; }
+
         public ActividadDTO()
         {
         }
@@ -24,7 +28,17 @@ namespace Negocio.EntitiesDTO
             Nombre = nombre;
             Descripcion = descripcion;
             DNI_Monitor = dniMonitor;
+            MediaValoracion = 1.0;
         }
 
+        public ActividadDTO(int idActividad, string nombre, string descripcion, string dniMonitor, DateTime fecha)
+        {
+            Id_Actividad = idActividad;
+            Nombre = nombre;
+            Descripcion = descripcion;
+            DNI_Monitor = dniMonitor;
+            MediaValoracion = 1.0;
+            Fecha = fecha;
+        }
     }
 }

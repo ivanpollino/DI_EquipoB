@@ -24,6 +24,8 @@ namespace Negocio.Managment
             actividad.Nombre = actividadDTO.Nombre;
             actividad.Descripcion = actividadDTO.Descripcion;
             actividad.DNI_Monitor = actividadDTO.DNI_Monitor;
+            actividad.Media_Valoracion = actividadDTO.MediaValoracion;
+            actividad.Fecha = actividadDTO.Fecha;
 
             return new Datos.Repositorys.ActividadRepository().bajaActividad(actividad);
 
@@ -43,6 +45,27 @@ namespace Negocio.Managment
                 aux.Nombre = actividadNormal.Nombre;
                 aux.Descripcion = actividadNormal.Descripcion;
                 aux.DNI_Monitor = actividadNormal.DNI_Monitor;
+                aux.MediaValoracion = (double)actividadNormal.Media_Valoracion;
+                aux.Fecha = actividadNormal.Fecha;
+
+                listaDTO.Add(aux);
+            }
+            return listaDTO;
+        }
+
+        public List<ActividadDTO> ObtenerActividadesFiltradas()
+        {
+            List<Actividad> actividades = new Datos.Repositorys.ActividadRepository().listadoActividadesFiltradas();
+            List<ActividadDTO> listaDTO = new List<ActividadDTO>();
+            foreach (Actividad actividadNormal in actividades)
+            {
+                ActividadDTO aux = new ActividadDTO();
+                aux.Id_Actividad = actividadNormal.Id_Actividad;
+                aux.Nombre = actividadNormal.Nombre;
+                aux.Descripcion = actividadNormal.Descripcion;
+                aux.DNI_Monitor = actividadNormal.DNI_Monitor;
+                aux.MediaValoracion = (double)actividadNormal.Media_Valoracion;
+                aux.Fecha = actividadNormal.Fecha;
 
                 listaDTO.Add(aux);
             }
@@ -63,9 +86,27 @@ namespace Negocio.Managment
                 Id_Actividad = nuevoId,
                 Nombre = nuevaActividad.Nombre,
                 Descripcion = nuevaActividad.Descripcion,
-                DNI_Monitor = nuevaActividad.DNI_Monitor
+                DNI_Monitor = nuevaActividad.DNI_Monitor,
+                Media_Valoracion = nuevaActividad.MediaValoracion,
+                Fecha = nuevaActividad.Fecha
             };
             return actividadRepository.GuardarActividad(actividad);
+        }
+
+        public ActividadDTO ObtenerActividadPorId(int idActividad)
+        {
+                Actividad actividadNormal = new Datos.Repositorys.ActividadRepository().ObtenerActividadPorId(idActividad);
+                ActividadDTO aux = new ActividadDTO
+                {
+                    Id_Actividad = actividadNormal.Id_Actividad,
+                    Nombre = actividadNormal.Nombre,
+                    Descripcion = actividadNormal.Descripcion,
+                    DNI_Monitor = actividadNormal.DNI_Monitor,
+                    MediaValoracion = (double)actividadNormal.Media_Valoracion,
+                    Fecha = actividadNormal.Fecha
+                };
+
+                return aux;
         }
     }
 }

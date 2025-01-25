@@ -34,6 +34,7 @@ namespace Presentacion
             this.panel1 = new System.Windows.Forms.Panel();
             this.BTNVerActividades = new System.Windows.Forms.Button();
             this.panelParaUsuarios = new System.Windows.Forms.Panel();
+            this.btnEditarPerfil = new System.Windows.Forms.Button();
             this.BTNCerrarSesionUsuario = new System.Windows.Forms.Button();
             this.panelAdministrador = new System.Windows.Forms.Panel();
             this.BTNCerrarSesionAdmin = new System.Windows.Forms.Button();
@@ -71,9 +72,9 @@ namespace Presentacion
             // 
             // BTNVerActividades
             // 
-            this.BTNVerActividades.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.BTNVerActividades.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNVerActividades.ForeColor = System.Drawing.Color.Black;
-            this.BTNVerActividades.Location = new System.Drawing.Point(346, 361);
+            this.BTNVerActividades.Location = new System.Drawing.Point(346, 359);
             this.BTNVerActividades.Name = "BTNVerActividades";
             this.BTNVerActividades.Size = new System.Drawing.Size(164, 30);
             this.BTNVerActividades.TabIndex = 8;
@@ -84,11 +85,29 @@ namespace Presentacion
             // 
             // panelParaUsuarios
             // 
+            this.panelParaUsuarios.Controls.Add(this.btnEditarPerfil);
             this.panelParaUsuarios.Controls.Add(this.BTNCerrarSesionUsuario);
             this.panelParaUsuarios.Location = new System.Drawing.Point(780, 379);
             this.panelParaUsuarios.Name = "panelParaUsuarios";
-            this.panelParaUsuarios.Size = new System.Drawing.Size(208, 66);
+            this.panelParaUsuarios.Size = new System.Drawing.Size(208, 132);
             this.panelParaUsuarios.TabIndex = 7;
+            // 
+            // btnEditarPerfil
+            // 
+            this.btnEditarPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.btnEditarPerfil.FlatAppearance.BorderSize = 0;
+            this.btnEditarPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarPerfil.ForeColor = System.Drawing.Color.Cyan;
+            this.btnEditarPerfil.Image = global::Presentacion.Properties.Resources.user_solid_48;
+            this.btnEditarPerfil.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarPerfil.Location = new System.Drawing.Point(0, 0);
+            this.btnEditarPerfil.Name = "btnEditarPerfil";
+            this.btnEditarPerfil.Size = new System.Drawing.Size(208, 66);
+            this.btnEditarPerfil.TabIndex = 9;
+            this.btnEditarPerfil.Text = "Editar Perfil";
+            this.btnEditarPerfil.UseVisualStyleBackColor = false;
+            this.btnEditarPerfil.Click += new System.EventHandler(this.btnEditarPerfil_Click);
             // 
             // BTNCerrarSesionUsuario
             // 
@@ -99,7 +118,7 @@ namespace Presentacion
             this.BTNCerrarSesionUsuario.ForeColor = System.Drawing.Color.Cyan;
             this.BTNCerrarSesionUsuario.Image = global::Presentacion.Properties.Resources.logOut;
             this.BTNCerrarSesionUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNCerrarSesionUsuario.Location = new System.Drawing.Point(0, 0);
+            this.BTNCerrarSesionUsuario.Location = new System.Drawing.Point(0, 66);
             this.BTNCerrarSesionUsuario.Name = "BTNCerrarSesionUsuario";
             this.BTNCerrarSesionUsuario.Size = new System.Drawing.Size(208, 66);
             this.BTNCerrarSesionUsuario.TabIndex = 8;
@@ -267,5 +286,6 @@ namespace Presentacion
         private Button BTNCerrarSesionUsuario;
         private Panel panelParaUsuarios;
         private Button BTNVerActividades;
+        private Button btnEditarPerfil;
     }
 }

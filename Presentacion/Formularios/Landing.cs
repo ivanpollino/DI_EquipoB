@@ -269,5 +269,12 @@ namespace Presentacion
             Actividades actividadesForm = new Actividades(usuario);
             actividadesForm.ShowDialog();
         }
+
+        private void btnEditarPerfil_Click(object sender, EventArgs e)
+        {
+            EditarPerfil editarPerfil = new EditarPerfil(usuario);
+            editarPerfil.ShowDialog();
+            cargarHeader();
+        }
     }
 }

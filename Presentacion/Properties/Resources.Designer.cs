@@ -113,6 +113,46 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap es_empty {
+            get {
+                object obj = ResourceManager.GetObject("es_empty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap es_llena {
+            get {
+                object obj = ResourceManager.GetObject("es_llena", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estadisticas {
+            get {
+                object obj = ResourceManager.GetObject("estadisticas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estrella_vacia {
+            get {
+                object obj = ResourceManager.GetObject("estrella_vacia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imagenFondoLogin {
             get {
                 object obj = ResourceManager.GetObject("imagenFondoLogin", resourceCulture);
@@ -196,6 +236,26 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap Services {
             get {
                 object obj = ResourceManager.GetObject("Services", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap top5 {
+            get {
+                object obj = ResourceManager.GetObject("top5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_solid_48 {
+            get {
+                object obj = ResourceManager.GetObject("user-solid-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

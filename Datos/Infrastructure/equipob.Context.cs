@@ -27,6 +27,7 @@ namespace Datos.Infrastructure
     
         public virtual DbSet<Actividad> Actividad { get; set; }
         public virtual DbSet<Administrador> Administrador { get; set; }
+        public virtual DbSet<Facturas> Facturas { get; set; }
         public virtual DbSet<Monitor> Monitor { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Usuario_Actividad> Usuario_Actividad { get; set; }

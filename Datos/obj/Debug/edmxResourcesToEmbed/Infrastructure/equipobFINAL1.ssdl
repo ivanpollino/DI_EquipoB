@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="equipobFINAL1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Actividad">
+    <Key>
+      <PropertyRef Name="Id_Actividad" />
+    </Key>
+    <Property Name="Id_Actividad" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar(max)" />
+    <Property Name="Media_Valoracion" Type="float" />
+    <Property Name="Fecha" Type="date" />
+    <Property Name="DNI_Monitor" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Administrador">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="Numero_Factura" />
+    </Key>
+    <Property Name="Numero_Factura" Type="int" Nullable="false" />
+    <Property Name="Fecha_Emision" Type="date" />
+    <Property Name="Descripcion_Servicios" Type="varchar(max)" />
+    <Property Name="Cantidad_Servicios" Type="int" />
+    <Property Name="Precio_Unitario" Type="float" />
+    <Property Name="Subtotal" Type="float" />
+    <Property Name="Impuestos" Type="int" />
+    <Property Name="Total" Type="float" />
+    <Property Name="DNI" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Monitor">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Telefono" Type="int" />
+    <Property Name="Direccion" Type="varchar" MaxLength="60" />
+    <Property Name="Cuenta_Corriente" Type="varchar" MaxLength="60" />
+    <Property Name="Email" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Passwd" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario_Actividad">
+    <Key>
+      <PropertyRef Name="DNI" />
+      <PropertyRef Name="Id_Actividad" />
+    </Key>
+    <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Id_Actividad" Type="int" Nullable="false" />
+    <Property Name="Valoracion" Type="tinyint" />
+    <Property Name="Fecha_Valoracion" Type="date" />
+  </EntityType>
+  <EntityType Name="Usuario_Normal">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Actividad_Usuario">
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Usuario_Actividad" Type="Self.Usuario_Actividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actividad">
+        <PropertyRef Name="Id_Actividad" />
+      </Principal>
+      <Dependent Role="Usuario_Actividad">
+        <PropertyRef Name="Id_Actividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Facturas_UsuarioNormal">
+    <End Role="Usuario_Normal" Type="Self.Usuario_Normal" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_Normal">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Facturas">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Monitor_Actividad">
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="0..1" />
+    <End Role="Actividad" Type="Self.Actividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Monitor">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Actividad">
+        <PropertyRef Name="DNI_Monitor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Actividad">
+    <End Role="Usuario_Normal" Type="Self.Usuario_Normal" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Usuario_Actividad" Type="Self.Usuario_Actividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_Normal">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Usuario_Actividad">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Administrador">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Administrador" Type="Self.Administrador" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Administrador">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Monitor">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Monitor" Type="Self.Monitor" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Monitor">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Normal">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Usuario_Normal" Type="Self.Usuario_Normal" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Usuario_Normal">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="equipobFINAL1ModelStoreContainer">
+    <EntitySet Name="Actividad" EntityType="Self.Actividad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Administrador" EntityType="Self.Administrador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Facturas" EntityType="Self.Facturas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Monitor" EntityType="Self.Monitor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario_Actividad" EntityType="Self.Usuario_Actividad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario_Normal" EntityType="Self.Usuario_Normal" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Actividad_Usuario" Association="Self.FK_Actividad_Usuario">
+      <End Role="Actividad" EntitySet="Actividad" />
+      <End Role="Usuario_Actividad" EntitySet="Usuario_Actividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Facturas_UsuarioNormal" Association="Self.FK_Facturas_UsuarioNormal">
+      <End Role="Usuario_Normal" EntitySet="Usuario_Normal" />
+      <End Role="Facturas" EntitySet="Facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Monitor_Actividad" Association="Self.FK_Monitor_Actividad">
+      <End Role="Monitor" EntitySet="Monitor" />
+      <End Role="Actividad" EntitySet="Actividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Actividad" Association="Self.FK_Usuario_Actividad">
+      <End Role="Usuario_Normal" EntitySet="Usuario_Normal" />
+      <End Role="Usuario_Actividad" EntitySet="Usuario_Actividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Administrador" Association="Self.FK_Usuario_Administrador">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Administrador" EntitySet="Administrador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Monitor" Association="Self.FK_Usuario_Monitor">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Monitor" EntitySet="Monitor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Normal" Association="Self.FK_Usuario_Normal">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario_Normal" EntitySet="Usuario_Normal" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

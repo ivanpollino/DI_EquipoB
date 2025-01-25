@@ -61,6 +61,9 @@
     <Compile Include="PruebasSprint2\PruebasActividades.cs" />
     <Compile Include="PruebasSprint2\PruebasMonitor.cs" />
     <Compile Include="PruebasSprint3\PruebasApuntarseActividad.cs" />
+    <Compile Include="PruebasSprint4\PruebasDesapuntarteActividad.cs" />
+    <Compile Include="PruebasSprint4\PruebasEditarUsuario.cs" />
+    <Compile Include="PruebasSprint4\PruebasValorarActividad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

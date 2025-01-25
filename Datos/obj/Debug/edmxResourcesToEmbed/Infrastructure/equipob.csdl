@@ -7,6 +7,8 @@
     <Property Name="Id_Actividad" Type="Int32" Nullable="false" />
     <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Media_Valoracion" Type="Double" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
     <Property Name="DNI_Monitor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Usuario_Actividad" Relationship="Self.FK_Actividad_Usuario" FromRole="Actividad" ToRole="Usuario_Actividad" />
     <NavigationProperty Name="Monitor" Relationship="Self.FK_Monitor_Actividad" FromRole="Actividad" ToRole="Monitor" />
@@ -17,6 +19,21 @@
     </Key>
     <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Administrador" FromRole="Administrador" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="Numero_Factura" />
+    </Key>
+    <Property Name="Numero_Factura" Type="Int32" Nullable="false" />
+    <Property Name="Fecha_Emision" Type="DateTime" Precision="0" />
+    <Property Name="Descripcion_Servicios" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Cantidad_Servicios" Type="Int32" />
+    <Property Name="Precio_Unitario" Type="Double" />
+    <Property Name="Subtotal" Type="Double" />
+    <Property Name="Impuestos" Type="Int32" />
+    <Property Name="Total" Type="Double" />
+    <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario_Normal" Relationship="Self.FK_Facturas_UsuarioNormal" FromRole="Facturas" ToRole="Usuario_Normal" />
   </EntityType>
   <EntityType Name="Monitor">
     <Key>
@@ -58,6 +75,7 @@
       <PropertyRef Name="DNI" />
     </Key>
     <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Facturas" Relationship="Self.FK_Facturas_UsuarioNormal" FromRole="Usuario_Normal" ToRole="Facturas" />
     <NavigationProperty Name="Usuario" Relationship="Self.FK_Usuario_Normal" FromRole="Usuario_Normal" ToRole="Usuario" />
     <NavigationProperty Name="Usuario_Actividad" Relationship="Self.FK_Usuario_Actividad" FromRole="Usuario_Normal" ToRole="Usuario_Actividad" />
   </EntityType>
@@ -97,6 +115,20 @@
         <PropertyRef Name="DNI" />
       </Principal>
       <Dependent Role="Administrador">
+        <PropertyRef Name="DNI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Facturas_UsuarioNormal">
+    <End Role="Usuario_Normal" Type="Self.Usuario_Normal" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_Normal">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Facturas">
         <PropertyRef Name="DNI" />
       </Dependent>
     </ReferentialConstraint>
@@ -146,6 +178,7 @@
   <EntityContainer Name="equipobEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Actividad" EntityType="Self.Actividad" />
     <EntitySet Name="Administrador" EntityType="Self.Administrador" />
+    <EntitySet Name="Facturas" EntityType="Self.Facturas" />
     <EntitySet Name="Monitor" EntityType="Self.Monitor" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <EntitySet Name="Usuario_Actividad" EntityType="Self.Usuario_Actividad" />
@@ -161,6 +194,10 @@
     <AssociationSet Name="FK_Usuario_Administrador" Association="Self.FK_Usuario_Administrador">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="Administrador" EntitySet="Administrador" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Facturas_UsuarioNormal" Association="Self.FK_Facturas_UsuarioNormal">
+      <End Role="Usuario_Normal" EntitySet="Usuario_Normal" />
+      <End Role="Facturas" EntitySet="Facturas" />
     </AssociationSet>
     <AssociationSet Name="FK_Usuario_Monitor" Association="Self.FK_Usuario_Monitor">
       <End Role="Usuario" EntitySet="Usuario" />

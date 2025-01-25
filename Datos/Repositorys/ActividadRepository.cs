@@ -18,7 +18,7 @@ namespace Datos.Repositorys
         /// <returns>Un mensaje de éxito indicando que la actividad ha sido eliminada correctamente.</returns>
         public String bajaActividad(Actividad actividad)
         {
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobFINAL1Entities())
             {
                 var actividadExistente = contexto.Actividad.Find(actividad.Id_Actividad);
                 if (actividadExistente != null)
@@ -41,7 +41,7 @@ namespace Datos.Repositorys
         public Actividad sacarActividad(Actividad actividad)
         {
             Actividad actividadAux = new Actividad();
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobFINAL1Entities())
             {
                 actividadAux = contexto.Actividad.FirstOrDefault(a => a.Nombre == actividad.Nombre);
             }
@@ -51,13 +51,30 @@ namespace Datos.Repositorys
         /// Obtiene una lista de todas las actividades almacenadas en la base de datos.
         /// </summary>
         /// <returns>Una lista con todas las actividades de la base de datos.</returns>
+        /// 
+
         public List<Actividad> listadoActividades()
         {
             List<Actividad> actividades = new List<Actividad>();
 
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobFINAL1Entities())
             {
                 actividades = contexto.Actividad.ToList();
+            }
+
+            return actividades;
+        }
+
+        public List<Actividad> listadoActividadesFiltradas()
+        {
+            List<Actividad> actividades = new List<Actividad>();
+
+            using (var contexto = new equipobFINAL1Entities())
+            {
+                // Filtrar las actividades por fecha mayor o igual a hoy
+                actividades = contexto.Actividad
+                    .Where(a => a.Fecha >= DateTime.Today)
+                    .ToList();
             }
 
             return actividades;
@@ -68,7 +85,7 @@ namespace Datos.Repositorys
         /// <returns>El siguiente ID disponible para una nueva actividad.</returns>
         public int ObtenerNuevoIdActividad()
         {
-            using (var context = new equipobEntities())
+            using (var context = new equipobFINAL1Entities())
             {
                 var ultimoId = context.Actividad
                                       .OrderByDescending(a => a.Id_Actividad)
@@ -83,7 +100,7 @@ namespace Datos.Repositorys
         /// <returns>El monitor encontrado o null si no se encuentra ningún monitor con ese DNI.</returns>
         public Monitor ObtenerMonitorPorDni(string dniMonitor)
         {
-            using (var context = new equipobEntities())
+            using (var context = new equipobFINAL1Entities())
             {
                 return context.Monitor.FirstOrDefault(m => m.DNI == dniMonitor);
             }
@@ -94,7 +111,7 @@ namespace Datos.Repositorys
         /// <param name="actividad">La actividad que se desea guardar.</param>
         public string GuardarActividad(Actividad actividad)
         {
-            using (var context = new equipobEntities())
+            using (var context = new equipobFINAL1Entities())
             {
                 try
                 {
@@ -115,6 +132,14 @@ namespace Datos.Repositorys
                     // Manejo genérico de excepciones
                     return $"Error al guardar la actividad: {ex.Message}";
                 }
+            }
+        }
+
+        public Actividad ObtenerActividadPorId(int idActividad)
+        {
+            using (var context = new equipobFINAL1Entities())
+            {
+                return context.Actividad.FirstOrDefault(a => a.Id_Actividad == idActividad);
             }
         }
     }

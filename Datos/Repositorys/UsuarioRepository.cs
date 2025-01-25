@@ -24,7 +24,7 @@ namespace Datos.Repositorys
         {
             Usuario_Normal usuarioNormal = new Usuario_Normal();
             usuarioNormal.DNI = usuario.DNI;
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobFINAL1Entities())
                 {
                     contexto.Usuario.Add(usuario);
                     contexto.Usuario_Normal.Add(usuarioNormal);
@@ -43,7 +43,7 @@ namespace Datos.Repositorys
             try
             {
                 //Abrir la BD
-                using (var contexto = new equipobEntities())
+                using (var contexto = new equipobFINAL1Entities())
                 {
                     usuarios = contexto.Usuario.ToList();
                 }
@@ -61,7 +61,7 @@ namespace Datos.Repositorys
             try
             {
                 //Abrir la BD
-                using (var contexto = new equipobEntities())
+                using (var contexto = new equipobFINAL1Entities())
                 {
                     usuarios = contexto.Administrador.ToList();
                 }
@@ -79,7 +79,7 @@ namespace Datos.Repositorys
             List<Usuario_Normal> usuarios = new List<Usuario_Normal>();
             try
             {
-                using (var contexto = new equipobEntities())
+                using (var contexto = new equipobFINAL1Entities())
                 {
                     usuarios = contexto.Usuario_Normal.ToList();
                 }
@@ -93,7 +93,7 @@ namespace Datos.Repositorys
 
         public String sacarNombrePorDNI(String dni)
         {
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobFINAL1Entities())
             {
                 var usuario = contexto.Usuario
                                       .FirstOrDefault(u => u.DNI == dni);
@@ -107,6 +107,30 @@ namespace Datos.Repositorys
                     return "Usuario no encontrado";
                 }
             }
+        }
+
+        public String modificarUsuario(String dni, Usuario nuevosDatos)
+        {
+            using (var contexto = new equipobFINAL1Entities())
+            {
+                var usuarioExistente = contexto.Usuario.FirstOrDefault(u => u.DNI == dni);
+
+                if (usuarioExistente == null)
+                {
+                    return "Usuario no encontrado";
+                }
+
+                usuarioExistente.Nombre = nuevosDatos.Nombre;
+                usuarioExistente.Apellidos = nuevosDatos.Apellidos;
+                usuarioExistente.Email = nuevosDatos.Email;
+                usuarioExistente.Telefono = nuevosDatos.Telefono;
+                usuarioExistente.Cuenta_Corriente = nuevosDatos.Cuenta_Corriente;
+                usuarioExistente.Direccion = nuevosDatos.Direccion;
+
+                contexto.SaveChanges();
+            }
+
+            return "Usuario modificado con éxito";
         }
     }
 }

@@ -34,6 +34,7 @@ namespace Presentacion
         {
             System.Windows.Forms.Panel panelDerecho;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            this.BTNLogin = new System.Windows.Forms.Button();
             this.LinkLoginLabel = new System.Windows.Forms.LinkLabel();
             this.BTNAlternarContrasena = new System.Windows.Forms.Button();
             this.TXTBPass = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@ namespace Presentacion
             this.TXTBEmail = new System.Windows.Forms.TextBox();
             this.LBLEmail = new System.Windows.Forms.Label();
             this.LBLTitulo = new System.Windows.Forms.Label();
-            this.BTNLogin = new System.Windows.Forms.Button();
             panelDerecho = new System.Windows.Forms.Panel();
             panelDerecho.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,17 @@ namespace Presentacion
             panelDerecho.Size = new System.Drawing.Size(884, 461);
             panelDerecho.TabIndex = 0;
             panelDerecho.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDerecho_Paint);
+            // 
+            // BTNLogin
+            // 
+            this.BTNLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNLogin.ForeColor = System.Drawing.Color.Black;
+            this.BTNLogin.Location = new System.Drawing.Point(713, 330);
+            this.BTNLogin.Name = "BTNLogin";
+            this.BTNLogin.Size = new System.Drawing.Size(103, 30);
+            this.BTNLogin.TabIndex = 8;
+            this.BTNLogin.Text = "LOGIN";
+            this.BTNLogin.UseVisualStyleBackColor = true;
             // 
             // LinkLoginLabel
             // 
@@ -145,17 +156,6 @@ namespace Presentacion
             this.LBLTitulo.Size = new System.Drawing.Size(127, 54);
             this.LBLTitulo.TabIndex = 0;
             this.LBLTitulo.Text = "Login";
-            // 
-            // BTNLogin
-            // 
-            this.BTNLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNLogin.ForeColor = System.Drawing.Color.Black;
-            this.BTNLogin.Location = new System.Drawing.Point(713, 330);
-            this.BTNLogin.Name = "BTNLogin";
-            this.BTNLogin.Size = new System.Drawing.Size(103, 30);
-            this.BTNLogin.TabIndex = 8;
-            this.BTNLogin.Text = "LOGIN";
-            this.BTNLogin.UseVisualStyleBackColor = true;
             // 
             // Login
             // 

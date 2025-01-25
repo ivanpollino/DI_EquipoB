@@ -55,6 +55,7 @@ C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Datos.dll.conf
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
 C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
 C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Negocio\bin\Debug\Negocio.dll
@@ -81,4 +82,3 @@ C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\obj\Debug\Negocio.pdb
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\EntityFramework.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Negocio\bin\Debug\EntityFramework.xml
-C:\Users\Vespertino\Documents\GitHub\DI_EquipoB\Negocio\obj\Debug\Negocio.csproj.Up2Date

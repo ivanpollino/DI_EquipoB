@@ -64,8 +64,9 @@ namespace Presentacion
             string nombreActividad = tbxNombreAct.Text;
             string descripcionActividad = tbxDescripcionAct.Text;
             string dniMonitor = cbMonitores.SelectedValue?.ToString();
+            DateTime fechaActividad = seleccionFecha.Value;
 
-            if (string.IsNullOrWhiteSpace(nombreActividad) || string.IsNullOrWhiteSpace(descripcionActividad) || cbMonitores.SelectedItem == null)
+            if (string.IsNullOrWhiteSpace(nombreActividad) || string.IsNullOrWhiteSpace(descripcionActividad) || cbMonitores.SelectedItem == null || seleccionFecha.Value==null)
             {
                 MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -75,7 +76,10 @@ namespace Presentacion
             {
                 Nombre = nombreActividad,
                 Descripcion = descripcionActividad,
-                DNI_Monitor = dniMonitor
+                DNI_Monitor = dniMonitor,
+                MediaValoracion = 1,
+                Fecha = fechaActividad
+                
             };
 
             ActividadManagment actividadManagment = new ActividadManagment();

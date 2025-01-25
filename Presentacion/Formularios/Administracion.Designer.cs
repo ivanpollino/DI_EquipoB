@@ -41,13 +41,19 @@
             this.menuTransicion = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutMenuAdministracion = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutEstadisticas = new System.Windows.Forms.FlowLayoutPanel();
+            this.BTNEstadisticas = new System.Windows.Forms.Button();
+            this.BTNVerTop5 = new System.Windows.Forms.Button();
+            this.btnTodasLasActividades = new System.Windows.Forms.Button();
             this.menuTransacionActividades = new System.Windows.Forms.Timer(this.components);
             this.menuTransicionAdministracion = new System.Windows.Forms.Timer(this.components);
+            this.menuTransicionEstadisticas = new System.Windows.Forms.Timer(this.components);
             BTNAdminitracion = new System.Windows.Forms.Button();
             this.flowLayoutGestionActividades.SuspendLayout();
             this.flowLayoutGestioMonitores.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutMenuAdministracion.SuspendLayout();
+            this.flowLayoutEstadisticas.SuspendLayout();
             this.SuspendLayout();
             // 
             // BTNAdminitracion
@@ -74,7 +80,7 @@
             this.flowLayoutGestionActividades.Controls.Add(this.BTNListadoActividades);
             this.flowLayoutGestionActividades.Location = new System.Drawing.Point(3, 122);
             this.flowLayoutGestionActividades.Name = "flowLayoutGestionActividades";
-            this.flowLayoutGestionActividades.Size = new System.Drawing.Size(283, 56);
+            this.flowLayoutGestionActividades.Size = new System.Drawing.Size(283, 57);
             this.flowLayoutGestionActividades.TabIndex = 4;
             // 
             // BTNGestionActividades
@@ -82,6 +88,7 @@
             this.BTNGestionActividades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.BTNGestionActividades.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
             this.BTNGestionActividades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNGestionActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNGestionActividades.ForeColor = System.Drawing.Color.White;
             this.BTNGestionActividades.Image = global::Presentacion.Properties.Resources.Actividades;
             this.BTNGestionActividades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,10 +194,62 @@
             this.flowLayoutMenuAdministracion.Controls.Add(BTNAdminitracion);
             this.flowLayoutMenuAdministracion.Controls.Add(this.flowLayoutGestioMonitores);
             this.flowLayoutMenuAdministracion.Controls.Add(this.flowLayoutGestionActividades);
+            this.flowLayoutMenuAdministracion.Controls.Add(this.flowLayoutEstadisticas);
             this.flowLayoutMenuAdministracion.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutMenuAdministracion.Name = "flowLayoutMenuAdministracion";
-            this.flowLayoutMenuAdministracion.Size = new System.Drawing.Size(279, 58);
+            this.flowLayoutMenuAdministracion.Size = new System.Drawing.Size(279, 57);
             this.flowLayoutMenuAdministracion.TabIndex = 5;
+            // 
+            // flowLayoutEstadisticas
+            // 
+            this.flowLayoutEstadisticas.Controls.Add(this.BTNEstadisticas);
+            this.flowLayoutEstadisticas.Controls.Add(this.BTNVerTop5);
+            this.flowLayoutEstadisticas.Controls.Add(this.btnTodasLasActividades);
+            this.flowLayoutEstadisticas.Location = new System.Drawing.Point(3, 185);
+            this.flowLayoutEstadisticas.Name = "flowLayoutEstadisticas";
+            this.flowLayoutEstadisticas.Size = new System.Drawing.Size(279, 57);
+            this.flowLayoutEstadisticas.TabIndex = 1;
+            // 
+            // BTNEstadisticas
+            // 
+            this.BTNEstadisticas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.BTNEstadisticas.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
+            this.BTNEstadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNEstadisticas.ForeColor = System.Drawing.Color.White;
+            this.BTNEstadisticas.Image = global::Presentacion.Properties.Resources.estadisticas;
+            this.BTNEstadisticas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTNEstadisticas.Location = new System.Drawing.Point(3, 3);
+            this.BTNEstadisticas.Name = "BTNEstadisticas";
+            this.BTNEstadisticas.Size = new System.Drawing.Size(273, 50);
+            this.BTNEstadisticas.TabIndex = 0;
+            this.BTNEstadisticas.Text = "ESTADISTICAS";
+            this.BTNEstadisticas.UseVisualStyleBackColor = false;
+            this.BTNEstadisticas.Click += new System.EventHandler(this.BTNEstadisticas_Click);
+            // 
+            // BTNVerTop5
+            // 
+            this.BTNVerTop5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.BTNVerTop5.ForeColor = System.Drawing.Color.White;
+            this.BTNVerTop5.Image = global::Presentacion.Properties.Resources.top5;
+            this.BTNVerTop5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTNVerTop5.Location = new System.Drawing.Point(3, 59);
+            this.BTNVerTop5.Name = "BTNVerTop5";
+            this.BTNVerTop5.Size = new System.Drawing.Size(273, 50);
+            this.BTNVerTop5.TabIndex = 2;
+            this.BTNVerTop5.Text = "TOP 5";
+            this.BTNVerTop5.UseVisualStyleBackColor = false;
+            // 
+            // btnTodasLasActividades
+            // 
+            this.btnTodasLasActividades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.btnTodasLasActividades.ForeColor = System.Drawing.Color.White;
+            this.btnTodasLasActividades.Location = new System.Drawing.Point(3, 115);
+            this.btnTodasLasActividades.Name = "btnTodasLasActividades";
+            this.btnTodasLasActividades.Size = new System.Drawing.Size(273, 50);
+            this.btnTodasLasActividades.TabIndex = 2;
+            this.btnTodasLasActividades.Text = "TODAS LAS ACTIVIDADES";
+            this.btnTodasLasActividades.UseVisualStyleBackColor = false;
+            this.btnTodasLasActividades.Click += new System.EventHandler(this.btnTodasLasActividades_Click);
             // 
             // menuTransacionActividades
             // 
@@ -201,6 +260,11 @@
             // 
             this.menuTransicionAdministracion.Interval = 6;
             this.menuTransicionAdministracion.Tick += new System.EventHandler(this.menuTransicionAdministracion_Tick);
+            // 
+            // menuTransicionEstadisticas
+            // 
+            this.menuTransicionEstadisticas.Interval = 10;
+            this.menuTransicionEstadisticas.Tick += new System.EventHandler(this.menuTransicionEstadisticas_Tick);
             // 
             // Administracion
             // 
@@ -218,6 +282,7 @@
             this.flowLayoutGestioMonitores.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutMenuAdministracion.ResumeLayout(false);
+            this.flowLayoutEstadisticas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -236,5 +301,10 @@
         private System.Windows.Forms.Timer menuTransacionActividades;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutMenuAdministracion;
         private System.Windows.Forms.Timer menuTransicionAdministracion;
+        private System.Windows.Forms.Button BTNEstadisticas;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutEstadisticas;
+        private System.Windows.Forms.Timer menuTransicionEstadisticas;
+        private System.Windows.Forms.Button BTNVerTop5;
+        private System.Windows.Forms.Button btnTodasLasActividades;
     }
 }
