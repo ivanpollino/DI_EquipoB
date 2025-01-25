@@ -39,12 +39,16 @@ namespace Presentacion
             this.lbDescripcion = new System.Windows.Forms.Label();
             this.lbNombreActv = new System.Windows.Forms.Label();
             this.LBLTitulo = new System.Windows.Forms.Label();
+            this.seleccionFecha = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaActividad = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            this.panel1.Controls.Add(this.lblFechaActividad);
+            this.panel1.Controls.Add(this.seleccionFecha);
             this.panel1.Controls.Add(this.cbMonitores);
             this.panel1.Controls.Add(this.btLimpiarForm);
             this.panel1.Controls.Add(this.btRegistrarAct);
@@ -71,7 +75,7 @@ namespace Presentacion
             // btLimpiarForm
             // 
             this.btLimpiarForm.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLimpiarForm.Location = new System.Drawing.Point(211, 341);
+            this.btLimpiarForm.Location = new System.Drawing.Point(211, 355);
             this.btLimpiarForm.Name = "btLimpiarForm";
             this.btLimpiarForm.Size = new System.Drawing.Size(122, 35);
             this.btLimpiarForm.TabIndex = 37;
@@ -82,7 +86,7 @@ namespace Presentacion
             // btRegistrarAct
             // 
             this.btRegistrarAct.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btRegistrarAct.Location = new System.Drawing.Point(83, 341);
+            this.btRegistrarAct.Location = new System.Drawing.Point(83, 355);
             this.btRegistrarAct.Name = "btRegistrarAct";
             this.btRegistrarAct.Size = new System.Drawing.Size(122, 35);
             this.btRegistrarAct.TabIndex = 36;
@@ -153,6 +157,26 @@ namespace Presentacion
             this.LBLTitulo.TabIndex = 28;
             this.LBLTitulo.Text = "Registro de Actividad";
             // 
+            // seleccionFecha
+            // 
+            this.seleccionFecha.Location = new System.Drawing.Point(83, 317);
+            this.seleccionFecha.Name = "seleccionFecha";
+            this.seleccionFecha.Size = new System.Drawing.Size(248, 20);
+            this.seleccionFecha.TabIndex = 39;
+            // 
+            // lblFechaActividad
+            // 
+            this.lblFechaActividad.AccessibleDescription = "lbMonitor";
+            this.lblFechaActividad.AutoSize = true;
+            this.lblFechaActividad.BackColor = System.Drawing.Color.Transparent;
+            this.lblFechaActividad.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblFechaActividad.ForeColor = System.Drawing.Color.White;
+            this.lblFechaActividad.Location = new System.Drawing.Point(79, 295);
+            this.lblFechaActividad.Name = "lblFechaActividad";
+            this.lblFechaActividad.Size = new System.Drawing.Size(113, 19);
+            this.lblFechaActividad.TabIndex = 40;
+            this.lblFechaActividad.Text = "Fecha actividad";
+            // 
             // RegistrarActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,5 +204,7 @@ namespace Presentacion
         private System.Windows.Forms.Button btLimpiarForm;
         private System.Windows.Forms.Button btRegistrarAct;
         private System.Windows.Forms.ComboBox cbMonitores;
+        private System.Windows.Forms.Label lblFechaActividad;
+        private System.Windows.Forms.DateTimePicker seleccionFecha;
     }
 }

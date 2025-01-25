@@ -12,7 +12,7 @@
           <Property Name="Id_Actividad" Type="int" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
           <Property Name="Descripcion" Type="varchar(max)" />
-          <Property Name="Media_Valoracion" Type="tinyint" />
+          <Property Name="Media_Valoracion" Type="float" />
           <Property Name="Fecha" Type="date" />
           <Property Name="DNI_Monitor" Type="varchar" MaxLength="10" />
         </EntityType>
@@ -215,7 +215,7 @@
           <Property Name="Id_Actividad" Type="Int32" Nullable="false" />
           <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Media_Valoracion" Type="Byte" />
+          <Property Name="Media_Valoracion" Type="Double" />
           <Property Name="Fecha" Type="DateTime" Precision="0" />
           <Property Name="DNI_Monitor" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Usuario_Actividad" Relationship="Self.FK_Actividad_Usuario" FromRole="Actividad" ToRole="Usuario_Actividad" />

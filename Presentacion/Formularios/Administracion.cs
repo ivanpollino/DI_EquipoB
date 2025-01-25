@@ -1,5 +1,7 @@
-﻿using Negocio.EntitiesDTO;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using Negocio.EntitiesDTO;
 using Presentacion.ComponentesPersonalizados;
+using Presentacion.Formularios;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -192,11 +194,17 @@ namespace Presentacion
             registrarActividad.Show();
         }
 
-        private void panelFormularios_Paint(object sender, PaintEventArgs e)
+        private void btnTodasLasActividades_Click(object sender, EventArgs e)
         {
-
+           InformeVerTodasLasActividades informeVerTodasLasActividades = new InformeVerTodasLasActividades();
+            informeVerTodasLasActividades.TopLevel = false;
+            informeVerTodasLasActividades.FormBorderStyle = FormBorderStyle.None;
+            informeVerTodasLasActividades.Dock = DockStyle.Fill;
+            panelFormularios.Controls.Add(informeVerTodasLasActividades);
+            panelFormularios.Tag = informeVerTodasLasActividades;
+            informeVerTodasLasActividades.BringToFront();
+            informeVerTodasLasActividades.Show();
         }
 
-       
     }
 }

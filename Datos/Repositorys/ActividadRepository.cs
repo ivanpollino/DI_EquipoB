@@ -51,6 +51,8 @@ namespace Datos.Repositorys
         /// Obtiene una lista de todas las actividades almacenadas en la base de datos.
         /// </summary>
         /// <returns>Una lista con todas las actividades de la base de datos.</returns>
+        /// 
+
         public List<Actividad> listadoActividades()
         {
             List<Actividad> actividades = new List<Actividad>();
@@ -58,6 +60,21 @@ namespace Datos.Repositorys
             using (var contexto = new equipobEntities())
             {
                 actividades = contexto.Actividad.ToList();
+            }
+
+            return actividades;
+        }
+
+        public List<Actividad> listadoActividadesFiltradas()
+        {
+            List<Actividad> actividades = new List<Actividad>();
+
+            using (var contexto = new equipobEntities())
+            {
+                // Filtrar las actividades por fecha mayor o igual a hoy
+                actividades = contexto.Actividad
+                    .Where(a => a.Fecha >= DateTime.Today)
+                    .ToList();
             }
 
             return actividades;

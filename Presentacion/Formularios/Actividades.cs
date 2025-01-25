@@ -99,7 +99,7 @@ namespace Presentacion.Formularios
             lbActividadesDisponibles.Visible = false;
             formTusActividades.contenedorActividades.Controls.Clear();
             String nombreMonitor;
-            List<ActividadDTO> listaTodasActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
+            List<ActividadDTO> listaTodasActividades = new Negocio.Managment.ActividadManagment().ObtenerActividadesFiltradas();
             List<UsuarioActividadDTO> actividadesApuntado = new Negocio.Managment.UsuarioActividadManagment().ObtenerActividadesApuntado(usuario.DNI);
 
             foreach (var actividad in listaTodasActividades)
@@ -130,7 +130,7 @@ namespace Presentacion.Formularios
             lbActividadesDisponibles.Visible = true;
             formTusActividades.contenedorActividades.Controls.Clear();
             String nombreMonitor;
-            List<ActividadDTO> listaTodasActividades = new Negocio.Managment.ActividadManagment().ObtenerActividades();
+            List<ActividadDTO> listaTodasActividades = new Negocio.Managment.ActividadManagment().ObtenerActividadesFiltradas();
             List<UsuarioActividadDTO> actividadesApuntado = new Negocio.Managment.UsuarioActividadManagment().ObtenerActividadesApuntado(usuario.DNI);
             List<ActividadDTO> actividadesDisponibles = new List<ActividadDTO>();
 

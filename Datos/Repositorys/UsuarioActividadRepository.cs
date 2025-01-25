@@ -92,7 +92,7 @@ namespace Datos.Repositorys
 
                 if (actividad != null && mediaValoracion!=null)
                 {
-                    actividad.Media_Valoracion = (decimal?)mediaValoracion;
+                    actividad.Media_Valoracion = (double?)(decimal?)mediaValoracion;
                     context.SaveChanges();
                 }
                 else

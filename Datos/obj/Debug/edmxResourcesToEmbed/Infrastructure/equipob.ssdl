@@ -7,14 +7,29 @@
     <Property Name="Id_Actividad" Type="int" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="Descripcion" Type="varchar(max)" />
+    <Property Name="Media_Valoracion" Type="float" />
+    <Property Name="Fecha" Type="date" />
     <Property Name="DNI_Monitor" Type="varchar" MaxLength="10" />
-    <Property Name="Media_Valoracion" Type="decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="Administrador">
     <Key>
       <PropertyRef Name="DNI" />
     </Key>
     <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="Numero_Factura" />
+    </Key>
+    <Property Name="Numero_Factura" Type="int" Nullable="false" />
+    <Property Name="Fecha_Emision" Type="date" />
+    <Property Name="Descripcion_Servicios" Type="varchar(max)" />
+    <Property Name="Cantidad_Servicios" Type="int" />
+    <Property Name="Precio_Unitario" Type="float" />
+    <Property Name="Subtotal" Type="float" />
+    <Property Name="Impuestos" Type="int" />
+    <Property Name="Total" Type="float" />
+    <Property Name="DNI" Type="varchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="Monitor">
     <Key>
@@ -61,6 +76,20 @@
       </Principal>
       <Dependent Role="Usuario_Actividad">
         <PropertyRef Name="Id_Actividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Facturas_UsuarioNormal">
+    <End Role="Usuario_Normal" Type="Self.Usuario_Normal" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario_Normal">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Facturas">
+        <PropertyRef Name="DNI" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -135,6 +164,7 @@
   <EntityContainer Name="equipobModelStoreContainer">
     <EntitySet Name="Actividad" EntityType="Self.Actividad" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Administrador" EntityType="Self.Administrador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Facturas" EntityType="Self.Facturas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Monitor" EntityType="Self.Monitor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario_Actividad" EntityType="Self.Usuario_Actividad" Schema="dbo" store:Type="Tables" />
@@ -142,6 +172,10 @@
     <AssociationSet Name="FK_Actividad_Usuario" Association="Self.FK_Actividad_Usuario">
       <End Role="Actividad" EntitySet="Actividad" />
       <End Role="Usuario_Actividad" EntitySet="Usuario_Actividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Facturas_UsuarioNormal" Association="Self.FK_Facturas_UsuarioNormal">
+      <End Role="Usuario_Normal" EntitySet="Usuario_Normal" />
+      <End Role="Facturas" EntitySet="Facturas" />
     </AssociationSet>
     <AssociationSet Name="FK_Monitor_Actividad" Association="Self.FK_Monitor_Actividad">
       <End Role="Monitor" EntitySet="Monitor" />
