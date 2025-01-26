@@ -24,7 +24,7 @@ namespace Negocio.Managment
             actividad.Nombre = actividadDTO.Nombre;
             actividad.Descripcion = actividadDTO.Descripcion;
             actividad.DNI_Monitor = actividadDTO.DNI_Monitor;
-            actividad.Media_Valoracion = (decimal?)actividadDTO.MediaValoracion;
+            //actividad.Media_Valoracion = (decimal?)actividadDTO.MediaValoracion;
 
             return new Datos.Repositorys.ActividadRepository().bajaActividad(actividad);
 
@@ -44,7 +44,7 @@ namespace Negocio.Managment
                 aux.Nombre = actividadNormal.Nombre;
                 aux.Descripcion = actividadNormal.Descripcion;
                 aux.DNI_Monitor = actividadNormal.DNI_Monitor;
-                aux.MediaValoracion = (double) actividadNormal.Media_Valoracion;
+                //aux.MediaValoracion = (double) actividadNormal.Media_Valoracion;
 
                 listaDTO.Add(aux);
             }
@@ -66,7 +66,7 @@ namespace Negocio.Managment
                 Nombre = nuevaActividad.Nombre,
                 Descripcion = nuevaActividad.Descripcion,
                 DNI_Monitor = nuevaActividad.DNI_Monitor,
-                Media_Valoracion = (decimal?)nuevaActividad.MediaValoracion
+                //Media_Valoracion = (decimal?)nuevaActividad.MediaValoracion
             };
             return actividadRepository.GuardarActividad(actividad);
         }
@@ -80,7 +80,7 @@ namespace Negocio.Managment
                     Nombre = actividadNormal.Nombre,
                     Descripcion = actividadNormal.Descripcion,
                     DNI_Monitor = actividadNormal.DNI_Monitor,
-                    MediaValoracion = (double)actividadNormal.Media_Valoracion
+                    //MediaValoracion = (double)actividadNormal.Media_Valoracion
                 };
 
                 return aux;

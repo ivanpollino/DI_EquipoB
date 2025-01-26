@@ -13,10 +13,10 @@ namespace Datos.Infrastructure
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class equipobEntities : DbContext
+    public partial class equipobFinal2Entities : DbContext
     {
-        public equipobEntities()
-            : base("name=equipobEntities")
+        public equipobFinal2Entities()
+            : base("name=equipobFinal2Entities")
         {
         }
     
@@ -28,6 +28,7 @@ namespace Datos.Infrastructure
         public virtual DbSet<Actividad> Actividad { get; set; }
         public virtual DbSet<Administrador> Administrador { get; set; }
         public virtual DbSet<Monitor> Monitor { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Usuario_Actividad> Usuario_Actividad { get; set; }
         public virtual DbSet<Usuario_Normal> Usuario_Normal { get; set; }

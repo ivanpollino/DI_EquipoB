@@ -23,8 +23,6 @@ namespace Datos.Infrastructure
         public int Id_Actividad { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public Nullable<byte> Media_Valoracion { get; set; }
-        public Nullable<System.DateTime> Fechar { get; set; }
         public string DNI_Monitor { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

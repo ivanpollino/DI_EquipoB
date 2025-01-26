@@ -70,6 +70,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework">
       <HintPath>..\Datos\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
@@ -78,6 +82,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -185,6 +191,12 @@
     <Compile Include="Formularios\VerInformacionActividad.Designer.cs">
       <DependentUpon>VerInformacionActividad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informes\Factura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Factura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ComponentesPersonalizados\ActividadPestaña.resx">
@@ -235,6 +247,10 @@
     <EmbeddedResource Include="Formularios\VerInformacionActividad.resx">
       <DependentUpon>VerInformacionActividad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Factura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Factura.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -247,6 +263,7 @@
     </Compile>
     <None Include="Presentacion_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\Presentacion.Informes.Factura.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -314,6 +331,7 @@
     <Content Include="Resources\es_empty.png" />
     <Content Include="Resources\es_llena.png" />
     <None Include="Resources\euro-regular-48.png" />
+    <None Include="Resources\search-regular-24.png" />
     <Content Include="Resources\user-solid-48.png" />
   </ItemGroup>
   <ItemGroup>
@@ -328,5 +346,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

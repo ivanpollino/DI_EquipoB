@@ -23,7 +23,6 @@ namespace Datos.Infrastructure
         public string Email { get; set; }
         public string Passwd { get; set; }
     
-        public virtual Administrador Administrador { get; set; }
         public virtual Monitor Monitor { get; set; }
         public virtual Usuario_Normal Usuario_Normal { get; set; }
     }

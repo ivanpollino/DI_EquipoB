@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Datos\Infrastructure\equipob.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'D:\MULWEB 2\DesInt\EquipoB\DI_EquipoB\Datos\Infrastructure\EquipoB.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

@@ -233,6 +233,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap search_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("search-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Services {
             get {
                 object obj = ResourceManager.GetObject("Services", resourceCulture);

@@ -4,19 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1aad0a8df66e4a2281030708cefdfc17" Name="Diagram1">
-        <EntityTypeShape EntityType="equipobModel.Actividad" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="equipobModel.Administrador" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="equipobModel.Monitor" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="equipobModel.Usuario" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="equipobModel.Usuario_Actividad" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="equipobModel.Usuario_Normal" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
-        <AssociationConnector Association="equipobModel.FK_Actividad_Usuario" ManuallyRouted="false" />
-        <AssociationConnector Association="equipobModel.FK_Monitor_Actividad" ManuallyRouted="false" />
-        <AssociationConnector Association="equipobModel.FK_Usuario_Administrador" ManuallyRouted="false" />
-        <AssociationConnector Association="equipobModel.FK_Usuario_Monitor" ManuallyRouted="false" />
-        <AssociationConnector Association="equipobModel.FK_Usuario_Normal" ManuallyRouted="false" />
-        <AssociationConnector Association="equipobModel.FK_Usuario_Actividad" ManuallyRouted="false" />
+      <Diagram DiagramId="b9873bf98b084fd784a9e5d0948e08ba" Name="Diagram1">
+        <EntityTypeShape EntityType="equipobFinal2Model.Actividad" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.Administrador" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.Monitor" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.Usuario" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.Usuario_Actividad" Width="1.5" PointX="7.5" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="equipobFinal2Model.Usuario_Normal" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Actividad_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Monitor_Actividad" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Usuario_Administrador" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Usuario_Monitor" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Usuario_Normal" ManuallyRouted="false" />
+        <AssociationConnector Association="equipobFinal2Model.FK_Usuario_Actividad" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

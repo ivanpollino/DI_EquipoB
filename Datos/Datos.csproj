@@ -52,58 +52,55 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Infrastructure\Actividad.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>EquipoBPortatil.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Administrador.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>EquipoB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\equipob.Context.cs">
+    <Compile Include="Infrastructure\EquipoB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>equipob.Context.tt</DependentUpon>
+      <DependentUpon>EquipoB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\equipob.cs">
+    <Compile Include="Infrastructure\EquipoB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>equipob.tt</DependentUpon>
+      <DependentUpon>EquipoB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\equipob.Designer.cs">
+    <Compile Include="Infrastructure\EquipoB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>equipob.edmx</DependentUpon>
+      <DependentUpon>EquipoB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\Facturas.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Infrastructure\Model1.Context.cs">
+    <Compile Include="Infrastructure\EquipoBPortatil.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>EquipoBPortatil.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\Model1.cs">
+    <Compile Include="Infrastructure\EquipoBPortatil.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>EquipoBPortatil.tt</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\Model1.Designer.cs">
+    <Compile Include="Infrastructure\EquipoBPortatil.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>EquipoBPortatil.edmx</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Monitor.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>EquipoBPortatil.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\sysdiagrams.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>EquipoBPortatil.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>EquipoBPortatil.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Actividad.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>EquipoBPortatil.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Usuario_Normal.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>EquipoBPortatil.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorys\ActividadRepository.cs" />
@@ -113,46 +110,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <EntityDeploy Include="Infrastructure\equipob.edmx">
+    <EntityDeploy Include="Infrastructure\EquipoB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>equipob.Designer.cs</LastGenOutput>
+      <LastGenOutput>EquipoB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Infrastructure\equipob.edmx.diagram">
-      <DependentUpon>equipob.edmx</DependentUpon>
+    <None Include="Infrastructure\EquipoB.edmx.diagram">
+      <DependentUpon>EquipoB.edmx</DependentUpon>
     </None>
-    <EntityDeploy Include="Infrastructure\Model1.edmx">
+    <EntityDeploy Include="Infrastructure\EquipoBPortatil.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>EquipoBPortatil.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Infrastructure\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="Infrastructure\EquipoBPortatil.edmx.diagram">
+      <DependentUpon>EquipoBPortatil.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Infrastructure\equipob.Context.tt">
+    <Content Include="Infrastructure\EquipoB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>equipob.edmx</DependentUpon>
-      <LastGenOutput>equipob.Context.cs</LastGenOutput>
+      <DependentUpon>EquipoB.edmx</DependentUpon>
+      <LastGenOutput>EquipoB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Infrastructure\equipob.tt">
+    <Content Include="Infrastructure\EquipoB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>equipob.edmx</DependentUpon>
-      <LastGenOutput>equipob.cs</LastGenOutput>
+      <DependentUpon>EquipoB.edmx</DependentUpon>
+      <LastGenOutput>EquipoB.cs</LastGenOutput>
     </Content>
-    <Content Include="Infrastructure\Model1.Context.tt">
+    <Content Include="Infrastructure\EquipoBPortatil.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>EquipoBPortatil.edmx</DependentUpon>
+      <LastGenOutput>EquipoBPortatil.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Infrastructure\Model1.tt">
+    <Content Include="Infrastructure\EquipoBPortatil.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>EquipoBPortatil.edmx</DependentUpon>
+      <LastGenOutput>EquipoBPortatil.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -23,7 +23,7 @@ namespace Datos.Repositorys
         {
             Usuario_Normal usuarioNormal = new Usuario_Normal();
             usuarioNormal.DNI = usuario.DNI;
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipoB())
             {
                 contexto.Usuario.Add(usuario);
                 contexto.Usuario_Normal.Add(usuarioNormal);
@@ -41,7 +41,7 @@ namespace Datos.Repositorys
             List<Usuario> usuarios = new List<Usuario>();
             try
             {
-                using (var contexto = new equipobEntities())
+                using (var contexto = new equipoB())
                 {
                     usuarios = contexto.Usuario.ToList();
                 }
@@ -62,9 +62,9 @@ namespace Datos.Repositorys
             List<Administrador> usuarios = new List<Administrador>();
             try
             {
-                using (var contexto = new equipobEntities())
+                using (var contexto = new equipoB())
                 {
-                    usuarios = contexto.Administrador.ToList();
+                    //usuarios = contexto.r.ToList();
                 }
                 return usuarios;
             }
@@ -83,7 +83,7 @@ namespace Datos.Repositorys
             List<Usuario_Normal> usuarios = new List<Usuario_Normal>();
             try
             {
-                using (var contexto = new equipobEntities())
+                using (var contexto = new equipoB())
                 {
                     usuarios = contexto.Usuario_Normal.ToList();
                 }
@@ -102,7 +102,7 @@ namespace Datos.Repositorys
         /// <returns>El nombre completo del usuario o un mensaje indicando que no fue encontrado.</returns>
         public String sacarNombrePorDNI(String dni)
         {
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipoB())
             {
                 var usuario = contexto.Usuario
                                       .FirstOrDefault(u => u.DNI == dni);
@@ -126,7 +126,7 @@ namespace Datos.Repositorys
         /// <returns>Mensaje indicando si la modificación fue exitosa o si el usuario no fue encontrado.</returns>
         public String modificarUsuario(String dni, Usuario nuevosDatos)
         {
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipoB())
             {
                 var usuarioExistente = contexto.Usuario.FirstOrDefault(u => u.DNI == dni);
 

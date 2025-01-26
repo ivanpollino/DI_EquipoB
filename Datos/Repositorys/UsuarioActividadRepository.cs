@@ -22,7 +22,7 @@ namespace Datos.Repositorys
         {
             try
             {
-                using (var context = new equipobEntities())
+                using (var context = new equipobFinal2Entities())
                 {
                     context.Usuario_Actividad.Add(actividad);
                     context.SaveChanges();
@@ -44,7 +44,7 @@ namespace Datos.Repositorys
         {
             List<Usuario_Actividad> actividades;
 
-            using (var contexto = new equipobEntities())
+            using (var contexto = new equipobFinal2Entities())
             {
                 actividades = contexto.Usuario_Actividad
                                        .Where(usuarioActividad => usuarioActividad.DNI == DNI)
@@ -63,7 +63,7 @@ namespace Datos.Repositorys
         {
             try
             {
-                using (var context = new equipobEntities())
+                using (var context = new equipobFinal2Entities())
                 {
                     var entidad = context.Usuario_Actividad.FirstOrDefault(
                         ua => ua.DNI == usuarioActividad.DNI &&
@@ -91,7 +91,7 @@ namespace Datos.Repositorys
         /// <param name="idActividad">El ID de la actividad cuya media se actualizará.</param>
         public void ActualizarMediaValoracion(int idActividad)
         {
-            using (var context = new equipobEntities())
+            using (var context = new equipoB())
             {
                 var mediaValoracion = context.Usuario_Actividad
                     .Where(v => v.Id_Actividad == idActividad)
@@ -101,12 +101,12 @@ namespace Datos.Repositorys
 
                 if (actividad != null && mediaValoracion != null)
                 {
-                    actividad.Media_Valoracion = (decimal?)mediaValoracion;
+                    //actividad.Media_Valoracion = (decimal?)mediaValoracion;
                     context.SaveChanges();
                 }
                 else
                 {
-                    actividad.Media_Valoracion = 1;
+                    //actividad.Media_Valoracion = 1;
                     context.SaveChanges();
                 }
             }
@@ -123,7 +123,7 @@ namespace Datos.Repositorys
         {
             try
             {
-                using (var context = new equipobEntities())
+                using (var context = new equipobFinal2Entities())
                 {
                     var usuarioActividad = context.Usuario_Actividad
                         .FirstOrDefault(ua => ua.Id_Actividad == idActividad && ua.DNI == dniUsuario);
@@ -163,7 +163,7 @@ namespace Datos.Repositorys
         {
             try
             {
-                using (var context = new equipobEntities())
+                using (var context = new equipoB())
                 {
                     var usuarioActividad = context.Usuario_Actividad
                         .FirstOrDefault(ua => ua.Id_Actividad == idActividad && ua.DNI == dniUsuario);
