@@ -206,5 +206,16 @@ namespace Presentacion
             informeVerTodasLasActividades.Show();
         }
 
+        private void BTNVerTop5_Click(object sender, EventArgs e)
+        {
+            Top5Actividades top5Actividades = new Top5Actividades();
+            top5Actividades.TopLevel = false;
+            top5Actividades.FormBorderStyle = FormBorderStyle.None;
+            top5Actividades.Dock = DockStyle.Fill;
+            panelFormularios.Controls.Add(top5Actividades);
+            panelFormularios.Tag = top5Actividades;
+            top5Actividades.BringToFront();
+            top5Actividades.Show();
+        }
     }
 }

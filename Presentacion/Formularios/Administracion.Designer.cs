@@ -65,9 +65,10 @@
             BTNAdminitracion.ForeColor = System.Drawing.Color.Cyan;
             BTNAdminitracion.Image = global::Presentacion.Properties.Resources.Services;
             BTNAdminitracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            BTNAdminitracion.Location = new System.Drawing.Point(3, 3);
+            BTNAdminitracion.Location = new System.Drawing.Point(4, 4);
+            BTNAdminitracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             BTNAdminitracion.Name = "BTNAdminitracion";
-            BTNAdminitracion.Size = new System.Drawing.Size(276, 50);
+            BTNAdminitracion.Size = new System.Drawing.Size(368, 62);
             BTNAdminitracion.TabIndex = 0;
             BTNAdminitracion.Text = "ADMINISTRACIÓN";
             BTNAdminitracion.UseVisualStyleBackColor = false;
@@ -78,9 +79,10 @@
             this.flowLayoutGestionActividades.Controls.Add(this.BTNGestionActividades);
             this.flowLayoutGestionActividades.Controls.Add(this.BTNRegistrarActividad);
             this.flowLayoutGestionActividades.Controls.Add(this.BTNListadoActividades);
-            this.flowLayoutGestionActividades.Location = new System.Drawing.Point(3, 122);
+            this.flowLayoutGestionActividades.Location = new System.Drawing.Point(4, 152);
+            this.flowLayoutGestionActividades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutGestionActividades.Name = "flowLayoutGestionActividades";
-            this.flowLayoutGestionActividades.Size = new System.Drawing.Size(283, 57);
+            this.flowLayoutGestionActividades.Size = new System.Drawing.Size(377, 70);
             this.flowLayoutGestionActividades.TabIndex = 4;
             // 
             // BTNGestionActividades
@@ -92,9 +94,10 @@
             this.BTNGestionActividades.ForeColor = System.Drawing.Color.White;
             this.BTNGestionActividades.Image = global::Presentacion.Properties.Resources.Actividades;
             this.BTNGestionActividades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNGestionActividades.Location = new System.Drawing.Point(3, 3);
+            this.BTNGestionActividades.Location = new System.Drawing.Point(4, 4);
+            this.BTNGestionActividades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNGestionActividades.Name = "BTNGestionActividades";
-            this.BTNGestionActividades.Size = new System.Drawing.Size(273, 50);
+            this.BTNGestionActividades.Size = new System.Drawing.Size(364, 62);
             this.BTNGestionActividades.TabIndex = 0;
             this.BTNGestionActividades.Text = "GESTION ACTIVIDADES";
             this.BTNGestionActividades.UseVisualStyleBackColor = false;
@@ -106,9 +109,10 @@
             this.BTNRegistrarActividad.ForeColor = System.Drawing.Color.White;
             this.BTNRegistrarActividad.Image = global::Presentacion.Properties.Resources.Añadir;
             this.BTNRegistrarActividad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNRegistrarActividad.Location = new System.Drawing.Point(3, 59);
+            this.BTNRegistrarActividad.Location = new System.Drawing.Point(4, 74);
+            this.BTNRegistrarActividad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNRegistrarActividad.Name = "BTNRegistrarActividad";
-            this.BTNRegistrarActividad.Size = new System.Drawing.Size(276, 50);
+            this.BTNRegistrarActividad.Size = new System.Drawing.Size(368, 62);
             this.BTNRegistrarActividad.TabIndex = 2;
             this.BTNRegistrarActividad.Text = "REGISTRAR ACTIVIDAD";
             this.BTNRegistrarActividad.UseVisualStyleBackColor = false;
@@ -120,9 +124,10 @@
             this.BTNListadoActividades.ForeColor = System.Drawing.Color.White;
             this.BTNListadoActividades.Image = global::Presentacion.Properties.Resources.listado;
             this.BTNListadoActividades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNListadoActividades.Location = new System.Drawing.Point(3, 115);
+            this.BTNListadoActividades.Location = new System.Drawing.Point(4, 144);
+            this.BTNListadoActividades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNListadoActividades.Name = "BTNListadoActividades";
-            this.BTNListadoActividades.Size = new System.Drawing.Size(276, 50);
+            this.BTNListadoActividades.Size = new System.Drawing.Size(368, 62);
             this.BTNListadoActividades.TabIndex = 2;
             this.BTNListadoActividades.Text = "LISTADO ACTIVIDADES";
             this.BTNListadoActividades.UseVisualStyleBackColor = false;
@@ -132,9 +137,10 @@
             // 
             this.flowLayoutGestioMonitores.Controls.Add(this.BTNGestionarMonitores);
             this.flowLayoutGestioMonitores.Controls.Add(this.BTNRegistrarMonitor);
-            this.flowLayoutGestioMonitores.Location = new System.Drawing.Point(3, 59);
+            this.flowLayoutGestioMonitores.Location = new System.Drawing.Point(4, 74);
+            this.flowLayoutGestioMonitores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutGestioMonitores.Name = "flowLayoutGestioMonitores";
-            this.flowLayoutGestioMonitores.Size = new System.Drawing.Size(279, 57);
+            this.flowLayoutGestioMonitores.Size = new System.Drawing.Size(372, 70);
             this.flowLayoutGestioMonitores.TabIndex = 3;
             // 
             // BTNGestionarMonitores
@@ -145,9 +151,10 @@
             this.BTNGestionarMonitores.ForeColor = System.Drawing.Color.White;
             this.BTNGestionarMonitores.Image = global::Presentacion.Properties.Resources.Monitor;
             this.BTNGestionarMonitores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNGestionarMonitores.Location = new System.Drawing.Point(3, 3);
+            this.BTNGestionarMonitores.Location = new System.Drawing.Point(4, 4);
+            this.BTNGestionarMonitores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNGestionarMonitores.Name = "BTNGestionarMonitores";
-            this.BTNGestionarMonitores.Size = new System.Drawing.Size(273, 49);
+            this.BTNGestionarMonitores.Size = new System.Drawing.Size(364, 60);
             this.BTNGestionarMonitores.TabIndex = 0;
             this.BTNGestionarMonitores.Text = "GESTION MONITORES";
             this.BTNGestionarMonitores.UseVisualStyleBackColor = false;
@@ -159,9 +166,10 @@
             this.BTNRegistrarMonitor.ForeColor = System.Drawing.Color.White;
             this.BTNRegistrarMonitor.Image = global::Presentacion.Properties.Resources.Añadir;
             this.BTNRegistrarMonitor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNRegistrarMonitor.Location = new System.Drawing.Point(3, 58);
+            this.BTNRegistrarMonitor.Location = new System.Drawing.Point(4, 72);
+            this.BTNRegistrarMonitor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNRegistrarMonitor.Name = "BTNRegistrarMonitor";
-            this.BTNRegistrarMonitor.Size = new System.Drawing.Size(276, 49);
+            this.BTNRegistrarMonitor.Size = new System.Drawing.Size(368, 60);
             this.BTNRegistrarMonitor.TabIndex = 0;
             this.BTNRegistrarMonitor.Text = "REGISTRAR MONITOR";
             this.BTNRegistrarMonitor.UseVisualStyleBackColor = false;
@@ -170,9 +178,10 @@
             // panelFormularios
             // 
             this.panelFormularios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.panelFormularios.Location = new System.Drawing.Point(288, 0);
+            this.panelFormularios.Location = new System.Drawing.Point(384, 0);
+            this.panelFormularios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFormularios.Name = "panelFormularios";
-            this.panelFormularios.Size = new System.Drawing.Size(897, 623);
+            this.panelFormularios.Size = new System.Drawing.Size(1196, 767);
             this.panelFormularios.TabIndex = 1;
             // 
             // menuTransicion
@@ -185,8 +194,9 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutMenuAdministracion);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(289, 620);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(385, 763);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // flowLayoutMenuAdministracion
@@ -195,9 +205,10 @@
             this.flowLayoutMenuAdministracion.Controls.Add(this.flowLayoutGestioMonitores);
             this.flowLayoutMenuAdministracion.Controls.Add(this.flowLayoutGestionActividades);
             this.flowLayoutMenuAdministracion.Controls.Add(this.flowLayoutEstadisticas);
-            this.flowLayoutMenuAdministracion.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutMenuAdministracion.Location = new System.Drawing.Point(4, 4);
+            this.flowLayoutMenuAdministracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutMenuAdministracion.Name = "flowLayoutMenuAdministracion";
-            this.flowLayoutMenuAdministracion.Size = new System.Drawing.Size(279, 57);
+            this.flowLayoutMenuAdministracion.Size = new System.Drawing.Size(381, 74);
             this.flowLayoutMenuAdministracion.TabIndex = 5;
             // 
             // flowLayoutEstadisticas
@@ -205,9 +216,10 @@
             this.flowLayoutEstadisticas.Controls.Add(this.BTNEstadisticas);
             this.flowLayoutEstadisticas.Controls.Add(this.BTNVerTop5);
             this.flowLayoutEstadisticas.Controls.Add(this.btnTodasLasActividades);
-            this.flowLayoutEstadisticas.Location = new System.Drawing.Point(3, 185);
+            this.flowLayoutEstadisticas.Location = new System.Drawing.Point(4, 230);
+            this.flowLayoutEstadisticas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutEstadisticas.Name = "flowLayoutEstadisticas";
-            this.flowLayoutEstadisticas.Size = new System.Drawing.Size(279, 57);
+            this.flowLayoutEstadisticas.Size = new System.Drawing.Size(372, 72);
             this.flowLayoutEstadisticas.TabIndex = 1;
             // 
             // BTNEstadisticas
@@ -218,9 +230,10 @@
             this.BTNEstadisticas.ForeColor = System.Drawing.Color.White;
             this.BTNEstadisticas.Image = global::Presentacion.Properties.Resources.estadisticas;
             this.BTNEstadisticas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNEstadisticas.Location = new System.Drawing.Point(3, 3);
+            this.BTNEstadisticas.Location = new System.Drawing.Point(4, 4);
+            this.BTNEstadisticas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNEstadisticas.Name = "BTNEstadisticas";
-            this.BTNEstadisticas.Size = new System.Drawing.Size(273, 50);
+            this.BTNEstadisticas.Size = new System.Drawing.Size(364, 62);
             this.BTNEstadisticas.TabIndex = 0;
             this.BTNEstadisticas.Text = "ESTADISTICAS";
             this.BTNEstadisticas.UseVisualStyleBackColor = false;
@@ -232,20 +245,23 @@
             this.BTNVerTop5.ForeColor = System.Drawing.Color.White;
             this.BTNVerTop5.Image = global::Presentacion.Properties.Resources.top5;
             this.BTNVerTop5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNVerTop5.Location = new System.Drawing.Point(3, 59);
+            this.BTNVerTop5.Location = new System.Drawing.Point(4, 74);
+            this.BTNVerTop5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNVerTop5.Name = "BTNVerTop5";
-            this.BTNVerTop5.Size = new System.Drawing.Size(273, 50);
+            this.BTNVerTop5.Size = new System.Drawing.Size(364, 62);
             this.BTNVerTop5.TabIndex = 2;
             this.BTNVerTop5.Text = "TOP 5";
             this.BTNVerTop5.UseVisualStyleBackColor = false;
+            this.BTNVerTop5.Click += new System.EventHandler(this.BTNVerTop5_Click);
             // 
             // btnTodasLasActividades
             // 
             this.btnTodasLasActividades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.btnTodasLasActividades.ForeColor = System.Drawing.Color.White;
-            this.btnTodasLasActividades.Location = new System.Drawing.Point(3, 115);
+            this.btnTodasLasActividades.Location = new System.Drawing.Point(4, 144);
+            this.btnTodasLasActividades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTodasLasActividades.Name = "btnTodasLasActividades";
-            this.btnTodasLasActividades.Size = new System.Drawing.Size(273, 50);
+            this.btnTodasLasActividades.Size = new System.Drawing.Size(364, 62);
             this.btnTodasLasActividades.TabIndex = 2;
             this.btnTodasLasActividades.Text = "TODAS LAS ACTIVIDADES";
             this.btnTodasLasActividades.UseVisualStyleBackColor = false;
@@ -268,13 +284,14 @@
             // 
             // Administracion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 611);
+            this.ClientSize = new System.Drawing.Size(1576, 742);
             this.Controls.Add(this.panelFormularios);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.MaximumSize = new System.Drawing.Size(1200, 650);
-            this.MinimumSize = new System.Drawing.Size(1200, 650);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1594, 789);
+            this.MinimumSize = new System.Drawing.Size(1594, 789);
             this.Name = "Administracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Panel de administración";

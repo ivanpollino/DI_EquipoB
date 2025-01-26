@@ -149,3 +149,4 @@ C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentaci
 C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.exe.manifest
 C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.application
 C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date
+C:\Users\Alejandra\Documents\GitHub\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.Top5Actividades.resources

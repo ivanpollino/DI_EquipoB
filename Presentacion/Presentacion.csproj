@@ -185,6 +185,12 @@
     <Compile Include="Formularios\RegistroMonitor.Designer.cs">
       <DependentUpon>RegistroMonitor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Top5Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Top5Actividades.Designer.cs">
+      <DependentUpon>Top5Actividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\VerInformacionActividad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TodasLasActividades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Informes\TopActividadesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TopActividadesReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -244,12 +256,19 @@
     <EmbeddedResource Include="Formularios\RegistroMonitor.resx">
       <DependentUpon>RegistroMonitor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Top5Actividades.resx">
+      <DependentUpon>Top5Actividades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VerInformacionActividad.resx">
       <DependentUpon>VerInformacionActividad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\TodasLasActividades.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>TodasLasActividades.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\TopActividadesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TopActividadesReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
