@@ -62,6 +62,7 @@
           <ScalarProperty Name="DNI" ColumnName="DNI" />
           <ScalarProperty Name="Id_Actividad" ColumnName="Id_Actividad" />
           <ScalarProperty Name="Valoracion" ColumnName="Valoracion" />
+          <ScalarProperty Name="Fecha_Valoracion" ColumnName="Fecha_Valoracion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

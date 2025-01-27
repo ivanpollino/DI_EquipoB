@@ -17,6 +17,7 @@ namespace Datos.Infrastructure
         public string DNI { get; set; }
         public int Id_Actividad { get; set; }
         public Nullable<byte> Valoracion { get; set; }
+        public Nullable<System.DateTime> Fecha_Valoracion { get; set; }
     
         public virtual Actividad Actividad { get; set; }
         public virtual Usuario_Normal Usuario_Normal { get; set; }

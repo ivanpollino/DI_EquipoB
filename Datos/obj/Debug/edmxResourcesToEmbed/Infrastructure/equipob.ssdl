@@ -58,6 +58,7 @@
     <Property Name="DNI" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="Id_Actividad" Type="int" Nullable="false" />
     <Property Name="Valoracion" Type="tinyint" />
+    <Property Name="Fecha_Valoracion" Type="date" />
   </EntityType>
   <EntityType Name="Usuario_Normal">
     <Key>

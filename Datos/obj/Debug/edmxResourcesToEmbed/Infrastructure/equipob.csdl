@@ -67,6 +67,7 @@
     <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Id_Actividad" Type="Int32" Nullable="false" />
     <Property Name="Valoracion" Type="Byte" />
+    <Property Name="Fecha_Valoracion" Type="DateTime" Precision="0" />
     <NavigationProperty Name="Actividad" Relationship="Self.FK_Actividad_Usuario" FromRole="Usuario_Actividad" ToRole="Actividad" />
     <NavigationProperty Name="Usuario_Normal" Relationship="Self.FK_Usuario_Actividad" FromRole="Usuario_Actividad" ToRole="Usuario_Normal" />
   </EntityType>

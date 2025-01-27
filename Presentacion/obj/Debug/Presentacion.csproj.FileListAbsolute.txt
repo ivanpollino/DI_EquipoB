@@ -93,3 +93,4 @@ C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\CrystalDecisi
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.InformeVerTodasLasActividades.resources
+C:\Users\User\Desktop\ProyectoDI\DI_EquipoB\Presentacion\obj\Debug\Presentacion.Formularios.Top5Actividades.resources

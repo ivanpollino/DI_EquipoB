@@ -123,6 +123,7 @@ namespace Datos.Repositorys
                     if (usuarioActividad != null)
                     {
                         usuarioActividad.Valoracion = valoracion;
+                        usuarioActividad.Fecha_Valoracion = DateTime.Now;  // Asignamos la fecha de hoy
                     }
                     else
                     {
@@ -130,8 +131,10 @@ namespace Datos.Repositorys
                         {
                             Id_Actividad = idActividad,
                             DNI = dniUsuario,
-                            Valoracion = valoracion
+                            Valoracion = valoracion,
+                            Fecha_Valoracion = DateTime.Now   // Asignamos la fecha de hoy
                         };
+
                         context.Usuario_Actividad.Add(usuarioActividad);
                     }
 

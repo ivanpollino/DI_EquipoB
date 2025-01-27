@@ -1,6 +1,6 @@
 ﻿namespace Presentacion.Formularios
 {
-    partial class InformeVerTodasLasActividades
+    partial class Top5Actividades
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.todasLasActividades1 = new Presentacion.Informes.TodasLasActividades();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.TopActividadesReport1 = new Presentacion.Informes.TopActividadesReport();
             this.SuspendLayout();
-            // 
-            // todasLasActividades1
-            // 
-            this.todasLasActividades1.InitReport += new System.EventHandler(this.todasLasActividades1_InitReport);
             // 
             // crystalReportViewer1
             // 
@@ -44,26 +40,26 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = "C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\Presentacion\\Informes\\TodasLasActivid" +
-    "ades.rpt";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1081, 519);
+            this.crystalReportViewer1.ReportSource = "C:\\Users\\User\\Desktop\\ProyectoDI\\DI_EquipoB\\Presentacion\\Informes\\TopActividadesR" +
+    "eport.rpt";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
             // 
-            // InformeVerTodasLasActividades
+            // Top5Actividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 519);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "InformeVerTodasLasActividades";
-            this.Text = "InformeVerTodasLasActividades";
+            this.Name = "Top5Actividades";
+            this.Text = "Top5Actividades";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Informes.TodasLasActividades todasLasActividades1;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private Informes.TopActividadesReport TopActividadesReport1;
     }
 }
