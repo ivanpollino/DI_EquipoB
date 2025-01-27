@@ -153,6 +153,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap euro_regular_48 {
+            get {
+                object obj = ResourceManager.GetObject("euro-regular-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imagenFondoLogin {
             get {
                 object obj = ResourceManager.GetObject("imagenFondoLogin", resourceCulture);
@@ -226,6 +236,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap Registro {
             get {
                 object obj = ResourceManager.GetObject("Registro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_regular_24 {
+            get {
+                object obj = ResourceManager.GetObject("search-regular-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -143,6 +143,12 @@
     <Compile Include="Formularios\EditarPerfil.Designer.cs">
       <DependentUpon>EditarPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Facturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Facturas.Designer.cs">
+      <DependentUpon>Facturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\InformeVerTodasLasActividades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,12 @@
     <Compile Include="Formularios\VerInformacionActividad.Designer.cs">
       <DependentUpon>VerInformacionActividad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informes\Factura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Factura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Informes\TodasLasActividades.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -235,6 +247,9 @@
     <EmbeddedResource Include="Formularios\EditarPerfil.resx">
       <DependentUpon>EditarPerfil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Facturas.resx">
+      <DependentUpon>Facturas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\InformeVerTodasLasActividades.resx">
       <DependentUpon>InformeVerTodasLasActividades.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +276,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VerInformacionActividad.resx">
       <DependentUpon>VerInformacionActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\Factura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Factura.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\TodasLasActividades.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -350,6 +369,8 @@
     <Content Include="Resources\es_empty.png" />
     <Content Include="Resources\es_llena.png" />
     <None Include="Resources\top5.png" />
+    <None Include="Resources\search-regular-24.png" />
+    <None Include="Resources\euro-regular-48.png" />
     <Content Include="Resources\user-solid-48.png" />
   </ItemGroup>
   <ItemGroup>

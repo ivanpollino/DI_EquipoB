@@ -276,5 +276,11 @@ namespace Presentacion
             editarPerfil.ShowDialog();
             cargarHeader();
         }
+
+        private void BTNMisFacturas_Click(object sender, EventArgs e)
+        {
+            Facturas facturas = new Facturas(usuario);
+            facturas.ShowDialog();
+        }
     }
 }

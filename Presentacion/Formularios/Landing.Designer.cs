@@ -37,6 +37,7 @@ namespace Presentacion
             this.btnEditarPerfil = new System.Windows.Forms.Button();
             this.BTNCerrarSesionUsuario = new System.Windows.Forms.Button();
             this.panelAdministrador = new System.Windows.Forms.Panel();
+            this.BTNMisFacturas = new System.Windows.Forms.Button();
             this.BTNCerrarSesionAdmin = new System.Windows.Forms.Button();
             this.BTNOpcionesAdministrador = new System.Windows.Forms.Button();
             this.lbTexto2 = new System.Windows.Forms.Label();
@@ -85,11 +86,12 @@ namespace Presentacion
             // 
             // panelParaUsuarios
             // 
+            this.panelParaUsuarios.Controls.Add(this.BTNMisFacturas);
             this.panelParaUsuarios.Controls.Add(this.btnEditarPerfil);
             this.panelParaUsuarios.Controls.Add(this.BTNCerrarSesionUsuario);
-            this.panelParaUsuarios.Location = new System.Drawing.Point(780, 379);
+            this.panelParaUsuarios.Location = new System.Drawing.Point(780, 390);
             this.panelParaUsuarios.Name = "panelParaUsuarios";
-            this.panelParaUsuarios.Size = new System.Drawing.Size(208, 132);
+            this.panelParaUsuarios.Size = new System.Drawing.Size(208, 194);
             this.panelParaUsuarios.TabIndex = 7;
             // 
             // btnEditarPerfil
@@ -118,7 +120,7 @@ namespace Presentacion
             this.BTNCerrarSesionUsuario.ForeColor = System.Drawing.Color.Cyan;
             this.BTNCerrarSesionUsuario.Image = global::Presentacion.Properties.Resources.logOut;
             this.BTNCerrarSesionUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNCerrarSesionUsuario.Location = new System.Drawing.Point(0, 66);
+            this.BTNCerrarSesionUsuario.Location = new System.Drawing.Point(0, 127);
             this.BTNCerrarSesionUsuario.Name = "BTNCerrarSesionUsuario";
             this.BTNCerrarSesionUsuario.Size = new System.Drawing.Size(208, 66);
             this.BTNCerrarSesionUsuario.TabIndex = 8;
@@ -133,8 +135,25 @@ namespace Presentacion
             this.panelAdministrador.Controls.Add(this.BTNOpcionesAdministrador);
             this.panelAdministrador.Location = new System.Drawing.Point(780, 174);
             this.panelAdministrador.Name = "panelAdministrador";
-            this.panelAdministrador.Size = new System.Drawing.Size(208, 132);
+            this.panelAdministrador.Size = new System.Drawing.Size(208, 136);
             this.panelAdministrador.TabIndex = 6;
+            // 
+            // BTNMisFacturas
+            // 
+            this.BTNMisFacturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.BTNMisFacturas.FlatAppearance.BorderSize = 0;
+            this.BTNMisFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTNMisFacturas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNMisFacturas.ForeColor = System.Drawing.Color.Cyan;
+            this.BTNMisFacturas.Image = global::Presentacion.Properties.Resources.euro_regular_48;
+            this.BTNMisFacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BTNMisFacturas.Location = new System.Drawing.Point(0, 62);
+            this.BTNMisFacturas.Name = "BTNMisFacturas";
+            this.BTNMisFacturas.Size = new System.Drawing.Size(208, 68);
+            this.BTNMisFacturas.TabIndex = 2;
+            this.BTNMisFacturas.Text = "Mis Facturas";
+            this.BTNMisFacturas.UseVisualStyleBackColor = false;
+            this.BTNMisFacturas.Click += new System.EventHandler(this.BTNMisFacturas_Click);
             // 
             // BTNCerrarSesionAdmin
             // 
@@ -145,7 +164,7 @@ namespace Presentacion
             this.BTNCerrarSesionAdmin.ForeColor = System.Drawing.Color.Cyan;
             this.BTNCerrarSesionAdmin.Image = global::Presentacion.Properties.Resources.logOut;
             this.BTNCerrarSesionAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BTNCerrarSesionAdmin.Location = new System.Drawing.Point(0, 64);
+            this.BTNCerrarSesionAdmin.Location = new System.Drawing.Point(0, 66);
             this.BTNCerrarSesionAdmin.Name = "BTNCerrarSesionAdmin";
             this.BTNCerrarSesionAdmin.Size = new System.Drawing.Size(208, 68);
             this.BTNCerrarSesionAdmin.TabIndex = 1;
@@ -287,5 +306,6 @@ namespace Presentacion
         private Panel panelParaUsuarios;
         private Button BTNVerActividades;
         private Button btnEditarPerfil;
+        private Button BTNMisFacturas;
     }
 }
